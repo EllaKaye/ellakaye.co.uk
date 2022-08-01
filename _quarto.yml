@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "ellakaye-quarto"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+editor: source
+
