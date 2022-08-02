@@ -1,0 +1,74 @@
+/*-- scss:defaults --*/
+
+// use litera as the base
+$theme: "litera" !default;
+
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+
+@font-face {
+  font-family: 'LEMONMILKPro-Regular';
+  src: local('LEMONMILKPro-Regular'), url('/fonts/LEMONMILKPro-Regular.woff2') format('woff2'), url('/fonts/LEMONMILKPro-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LEMONMILKPro-Light';
+  src: local('LEMONMILKPro-Light'), url('/fonts/LEMONMILKPro-Light.woff2') format('woff2'), url('/fonts/LEMONMILKPro-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LEMONMILKPro-UltraLight';
+  src: local('LEMONMILKPro-UltraLight'), url('/fonts/LEMONMILKPro-UltraLight.woff2') format('woff2'), url('/fonts/LEMONMILKPro-UltraLight.woff') format('woff');
+}
+
+// fonts
+$font-family-sans-serif: "LEMONMILKPro-Light", Helvetica, sans-serif !default;
+$font-family-monospace: "Fira Mono", monospace;
+$headings-font-family: "LEMONMILKPro-Regular", Helvetica, sans-serif !default;
+
+// colors
+$pink: #D4006A;
+$blue: #006AD4;
+$green: #00D46A;
+$cyan: #00D4D4;
+
+// grey defaults
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$body-color: $gray-700;
+
+/*-- scss:rules --*/
+
+.icon-link, div.quarto-about-jolla .about-link {
+    background-color: transparent;
+    color: $pink;
+    border: 2px solid;
+    border-color: $pink;
+    padding: 5px .4rem 5px .4rem;
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    border-radius: 5px; 
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon-link:hover, div.quarto-about-jolla .about-link:hover{
+    background-color: $pink;
+    border-color: $pink;
+    color: white;
+    text-decoration: none;
+}
+
+pre.sourceCode {
+  border-radius: 0;
+}

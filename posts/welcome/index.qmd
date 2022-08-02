@@ -5,8 +5,35 @@ date: "2022-07-29"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Let's test some syntax highlighting!
 
-![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+```{r}
+#| label: code-demo
+#| eval: false
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(palmerpenguins)
+
+penguins %>%
+  mutate(
+    long_flipper = case_when(
+      species == "Adelie" & flipper_length_mm > 195 ~ TRUE,
+      species == "Chinstrap" & flipper_length_mm > 200 ~ TRUE,
+      species == "Gentoo" & flipper_length_mm > 225 ~ TRUE,
+      TRUE ~ FALSE
+    )
+  ) %>%
+  mutate(
+    long_bill = case_when(
+      species == "Adelie" & bill_length_mm > 42 ~ TRUE,
+      species == "Chinstrap" & bill_length_mm > 52 ~ TRUE,
+      species == "Gentoo" & bill_length_mm > 50 ~ TRUE,
+      TRUE ~ FALSE
+    )
+  )
+```
+
+## Cards
