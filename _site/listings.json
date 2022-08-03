@@ -9,8 +9,14 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/callout-blocks/index.html",
+      "/posts/icon-links/index.html",
+      "/posts/highlighting-qmd/index.html",
+      "/posts/syntax-highlighting/index.html"
     ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": []
   }
 ]

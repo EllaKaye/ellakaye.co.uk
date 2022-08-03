@@ -63,17 +63,21 @@ $purple: #6A00D4;
 $orange: #D46A00;
 $yellow: #D4D400;
 
-$primary:       $pink !default;
-$secondary:     $gray-500 !default;
+$primary:       $green !default;
+$secondary:     $gray-300 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $orange !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $gray-900 !default;
 
 // colour tweaks to theme
-$body-color: $gray-700;
+// to make it dark
+$body-bg: $dark;
+$body-color: $secondary;
+$navbar-bg: $body-bg;
+$navbar-fg: $body-color;
 
 
 // callouts
@@ -82,6 +86,8 @@ $callout-color-tip: $green;
 $callout-color-caution: $purple;
 $callout-color-warning: $orange;
 $callout-color-important: $red;
+
+
 
 /*-- scss:rules --*/
 

@@ -4,7 +4,7 @@
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\nAdd bootstrap icons:\nAdd fontawesome icons using the extension:\nCompare bi, fa ,"
+    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme.\nThis is a post with executable code.\nAdd bootstrap icons:\nAdd fontawesome icons using the extension:\nCompare bi, fa ,"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -95,6 +95,97 @@
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "talks",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "posts/syntax-highlighting/index.html",
+    "href": "posts/syntax-highlighting/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Let’s test some syntax highlighting!"
+  },
+  {
+    "objectID": "posts/syntax-highlighting/index.html#cards",
+    "href": "posts/syntax-highlighting/index.html#cards",
+    "title": "Welcome To My Blog",
+    "section": "Cards",
+    "text": "Cards"
+  },
+  {
+    "objectID": "posts/icon-links/index.html",
+    "href": "posts/icon-links/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme.\nThis is a post with executable code.\nAdd bootstrap icons:\nAdd fontawesome icons using the extension:\nCompare bi, fa ,"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
+    "href": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
+    "title": "Post With Code",
+    "section": "Experimenting with distilltools::icon_link in Quarto",
+    "text": "Experimenting with distilltools::icon_link in Quarto\n\n\n\nIn a code block puts them all on separate lines.\n\n\n slides\n\n\n materials\n\n\n video\n\n\nBut using inline chunks gets them on the same line (as long as there are no line breaks between them):\n slides  materials  video\nalso, note, need display: inline-block in the css"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#using-btn-and-svg",
+    "href": "posts/icon-links/index.html#using-btn-and-svg",
+    "title": "Post With Code",
+    "section": "Using btn and svg",
+    "text": "Using btn and svg\n\n\n\n\nmaterials\n\n\n\n\n\nmaterials 2"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#using-btn-and-i",
+    "href": "posts/icon-links/index.html#using-btn-and-i",
+    "title": "Post With Code",
+    "section": "Using btn and <i>",
+    "text": "Using btn and <i>\n\n materials"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#conclusion",
+    "href": "posts/icon-links/index.html#conclusion",
+    "title": "Post With Code",
+    "section": "Conclusion",
+    "text": "Conclusion\nOriginal strategy, <a> styled to look like button, is probably best (see this StackOverflow).\nAlso, use <i> rather than <svg> as that’s what Quarto seems to do (though note can style <svg> with CSS).\nAlso, using font-size CSS property makes both icon and text bigger with <i> tag, but not <svg>."
+  },
+  {
+    "objectID": "posts/icon-links/index.html#with-bigger-icon",
+    "href": "posts/icon-links/index.html#with-bigger-icon",
+    "title": "Post With Code",
+    "section": "With bigger icon?",
+    "text": "With bigger icon?\n slides"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#in-a-header",
+    "href": "posts/icon-links/index.html#in-a-header",
+    "title": "Post With Code",
+    "section": "In a header",
+    "text": "In a header\n\n materials"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
+    "href": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
+    "title": "Post With Code",
+    "section": "icon_link html with bookstrap icon:",
+    "text": "icon_link html with bookstrap icon:\n slides"
+  },
+  {
+    "objectID": "posts/highlighting-qmd/index.html",
+    "href": "posts/highlighting-qmd/index.html",
+    "title": "Syntax Highlighting in Quarto",
+    "section": "",
+    "text": "A while back, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I’ve rewritten my website using Quarto, this post is an update on that process for this format.\n\n\nQuarto, like distill, uses a theme called arrow as its default. There are, however, some differences between the implementations for distill and Quarto. Firstly, when I applied my custom highlighting scheme, with its five-colour palette, to my Quarto site, I noticed an extra colour had slipped in."
+  },
+  {
+    "objectID": "posts/callout-blocks/index.html",
+    "href": "posts/callout-blocks/index.html",
+    "title": "Testing callout blocks",
+    "section": "",
+    "text": "See the documentation.\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\n\nDon’t do that! minimal appearance.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nDo do this!\n\n\n\n\n\n\n\n\nTip With Caption\n\n\n\nThis is an example of a callout with a caption.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default."
   }
 ]

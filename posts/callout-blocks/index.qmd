@@ -1,0 +1,37 @@
+---
+title: "Testing callout blocks"
+---
+
+Here are my tests of callout blocks.
+
+See the [documentation](https://quarto.org/docs/authoring/callouts.html).
+
+:::{.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+:::{.callout-warning appearance="simple"}
+Don't do that! simple appearance.
+:::
+
+:::{.callout-warning appearance="minimal"}
+Don't do that! minimal appearance.
+:::
+
+:::{.callout-important}
+Do do this!
+:::
+
+:::{.callout-tip}
+## Tip With Caption
+
+This is an example of a callout with a caption.
+:::
+
+:::{.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+

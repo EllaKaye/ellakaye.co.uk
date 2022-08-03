@@ -1,5 +1,5 @@
 ---
-title: "Welcome To My Blog"
+title: "Syntax Highlighting"
 author: "Tristan O'Malley"
 date: "2022-07-29"
 categories: [news]

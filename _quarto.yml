@@ -2,10 +2,14 @@ project:
   type: website
 
 website:
-  title: ""
+  title: "ELLA KAYE"
+  favicon: images/favicon.png
   navbar:
+    logo: images/logo.png
+    title: false
     right:
       - posts.qmd
+      - talks.qmd
       - icon: github
         href: https://github.com/
       - icon: twitter
@@ -14,6 +18,7 @@ format:
   html:
     theme: ek-theme.scss
     code-block-border-left: true
+    highlight-style: ek-syntax-highlighting.theme
 
 editor: source
 
