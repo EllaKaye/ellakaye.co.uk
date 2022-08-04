@@ -5,7 +5,7 @@ website:
   title: "ELLA KAYE"
   favicon: images/favicon.png
   navbar:
-    logo: images/logo.png
+    logo: ELLAKAYE-logo-light.png
     title: false
     right:
       - posts.qmd
@@ -16,7 +16,9 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: ek-theme.scss
+    theme: 
+      light: ek-theme.scss
+      #dark: ek-theme-dark.scss
     code-block-border-left: true
     highlight-style: ek-syntax-highlighting.theme
 

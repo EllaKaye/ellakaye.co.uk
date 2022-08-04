@@ -11,12 +11,8 @@ Note that there are five types of callouts, including:
 `note`, `warning`, `important`, `tip`, and `caution`.
 :::
 
-:::{.callout-warning appearance="simple"}
+:::{.callout-warning}
 Don't do that! simple appearance.
-:::
-
-:::{.callout-warning appearance="minimal"}
-Don't do that! minimal appearance.
 :::
 
 :::{.callout-important}
@@ -33,5 +29,13 @@ This is an example of a callout with a caption.
 ## Expand To Learn About Collapse
 
 This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+:::{.callout-caution appearance="simple"}
+Don't do that! simple appearance.
+:::
+
+:::{.callout-caution appearance="minimal"}
+Don't do that! minimal appearance.
 :::
 

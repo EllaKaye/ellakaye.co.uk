@@ -110,11 +110,6 @@ pre.sourceCode {
   border-radius: 0;
 }
 
-.navbar-brand > img {
-  max-height: 60px;
-  width: auto;
-  //margin-top: 18px;
-}
 
 #quarto-header {
   text-transform: uppercase;
@@ -137,3 +132,19 @@ a:hover {
 h1, h2, h3 {
   text-transform: uppercase;
 }
+
+span.navbar-title br {
+  background-color: $green;
+}
+
+/*
+.light-mode { display: block; }
+.dark-mode { display: none; }
+*/
+
+.navbar-brand > img {
+  max-height: 60px;
+  width: 78px;
+  //margin-top: 18px;
+}
+
