@@ -73,7 +73,7 @@ $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
 // colour tweaks to theme
-$body-color: $gray-700;
+$body-color: $gray-800;
 
 
 // callouts
@@ -102,7 +102,7 @@ $callout-color-important: $red;
 .icon-link:hover, div.quarto-about-jolla .about-link:hover{
     background-color: $primary;
     border-color: $primary;
-    color: white;
+    color: $body-bg;
     text-decoration: none;
 }
   

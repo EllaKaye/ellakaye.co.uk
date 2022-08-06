@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "About this blog"
+    "text": "I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
   },
   {
     "objectID": "about.html",
@@ -95,7 +95,7 @@
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks.html",
@@ -107,9 +107,9 @@
   {
     "objectID": "posts/syntax-highlighting/index.html",
     "href": "posts/syntax-highlighting/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Syntax Highlighting",
     "section": "",
-    "text": "Let’s test some syntax highlighting!"
+    "text": "library(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )"
   },
   {
     "objectID": "posts/syntax-highlighting/index.html#cards",
@@ -179,7 +179,7 @@
     "href": "posts/highlighting-qmd/index.html",
     "title": "Syntax Highlighting in Quarto",
     "section": "",
-    "text": "A while back, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I’ve rewritten my website using Quarto, this post is an update on that process for this format.\n\n\nQuarto, like distill, uses a theme called arrow as its default. There are, however, some differences between the implementations for distill and Quarto. Firstly, when I applied my custom highlighting scheme, with its five-colour palette, to my Quarto site, I noticed an extra colour had slipped in."
+    "text": "Last year, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I’ve rewritten my website using Quarto, this post is an update on that process for this format.\n\n\nQuarto, like distill, uses a theme called arrow as its default. There are, however, some differences between the implementations for distill and Quarto. Firstly, when I applied my custom highlighting scheme, with its five-colour palette, to my Quarto site, I noticed an extra colour had slipped in."
   },
   {
     "objectID": "posts/callout-blocks/index.html",
@@ -187,5 +187,19 @@
     "title": "Testing callout blocks",
     "section": "",
     "text": "See the documentation.\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nDo do this!\n\n\n\n\n\n\n\n\nTip With Caption\n\n\n\nThis is an example of a callout with a caption.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\n\nDon’t do that! minimal appearance."
+  },
+  {
+    "objectID": "posts/post-template/index.html",
+    "href": "posts/post-template/index.html",
+    "title": "Post Title",
+    "section": "",
+    "text": "Here’s what my post is about."
+  },
+  {
+    "objectID": "posts/post-template/index.knit.html",
+    "href": "posts/post-template/index.knit.html",
+    "title": "Post Title",
+    "section": "",
+    "text": "Here’s what my post is about."
   }
 ]

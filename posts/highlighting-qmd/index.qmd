@@ -7,7 +7,7 @@ categories: [Quarto]
 
 ## Distill to Quarto
 
-A while back, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I've rewritten my website using Quarto, this post is an update on that process for this format.
+Last year, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I've rewritten my website using Quarto, this post is an update on that process for this format.
 
 ### An extra colour
 

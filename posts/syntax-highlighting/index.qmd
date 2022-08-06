@@ -1,6 +1,6 @@
 ---
 title: "Syntax Highlighting"
-author: "Tristan O'Malley"
+author: "Ella Kaye"
 date: "2022-07-29"
 categories: [news]
 ---
@@ -35,5 +35,3 @@ penguins %>%
     )
   )
 ```
-
-## Cards

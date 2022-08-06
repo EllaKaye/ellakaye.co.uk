@@ -37,6 +37,7 @@ $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+//$gray-900: #292125  !default; // pink base
 $black:    #000 !default;
 
 /*
@@ -108,7 +109,7 @@ $callout-color-important: $red;
 .icon-link:hover, div.quarto-about-jolla .about-link:hover{
     background-color: $primary;
     border-color: $primary;
-    color: white;
+    color: $body-bg;
     text-decoration: none;
 }
   

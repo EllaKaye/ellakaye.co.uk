@@ -3,6 +3,7 @@ project:
 
 website:
   title: "ELLA KAYE"
+  site-url: "https://ellakaye.rbind.io"
   favicon: images/favicon.png
   navbar:
     logo: ELLAKAYE-logo-light.png
@@ -11,16 +12,18 @@ website:
       - posts.qmd
       - talks.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/EllaKaye
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/ellamkaye
+  license: CC BY-SA
+
 format:
   html:
     theme: 
       light: ek-theme.scss
-      #dark: ek-theme-dark.scss
+      dark: ek-theme-dark.scss
     code-block-border-left: true
-    highlight-style: ek-syntax-highlighting.theme
-
+    highlight-style: ek-highlighting-light.theme
+    
 editor: source
 

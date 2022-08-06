@@ -1,7 +1,7 @@
 {
-  "hash": "35c01c348a14f6c6065d18390f6237ec",
+  "hash": "c02e91a3e6fe0c083eec47e6c7e28d3e",
   "result": {
-    "markdown": "---\ntitle: \"Welcome To My Blog\"\nauthor: \"Tristan O'Malley\"\ndate: \"2022-07-29\"\ncategories: [news]\n---\n\n\nLet's test some syntax highlighting!\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n```\n:::\n\n\n## Cards\n",
+    "markdown": "---\ntitle: \"Syntax Highlighting\"\nauthor: \"Ella Kaye\"\ndate: \"2022-07-29\"\ncategories: [news]\n---\n\n\nLet's test some syntax highlighting!\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n```\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
