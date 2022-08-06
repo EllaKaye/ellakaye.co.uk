@@ -65,7 +65,7 @@ $orange: #D46A00;
 $yellow: #D4D400;
 
 $primary:       $green !default;
-$secondary:     $gray-300 !default;
+$secondary:     $gray-400 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $orange !default;
@@ -76,7 +76,7 @@ $dark:          $gray-900 !default;
 // colour tweaks to theme
 // to make it dark
 $body-bg: $dark;
-$body-color: $secondary;
+$body-color: $light;
 $navbar-bg: $body-bg;
 $navbar-fg: $body-color;
 
