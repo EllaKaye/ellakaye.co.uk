@@ -1,6 +1,6 @@
 ---
 title: "Experimenting with icon links"
-author: "Harlow Malloc"
+author: "Ella Kaye"
 date: "2022-08-01"
 categories: [news, code, analysis]
 image: "image.jpg"
@@ -9,6 +9,19 @@ execute:
 ---
 
 Here an article: [custom syntax highlighting for {distill}: modifying the theme](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/).
+
+
+# Here's `SOME code` in h1
+
+## Here's `SOME code` in h2
+
+### Here's `SOME code` in h3
+
+#### Here's `SOME code` in h4
+
+##### Here's `SOME code` in h5
+
+###### Here's `SOME code` in h6
 
 This is a post with executable code.
 

@@ -95,7 +95,7 @@
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks.html",
@@ -121,56 +121,56 @@
   {
     "objectID": "posts/icon-links/index.html",
     "href": "posts/icon-links/index.html",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "",
-    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme.\nThis is a post with executable code.\nAdd bootstrap icons:\nAdd fontawesome icons using the extension:\nCompare bi, fa ,"
+    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme."
   },
   {
     "objectID": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
     "href": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "Experimenting with distilltools::icon_link in Quarto",
     "text": "Experimenting with distilltools::icon_link in Quarto\n\n\n\nIn a code block puts them all on separate lines.\n\n\n slides\n\n\n materials\n\n\n video\n\n\nBut using inline chunks gets them on the same line (as long as there are no line breaks between them):\n slides  materials  video\nalso, note, need display: inline-block in the css"
   },
   {
     "objectID": "posts/icon-links/index.html#using-btn-and-svg",
     "href": "posts/icon-links/index.html#using-btn-and-svg",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "Using btn and svg",
     "text": "Using btn and svg\n\n\n\n\nmaterials\n\n\n\n\n\nmaterials 2"
   },
   {
     "objectID": "posts/icon-links/index.html#using-btn-and-i",
     "href": "posts/icon-links/index.html#using-btn-and-i",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "Using btn and <i>",
     "text": "Using btn and <i>\n\n materials"
   },
   {
     "objectID": "posts/icon-links/index.html#conclusion",
     "href": "posts/icon-links/index.html#conclusion",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "Conclusion",
     "text": "Conclusion\nOriginal strategy, <a> styled to look like button, is probably best (see this StackOverflow).\nAlso, use <i> rather than <svg> as that’s what Quarto seems to do (though note can style <svg> with CSS).\nAlso, using font-size CSS property makes both icon and text bigger with <i> tag, but not <svg>."
   },
   {
     "objectID": "posts/icon-links/index.html#with-bigger-icon",
     "href": "posts/icon-links/index.html#with-bigger-icon",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "With bigger icon?",
     "text": "With bigger icon?\n slides"
   },
   {
     "objectID": "posts/icon-links/index.html#in-a-header",
     "href": "posts/icon-links/index.html#in-a-header",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "In a header",
     "text": "In a header\n\n materials"
   },
   {
     "objectID": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
     "href": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
-    "title": "Post With Code",
+    "title": "Experimenting with icon links",
     "section": "icon_link html with bookstrap icon:",
     "text": "icon_link html with bookstrap icon:\n slides"
   },
@@ -201,5 +201,12 @@
     "title": "Post Title",
     "section": "",
     "text": "Here’s what my post is about."
+  },
+  {
+    "objectID": "posts/icon-links/index.html#heres-some-code-in-h2",
+    "href": "posts/icon-links/index.html#heres-some-code-in-h2",
+    "title": "Experimenting with icon links",
+    "section": "Here’s SOME code in h2",
+    "text": "Here’s SOME code in h2\n\nHere’s SOME code in h3\n\nHere’s SOME code in h4\n\nHere’s SOME code in h5\n\nHere’s SOME code in h6\nThis is a post with executable code.\n\n\n[1] 2\n\n\nAdd bootstrap icons:\n  \nAdd fontawesome icons using the extension:\n \nCompare bi, fa ,"
   }
 ]

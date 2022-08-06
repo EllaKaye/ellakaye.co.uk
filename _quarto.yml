@@ -23,7 +23,7 @@ format:
       light: ek-theme.scss
       dark: ek-theme-dark.scss
     code-block-border-left: true
-    highlight-style: ek-highlighting-light.theme
+    highlight-style: atom-one
     
 editor: source
 
