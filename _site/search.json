@@ -1,122 +1,31 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/highlighting-qmd/index.html",
+    "href": "posts/highlighting-qmd/index.html",
+    "title": "Syntax Highlighting in Quarto",
     "section": "",
-    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme.\nThis is a post with executable code.\nAdd bootstrap icons:\nAdd fontawesome icons using the extension:\nCompare bi, fa ,"
+    "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Syntax {Highlighting} in {Quarto}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/highlighting-qmd},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Syntax Highlighting in Quarto.” July 29,\n2022. https://ellakaye.rbind.io/posts/highlighting-qmd."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/callout-blocks/index.html",
+    "href": "posts/callout-blocks/index.html",
+    "title": "Testing callout blocks",
     "section": "",
-    "text": "library(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n# A tibble: 344 × 10\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   <fct>   <fct>              <dbl>         <dbl>             <int>       <int>\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# … with 334 more rows, and 4 more variables: sex <fct>, year <int>,\n#   long_flipper <lgl>, long_bill <lgl>"
+    "text": "See the documentation.\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nDo do this!\n\n\n\n\n\n\n\n\nTip With Caption\n\n\n\nThis is an example of a callout with a caption.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\n\nDon’t do that! minimal appearance.\n\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{untitled,\n  author = {},\n  title = {Testing Callout Blocks},\n  url = {https://ellakaye.rbind.io/posts/callout-blocks},\n  langid = {en}\n}\nFor attribution, please cite this work as:\n“Testing Callout Blocks.” n.d. https://ellakaye.rbind.io/posts/callout-blocks."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ELLA KAYE",
+    "objectID": "posts/post-template/index.html",
+    "href": "posts/post-template/index.html",
+    "title": "Post Title",
     "section": "",
-    "text": "I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "ELLA KAYE",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "href": "posts/post-with-code/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "title": "Post With Code",
-    "section": "Experimenting with distilltools::icon_link in Quarto",
-    "text": "Experimenting with distilltools::icon_link in Quarto\n\n\n\nIn a code block puts them all on separate lines.\n\n\n slides\n\n\n materials\n\n\n video\n\n\nBut using inline chunks gets them on the same line (as long as there are no line breaks between them):\n slides  materials  video\nalso, note, need display: inline-block in the css"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#using-btn-and-svg",
-    "href": "posts/post-with-code/index.html#using-btn-and-svg",
-    "title": "Post With Code",
-    "section": "Using btn and svg",
-    "text": "Using btn and svg\n\n\n\n\nmaterials\n\n\n\n\n\nmaterials 2"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#using-btn-and",
-    "href": "posts/post-with-code/index.html#using-btn-and",
-    "title": "Post With Code",
-    "section": "Using btn and ",
-    "text": "Using btn and \n\n materials"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#using-btn-and-i",
-    "href": "posts/post-with-code/index.html#using-btn-and-i",
-    "title": "Post With Code",
-    "section": "Using btn and <i>",
-    "text": "Using btn and <i>\n\n materials"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#conclusion",
-    "href": "posts/post-with-code/index.html#conclusion",
-    "title": "Post With Code",
-    "section": "Conclusion",
-    "text": "Conclusion\nOriginal strategy, <a> styled to look like button, is probably best (see this StackOverflow).\nAlso, use <i> rather than <svg> as that’s what Quarto seems to do (though note can style <svg> with CSS).\nAlso, using font-size CSS property makes both icon and text bigger with <i> tag, but not <svg>."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#with-bigger-button",
-    "href": "posts/post-with-code/index.html#with-bigger-button",
-    "title": "Post With Code",
-    "section": "With bigger button?",
-    "text": "With bigger button?\n slides"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#with-bigger-icon",
-    "href": "posts/post-with-code/index.html#with-bigger-icon",
-    "title": "Post With Code",
-    "section": "With bigger icon?",
-    "text": "With bigger icon?\n slides"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#in-a-header",
-    "href": "posts/post-with-code/index.html#in-a-header",
-    "title": "Post With Code",
-    "section": "In a header",
-    "text": "In a header\n\n materials"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#icon_link-html-with-bookstrap-icon",
-    "href": "posts/post-with-code/index.html#icon_link-html-with-bookstrap-icon",
-    "title": "Post With Code",
-    "section": "icon_link html with bookstrap icon:",
-    "text": "icon_link html with bookstrap icon:\n slides"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
-    "section": "",
-    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "talks",
-    "section": "",
-    "text": "No matching items"
+    "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Post {Title}},\n  date = {2022-08-05},\n  url = {https://ellakaye.rbind.io/posts/post-template},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Post Title.” August 5, 2022. https://ellakaye.rbind.io/posts/post-template."
   },
   {
     "objectID": "posts/syntax-highlighting/index.html",
     "href": "posts/syntax-highlighting/index.html",
     "title": "Syntax Highlighting",
     "section": "",
-    "text": "library(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )"
-  },
-  {
-    "objectID": "posts/syntax-highlighting/index.html#cards",
-    "href": "posts/syntax-highlighting/index.html#cards",
-    "title": "Welcome To My Blog",
-    "section": "Cards",
-    "text": "Cards"
+    "text": "#| label: code-demo-py\n#| eval: false\n#| message: false\n#| warning: false\n\nimport numpy as np\n\n\nToggle the code\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Syntax {Highlighting}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/syntax-highlighting},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Syntax Highlighting.” July 29, 2022. https://ellakaye.rbind.io/posts/syntax-highlighting."
   },
   {
     "objectID": "posts/icon-links/index.html",
@@ -124,6 +33,13 @@
     "title": "Experimenting with icon links",
     "section": "",
     "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme."
+  },
+  {
+    "objectID": "posts/icon-links/index.html#heres-some-code-in-h2",
+    "href": "posts/icon-links/index.html#heres-some-code-in-h2",
+    "title": "Experimenting with icon links",
+    "section": "Here’s SOME code in h2",
+    "text": "Here’s SOME code in h2\n\nHere’s SOME code in h3\n\nHere’s SOME code in h4\n\nHere’s SOME code in h5\n\nHere’s SOME code in h6\nThis is a post with executable code.\n\n\n[1] 2\n\n\nAdd bootstrap icons:\n  \nAdd fontawesome icons using the extension:\n \nCompare bi, fa ,"
   },
   {
     "objectID": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
@@ -175,38 +91,24 @@
     "text": "icon_link html with bookstrap icon:\n slides"
   },
   {
-    "objectID": "posts/highlighting-qmd/index.html",
-    "href": "posts/highlighting-qmd/index.html",
-    "title": "Syntax Highlighting in Quarto",
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "talks",
     "section": "",
-    "text": "Last year, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I’ve rewritten my website using Quarto, this post is an update on that process for this format.\n\n\nQuarto, like distill, uses a theme called arrow as its default. There are, however, some differences between the implementations for distill and Quarto. Firstly, when I applied my custom highlighting scheme, with its five-colour palette, to my Quarto site, I noticed an extra colour had slipped in."
+    "text": "No matching items"
   },
   {
-    "objectID": "posts/callout-blocks/index.html",
-    "href": "posts/callout-blocks/index.html",
-    "title": "Testing callout blocks",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ELLA<span class='icon-line'></span>KAYE",
     "section": "",
-    "text": "See the documentation.\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nDo do this!\n\n\n\n\n\n\n\n\nTip With Caption\n\n\n\nThis is an example of a callout with a caption.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\n\nDon’t do that! minimal appearance."
+    "text": "I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
   },
   {
-    "objectID": "posts/post-template/index.html",
-    "href": "posts/post-template/index.html",
-    "title": "Post Title",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
     "section": "",
-    "text": "Here’s what my post is about."
-  },
-  {
-    "objectID": "posts/post-template/index.knit.html",
-    "href": "posts/post-template/index.knit.html",
-    "title": "Post Title",
-    "section": "",
-    "text": "Here’s what my post is about."
-  },
-  {
-    "objectID": "posts/icon-links/index.html#heres-some-code-in-h2",
-    "href": "posts/icon-links/index.html#heres-some-code-in-h2",
-    "title": "Experimenting with icon links",
-    "section": "Here’s SOME code in h2",
-    "text": "Here’s SOME code in h2\n\nHere’s SOME code in h3\n\nHere’s SOME code in h4\n\nHere’s SOME code in h5\n\nHere’s SOME code in h6\nThis is a post with executable code.\n\n\n[1] 2\n\n\nAdd bootstrap icons:\n  \nAdd fontawesome icons using the extension:\n \nCompare bi, fa ,"
+    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -6,3 +6,22 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: false
+
+citation: true
+license: CC BY-SA
+
+toc: true    
+toc-title: Contents
+
+code-fold: show
+code-summary: "Toggle the code"
+code-tools: true
+
+execute:
+  echo: true
+  message: true
+  warning: true
+  
+comments:
+  giscus: 
+    repo: EllaKaye/ellakaye-quarto

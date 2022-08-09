@@ -1,7 +1,7 @@
 {
-  "hash": "c02e91a3e6fe0c083eec47e6c7e28d3e",
+  "hash": "708e1402c3a1add9d083f34bf1e7442f",
   "result": {
-    "markdown": "---\ntitle: \"Syntax Highlighting\"\nauthor: \"Ella Kaye\"\ndate: \"2022-07-29\"\ncategories: [news]\n---\n\n\nLet's test some syntax highlighting!\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n```\n:::\n",
+    "markdown": "---\ntitle: \"Syntax Highlighting\"\nauthor: \"Ella Kaye\"\ndate: \"2022-07-29\"\ncategories: [news]\npagetitle: \"Ella Kaye: Syntax Highlighting\"\n---\n\n\nLet's test some syntax highlighting!\n\n```{.python}\n#| label: code-demo-py\n#| eval: false\n#| message: false\n#| warning: false\n\nimport numpy as np\n```\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n```\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

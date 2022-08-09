@@ -17,14 +17,6 @@ twitter:
 draft: false
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  warning = TRUE,
-  message = TRUE,
-  R.options = list(width = 60)
-)
-```
 
 ```{r metathis, eval = TRUE, message=FALSE, warning=FALSE, include=FALSE}
 library(metathis)

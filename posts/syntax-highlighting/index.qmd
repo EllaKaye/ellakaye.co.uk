@@ -3,10 +3,19 @@ title: "Syntax Highlighting"
 author: "Ella Kaye"
 date: "2022-07-29"
 categories: [news]
+pagetitle: "Ella Kaye: Syntax Highlighting"
 ---
 
 Let's test some syntax highlighting!
 
+```{.python}
+#| label: code-demo-py
+#| eval: false
+#| message: false
+#| warning: false
+
+import numpy as np
+```
 
 ```{r}
 #| label: code-demo
@@ -23,14 +32,6 @@ penguins %>%
       species == "Adelie" & flipper_length_mm > 195 ~ TRUE,
       species == "Chinstrap" & flipper_length_mm > 200 ~ TRUE,
       species == "Gentoo" & flipper_length_mm > 225 ~ TRUE,
-      TRUE ~ FALSE
-    )
-  ) %>%
-  mutate(
-    long_bill = case_when(
-      species == "Adelie" & bill_length_mm > 42 ~ TRUE,
-      species == "Chinstrap" & bill_length_mm > 52 ~ TRUE,
-      species == "Gentoo" & bill_length_mm > 50 ~ TRUE,
       TRUE ~ FALSE
     )
   )

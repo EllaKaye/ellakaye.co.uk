@@ -1,10 +1,7 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
-    ]
+    "listing": "/talks.html",
+    "items": []
   },
   {
     "listing": "/posts.html",
@@ -15,9 +12,5 @@
       "/posts/highlighting-qmd/index.html",
       "/posts/syntax-highlighting/index.html"
     ]
-  },
-  {
-    "listing": "/talks.html",
-    "items": []
   }
 ]

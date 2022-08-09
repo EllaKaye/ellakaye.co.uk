@@ -92,7 +92,7 @@ $navbar-fg: $body-color;
 $code-bg: $dark;
 $code-color: $cyan;
 
-// font size tweaks
+// font size tweaks - adjust to make Fira Mono same size as Lemon Milk Light
 $code-font-size: $font-size-base  * 1.14;
 
 h1 code {
@@ -202,3 +202,13 @@ h1, h2, h3 {
   background-repeat: no-repeat;
 }
 
+.icon-line {
+  display: block;
+  background: $primary;
+  width: 100%;
+  height: 5px;
+  margin: auto;
+  display: table;
+  margin-top: -4px;
+  margin-bottom: -4px;
+}

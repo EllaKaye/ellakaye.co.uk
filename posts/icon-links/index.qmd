@@ -11,7 +11,7 @@ execute:
 Here an article: [custom syntax highlighting for {distill}: modifying the theme](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/).
 
 
-# Here's `SOME code` in h1
+<!-- # Here's `SOME code` in h1 -->
 
 ## Here's `SOME code` in h2
 

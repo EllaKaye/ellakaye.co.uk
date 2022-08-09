@@ -2,12 +2,13 @@ project:
   type: website
 
 website:
-  title: "ELLA KAYE"
+  title: "ELLA<span class='icon-line'></span>KAYE"
   site-url: "https://ellakaye.rbind.io"
-  favicon: images/favicon.png
+  repo-url: https://github.com/EllaKaye/ellakaye-quarto
+  repo-actions: issue
   navbar:
-    logo: ELLAKAYE-logo-light.png
-    title: false
+    #logo: ELLAKAYE-logo-light.png
+    #title: false
     right:
       - posts.qmd
       - talks.qmd
@@ -15,15 +16,45 @@ website:
         href: https://github.com/EllaKaye
       - icon: twitter
         href: https://twitter.com/ellamkaye
-  license: CC BY-SA
+  favicon: images/favicon.png
+  twitter-card: 
+    description: The personal website of Ella Kaye
+    image: "images/logo-white-background.png"
+    image-alt: |
+      A logo made from Ella Kaye's name - 
+      first name on top of last name in dark gray capital letters, 
+      separated by a horizontal bright pink line, on a white background"
+    image-width: 500
+    image-height: 500
+    card-style: summary # alternative summary_large_image
+    creator: "@ellamkaye"
+  open-graph: 
+    #description: The personal website of Ella Kaye
+    image: "images/logo-white-background.png"
+    image-alt: |
+      A logo made from Ella Kaye's name - 
+      first name on top of last name in dark gray capital letters, 
+      separated by a horizontal bright pink line, on a white background"
+    image-width: 500
+    image-height: 500
+    locale: en-GB
+  google-analytics: "UA-101621242-1"
+    
 
 format:
   html:
+    metadata: 
+      pagetitle: "Ella Kaye"
     theme: 
-      light: ek-theme.scss
+      light: ek-theme-light.scss
       dark: ek-theme-dark.scss
+    css: ek-styles.css
     code-block-border-left: true
-    highlight-style: atom-one
+    highlight-style: arrow
+      #light: ek-highlighting-light.theme
+      #dark: dark-test.theme
+    smooth-scroll: true
+
     
 editor: source
 
