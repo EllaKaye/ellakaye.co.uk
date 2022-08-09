@@ -5,26 +5,22 @@
 $theme: "litera" !default;
 
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Jost&display=swap);
 
 @font-face {
   font-family: 'LEMONMILKPro-Regular';
-  src: local('LEMONMILKPro-Regular'), url('/fonts/LEMONMILKPro-Regular.woff2') format('woff2'), url('/fonts/LEMONMILKPro-Regular.woff') format('woff');
+  src: local('LEMONMILKPro-Regular'), url('fonts/LEMONMILKPro-Regular.woff2') format('woff2'), url('fonts/LEMONMILKPro-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'LEMONMILKPro-Light';
-  src: local('LEMONMILKPro-Light'), url('/fonts/LEMONMILKPro-Light.woff2') format('woff2'), url('/fonts/LEMONMILKPro-Light.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'LEMONMILKPro-UltraLight';
-  src: local('LEMONMILKPro-UltraLight'), url('/fonts/LEMONMILKPro-UltraLight.woff2') format('woff2'), url('/fonts/LEMONMILKPro-UltraLight.woff') format('woff');
+  src: local('LEMONMILKPro-Light'), url('fonts/LEMONMILKPro-Light.woff2') format('woff2'), url('fonts/LEMONMILKPro-Light.woff') format('woff');
 }
 
 // fonts
-$font-family-sans-serif: "LEMONMILKPro-Light", Helvetica, sans-serif !default;
+$font-family-sans-serif: "LEMONMILKPro-Light", Jost, Helvetica, sans-serif !default;
 $font-family-monospace: "Fira Mono", monospace;
-$headings-font-family: "LEMONMILKPro-Regular", Helvetica, sans-serif !default;
+$headings-font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif !default;
 
 // litera bootswatch theme colors
 $white:    #fff !default;
