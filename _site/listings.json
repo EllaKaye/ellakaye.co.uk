@@ -7,6 +7,7 @@
     "listing": "/posts.html",
     "items": [
       "/posts/callout-blocks/index.html",
+      "/posts/awesome-icon/index.html",
       "/posts/post-template/index.html",
       "/posts/icon-links/index.html",
       "/posts/highlighting-qmd/index.html",

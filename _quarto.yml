@@ -2,13 +2,14 @@ project:
   type: website
 
 website:
-  title: "ELLA<span class='icon-line'></span>KAYE"
+  title: "ELLA KAYE"
   site-url: "https://ellakaye.rbind.io"
   repo-url: https://github.com/EllaKaye/ellakaye-quarto
   repo-actions: issue
   navbar:
     #logo: ELLAKAYE-logo-light.png
-    #title: false
+    #title: "ELLA<span class='icon-line'></span>KAYE"
+    title: "ELLA<span class='icon-line'></span>KAYE"
     right:
       - posts.qmd
       - talks.qmd
@@ -43,8 +44,8 @@ website:
 
 format:
   html:
-    metadata: 
-      pagetitle: "Ella Kaye"
+    #metadata: 
+    #  pagetitle: "Ella Kaye"
     theme: 
       light: ek-theme-light.scss
       dark: ek-theme-dark.scss

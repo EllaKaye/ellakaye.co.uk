@@ -7,6 +7,13 @@
     "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Syntax {Highlighting} in {Quarto}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/highlighting-qmd},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Syntax Highlighting in Quarto.” July 29,\n2022. https://ellakaye.rbind.io/posts/highlighting-qmd."
   },
   {
+    "objectID": "posts/awesome-icon/index.html",
+    "href": "posts/awesome-icon/index.html",
+    "title": "Awesome Icon",
+    "section": "",
+    "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Awesome {Icon}},\n  date = {2022-08-05},\n  url = {https://ellakaye.rbind.io/posts/awesome-icon},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Awesome Icon.” August 5, 2022. https://ellakaye.rbind.io/posts/awesome-icon."
+  },
+  {
     "objectID": "posts/callout-blocks/index.html",
     "href": "posts/callout-blocks/index.html",
     "title": "Testing callout blocks",
@@ -100,15 +107,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "ELLA<span class='icon-line'></span>KAYE",
+    "title": "ELLA KAYE",
     "section": "",
-    "text": "I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
+    "text": "PLEASE SEE https://ellakaye.rbind.io FOR MY CURRENT SITE.\nHello and welcome to my personal website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
   },
   {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   }
 ]
