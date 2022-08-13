@@ -35,4 +35,10 @@ penguins %>%
       TRUE ~ FALSE
     )
   )
+
+"penguin" == 5
+
+my_var <- 218
+
+c(1,5,6) |> mean()
 ```
