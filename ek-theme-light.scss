@@ -156,9 +156,6 @@ pre.sourceCode {
   font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:hover {
-  color: $primary;
-}
 
 a {
   color: $body-color;
@@ -200,3 +197,29 @@ h1, h2, h3 {
   margin-top: -4px;
   margin-bottom: -4px;
 }
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: $primary;
+}
+
+/*
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $primary;
+  width: 0%;
+  content: "";
+  height: 5px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+*/

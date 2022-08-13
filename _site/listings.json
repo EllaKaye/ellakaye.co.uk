@@ -11,7 +11,8 @@
       "/posts/post-template/index.html",
       "/posts/icon-links/index.html",
       "/posts/highlighting-qmd/index.html",
-      "/posts/syntax-highlighting/index.html"
+      "/posts/syntax-highlighting/index.html",
+      "/posts/advent-of-code-2020/index.html"
     ]
   }
 ]

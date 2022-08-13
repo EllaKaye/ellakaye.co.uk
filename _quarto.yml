@@ -51,9 +51,9 @@ format:
       dark: ek-theme-dark.scss
     css: ek-styles.css
     code-block-border-left: true
-    highlight-style: arrow
-      #light: ek-highlighting-light.theme
-      #dark: dark-test.theme
+    highlight-style: 
+      light: ek-light.theme
+      dark: ek-dark.theme
     smooth-scroll: true
 
     
