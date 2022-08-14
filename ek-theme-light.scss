@@ -151,11 +151,6 @@ pre.sourceCode {
 }
 
 
-#quarto-header {
-  text-transform: uppercase;
-  font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
-}
-
 
 a {
   color: $body-color;
@@ -170,9 +165,7 @@ a:hover {
   color: $primary;
 }
 
-h1, h2, h3 {
-  text-transform: uppercase;
-}
+
 
 /*
 .light-mode { display: block; }
@@ -223,3 +216,14 @@ h1, h2, h3 {
   width: 100%;
 }
 */
+
+// header styles
+#quarto-header {
+  text-transform: uppercase;
+  font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
