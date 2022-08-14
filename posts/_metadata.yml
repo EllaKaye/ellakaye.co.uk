@@ -22,8 +22,5 @@ execute:
   message: true
   warning: true
   
-comments:
-  giscus: 
-    repo: EllaKaye/ellakaye-quarto
-    
 include-in-header: giscus-mode-toggle.html
+include-after-body: div-giscus.html
