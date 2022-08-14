@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.rbind.io/posts/highlighting-qmd/index.html</loc>
-    <lastmod>2022-08-11T09:20:29.709Z</lastmod>
+    <lastmod>2022-08-14T09:14:32.327Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/awesome-icon/index.html</loc>
-    <lastmod>2022-08-13T13:36:59.056Z</lastmod>
+    <lastmod>2022-08-14T09:14:33.504Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/callout-blocks/index.html</loc>
-    <lastmod>2022-08-11T09:20:32.115Z</lastmod>
+    <lastmod>2022-08-14T09:14:34.568Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/post-template/index.html</loc>
-    <lastmod>2022-08-11T09:20:33.092Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/syntax-highlighting/index.html</loc>
-    <lastmod>2022-08-13T10:35:11.945Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/icon-links/index.html</loc>
-    <lastmod>2022-08-13T13:37:13.614Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-12T17:31:54.487Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-13T13:43:32.453Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-13T14:24:55.981Z</lastmod>
+    <lastmod>2022-08-14T09:14:35.569Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/advent-of-code-2020/index.html</loc>
-    <lastmod>2022-08-13T14:24:55.456Z</lastmod>
+    <lastmod>2022-08-14T09:16:09.548Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts/syntax-highlighting/index.html</loc>
+    <lastmod>2022-08-14T09:14:39.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts/icon-links/index.html</loc>
+    <lastmod>2022-08-14T09:14:40.709Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks.html</loc>
+    <lastmod>2022-08-14T09:14:40.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/index.html</loc>
+    <lastmod>2022-08-14T09:16:01.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts.html</loc>
+    <lastmod>2022-08-14T09:16:03.866Z</lastmod>
   </url>
 </urlset>

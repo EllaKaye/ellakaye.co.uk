@@ -66,7 +66,7 @@ expand.grid(expenses, expenses, expenses) %>%
 
 ## Day 2: [Password Philosophy](https://adventofcode.com/2020/day/2)
 
-[My day 2 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day2.txt)
+[My day 2 data](data/AoC_day2.txt)
 
 #### Part 1: Number of letters
 
@@ -125,7 +125,7 @@ passwords %>%
 
 ## Day 3: [Toboggan Trajectory](https://adventofcode.com/2020/day/3)
 
-[My day 3 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day3.txt)
+[My day 3 data](data/AoC_day3.txt)
 
 #### Part 1: Encountering trees
 
@@ -220,7 +220,7 @@ prod(slope_check(tree_mat, 1, 1),
 
 <p><a id='day4'></a></p>
 
-[My day 4 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day4.txt)
+[My day 4 data](data/AoC_day4.txt)
 
 #### Part 1: Complete passports
 
@@ -304,7 +304,7 @@ complete_passports %>%
 
 ## Day 5: [Binary Boarding](https://adventofcode.com/2020/day/5)
 
-[My day 5 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day5.txt)
+[My day 5 data](data/AoC_day5.txt)
 
 #### Part 1: Finding all seat IDs
 
@@ -371,7 +371,7 @@ seat_IDs %>%
 
 ## Day 6: [Custom Customs](https://adventofcode.com/2020/day/6)
 
-[My day 6 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day6.txt)
+[My day 6 data](data/AoC_day6.txt)
 
 #### Part 1: Anyone answers
 
@@ -426,7 +426,7 @@ customs_groups %>%
 
 ## Day 7: [Handy Haverstocks](https://adventofcode.com/2020/day/7)
 
-[My day 7 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day7.txt)
+[My day 7 data](data/AoC_day7.txt)
 
 #### Part 1: Number of colour bags
 
@@ -503,7 +503,7 @@ count_all_contained("shiny gold")
 
 ## Day 8: [Handheld Halting](https://adventofcode.com/2020/day/8)
 
-[My day 8 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day8.txt)
+[My day 8 data](data/AoC_day8.txt)
 
 #### Part 1: Infinite Loop
 
@@ -637,7 +637,7 @@ check_programme$accumulator
 
 ## Day 9: [Encoding Error](https://adventofcode.com/2020/day/9)
 
-[My day 9 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day9.txt)
+[My day 9 data](data/AoC_day9.txt)
 
 #### Part 1: Weak Link
 
@@ -711,7 +711,7 @@ I appreciate that there's some redundant calculation in this method. The vectors
 
 ## Day 10: [Adapter Array](https://adventofcode.com/2020/day/10)
 
-[My day 10 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day10.txt)
+[My day 10 data](data/AoC_day10.txt)
 
 #### Part 1: Adapter Distribution
 
@@ -802,7 +802,7 @@ runs_df %>%
 
 ## Day 11: [Seating System](https://adventofcode.com/2020/day/11)
 
-[My day 11 data](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day11.txt)
+[My day 11 data](data/AoC_day11.txt)
 
 #### Part 1: Changing layout
 

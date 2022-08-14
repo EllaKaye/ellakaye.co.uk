@@ -55,7 +55,6 @@ format:
       light: ek-light.theme
       dark: ek-dark.theme
     smooth-scroll: true
-
     
 editor: source
 

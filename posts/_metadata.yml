@@ -25,3 +25,5 @@ execute:
 comments:
   giscus: 
     repo: EllaKaye/ellakaye-quarto
+    
+include-in-header: giscus-toggle.html

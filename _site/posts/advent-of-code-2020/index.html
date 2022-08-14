@@ -137,6 +137,28 @@ ga('send', {
 });
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+  function changeGiscusTheme () {
+    let modeToggle = new ModeToggle();
+    const theme = modeToggle.mode === 'dark' ?  'dark' : 'light'
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+    sendMessage({
+      setConfig: {
+        theme: theme
+      }
+    });
+  }
+  
+  const modeToggle = document.getElementsByClassName("mode-toggle")[0];
+  
+  if (typeof modeToggle !== "undefined") {
+    modeToggle.addEventListener('click', changeGiscusTheme);
+}
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -360,7 +382,7 @@ ga('send', {
 </section>
 <section id="day-2-password-philosophy" class="level2">
 <h2 class="anchored" data-anchor-id="day-2-password-philosophy">Day 2: <a href="https://adventofcode.com/2020/day/2">Password Philosophy</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day2.txt">My day 2 data</a></p>
+<p><a href="data/AoC_day2.txt">My day 2 data</a></p>
 <section id="part-1-number-of-letters" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-number-of-letters">Part 1: Number of letters</h4>
 <p>We need to find how many passwords are valid according to their policy. The policies and passwords are given as follows:</p>
@@ -426,7 +448,7 @@ ga('send', {
 </section>
 <section id="day-3-toboggan-trajectory" class="level2">
 <h2 class="anchored" data-anchor-id="day-3-toboggan-trajectory">Day 3: <a href="https://adventofcode.com/2020/day/3">Toboggan Trajectory</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day3.txt">My day 3 data</a></p>
+<p><a href="data/AoC_day3.txt">My day 3 data</a></p>
 <section id="part-1-encountering-trees" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-encountering-trees">Part 1: Encountering trees</h4>
 <p>Starting at the top left corner of the map, how many trees (“#”) do we encounter, going at a trajectory of 3 right and 1 down?</p>
@@ -532,7 +554,7 @@ ga('send', {
 <p>
 <a id="day4"></a>
 </p>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day4.txt">My day 4 data</a></p>
+<p><a href="data/AoC_day4.txt">My day 4 data</a></p>
 <section id="part-1-complete-passports" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-complete-passports">Part 1: Complete passports</h4>
 <div class="cell">
@@ -632,7 +654,7 @@ ga('send', {
 </section>
 <section id="day-5-binary-boarding" class="level2">
 <h2 class="anchored" data-anchor-id="day-5-binary-boarding">Day 5: <a href="https://adventofcode.com/2020/day/5">Binary Boarding</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day5.txt">My day 5 data</a></p>
+<p><a href="data/AoC_day5.txt">My day 5 data</a></p>
 <section id="part-1-finding-all-seat-ids" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-finding-all-seat-ids">Part 1: Finding all seat IDs</h4>
 <div class="cell">
@@ -714,7 +736,7 @@ ga('send', {
 </section>
 <section id="day-6-custom-customs" class="level2">
 <h2 class="anchored" data-anchor-id="day-6-custom-customs">Day 6: <a href="https://adventofcode.com/2020/day/6">Custom Customs</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day6.txt">My day 6 data</a></p>
+<p><a href="data/AoC_day6.txt">My day 6 data</a></p>
 <section id="part-1-anyone-answers" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-anyone-answers">Part 1: Anyone answers</h4>
 <div class="cell">
@@ -781,7 +803,7 @@ ga('send', {
 </section>
 <section id="day-7-handy-haverstocks" class="level2">
 <h2 class="anchored" data-anchor-id="day-7-handy-haverstocks">Day 7: <a href="https://adventofcode.com/2020/day/7">Handy Haverstocks</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day7.txt">My day 7 data</a></p>
+<p><a href="data/AoC_day7.txt">My day 7 data</a></p>
 <section id="part-1-number-of-colour-bags" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-number-of-colour-bags">Part 1: Number of colour bags</h4>
 <div class="cell">
@@ -883,7 +905,7 @@ ga('send', {
 </section>
 <section id="day-8-handheld-halting" class="level2">
 <h2 class="anchored" data-anchor-id="day-8-handheld-halting">Day 8: <a href="https://adventofcode.com/2020/day/8">Handheld Halting</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day8.txt">My day 8 data</a></p>
+<p><a href="data/AoC_day8.txt">My day 8 data</a></p>
 <section id="part-1-infinite-loop" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-infinite-loop">Part 1: Infinite Loop</h4>
 <p>Our programme gets stuck in an infinite loop. As well as keeping track of the accumulator, we need to keep track of where we’ve visited, and stop when we visit the same instruction twice. We use a <code>data.frame()</code> rather than a <code>tibble()</code> as the former is easier to index into.</p>
@@ -1027,7 +1049,7 @@ ga('send', {
 </section>
 <section id="day-9-encoding-error" class="level2">
 <h2 class="anchored" data-anchor-id="day-9-encoding-error">Day 9: <a href="https://adventofcode.com/2020/day/9">Encoding Error</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day9.txt">My day 9 data</a></p>
+<p><a href="data/AoC_day9.txt">My day 9 data</a></p>
 <section id="part-1-weak-link" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-weak-link">Part 1: Weak Link</h4>
 <p>We have to find the first number in the list which is <em>not</em> the sum of a pair of different numbers in the preceding 25 numbers.</p>
@@ -1112,7 +1134,7 @@ ga('send', {
 </section>
 <section id="day-10-adapter-array" class="level2">
 <h2 class="anchored" data-anchor-id="day-10-adapter-array">Day 10: <a href="https://adventofcode.com/2020/day/10">Adapter Array</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day10.txt">My day 10 data</a></p>
+<p><a href="data/AoC_day10.txt">My day 10 data</a></p>
 <section id="part-1-adapter-distribution" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-adapter-distribution">Part 1: Adapter Distribution</h4>
 <p>This is simply a case of ordering the adapters, prepending 0 and appending the the max in the list plus three, then finding the differences.</p>
@@ -1238,7 +1260,7 @@ ga('send', {
 </section>
 <section id="day-11-seating-system" class="level2">
 <h2 class="anchored" data-anchor-id="day-11-seating-system">Day 11: <a href="https://adventofcode.com/2020/day/11">Seating System</a></h2>
-<p><a href="https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day11.txt">My day 11 data</a></p>
+<p><a href="data/AoC_day11.txt">My day 11 data</a></p>
 <section id="part-1-changing-layout" class="level4">
 <h4 class="anchored" data-anchor-id="part-1-changing-layout">Part 1: Changing layout</h4>
 <p>My code for Day 11 runs a little slow (about 10 seconds for Part 1 and 80 seconds for Part 2), so for the sake of being able to rebuild this page quickly as I keep updating it working through the challenges, I will demonstrate this code with the test input provided as an example.</p>
@@ -1880,7 +1902,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-68"><a href="#cb81-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-69"><a href="#cb81-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 2: [Password Philosophy](https://adventofcode.com/2020/day/2)</span></span>
 <span id="cb81-70"><a href="#cb81-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-71"><a href="#cb81-71" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 2 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day2.txt)</span></span>
+<span id="cb81-71"><a href="#cb81-71" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 2 data</span><span class="co">](data/AoC_day2.txt)</span></span>
 <span id="cb81-72"><a href="#cb81-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-73"><a href="#cb81-73" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Number of letters</span></span>
 <span id="cb81-74"><a href="#cb81-74" aria-hidden="true" tabindex="-1"></a></span>
@@ -1939,7 +1961,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-133"><a href="#cb81-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-134"><a href="#cb81-134" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 3: [Toboggan Trajectory](https://adventofcode.com/2020/day/3)</span></span>
 <span id="cb81-135"><a href="#cb81-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-136"><a href="#cb81-136" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 3 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day3.txt)</span></span>
+<span id="cb81-136"><a href="#cb81-136" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 3 data</span><span class="co">](data/AoC_day3.txt)</span></span>
 <span id="cb81-137"><a href="#cb81-137" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-138"><a href="#cb81-138" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Encountering trees</span></span>
 <span id="cb81-139"><a href="#cb81-139" aria-hidden="true" tabindex="-1"></a></span>
@@ -2034,7 +2056,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-228"><a href="#cb81-228" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-229"><a href="#cb81-229" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;&lt;a</span> <span class="er">id</span><span class="ot">=</span><span class="st">'day4'</span><span class="kw">&gt;&lt;/a&gt;&lt;/p&gt;</span></span>
 <span id="cb81-230"><a href="#cb81-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-231"><a href="#cb81-231" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 4 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day4.txt)</span></span>
+<span id="cb81-231"><a href="#cb81-231" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 4 data</span><span class="co">](data/AoC_day4.txt)</span></span>
 <span id="cb81-232"><a href="#cb81-232" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-233"><a href="#cb81-233" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Complete passports</span></span>
 <span id="cb81-234"><a href="#cb81-234" aria-hidden="true" tabindex="-1"></a></span>
@@ -2118,7 +2140,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-318"><a href="#cb81-318" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-319"><a href="#cb81-319" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 5: [Binary Boarding](https://adventofcode.com/2020/day/5)</span></span>
 <span id="cb81-320"><a href="#cb81-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-321"><a href="#cb81-321" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 5 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day5.txt)</span></span>
+<span id="cb81-321"><a href="#cb81-321" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 5 data</span><span class="co">](data/AoC_day5.txt)</span></span>
 <span id="cb81-322"><a href="#cb81-322" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-323"><a href="#cb81-323" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Finding all seat IDs</span></span>
 <span id="cb81-324"><a href="#cb81-324" aria-hidden="true" tabindex="-1"></a></span>
@@ -2185,7 +2207,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-389"><a href="#cb81-389" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-390"><a href="#cb81-390" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 6: [Custom Customs](https://adventofcode.com/2020/day/6)</span></span>
 <span id="cb81-391"><a href="#cb81-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-392"><a href="#cb81-392" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 6 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day6.txt)</span></span>
+<span id="cb81-392"><a href="#cb81-392" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 6 data</span><span class="co">](data/AoC_day6.txt)</span></span>
 <span id="cb81-393"><a href="#cb81-393" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-394"><a href="#cb81-394" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Anyone answers</span></span>
 <span id="cb81-395"><a href="#cb81-395" aria-hidden="true" tabindex="-1"></a></span>
@@ -2240,7 +2262,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-444"><a href="#cb81-444" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-445"><a href="#cb81-445" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 7: [Handy Haverstocks](https://adventofcode.com/2020/day/7)</span></span>
 <span id="cb81-446"><a href="#cb81-446" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-447"><a href="#cb81-447" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 7 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day7.txt)</span></span>
+<span id="cb81-447"><a href="#cb81-447" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 7 data</span><span class="co">](data/AoC_day7.txt)</span></span>
 <span id="cb81-448"><a href="#cb81-448" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-449"><a href="#cb81-449" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Number of colour bags</span></span>
 <span id="cb81-450"><a href="#cb81-450" aria-hidden="true" tabindex="-1"></a></span>
@@ -2317,7 +2339,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-527"><a href="#cb81-527" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-528"><a href="#cb81-528" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 8: [Handheld Halting](https://adventofcode.com/2020/day/8)</span></span>
 <span id="cb81-529"><a href="#cb81-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-530"><a href="#cb81-530" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 8 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day8.txt)</span></span>
+<span id="cb81-530"><a href="#cb81-530" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 8 data</span><span class="co">](data/AoC_day8.txt)</span></span>
 <span id="cb81-531"><a href="#cb81-531" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-532"><a href="#cb81-532" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Infinite Loop</span></span>
 <span id="cb81-533"><a href="#cb81-533" aria-hidden="true" tabindex="-1"></a></span>
@@ -2451,7 +2473,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-667"><a href="#cb81-667" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-668"><a href="#cb81-668" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 9: [Encoding Error](https://adventofcode.com/2020/day/9)</span></span>
 <span id="cb81-669"><a href="#cb81-669" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-670"><a href="#cb81-670" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 9 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day9.txt)</span></span>
+<span id="cb81-670"><a href="#cb81-670" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 9 data</span><span class="co">](data/AoC_day9.txt)</span></span>
 <span id="cb81-671"><a href="#cb81-671" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-672"><a href="#cb81-672" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Weak Link</span></span>
 <span id="cb81-673"><a href="#cb81-673" aria-hidden="true" tabindex="-1"></a></span>
@@ -2525,7 +2547,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-751"><a href="#cb81-751" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-752"><a href="#cb81-752" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 10: [Adapter Array](https://adventofcode.com/2020/day/10)</span></span>
 <span id="cb81-753"><a href="#cb81-753" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-754"><a href="#cb81-754" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 10 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day10.txt)</span></span>
+<span id="cb81-754"><a href="#cb81-754" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 10 data</span><span class="co">](data/AoC_day10.txt)</span></span>
 <span id="cb81-755"><a href="#cb81-755" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-756"><a href="#cb81-756" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Adapter Distribution</span></span>
 <span id="cb81-757"><a href="#cb81-757" aria-hidden="true" tabindex="-1"></a></span>
@@ -2616,7 +2638,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb81-850"><a href="#cb81-850" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-851"><a href="#cb81-851" aria-hidden="true" tabindex="-1"></a><span class="fu">## Day 11: [Seating System](https://adventofcode.com/2020/day/11)</span></span>
 <span id="cb81-852"><a href="#cb81-852" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-853"><a href="#cb81-853" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 11 data</span><span class="co">](https://ellakaye.rbind.io/post/advent-of-code-2020/data/AoC_day11.txt)</span></span>
+<span id="cb81-853"><a href="#cb81-853" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">My day 11 data</span><span class="co">](data/AoC_day11.txt)</span></span>
 <span id="cb81-854"><a href="#cb81-854" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-855"><a href="#cb81-855" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Part 1: Changing layout</span></span>
 <span id="cb81-856"><a href="#cb81-856" aria-hidden="true" tabindex="-1"></a></span>

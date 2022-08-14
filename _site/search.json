@@ -28,97 +28,6 @@
     "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Post {Title}},\n  date = {2022-08-05},\n  url = {https://ellakaye.rbind.io/posts/post-template},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Post Title.” August 5, 2022. https://ellakaye.rbind.io/posts/post-template."
   },
   {
-    "objectID": "posts/syntax-highlighting/index.html",
-    "href": "posts/syntax-highlighting/index.html",
-    "title": "Syntax Highlighting",
-    "section": "",
-    "text": "#| label: code-demo-py\n#| eval: false\n#| message: false\n#| warning: false\n\nimport numpy as np\n\n\nToggle the code\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\"penguin\" == 5\n\nmy_var <- 218\n\nc(1,5,6) |> mean()\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Syntax {Highlighting}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/syntax-highlighting},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Syntax Highlighting.” July 29, 2022. https://ellakaye.rbind.io/posts/syntax-highlighting."
-  },
-  {
-    "objectID": "posts/icon-links/index.html",
-    "href": "posts/icon-links/index.html",
-    "title": "Experimenting with icon links",
-    "section": "",
-    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme."
-  },
-  {
-    "objectID": "posts/icon-links/index.html#heres-some-code-in-h2",
-    "href": "posts/icon-links/index.html#heres-some-code-in-h2",
-    "title": "Experimenting with icon links",
-    "section": "Here’s SOME code in h2",
-    "text": "Here’s SOME code in h2\n\nHere’s SOME code in h3\n\nHere’s SOME code in h4\n\nHere’s SOME code in h5\n\nHere’s SOME code in h6\nThis is a post with executable code.\n\n\n[1] 2\n\n\nAdd bootstrap icons:\n  \nAdd fontawesome icons using the extension:\n \nCompare bi, fa ,"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "href": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "title": "Experimenting with icon links",
-    "section": "Experimenting with distilltools::icon_link in Quarto",
-    "text": "Experimenting with distilltools::icon_link in Quarto\n\n\n\nIn a code block puts them all on separate lines.\n\n\n slides\n\n\n materials\n\n\n video\n\n\nBut using inline chunks gets them on the same line (as long as there are no line breaks between them):\n slides  materials  video\nalso, note, need display: inline-block in the css"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#using-btn-and-svg",
-    "href": "posts/icon-links/index.html#using-btn-and-svg",
-    "title": "Experimenting with icon links",
-    "section": "Using btn and svg",
-    "text": "Using btn and svg\n\n\n\n\nmaterials\n\n\n\n\n\nmaterials 2"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#using-btn-and-i",
-    "href": "posts/icon-links/index.html#using-btn-and-i",
-    "title": "Experimenting with icon links",
-    "section": "Using btn and <i>",
-    "text": "Using btn and <i>\n\n materials"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#conclusion",
-    "href": "posts/icon-links/index.html#conclusion",
-    "title": "Experimenting with icon links",
-    "section": "Conclusion",
-    "text": "Conclusion\nOriginal strategy, <a> styled to look like button, is probably best (see this StackOverflow).\nAlso, use <i> rather than <svg> as that’s what Quarto seems to do (though note can style <svg> with CSS).\nAlso, using font-size CSS property makes both icon and text bigger with <i> tag, but not <svg>."
-  },
-  {
-    "objectID": "posts/icon-links/index.html#with-bigger-icon",
-    "href": "posts/icon-links/index.html#with-bigger-icon",
-    "title": "Experimenting with icon links",
-    "section": "With bigger icon?",
-    "text": "With bigger icon?\n slides"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#in-a-header",
-    "href": "posts/icon-links/index.html#in-a-header",
-    "title": "Experimenting with icon links",
-    "section": "In a header",
-    "text": "In a header\n\n materials"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
-    "href": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
-    "title": "Experimenting with icon links",
-    "section": "icon_link html with bookstrap icon:",
-    "text": "icon_link html with bookstrap icon:\n slides"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "talks",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ELLA KAYE",
-    "section": "",
-    "text": "PLEASE SEE https://ellakaye.rbind.io FOR MY CURRENT SITE.\nHello and welcome to my personal website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
-    "section": "",
-    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/advent-of-code-2020/index.html",
     "href": "posts/advent-of-code-2020/index.html",
     "title": "Advent of Code 2020",
@@ -208,5 +117,96 @@
     "title": "Advent of Code 2020",
     "section": "Next",
     "text": "Next\nI was late to the game, and that was as far as I managed to get in December 2020. I’m looking forward to taking on the challenge again in 2021!"
+  },
+  {
+    "objectID": "posts/syntax-highlighting/index.html",
+    "href": "posts/syntax-highlighting/index.html",
+    "title": "Syntax Highlighting",
+    "section": "",
+    "text": "#| label: code-demo-py\n#| eval: false\n#| message: false\n#| warning: false\n\nimport numpy as np\n\n\nToggle the code\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\"penguin\" == 5\n\nmy_var <- 218\n\nc(1,5,6) |> mean()\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Syntax {Highlighting}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/syntax-highlighting},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Syntax Highlighting.” July 29, 2022. https://ellakaye.rbind.io/posts/syntax-highlighting."
+  },
+  {
+    "objectID": "posts/icon-links/index.html",
+    "href": "posts/icon-links/index.html",
+    "title": "Experimenting with icon links",
+    "section": "",
+    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme."
+  },
+  {
+    "objectID": "posts/icon-links/index.html#heres-some-code-in-h2",
+    "href": "posts/icon-links/index.html#heres-some-code-in-h2",
+    "title": "Experimenting with icon links",
+    "section": "Here’s SOME code in h2",
+    "text": "Here’s SOME code in h2\n\nHere’s SOME code in h3\n\nHere’s SOME code in h4\n\nHere’s SOME code in h5\n\nHere’s SOME code in h6\nThis is a post with executable code.\n\n\n[1] 2\n\n\nAdd bootstrap icons:\n  \nAdd fontawesome icons using the extension:\n \nCompare bi, fa ,"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
+    "href": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
+    "title": "Experimenting with icon links",
+    "section": "Experimenting with distilltools::icon_link in Quarto",
+    "text": "Experimenting with distilltools::icon_link in Quarto\n\n\n\nIn a code block puts them all on separate lines.\n\n\n slides\n\n\n materials\n\n\n video\n\n\nBut using inline chunks gets them on the same line (as long as there are no line breaks between them):\n slides  materials  video\nalso, note, need display: inline-block in the css"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#using-btn-and-svg",
+    "href": "posts/icon-links/index.html#using-btn-and-svg",
+    "title": "Experimenting with icon links",
+    "section": "Using btn and svg",
+    "text": "Using btn and svg\n\n\n\n\nmaterials\n\n\n\n\n\nmaterials 2"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#using-btn-and-i",
+    "href": "posts/icon-links/index.html#using-btn-and-i",
+    "title": "Experimenting with icon links",
+    "section": "Using btn and <i>",
+    "text": "Using btn and <i>\n\n materials"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#conclusion",
+    "href": "posts/icon-links/index.html#conclusion",
+    "title": "Experimenting with icon links",
+    "section": "Conclusion",
+    "text": "Conclusion\nOriginal strategy, <a> styled to look like button, is probably best (see this StackOverflow).\nAlso, use <i> rather than <svg> as that’s what Quarto seems to do (though note can style <svg> with CSS).\nAlso, using font-size CSS property makes both icon and text bigger with <i> tag, but not <svg>."
+  },
+  {
+    "objectID": "posts/icon-links/index.html#with-bigger-icon",
+    "href": "posts/icon-links/index.html#with-bigger-icon",
+    "title": "Experimenting with icon links",
+    "section": "With bigger icon?",
+    "text": "With bigger icon?\n slides"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#in-a-header",
+    "href": "posts/icon-links/index.html#in-a-header",
+    "title": "Experimenting with icon links",
+    "section": "In a header",
+    "text": "In a header\n\n materials"
+  },
+  {
+    "objectID": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
+    "href": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
+    "title": "Experimenting with icon links",
+    "section": "icon_link html with bookstrap icon:",
+    "text": "icon_link html with bookstrap icon:\n slides"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "talks",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ELLA KAYE",
+    "section": "",
+    "text": "PLEASE SEE https://ellakaye.rbind.io FOR MY CURRENT SITE.\nHello and welcome to my personal website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
+    "section": "",
+    "text": "TAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   }
 ]
