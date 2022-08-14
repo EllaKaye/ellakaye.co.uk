@@ -135,9 +135,14 @@ ga('send', {
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script>
+  
+  function getGiscusTheme() {
+  const quartoTheme = localStorage.getItem("quarto-color-scheme");
+  const giscusTheme = quartoTheme === "alternate" ? "dark" : "light";
+  return giscusTheme;
+}
 
-function changeGiscusTheme() {
-  const theme = document.body.classList.contains('quarto-dark') ? 'dark' : 'light';
+function setGiscusTheme() {
   function sendMessage(message) {
     const iframe = document.querySelector('iframe.giscus-frame');
     if (!iframe) return;
@@ -145,18 +150,41 @@ function changeGiscusTheme() {
   }
   sendMessage({
     setConfig: {
-      theme: theme,
+      theme: getGiscusTheme(),
     },
   });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  const giscusAttributes = {
+    "src": "https://giscus.app/client.js",
+    "data-repo": "EllaKaye/ellakaye-quarto",
+    "data-repo-id": "R_kgDOHwJk_g",
+    "data-category": "General",
+    "data-category-id": "DIC_kwDOHwJk_s4CQr7D",
+    "data-mapping": "pathname",
+    "data-strict": "0",
+    "data-reactions-enabled": "1",
+    "data-emit-metadata": "0",
+    "data-input-position": "top",
+    "data-theme": getGiscusTheme(),
+    "data-lang": "en",
+    "crossorigin": "anonymous",
+    "async": "",
+  };
+
+  // Dynamically create script tag
+  const giscusScript = document.createElement("script");
+  Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+  document.body.appendChild(giscusScript);
+
+  // Update giscus theme when theme switcher is clicked
   const toggle = document.querySelector('.quarto-color-scheme-toggle');
   if (toggle) {
-    toggle.addEventListener('click', changeGiscusTheme);
+    toggle.addEventListener('click', setGiscusTheme);
   }
 });
-
+  
 </script>
 
 
@@ -348,6 +376,7 @@ Expand To Learn About Collapse
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-untitled" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
 <span>“Testing Callout Blocks.”</span> n.d. <a href="https://ellakaye.rbind.io/posts/callout-blocks">https://ellakaye.rbind.io/posts/callout-blocks</a>.
 </div></div></section></div></main> <!-- /main -->
+<div class="giscus">
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -599,8 +628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="EllaKaye/ellakaye-quarto" data-repo-id="R_kgDOHwJk_g" data-category="General" data-category-id="DIC_kwDOHwJk_s4CQr7D" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+</div> <!-- /content --><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Testing callout blocks"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -642,9 +670,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Don't do that! minimal appearance.</span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
-</div> <!-- /content -->
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</div><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

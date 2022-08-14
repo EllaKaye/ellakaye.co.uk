@@ -22,5 +22,5 @@ execute:
   message: true
   warning: true
   
-include-in-header: giscus-mode-toggle.html
+include-in-header: giscus.html
 include-after-body: div-giscus.html
