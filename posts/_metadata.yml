@@ -7,6 +7,10 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: true
 
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
+
 citation: true
 license: CC BY-SA
 
@@ -22,5 +26,5 @@ execute:
   message: true
   warning: true
   
-include-in-header: giscus.html
-include-after-body: div-giscus.html
+include-in-header: _includes/giscus.html
+include-after-body: _includes/div-giscus.html

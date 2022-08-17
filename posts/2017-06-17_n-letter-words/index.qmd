@@ -1,0 +1,74 @@
+---
+title: "n_letter_words and a personal (publicly available) package"
+description: |
+  How I created a handy function and a personal package
+date: 2017-06-17
+site-url: https://ellakaye.rbind.io/
+image: EMK-hex.png
+image-alt: |
+  A hexagon with a bright pink outline. Inside it, the letters E, M and K in the 
+  same bright pink, on a white background
+categories:
+  - R
+  - package development
+#twitter-card: 
+# uncomment lines below for different title and description to post
+#  title: |
+#  description: |
+# uncomment for different image to post
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: summary_large_image 
+draft: false
+---
+
+There's a little R function that I wrote and packaged up to generate a vector or data frame of words of a given length. I find it useful in a wide variety of contexts and thought other might too. To kick off my new blog, here's a post about it.
+
+The function, `n_letter_words`, came about because I wanted to be able to generate row and column names for a large matrix - didn't matter what they were, as long as they were unique. Since I was in the habit of using the built-in `LETTERS` vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was [stackoverflow](https://stackoverflow.com/questions/11388359/unique-combination-of-all-elements-from-two-or-more-vectors) to the rescue. There, I learnt about `expand.grid` and could then use some tidyverse tools to get the vector I was after:
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+out <- expand.grid(LETTERS, LETTERS) %>%
+  as_tibble() %>%
+  unite(word, 1:2, sep = "") %>%
+  pull()
+c(head(out), tail(out))
+```
+
+Sorted! At least I thought so, until, a couple of months later, when I wanted to generate names for a 1000\*1000 matrix, and realised both that I'd forgotten the `expand.grid` trick, and once I'd re-found the stackoverflow post, that it didn't give me enough words. That was enough to make it worth writing a function, taking `n` as an argument, that gives all 'words' of length $n$. 
+
+Writing functions always makes me think of what other arguments might be useful. What if we want something between the 676 two-letter words and 17,576 three-letter words (or the 456,976 four-letter words, etc)? Hence the argument `num_letters`, which can be set between 1 and 26, and results in a total of `num_letters`$^n$ words. By default, the function returns a `tibble`, but setting `as_vector = TRUE` does what you'd expect. And I threw in a `case` argument too.
+
+Now that I had my function, what to do with it? I remembered articles I'd read about the usefulness of [making](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) and [sharing]((https://hilaryparker.com/2013/04/03/personal-r-packages/)) a personal package. Now seemed like the time to do that myself. 
+
+So, [here](https://github.com/EllaKaye/EMK) is my personal package, `EMK`. If you think that `n_letter_words` might be of use to you, then feel free to install!
+
+```{r message=FALSE, eval = FALSE}
+devtools::install_github("EllaKaye/EMK")
+```
+
+Some examples of `n_letter_words`:
+
+```{r warning = FALSE, message = FALSE}
+library(EMK)
+
+n_letter_words(2)
+
+some_three_letter_words <- n_letter_words(
+  n = 3, 
+  num_letters = 10, 
+  case = "lower", 
+  as_vector = TRUE
+)
+
+c(head(some_three_letter_words), tail(some_three_letter_words))
+
+length(some_three_letter_words)
+```
+
+For now, my personal package has only this one function, but watch this space! No doubt I'll be adding more that I find useful. Perhaps, you'll find them useful too.
+
+Incidentally, none of the above would have happened if I'd just thought, for my test matrix `A`, to set `dimnames(A) <- list(1:nrow(A), 1:ncol(A))`!

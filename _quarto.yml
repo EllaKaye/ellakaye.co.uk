@@ -6,13 +6,16 @@ website:
   site-url: "https://ellakaye.rbind.io"
   repo-url: https://github.com/EllaKaye/ellakaye-quarto
   repo-actions: issue
+#  image:
+#  image-alt:
   navbar:
     #logo: ELLAKAYE-logo-light.png
-    #title: "ELLA<span class='icon-line'></span>KAYE"
     title: "ELLA<span class='icon-line'></span>KAYE"
     right:
       - posts.qmd
       - talks.qmd
+      - text: CV
+        file: CV.pdf
       - icon: github
         href: https://github.com/EllaKaye
       - icon: twitter
@@ -29,6 +32,7 @@ website:
     image-height: 500
     card-style: summary # alternative summary_large_image
     creator: "@ellamkaye"
+    site: "@ellamkaye"
   open-graph: 
     #description: The personal website of Ella Kaye
     image: "images/logo-white-background.png"

@@ -13,3 +13,11 @@
   }
 }
 
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  margin-bottom: 1rem;
+}
+
+#title-block-header.quarto-title-block.default .description > p:last-of-type, #title-block-header.quarto-title-block.default .abstract > p:last-of-type {
+  margin-bottom: 1rem;
+}
+

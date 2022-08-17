@@ -23,6 +23,7 @@ $font-family-monospace: "Fira Mono", monospace;
 $headings-font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif !default;
 
 // litera bootswatch theme colors
+/*
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -34,6 +35,21 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
+*/
+
+// warmer grays (hue 240)
+$white:    #fff !default;
+$gray-100: #F8F8FA !default;
+$gray-200: #E9E9EF !default;
+$gray-300: #DCDCE6 !default;
+$gray-400: #CECEDA !default;
+$gray-500: #ADADBD !default;
+$gray-600: #868696 !default;
+$gray-700: #494957 !default;
+$gray-800: #343440 !default;
+$gray-900: #212129 !default;
+$black:    #000 !default;
+
 
 /*
 $blue:    #4582ec !default;
@@ -58,6 +74,7 @@ $indigo: #0000D4;
 $purple: #6A00D4;
 $orange: #D46A00;
 $yellow: #D4D400;
+$darker-green: #008542;
 
 $primary:       $pink !default;
 $secondary:     $gray-500 !default;
@@ -117,7 +134,7 @@ h6 code {
 
 // callouts
 $callout-color-note: $blue;
-$callout-color-tip: $green;
+$callout-color-tip: $darker-green;
 $callout-color-caution: $purple;
 $callout-color-warning: $orange;
 $callout-color-important: $red;
