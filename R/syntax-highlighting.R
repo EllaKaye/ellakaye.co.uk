@@ -15,11 +15,12 @@ theme_light <- gsub("#00769E", "#5B00B6", theme_light) # blue -> purple
 theme_light <- gsub("#657422", "#5B00B6", theme_light) # light-green -> purple (attributes)
 theme_light <- gsub("#20794D", "#008542", theme_light) # green -> green
 theme_light <- gsub("#4758AB", "#005BB6", theme_light) # purple -> blue
-theme_light <- gsub("#5E5E5E", "#495057", theme_light) # mid-gray -> gray-700
-theme_light <- gsub("#f1f3f5", "#E9ECEF", theme_light) # light-gray -> gray-200 # background colour - doesn't make a difference
-theme_light <- gsub("#111111", "#212529", theme_light) # dark-gray -> gray-900
-theme_light <- gsub("#003B4F", "#212529", theme_light) # dark-blue -> gray-900
-theme_light <- gsub("#aaaaaa", "#ADB5BD", theme_light) # mid-gray -> dark-500 
+theme_light <- gsub("#5E5E5E", "#494957", theme_light) # mid-gray -> gray-700
+theme_light <- gsub("#f1f3f5", "#E9E9EF", theme_light) # light-gray -> gray-200 # background colour - doesn't make a difference
+theme_light <- gsub("#111111", "#212129", theme_light) # dark-gray -> gray-900
+theme_light <- gsub("#003B4F", "#212129", theme_light) # dark-blue -> gray-900
+theme_light <- gsub("#aaaaaa", "#ADADBD", theme_light) # mid-gray -> dark-500 
+# other set manually to #494957 (gray-700) in template-light
 
 
 writeLines(theme_light, "ek-light.theme")
@@ -38,12 +39,12 @@ theme_dark  <- gsub("#00769E", "#B062FF", theme_dark ) # blue -> purple
 theme_dark  <- gsub("#657422", "#B062FF", theme_dark ) # light-green -> purple (attributes)
 theme_dark  <- gsub("#20794D", "#00E673", theme_dark ) # green -> green
 theme_dark  <- gsub("#4758AB", "#2C95FF", theme_dark ) # purple -> blue
-theme_dark  <- gsub("#5E5E5E", "#CED4DA", theme_dark ) # mid-gray -> gray-700
-theme_dark  <- gsub("#f1f3f5", "#343A40", theme_dark ) # light-gray -> gray-800 # background colour - doesn't make a difference
-theme_dark  <- gsub("#111111", "#F8F9FA", theme_dark ) # dark-gray -> gray-100
-theme_dark  <- gsub("#003B4F", "#F8F9FA", theme_dark ) # dark-blue -> gray-100
-theme_dark  <- gsub("#aaaaaa", "#ADB5BD", theme_dark ) # mid-gray -> dark-500 
-theme_dark  <- gsub("#343A40", "#CED4DA", theme_dark ) # other (assignment)
+theme_dark  <- gsub("#5E5E5E", "#DCDCE6", theme_dark ) # mid-gray -> gray-300
+theme_dark  <- gsub("#f1f3f5", "#343440", theme_dark ) # light-gray -> gray-800 # background colour - doesn't make a difference
+theme_dark  <- gsub("#111111", "#F8F8FA", theme_dark ) # dark-gray -> gray-100
+theme_dark  <- gsub("#003B4F", "#F8F8FA", theme_dark ) # dark-blue -> gray-100
+theme_dark  <- gsub("#aaaaaa", "#ADADBD", theme_dark ) # mid-gray -> dark-500 
+theme_dark  <- gsub("#494957", "#DCDCE6", theme_dark ) # gray-300 other (assignment)
 
 
 writeLines(theme_dark, "ek-dark.theme")

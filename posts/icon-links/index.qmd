@@ -4,6 +4,8 @@ author: "Ella Kaye"
 date: "2022-08-01"
 categories: [news, code, analysis]
 image: "image.jpg"
+image-alt: |
+  The image is missing
 execute: 
   echo: false
 ---
@@ -116,3 +118,7 @@ Also, using `font-size` CSS property makes both icon and text bigger with `<i>` 
 ## `icon_link` html with bookstrap icon:
 
 <a href="https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1" class="icon-link" target="_blank" rel="noopener"><i class="bi bi-github"></i> slides</a>
+
+## Iconify
+
+{{< iconify exploding-head >}}

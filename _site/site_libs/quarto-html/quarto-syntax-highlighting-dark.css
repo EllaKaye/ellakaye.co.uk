@@ -1,35 +1,35 @@
 /* quarto syntax highlight colors */
 :root {
-  --quarto-hl-ot-color: #CED4DA;
+  --quarto-hl-ot-color: #DCDCE6;
   --quarto-hl-at-color: #B062FF;
   --quarto-hl-ss-color: #00E673;
-  --quarto-hl-an-color: #CED4DA;
+  --quarto-hl-an-color: #DCDCE6;
   --quarto-hl-fu-color: #2C95FF;
   --quarto-hl-st-color: #00E673;
-  --quarto-hl-cf-color: #F8F9FA;
-  --quarto-hl-op-color: #CED4DA;
+  --quarto-hl-cf-color: #F8F8FA;
+  --quarto-hl-op-color: #DCDCE6;
   --quarto-hl-er-color: #FF2B95;
   --quarto-hl-bn-color: #FF2B95;
   --quarto-hl-al-color: #FF2B95;
-  --quarto-hl-va-color: #F8F9FA;
+  --quarto-hl-va-color: #F8F8FA;
   --quarto-hl-bu-color: inherit;
   --quarto-hl-ex-color: inherit;
   --quarto-hl-pp-color: #FF2B95;
-  --quarto-hl-in-color: #CED4DA;
+  --quarto-hl-in-color: #DCDCE6;
   --quarto-hl-vs-color: #00E673;
-  --quarto-hl-wa-color: #CED4DA;
-  --quarto-hl-do-color: #CED4DA;
+  --quarto-hl-wa-color: #DCDCE6;
+  --quarto-hl-do-color: #DCDCE6;
   --quarto-hl-im-color: #B062FF;
   --quarto-hl-ch-color: #00E673;
   --quarto-hl-dt-color: #FF2B95;
   --quarto-hl-fl-color: #FF2B95;
-  --quarto-hl-co-color: #CED4DA;
-  --quarto-hl-cv-color: #CED4DA;
+  --quarto-hl-co-color: #DCDCE6;
+  --quarto-hl-cv-color: #DCDCE6;
   --quarto-hl-cn-color: #FF962C;
-  --quarto-hl-sc-color: #CED4DA;
+  --quarto-hl-sc-color: #DCDCE6;
   --quarto-hl-dv-color: #FF2B95;
   --quarto-hl-re-color: #2C95FF;
-  --quarto-hl-kw-color: #F8F9FA;
+  --quarto-hl-kw-color: #F8F8FA;
 }
 
 /* other quarto variables */
@@ -38,24 +38,24 @@
 }
 
 pre > code.sourceCode > span {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 code span {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 code.sourceCode > span {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 div.sourceCode,
 div.sourceCode pre.sourceCode {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 code span.ot {
-  color: #CED4DA;
+  color: #DCDCE6;
 }
 
 code span.at {
@@ -67,7 +67,7 @@ code span.ss {
 }
 
 code span.an {
-  color: #CED4DA;
+  color: #DCDCE6;
 }
 
 code span.fu {
@@ -79,11 +79,11 @@ code span.st {
 }
 
 code span.cf {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 code span.op {
-  color: #CED4DA;
+  color: #DCDCE6;
 }
 
 code span.er {
@@ -99,7 +99,7 @@ code span.al {
 }
 
 code span.va {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 code span.pp {
@@ -107,7 +107,7 @@ code span.pp {
 }
 
 code span.in {
-  color: #CED4DA;
+  color: #DCDCE6;
 }
 
 code span.vs {
@@ -115,12 +115,12 @@ code span.vs {
 }
 
 code span.wa {
-  color: #CED4DA;
+  color: #DCDCE6;
   font-style: italic;
 }
 
 code span.do {
-  color: #CED4DA;
+  color: #DCDCE6;
   font-style: italic;
 }
 
@@ -141,11 +141,11 @@ code span.fl {
 }
 
 code span.co {
-  color: #CED4DA;
+  color: #DCDCE6;
 }
 
 code span.cv {
-  color: #CED4DA;
+  color: #DCDCE6;
   font-style: italic;
 }
 
@@ -154,7 +154,7 @@ code span.cn {
 }
 
 code span.sc {
-  color: #CED4DA;
+  color: #DCDCE6;
 }
 
 code span.dv {
@@ -166,7 +166,7 @@ code span.re {
 }
 
 code span.kw {
-  color: #F8F9FA;
+  color: #F8F8FA;
 }
 
 .prevent-inlining {
