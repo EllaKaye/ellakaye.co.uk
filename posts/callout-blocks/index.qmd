@@ -1,6 +1,10 @@
 ---
 title: "Testing callout blocks"
+description: Also include icon-link
+include-in-header: ../_includes/fontawesome-local.html
 ---
+
+<a href="https://ellakaye.github.io/distilltools/" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
 
 Here are my tests of callout blocks.
 

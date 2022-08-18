@@ -28,6 +28,8 @@ twitter-card:
 draft: false
 execute: 
   echo: false
+include-in-header: ../_includes/fontawesome-local.html
+  
 ---
 
 ```{css}
@@ -94,8 +96,6 @@ library(distilltools)
 
 - John Helveston
 
-<!-- {{< fa brands github >}} -->
-
 <a href="https://www.jhelvy.com" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
 <a href="https://github.com/jhelvy/jhelvy.com" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
 
@@ -104,21 +104,15 @@ I particularly like his `icon_link` buttons (as demonstrated just above)^[Since 
 
 - Ijeamaka Anyene
 
-```{r}
-#| eval: false
-icon_link("globe", "site", "https://ijeamaka-anyene.netlify.app/", style = "regular")
-icon_link("github", "source", "https://github.com/Ijeamakaanyene/ijeamaka-anyene")
-```
+<a href="https://ijeamaka-anyene.netlify.app/" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
+<a href="https://github.com/Ijeamakaanyene/ijeamaka-anyene" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
 
 Ijeamaka has a really cool projects page, where she's created a card for each project, which I've implemented on my site.
 
 - Tom Mock
 
-```{r}
-#| eval: false
-icon_link("globe", "site", "https://themockup.blog", style = "regular")
-icon_link("github", "source", "https://github.com/jthomasmock/radix_themockup")
-```
+<a href="https://themockup.blog" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
+<a href="https://github.com/jthomasmock/radix_themockup" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
 
 Come for the minimalist, stylish design, stay for the fantastic blog content, not just on {distill}, but also on {gt}, R Markdown, #TidyTuesday and much more besides.
 
@@ -142,12 +136,8 @@ There are a number of folk who tweet about {distill} (alongside other #rstats co
 
 Inspiried by the above-mentioned posts from John Helveston and Eric Ekholm, I've started working on a package, {distilltools}, a collection of tools to support the creation and styling of content on websites created using {distill}. 
 
-```{r}
-#| eval: false
-icon_link("globe", "site", "https://ellakaye.github.io/distilltools/", style = "regular")
-icon_link("github", "source", "https://github.com/EllaKaye/distilltools")
-```
-
+<a href="https://ellakaye.github.io/distilltools/" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
+<a href="https://github.com/EllaKaye/distilltools" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
 
 It is in the very early stages of development. I am actively seeking contributions - both ideas and code - to help build the package to be broadly useful to a wide variety of {distill} users. The idea is for the package to become a curated, collaborative, community-driven project. Please see the [contributing guide](https://ellakaye.github.io/distilltools/CONTRIBUTING.html) for more details on how to get involved. In terms of relationship between packages, I hope in time that {distilltools} can be for {distill} something like what [{xaringanExtra}](https://pkg.garrickadenbuie.com/xaringanExtra/#/) and [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/) are for [{xaringan}](https://github.com/yihui/xaringan). Some of what I have in mind may sit better within the distill package itself, and I am in touch with the {distill} team about that.
 
