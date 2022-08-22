@@ -1,0 +1,23 @@
+---
+title: Awesome Icon
+description: |
+  Post description
+date: 2022-08-05
+base_url: https://ellakaye.rbind.io/
+# image: IMAGE.png
+#categories:
+#  - TAG_1
+#  - TAG_2
+twitter:
+  site: "@ellamkaye"
+  creator: "@ellamkaye"
+draft: true
+css: styles.css
+---
+
+
+## TL;DR
+I made an awesome animated icon for my navbar.
+
+<div class="contain-icon">ELLA<span class='icon-line'></span>KAYE</div>
+

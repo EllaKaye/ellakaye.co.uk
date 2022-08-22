@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ella Kaye">
+<meta name="dcterms.date" content="2021-05-25">
+<meta name="description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
+
+<title>ELLA KAYE - Custom Syntax Highlighting for {distill} Part 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-101621242-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+  
+  function getGiscusTheme() {
+  const quartoTheme = localStorage.getItem("quarto-color-scheme");
+  const giscusTheme = quartoTheme === "alternate" ? "dark" : "light";
+  return giscusTheme;
+}
+
+function setGiscusTheme() {
+  function sendMessage(message) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  sendMessage({
+    setConfig: {
+      theme: getGiscusTheme(),
+    },
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const giscusAttributes = {
+    "src": "https://giscus.app/client.js",
+    "data-repo": "EllaKaye/ellakaye-quarto",
+    "data-repo-id": "R_kgDOHwJk_g",
+    "data-category": "General",
+    "data-category-id": "DIC_kwDOHwJk_s4CQr7D",
+    "data-mapping": "title",
+    "data-strict": "0",
+    "data-reactions-enabled": "1",
+    "data-emit-metadata": "0",
+    "data-input-position": "top",
+    "data-theme": getGiscusTheme(),
+    "data-lang": "en",
+    "crossorigin": "anonymous",
+    "async": "",
+  };
+
+  // Dynamically create script tag
+  const giscusScript = document.createElement("script");
+  Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+  document.body.appendChild(giscusScript);
+
+  // Update giscus theme when theme switcher is clicked
+  const toggle = document.querySelector('.quarto-color-scheme-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', setGiscusTheme);
+  }
+});
+  
+</script>
+
+
+<link rel="stylesheet" href="../../ek-styles.css">
+<meta property="og:title" content="ELLA KAYE - Custom Syntax Highlighting for {distill} Part 1">
+<meta property="og:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
+<meta property="og:image" content="https://ellakaye.rbind.io/images/logo-white-background.png">
+<meta property="og:site-name" content="ELLA KAYE">
+<meta property="og:locale" content="en-GB">
+<meta property="og:image:height" content="500">
+<meta property="og:image:width" content="500">
+<meta name="twitter:title" content="ELLA KAYE - Custom Syntax Highlighting for {distill} Part 1">
+<meta name="twitter:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
+<meta name="twitter:image" content="https://ellakaye.rbind.io/images/logo-white-background.png">
+<meta name="twitter:creator" content="@ellamkaye">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="500">
+<meta name="twitter:image-width" content="500">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ELLA<span class="icon-line"></span>KAYE</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html">posts</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html">talks</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html">Projects</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../CV.pdf">CV</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/EllaKaye"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/ellamkaye"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Custom Syntax Highlighting for {distill} Part 1</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+            <p class="subtitle lead">Modifying the default theme</p>
+                  <div>
+        <div class="description">
+          <p>A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">distill</div>
+                <div class="quarto-category">distilltools</div>
+                <div class="quarto-category">colour</div>
+                <div class="quarto-category">accessibility</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ella Kaye </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 25, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#but-first-the-default" id="toc-but-first-the-default" class="nav-link" data-scroll-target="#but-first-the-default">But first, the default</a>
+  <ul class="collapse">
+  <li><a href="#in-praise-of-the-default" id="toc-in-praise-of-the-default" class="nav-link" data-scroll-target="#in-praise-of-the-default">In praise of the default</a></li>
+  <li><a href="#so-why-change" id="toc-so-why-change" class="nav-link" data-scroll-target="#so-why-change">So, why change?</a></li>
+  <li><a href="#distillpandoc-documentation" id="toc-distillpandoc-documentation" class="nav-link" data-scroll-target="#distillpandoc-documentation">Distill/pandoc documentation</a></li>
+  <li><a href="#finding-and-saving-the-default" id="toc-finding-and-saving-the-default" class="nav-link" data-scroll-target="#finding-and-saving-the-default">Finding and saving the default</a></li>
+  <li><a href="#closer-inspection-of-the-default" id="toc-closer-inspection-of-the-default" class="nav-link" data-scroll-target="#closer-inspection-of-the-default">Closer inspection of the default</a></li>
+  </ul></li>
+  <li><a href="#building-my-own-palette" id="toc-building-my-own-palette" class="nav-link" data-scroll-target="#building-my-own-palette">Building my own palette</a></li>
+  <li><a href="#modifying-arrow.theme" id="toc-modifying-arrow.theme" class="nav-link" data-scroll-target="#modifying-arrow.theme">Modifying <code>arrow.theme</code></a></li>
+  <li><a href="#wrapping-in-a-distilltools-function" id="toc-wrapping-in-a-distilltools-function" class="nav-link" data-scroll-target="#wrapping-in-a-distilltools-function">Wrapping in a {distilltools} function</a></li>
+  <li><a href="#using-the-theme" id="toc-using-the-theme" class="nav-link" data-scroll-target="#using-the-theme">Using the theme</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/EllaKaye/ellakaye-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="cell">
+<style type="text/css">
+.top-callout {
+  margin-top: 0;
+}
+</style>
+</div>
+<div class="callout-note top-callout callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Update: August 2022
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Since this post was originally written, I have replaced my {disill} website with this one built with <a href="https://quarto.org">Quarto</a>.</p>
+<p><code>arrow</code> is the default syntax highlighting theme for Quarto, as it was for {distill}, although it is implemented slightly differently here, and the process of modifying it for Quarto is not the same as it was before. I’ll lay out the differences in a future post. Moreover, as a result, the highlighting you’ll see below is not quite the same as it appeared on my previous site.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> That said, I am keeping this post otherwise as was on the blog for posterity.</p>
+</div>
+</div>
+</div>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<p>The <a href="https://rstudio.github.io/distill/">{distill}</a> package for R can be used to build easy-to-maintain websites written only in R Markdown, such as this one.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>I wrote a function to modify the default syntax highlighting theme. This <code>modify_default_highlighting</code> function is now part of the <a href="https://ellakaye.github.io/distilltools">{distilltools}</a> package.</p>
+<p>Here’s the function in action, to get the theme used on this site:</p>
+<div class="cell">
+<details open="">
+<summary>Toggle the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get distilltools, requires remotes &gt;= 2.2</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"EllaKaye/distilltools"</span>) </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(distilltools)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">modify_default_highlighting</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"ek_syntax_highlighting"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric =</span> <span class="st">"#B6005B"</span>, <span class="co"># replaces the default red</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> <span class="st">"#008643"</span>, <span class="co"># replaces the default green</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">functions =</span> <span class="st">"#005BB6"</span>, <span class="co"># replaces the default purple</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="st">"#5B00B6"</span>, <span class="co"># replaces the default blue</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">constant =</span> <span class="st">"#B65B00"</span> <span class="co"># replaces the default brown</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>And here’s the theme in action:</p>
+<div class="cell">
+<details open="">
+<summary>Toggle the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">long_flipper =</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Adelie"</span> <span class="sc">&amp;</span> flipper_length_mm <span class="sc">&gt;</span> <span class="dv">195</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Chinstrap"</span> <span class="sc">&amp;</span> flipper_length_mm <span class="sc">&gt;</span> <span class="dv">200</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Gentoo"</span> <span class="sc">&amp;</span> flipper_length_mm <span class="sc">&gt;</span> <span class="dv">225</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">long_bill =</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Adelie"</span> <span class="sc">&amp;</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">42</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Chinstrap"</span> <span class="sc">&amp;</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">52</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Gentoo"</span> <span class="sc">&amp;</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">50</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the first in a series of two posts on implementing a custom syntax highlighting theme for a website or blog built with {distill}. Read on here for why and how this function was built, what it does and doesn’t do, and its inclusion in the <a href="https://github.com/EllaKaye/distilltools">{distilltools}</a> package. This post also outlines the criteria that were important to me when choosing colours for my theme, but take a look at Part 2, <a href="https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/">custom syntax highlighting for {distill}: creating the palette</a>, for a deep dive into considerations about colour choices, in respect to both colour theory and accessibility, and how I ensured my criteria were met.</p>
+</section>
+<section id="but-first-the-default" class="level2">
+<h2 class="anchored" data-anchor-id="but-first-the-default">But first, the default</h2>
+<section id="in-praise-of-the-default" class="level3">
+<h3 class="anchored" data-anchor-id="in-praise-of-the-default">In praise of the default</h3>
+<p>Before I delve into how to create a custom syntax highlighting scheme, I want to take a minute to admire the default. The authors of {distill}, in particular <a href="https://alison.rbind.io">Alison Hill</a>, have thought and worked hard to ensure that {distill} provides a good user experience, both for the site’s author AND for those reading it. One of the key considerations for the latter is a default syntax highlighting scheme with colours that are optimised for accessibility and colour contrast. I say more about what that means below and in <a href="https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/">Part 2</a>. Also, it appears that the colours in the scheme work well together, and overall, on the many {distill} websites where I’ve seen the scheme used, I think it looks really good! For a great example of the default in action, check out this <a href="https://themockup.blog/posts/2021-03-07-creating-a-custom-gt-function-for-aligning-first-row-text-and-testing-it-with-testthat/">code-chunk-heavy post</a> by <a href="https://twitter.com/thomas_mock">Tom Mock</a>.</p>
+</section>
+<section id="so-why-change" class="level3">
+<h3 class="anchored" data-anchor-id="so-why-change">So, why change?</h3>
+<div class="cell">
+
+</div>
+<p>When I used the default syntax highlighting theme on my site I found, to my eye, that the red used for numeric variables clashed with the <span style="background-color: #D4006A; color: white; padding:3px">bright pink</span> (closest <a href="https://chir.ag/projects/name-that-color/#D4006A">colour name</a> “razzmatazz”) I’ve used in my logo and elsewhere throughout the site. So, I decided to tweak the default theme swapping the red for my pink and, to match it, more vibrant versions of the remaining colours.</p>
+</section>
+<section id="distillpandoc-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="distillpandoc-documentation">Distill/pandoc documentation</h3>
+<p>My first task was to find out whether this was possible, and if, so, how. Thankfully, the {distill} documentation contains a section on <a href="https://rstudio.github.io/distill/#syntax-highlighting">syntax highlighting</a>, showing that there is an option to give <code>distill_article</code> a path to a custom <code>.theme</code> file. The <a href="https://pandoc.org/MANUAL.html#syntax-highlighting">linked pandoc documentation on syntax highlighting</a> demonstrates how to use pandoc in the command line to save a personal version of the <code>pygments</code> highlighting theme. The documentation points out that that copy of the pygments <code>.theme</code> file can then be edited to create a custom theme.</p>
+</section>
+<section id="finding-and-saving-the-default" class="level3">
+<h3 class="anchored" data-anchor-id="finding-and-saving-the-default">Finding and saving the default</h3>
+<p>Once I had a general strategy of copying and editing an existing <code>.theme</code> file, my next task was to find the <code>.theme</code> file for the default used in {distill}, because that’s what I’d already decided to take as my starting point.</p>
+<p>I cloned the <a href="https://github.com/rstudio/distill">distill repo from GitHub</a> and opened it in RStudio.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> From there I began my detective work with one of my favourite RStudio features, ‘Find in Files’ (⇧ + ⌘ + F on a Mac), which searches across all files in a project. I searched for “highlight” and followed various trails until I discovered that the default is called <code>arrow.theme</code> and is stored in <code>inst/rmarkdown/templates/distill_article/resources/</code>. Thankfully, because it’s in the <code>inst</code> folder, the file is accessible to users who have the {distill} package installed. In the RStudio project for my website, I created a new script, <code>syntax_highlighting.R</code>, in the <code>R</code> folder I have in my root directory, then I ran the following to save a copy of <code>arrow.theme</code> into my website’s root directory:</p>
+<div class="cell">
+<details open="">
+<summary>Toggle the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>arrow_theme_path <span class="ot">&lt;-</span> <span class="fu">system.file</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown/templates/distill_article/resources/arrow.theme"</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">"distill"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">file.copy</span>(arrow_theme_path, <span class="st">"arrow.theme"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>When I had run that once, I commented out the above lines. I don’t want any future changes in <code>arrow.theme</code> in {distill} to break what I do next.</p>
+</section>
+<section id="closer-inspection-of-the-default" class="level3">
+<h3 class="anchored" data-anchor-id="closer-inspection-of-the-default">Closer inspection of the default</h3>
+<p>From there I could open up my copy of the <code>arrow.theme</code> file and manually inspect it. I use a great Mac app for building colour palettes, <a href="https://colorslurp.com">ColorSlurp</a>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> The basic version is free, though the pro version has useful features for testing accessibility - more on that in <a href="https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/">Part 2</a>. I set up a new palette in ColorSlurp and, for each hex colour code I encountered, I saved it there.</p>
+<p>There are 29 types of <code>text-styles</code> in the theme, of which:</p>
+<ul>
+<li><p>8 are assigned a grey, <span style="background-color: #5E5E5E; color: white; padding:3px">#5E5E5E</span>, things like <code>Comment</code> and <code>Documentation</code></p></li>
+<li><p>1 is off-black, <span style="background-color: #111111; color: white; padding:3px">#111111</span>, <code>Variable</code></p></li>
+<li><p>3 are blue, <span style="background-color: #007BA5; color: white; padding:3px">#007BA5</span>, <code>Other</code>, <code>ControlFlow</code> and <code>Keyword</code></p></li>
+<li><p>4 are green, <span style="background-color: #20794D; color: white; padding:3px">#20794D</span>, corresponding to various types of string</p></li>
+<li><p>1 is purple, <span style="background-color: #4758AB; color: white; padding:3px">#4758AB</span>, <code>Function</code></p></li>
+<li><p>7 are red, <span style="background-color: #AD0000; color: white; padding:3px">#AD0000</span>, a mix of numeric (e.g.&nbsp;<code>BaseN</code>, <code>Float</code>) and things like <code>Alert</code> and <code>Error</code></p></li>
+<li><p>1 is a brown, <span style="background-color: #8F5902; color: white; padding:3px">#8F5902</span>, for <code>Constant</code></p></li>
+<li><p>4 types are not assigned a colour - they are left as <code>null</code></p></li>
+</ul>
+<p>I was happy to stick with the groupings, grey, off-black and <code>null</code> in the default, so now I knew I had to pick five colours for my theme.</p>
+</section>
+</section>
+<section id="building-my-own-palette" class="level2">
+<h2 class="anchored" data-anchor-id="building-my-own-palette">Building my own palette</h2>
+<p>I had four criteria for building a colour palette to use for my syntax highlighting theme:</p>
+<ul>
+<li>It be based on the <span style="color:#D4006A">pink</span> that I use in my logo and elsewhere throughout this site</li>
+<li>It uses colour theory to pick colours that look appealing together</li>
+<li>It meets <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG web accessibility guidelines</a>, by ensuring sufficient colour contrast, i.e.&nbsp;a ratio of 4.5:1, between each of the colours in the theme and this site’s background colour (white)</li>
+<li>The colours in the palette are colourblind-friendly, i.e.&nbsp;still distinguishable to people with various difference types of colourblindness.</li>
+</ul>
+<p>I was originally going to write up how I went about building such a palette, both in terms of the thought process and tools used, as part of this post, but it was getting a little long<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, so I’ve spun it out into a separate post, <a href="https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/">custom syntax highlighting for {distill} part 2: creating the palette</a>.</p>
+<p>At the end of the process, the palette for my syntax highlighting scheme is as in <a href="#fig-ek-syntax-highlighting-palette">Figure&nbsp;1</a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ek-syntax-highlighting-palette" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ek-syntax-highlighting-palette.png" class="img-fluid figure-img" alt="A swatch of five colours, a bright pink, orange, green, blue and purple." width="560"></p>
+<p></p><figcaption class="figure-caption">Figure 1: The color palette used for syntax highlighting throughout this site.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="modifying-arrow.theme" class="level2">
+<h2 class="anchored" data-anchor-id="modifying-arrow.theme">Modifying <code>arrow.theme</code></h2>
+<p>With all the pieces in place, it’s now just a case of swapping out the default colour codes for our own choices. Although it’s possible to manually edit the <code>arrow.theme</code> file we now have in our directory, to aid reproducibility, and with a view to writing this up as a function, I edited it using R code instead. I read in the file, substituted the hex codes, then saved the resulting theme into a new <code>ek_syntax_highlighting.theme</code> file (leaving <code>arrow.theme</code> unchanged). Below are two approaches, one using base R, the other in the tidyverse, that I put in my <code>syntax_highlighting.R</code> script.</p>
+<div class="cell">
+<details open="">
+<summary>Toggle the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the default theme</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"arrow.theme"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># base R approach</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#AD0000"</span>, <span class="st">"#B6005B"</span>, theme) <span class="co"># red -&gt; pink</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#8f5902"</span>, <span class="st">"#B65B00"</span>, theme) <span class="co"># brown -&gt; brown </span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#007BA5"</span>, <span class="st">"#5B00B6"</span>, theme) <span class="co"># blue -&gt; purple</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#20794D"</span>, <span class="st">"#B65B00"</span>, theme) <span class="co"># green -&gt; green</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#4758AB"</span>, <span class="st">"#005BB6"</span>, theme) <span class="co"># purple -&gt; blue</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># alternatively, tidyverse approach</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"arrow.theme"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#AD0000"</span>, <span class="st">"#B6005B"</span>) <span class="sc">%&gt;%</span> <span class="co"># red -&gt; pink</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#8f5902"</span>, <span class="st">"#B65B00"</span>) <span class="sc">%&gt;%</span> <span class="co"># brown -&gt; brown </span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#007BA5"</span>, <span class="st">"#5B00B6"</span>) <span class="sc">%&gt;%</span> <span class="co"># blue -&gt; purple</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#20794D"</span>, <span class="st">"#008643"</span>) <span class="sc">%&gt;%</span> <span class="co"># green -&gt; green</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#4758AB"</span>, <span class="st">"#005BB6"</span>)     <span class="co"># purple -&gt; blue</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># save new theme</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(theme, <span class="st">"ek_syntax_highlighting.theme"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>I now have the file <code>ek_syntax_highlighting.theme</code> in my root directory, with my colour choices.</p>
+<p>It is, of course, possible to modify it further, either manually or by making further substutions in the code above. There is a quirk, though: if I swap one of the default hex codes for my own colour choice, that implements just fine, but if I swap any of the <code>null</code>s for a colour, that doesn’t show up when I apply the theme.</p>
+</section>
+<section id="wrapping-in-a-distilltools-function" class="level2">
+<h2 class="anchored" data-anchor-id="wrapping-in-a-distilltools-function">Wrapping in a {distilltools} function</h2>
+<p>When I figure out code to do something that I think I might want to do again, or think others might find useful, I generally like to write it up as a function, and that’s what I’ve done with the above, wrapping it in a function called <code>modify_default_highlighting</code> and putting it in the <a href="https://ellakaye.github.io/distilltools">{distilltools}</a> package. {distilltools} is in the very early stages of development, an (expanding) collection of tools to support the creation and styling of content on websites created using {distill}.</p>
+<p>When I first announced the package, I included in the ‘future functionality’ section of the package README the intention to add a <code>create_highlight_theme</code> function. I don’t think what I’ve done is quite versatile or fully-featured enough to warrant that name. Instead, I called it <code>modify_default_highlighting</code> because that’s all it does, allowing you to swap out the five colours in the default scheme for five colours of your choosing. It does, however, create a <code>.theme</code> file in your working directory, that can be further edited manually, or with your own R code, if further modifications are desired.</p>
+<p>The first argument to <code>modify_default_highlighting</code> is <code>name</code>, the name you want to give your theme (which will create the file <code>name.theme</code>). It then takes five colour arguments, which can be specified either in the hex form “#RRGGBB” or as a named colour, from the colour names in <a href="https://rdrr.io/r/grDevices/colors.html">grDevices::colors()</a>. For a list of the colour names available in R, see page 3 of the <a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf">R color cheatsheet</a> for a one page summary, or <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Colors in R</a> for a slightly less visually overwhelming list. The final argument, <code>overwrite</code> (defaults to <code>TRUE</code>) specifies whether to overwrite <code>name.theme</code> if it already exists in the working directory. Here’s the function in action again, this time using colour names (note that I have not tested the visual properties of this as a palette, just dropped in some colour names into the function):</p>
+<div class="cell">
+<details open="">
+<summary>Toggle the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(distilltools)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">modify_default_highlighting</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"ek_syntax_highlighting"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric =</span> <span class="st">"deeppink"</span>, <span class="co"># replaces the default red</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> <span class="st">"forestgreen"</span>, <span class="co"># replaces the default green</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">functions =</span> <span class="st">"darkorchid3"</span>, <span class="co"># replaces the default purple</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="st">"royalbkue3"</span>, <span class="co"># replaces the default blue</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">constant =</span> <span class="st">"darkorange1"</span> <span class="co"># replaces the default brown</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="using-the-theme" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-theme">Using the theme</h2>
+<p>Once you have you custom <code>.theme</code> file, you’ll want to apply it to your site. According to the <a href="https://rstudio.github.io/distill/#syntax-highlighting">{distill} documentation</a>, you can apply a syntax highlighting theme with the following YAML:</p>
+<pre><code>---
+output:
+  distill::distill_article:
+    highlight: my_highlighting.theme
+---  </code></pre>
+<p>Here, the available options for <code>highlight</code> include <code>default</code>, <code>rstudio</code> (the default RStudio editor theme), and the <code>haddock</code>, <code>kate</code>, <code>monochrome</code>, <code>pygments</code> and <code>tango</code> <a href="https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/">pandoc highlighting themes</a>. Also, most importantly for us, it can also take the path to a <code>.theme</code> file.</p>
+<p>Presumably, we should be able to add this to our <code>_site.yml</code> file to have the theme apply site-wide (though note you’ll have to rebuild the site and re-knit any posts where you want to it apply). However, that’s not working for me. I have raised an <a href="https://github.com/rstudio/distill/issues/370">issue</a> about it. If you face the same problem, it would be helpful if you could comment there too.</p>
+<p>There is a workaround, though, which is that the above YAML can also be included in individual .Rmd articles, in which case the theme applies just fine, though note that if your <code>.theme</code> file is in you root directory, you’ll need to give the full path to it.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> And if it sounds like a bit of a pain to have to add that every time you write a new post, consider creating a template for your posts, including those lines, and then starting new posts with the {distilltools} function <a href="https://ellakaye.github.io/distilltools/reference/create_post_from_template.html"><code>create_post_from_template()</code></a>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+
+
+<!-- -->
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>If you’d like to see the original theme in action, you can see it over at the <a href="https://distillery.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/">distillery</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>For more on resources and inspirations for setting up a {distill} website, see my previous post, <a href="https://ellakaye.rbind.io/posts/2021-05-08-welcome-to-my-distill-website/">Welcome to my {distill} website</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>From RStudio, go to ‘File’ in the menu bar, then ‘New Project…’ Chose ‘Version Control’, then ‘Git’, then enter <code>https://github.com/rstudio/distill.git</code> as the ‘Repository URL:’ and click ‘Create Project’<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>I don’t have experience of colour apps on other operating systems, but a quick search for ColorSlurp alternatives suggest there are <a href="https://alternativeto.net/software/colorslurp/">a bunch to pick from</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>As part of the process of writing the post, I learnt much more about colour theory, and alternatives to the approach that I had originally taken, and I wanted to share it all!<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>If you happen to inspect the source code for this post, you might notice that I have copied <code>ek_syntax_highlighting.theme</code> into the directory. This is <em>not</em> necessary for my site (using the full path to the <code>.theme</code> folder in my root directory is sufficient). However, I needed to do this to get the theme to show in the version of this post in the <a href="https://distillery.rbind.io">distillery</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>Note that the <code>create_post_from_template()</code> function is likely to get wrapped into {distill} itself, or its functionality included in <code>distill::create_post()</code>, and will be depreciated from {distilltools} if so. (I have had some discussion with the {distill} team about this and will be submitting a PR in the near future.)<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
+  author = {Ella Kaye},
+  title = {Custom {Syntax} {Highlighting} for \{Distill\} {Part} 1},
+  date = {2021-05-25},
+  url = {https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Ella Kaye. 2021. <span>“Custom Syntax Highlighting for {Distill} Part
+1.”</span> May 25, 2021. <a href="https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1">https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1</a>.
+</div></div></section></div></main> <!-- /main -->
+<div class="giscus">
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content --><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Custom Syntax Highlighting for {distill} Part 1"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Modifying the default theme"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">  A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2021-05-25</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="an">site-url:</span><span class="co"> https://ellakaye.rbind.io/</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> more-theme-in-action.png</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#image-alt: |</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - distill</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - distilltools</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - colour</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - accessibility</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="an">twitter-card:</span><span class="co"> </span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment lines below for different title and description to post</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#  title: |</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">#  description: |</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment for different image to post</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">#  image: |</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">#  image-alt: |</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#  defaults to 500 x 500 summary: uncomment lines below for large card</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">  image-width: 600 </span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">  image-height: 314</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">  card-style: "summary_large_image" </span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> false</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{css}</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>#<span class="op">|</span> echo<span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">top</span><span class="op">-</span>callout <span class="op">{</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  margin<span class="op">-</span>top<span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>:::{.callout-note collapse="false" .top-callout}</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Update: August 2022</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>Since this post was originally written, I have replaced my {disill} website with this one built with <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span>. </span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="in">`arrow`</span> is the default syntax highlighting theme for Quarto, as it was for {distill}, although it is implemented slightly differently here, and the process of modifying it for Quarto is not the same as it was before. I'll lay out the differences in a future post. Moreover, as a result, the highlighting you'll see below is not quite the same as it appeared on my previous site.^<span class="co">[</span><span class="ot">If you'd like to see the original theme in action, you can see it over at the [distillery](https://distillery.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/).</span><span class="co">]</span> That said, I am keeping this post otherwise as was on the blog for posterity. </span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## TL;DR</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">{distill}</span><span class="co">](https://rstudio.github.io/distill/)</span> package for R can be used to build easy-to-maintain websites written only in R Markdown, such as this one.^<span class="co">[</span><span class="ot">For more on resources and inspirations for setting up a {distill} website, see my previous post, [Welcome to my {distill} website](https://ellakaye.rbind.io/posts/2021-05-08-welcome-to-my-distill-website/).</span><span class="co">]</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>I wrote a function to modify the default syntax highlighting theme. This <span class="in">`modify_default_highlighting`</span> function is now part of the <span class="co">[</span><span class="ot">{distilltools}</span><span class="co">](https://ellakaye.github.io/distilltools)</span> package. </span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>Here's the function in action, to get the theme used on this site:</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a><span class="co"># get distilltools, requires remotes &gt;= 2.2</span></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"EllaKaye/distilltools"</span>) </span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(distilltools)</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="fu">modify_default_highlighting</span>(</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"ek_syntax_highlighting"</span>,</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric =</span> <span class="st">"#B6005B"</span>, <span class="co"># replaces the default red</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> <span class="st">"#008643"</span>, <span class="co"># replaces the default green</span></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">functions =</span> <span class="st">"#005BB6"</span>, <span class="co"># replaces the default purple</span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="st">"#5B00B6"</span>, <span class="co"># replaces the default blue</span></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  <span class="at">constant =</span> <span class="st">"#B65B00"</span> <span class="co"># replaces the default brown</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>And here's the theme in action:</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">long_flipper =</span> <span class="fu">case_when</span>(</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Adelie"</span> <span class="sc">&amp;</span> flipper_length_mm <span class="sc">&gt;</span> <span class="dv">195</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Chinstrap"</span> <span class="sc">&amp;</span> flipper_length_mm <span class="sc">&gt;</span> <span class="dv">200</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Gentoo"</span> <span class="sc">&amp;</span> flipper_length_mm <span class="sc">&gt;</span> <span class="dv">225</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>    <span class="at">long_bill =</span> <span class="fu">case_when</span>(</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Adelie"</span> <span class="sc">&amp;</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">42</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Chinstrap"</span> <span class="sc">&amp;</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">52</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>      species <span class="sc">==</span> <span class="st">"Gentoo"</span> <span class="sc">&amp;</span> bill_length_mm <span class="sc">&gt;</span> <span class="dv">50</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>This is the first in a series of two posts on implementing a custom syntax highlighting theme for a website or blog built with {distill}. Read on here for why and how this function was built, what it does and doesn't do, and its inclusion in the <span class="co">[</span><span class="ot">{distilltools}</span><span class="co">](https://github.com/EllaKaye/distilltools)</span> package. This post also outlines the criteria that were important to me when choosing colours for my theme, but take a look at Part 2, <span class="co">[</span><span class="ot">custom syntax highlighting for {distill}: creating the palette</span><span class="co">](https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/)</span>, for a deep dive into considerations about colour choices, in respect to both colour theory and accessibility, and how I ensured my criteria were met.</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## But first, the default</span></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### In praise of the default</span></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>Before I delve into how to create a custom syntax highlighting scheme, I want to take a minute to admire the default. The authors of {distill}, in particular <span class="co">[</span><span class="ot">Alison Hill</span><span class="co">](https://alison.rbind.io)</span>, have thought and worked hard to ensure that {distill} provides a good user experience, both for the site's author AND for those reading it. One of the key considerations for the latter is a default syntax highlighting scheme with colours that are optimised for accessibility and colour contrast. I say more about what that means below and in <span class="co">[</span><span class="ot">Part 2</span><span class="co">](https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/)</span>. Also, it appears that the colours in the scheme work well together, and overall, on the many {distill} websites where I've seen the scheme used, I think it looks really good! For a great example of the default in action, check out this <span class="co">[</span><span class="ot">code-chunk-heavy post</span><span class="co">](https://themockup.blog/posts/2021-03-07-creating-a-custom-gt-function-for-aligning-first-row-text-and-testing-it-with-testthat/)</span> by <span class="co">[</span><span class="ot">Tom Mock</span><span class="co">](https://twitter.com/thomas_mock)</span>.</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a><span class="fu">### So, why change?</span></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE}</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(coloratio)</span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>bg_col <span class="ot">&lt;-</span> <span class="cf">function</span>(bg_col, <span class="at">text =</span> <span class="cn">NULL</span>, <span class="at">text_col =</span> <span class="cn">NULL</span>) {</span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.null</span>(text)) text <span class="ot">&lt;-</span> bg_col</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">is.null</span>(text_col)) text_col <span class="ot">&lt;-</span> coloratio<span class="sc">::</span><span class="fu">cr_choose_bw</span>(bg_col)</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>  style <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"background-color: "</span>, bg_col, <span class="st">"; color: "</span>, text_col, <span class="st">"; padding:3px"</span>)</span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>  htmltools<span class="sc">::</span><span class="fu">span</span>(<span class="at">style =</span> style, text)</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>When I used the default syntax highlighting theme on my site I found, to my eye, that the red used for numeric variables clashed with the <span class="in">`r bg_col("#D4006A", text = "bright pink")`</span> (closest <span class="co">[</span><span class="ot">colour name</span><span class="co">](https://chir.ag/projects/name-that-color/#D4006A)</span> "razzmatazz") I've used in my logo and elsewhere throughout the site. So, I decided to tweak the default theme swapping the red for my pink and, to match it, more vibrant versions of the remaining colours. </span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a><span class="fu">### Distill/pandoc documentation</span></span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>My first task was to find out whether this was possible, and if, so, how. Thankfully, the {distill} documentation contains a section on <span class="co">[</span><span class="ot">syntax highlighting</span><span class="co">](https://rstudio.github.io/distill/#syntax-highlighting)</span>, showing that there is an option to give <span class="in">`distill_article`</span> a path to a custom <span class="in">`.theme`</span> file. The <span class="co">[</span><span class="ot">linked pandoc documentation on syntax highlighting</span><span class="co">](https://pandoc.org/MANUAL.html#syntax-highlighting)</span> demonstrates how to use pandoc in the command line to save a personal version of the <span class="in">`pygments`</span> highlighting theme. The documentation points out that that copy of the pygments <span class="in">`.theme`</span> file can then be edited to create a custom theme. </span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a><span class="fu">### Finding and saving the default</span></span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>Once I had a general strategy of copying and editing an existing <span class="in">`.theme`</span> file, my next task was to find the <span class="in">`.theme`</span> file for the default used in {distill}, because that's what I'd already decided to take as my starting point.</span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>I cloned the <span class="co">[</span><span class="ot">distill repo from GitHub</span><span class="co">](https://github.com/rstudio/distill)</span> and opened it in RStudio.^<span class="co">[</span><span class="ot">From RStudio, go to 'File' in the menu bar, then 'New Project...' Chose 'Version Control', then 'Git', then enter `https://github.com/rstudio/distill.git` as the 'Repository URL:' and click 'Create Project'</span><span class="co">]</span> From there I began my detective work with one of my favourite RStudio features, 'Find in Files' (⇧ + ⌘ + F on a Mac), which searches across all files in a project. I searched for "highlight" and followed various trails until I discovered that the default is called <span class="in">`arrow.theme`</span> and is stored in <span class="in">`inst/rmarkdown/templates/distill_article/resources/`</span>. Thankfully, because it's in the <span class="in">`inst`</span> folder, the file is accessible to users who have the {distill} package installed. In the RStudio project for my website, I created a new script, <span class="in">`syntax_highlighting.R`</span>, in the <span class="in">`R`</span> folder I have in my root directory, then I ran the following to save a copy of <span class="in">`arrow.theme`</span> into my website's root directory:</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>arrow_theme_path <span class="ot">&lt;-</span> <span class="fu">system.file</span>(</span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown/templates/distill_article/resources/arrow.theme"</span>, </span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">"distill"</span></span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="fu">file.copy</span>(arrow_theme_path, <span class="st">"arrow.theme"</span>)</span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a>When I had run that once, I commented out the above lines. I don't want any future changes in <span class="in">`arrow.theme`</span> in {distill} to break what I do next.</span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a><span class="fu">### Closer inspection of the default</span></span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a>From there I could open up my copy of the <span class="in">`arrow.theme`</span> file and manually inspect it. I use a great Mac app for building colour palettes, <span class="co">[</span><span class="ot">ColorSlurp</span><span class="co">](https://colorslurp.com)</span>.^<span class="co">[</span><span class="ot">I don't have experience of colour apps on other operating systems, but a quick search for ColorSlurp alternatives suggest there are [a bunch to pick from](https://alternativeto.net/software/colorslurp/).</span><span class="co">]</span> The basic version is free, though the pro version has useful features for testing accessibility - more on that in <span class="co">[</span><span class="ot">Part 2</span><span class="co">](https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/)</span>. I set up a new palette in ColorSlurp and, for each hex colour code I encountered, I saved it there.</span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a>There are 29 types of <span class="in">`text-styles`</span> in the theme, of which:</span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>8 are assigned a grey, <span class="in">`r bg_col("#5E5E5E")`</span>, things like <span class="in">`Comment`</span> and <span class="in">`Documentation`</span></span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 is off-black, <span class="in">`r bg_col("#111111")`</span>, <span class="in">`Variable`</span></span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>3 are blue, <span class="in">`r bg_col("#007BA5")`</span>, <span class="in">`Other`</span>, <span class="in">`ControlFlow`</span> and <span class="in">`Keyword`</span></span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>4 are green, <span class="in">`r bg_col("#20794D")`</span>, corresponding to various types of string</span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 is purple, <span class="in">`r bg_col("#4758AB")`</span>, <span class="in">`Function`</span></span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>7 are red, <span class="in">`r bg_col("#AD0000")`</span>, a mix of numeric (e.g. <span class="in">`BaseN`</span>, <span class="in">`Float`</span>) and things like <span class="in">`Alert`</span> and <span class="in">`Error`</span></span>
+<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 is a brown, <span class="in">`r bg_col("#8F5902")`</span>, for <span class="in">`Constant`</span></span>
+<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>4 types are not assigned a colour - they are left as <span class="in">`null`</span></span>
+<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a>I was happy to stick with the groupings, grey, off-black and <span class="in">`null`</span> in the default, so now I knew I had to pick five colours for my theme.</span>
+<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building my own palette </span></span>
+<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>I had four criteria for building a colour palette to use for my syntax highlighting theme:</span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It be based on the <span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color:#D4006A"</span><span class="kw">&gt;</span>pink<span class="kw">&lt;/span&gt;</span> that I use in my logo and elsewhere throughout this site</span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It uses colour theory to pick colours that look appealing together</span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It meets <span class="co">[</span><span class="ot">WCAG web accessibility guidelines</span><span class="co">](https://www.w3.org/WAI/standards-guidelines/wcag/)</span>, by ensuring sufficient colour contrast, i.e. a ratio of 4.5:1, between each of the colours in the theme and this site's background colour (white)</span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The colours in the palette are colourblind-friendly, i.e. still distinguishable to people with various difference types of colourblindness.</span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a>I was originally going to write up how I went about building such a palette, both in terms of the thought process and tools used, as part of this post, but it was getting a little long^<span class="co">[</span><span class="ot">As part of the process of writing the post, I learnt much more about colour theory, and alternatives to the approach that I had originally taken, and I wanted to share it all!</span><span class="co">]</span>, so I've spun it out into a separate post, <span class="co">[</span><span class="ot">custom syntax highlighting for {distill} part 2: creating the palette </span><span class="co">](https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/)</span>.</span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>At the end of the process, the palette for my syntax highlighting scheme is as in @fig-ek-syntax-highlighting-palette.</span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig-ek-syntax-highlighting-palette, echo = FALSE, fig.cap="The color palette used for syntax highlighting throughout this site.", fig.alt="A swatch of five colours, a bright pink, orange, green, blue and purple."}</span></span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"ek-syntax-highlighting-palette.png"</span>)</span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modifying `arrow.theme`</span></span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-184"><a href="#cb7-184" aria-hidden="true" tabindex="-1"></a>With all the pieces in place, it's now just a case of swapping out the default colour codes for our own choices. Although it's possible to manually edit the <span class="in">`arrow.theme`</span> file we now have in our directory, to aid reproducibility, and with a view to writing this up as a function, I edited it using R code instead. I read in the file, substituted the hex codes, then saved the resulting theme into a new <span class="in">`ek_syntax_highlighting.theme`</span> file (leaving <span class="in">`arrow.theme`</span> unchanged). Below are two approaches, one using base R, the other in the tidyverse, that I put in my <span class="in">`syntax_highlighting.R`</span> script.</span>
+<span id="cb7-185"><a href="#cb7-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-186"><a href="#cb7-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb7-187"><a href="#cb7-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-188"><a href="#cb7-188" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the default theme</span></span>
+<span id="cb7-189"><a href="#cb7-189" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"arrow.theme"</span>)</span>
+<span id="cb7-190"><a href="#cb7-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-191"><a href="#cb7-191" aria-hidden="true" tabindex="-1"></a><span class="co"># base R approach</span></span>
+<span id="cb7-192"><a href="#cb7-192" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#AD0000"</span>, <span class="st">"#B6005B"</span>, theme) <span class="co"># red -&gt; pink</span></span>
+<span id="cb7-193"><a href="#cb7-193" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#8f5902"</span>, <span class="st">"#B65B00"</span>, theme) <span class="co"># brown -&gt; brown </span></span>
+<span id="cb7-194"><a href="#cb7-194" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#007BA5"</span>, <span class="st">"#5B00B6"</span>, theme) <span class="co"># blue -&gt; purple</span></span>
+<span id="cb7-195"><a href="#cb7-195" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#20794D"</span>, <span class="st">"#B65B00"</span>, theme) <span class="co"># green -&gt; green</span></span>
+<span id="cb7-196"><a href="#cb7-196" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"#4758AB"</span>, <span class="st">"#005BB6"</span>, theme) <span class="co"># purple -&gt; blue</span></span>
+<span id="cb7-197"><a href="#cb7-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-198"><a href="#cb7-198" aria-hidden="true" tabindex="-1"></a><span class="co"># alternatively, tidyverse approach</span></span>
+<span id="cb7-199"><a href="#cb7-199" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb7-200"><a href="#cb7-200" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb7-201"><a href="#cb7-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-202"><a href="#cb7-202" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"arrow.theme"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-203"><a href="#cb7-203" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#AD0000"</span>, <span class="st">"#B6005B"</span>) <span class="sc">%&gt;%</span> <span class="co"># red -&gt; pink</span></span>
+<span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#8f5902"</span>, <span class="st">"#B65B00"</span>) <span class="sc">%&gt;%</span> <span class="co"># brown -&gt; brown </span></span>
+<span id="cb7-205"><a href="#cb7-205" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#007BA5"</span>, <span class="st">"#5B00B6"</span>) <span class="sc">%&gt;%</span> <span class="co"># blue -&gt; purple</span></span>
+<span id="cb7-206"><a href="#cb7-206" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#20794D"</span>, <span class="st">"#008643"</span>) <span class="sc">%&gt;%</span> <span class="co"># green -&gt; green</span></span>
+<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a>   <span class="fu">str_replace_all</span>(<span class="st">"#4758AB"</span>, <span class="st">"#005BB6"</span>)     <span class="co"># purple -&gt; blue</span></span>
+<span id="cb7-208"><a href="#cb7-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-209"><a href="#cb7-209" aria-hidden="true" tabindex="-1"></a><span class="co"># save new theme</span></span>
+<span id="cb7-210"><a href="#cb7-210" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(theme, <span class="st">"ek_syntax_highlighting.theme"</span>)</span>
+<span id="cb7-211"><a href="#cb7-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-212"><a href="#cb7-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-213"><a href="#cb7-213" aria-hidden="true" tabindex="-1"></a>I now have the file <span class="in">`ek_syntax_highlighting.theme`</span> in my root directory, with my colour choices.</span>
+<span id="cb7-214"><a href="#cb7-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-215"><a href="#cb7-215" aria-hidden="true" tabindex="-1"></a>It is, of course, possible to modify it further, either manually or by making further substutions in the code above. There is a quirk, though: if I swap one of the default hex codes for my own colour choice, that implements just fine, but if I swap any of the <span class="in">`null`</span>s for a colour, that doesn't show up when I apply the theme. </span>
+<span id="cb7-216"><a href="#cb7-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-217"><a href="#cb7-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wrapping in a {distilltools} function</span></span>
+<span id="cb7-218"><a href="#cb7-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-219"><a href="#cb7-219" aria-hidden="true" tabindex="-1"></a>When I figure out code to do something that I think I might want to do again, or think others might find useful, I generally like to write it up as a function, and that's what I've done with the above, wrapping it in a function called <span class="in">`modify_default_highlighting`</span> and putting it in the  <span class="co">[</span><span class="ot">{distilltools}</span><span class="co">](https://ellakaye.github.io/distilltools)</span> package. {distilltools} is in the very early stages of development, an (expanding) collection of tools to support the creation and styling of content on websites created using {distill}. </span>
+<span id="cb7-220"><a href="#cb7-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-221"><a href="#cb7-221" aria-hidden="true" tabindex="-1"></a>When I first announced the package, I included in the 'future functionality' section of the package README the intention to add a <span class="in">`create_highlight_theme`</span> function. I don't think what I've done is quite versatile or fully-featured enough to warrant that name. Instead, I called it  <span class="in">`modify_default_highlighting`</span> because that's all it does, allowing you to swap out the five colours in the default scheme for five colours of your choosing. It does, however, create a <span class="in">`.theme`</span> file in your working directory, that can be further edited manually, or with your own R code, if further modifications are desired. </span>
+<span id="cb7-222"><a href="#cb7-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-223"><a href="#cb7-223" aria-hidden="true" tabindex="-1"></a>The first argument to <span class="in">`modify_default_highlighting`</span> is <span class="in">`name`</span>, the name you want to give your theme (which will create the file <span class="in">`name.theme`</span>). It then takes five colour arguments, which can be specified either in the hex form "#RRGGBB" or as a named colour, from the colour names in <span class="co">[</span><span class="ot">grDevices::colors()</span><span class="co">](https://rdrr.io/r/grDevices/colors.html)</span>. For a list of the colour names available in R, see page 3 of the <span class="co">[</span><span class="ot">R color cheatsheet</span><span class="co">](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf)</span> for a one page summary, or <span class="co">[</span><span class="ot">Colors in R</span><span class="co">](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)</span> for a slightly less visually overwhelming list. The final argument, <span class="in">`overwrite`</span> (defaults to <span class="in">`TRUE`</span>) specifies whether to overwrite <span class="in">`name.theme`</span> if it already exists in the working directory. Here's the function in action again, this time using colour names (note that I have not tested the visual properties of this as a palette, just dropped in some colour names into the function):</span>
+<span id="cb7-224"><a href="#cb7-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-225"><a href="#cb7-225" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval = FALSE}</span></span>
+<span id="cb7-226"><a href="#cb7-226" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(distilltools)</span>
+<span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a><span class="fu">modify_default_highlighting</span>(</span>
+<span id="cb7-228"><a href="#cb7-228" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"ek_syntax_highlighting"</span>,</span>
+<span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a>  <span class="at">numeric =</span> <span class="st">"deeppink"</span>, <span class="co"># replaces the default red</span></span>
+<span id="cb7-230"><a href="#cb7-230" aria-hidden="true" tabindex="-1"></a>  <span class="at">strings =</span> <span class="st">"forestgreen"</span>, <span class="co"># replaces the default green</span></span>
+<span id="cb7-231"><a href="#cb7-231" aria-hidden="true" tabindex="-1"></a>  <span class="at">functions =</span> <span class="st">"darkorchid3"</span>, <span class="co"># replaces the default purple</span></span>
+<span id="cb7-232"><a href="#cb7-232" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="st">"royalbkue3"</span>, <span class="co"># replaces the default blue</span></span>
+<span id="cb7-233"><a href="#cb7-233" aria-hidden="true" tabindex="-1"></a>  <span class="at">constant =</span> <span class="st">"darkorange1"</span> <span class="co"># replaces the default brown</span></span>
+<span id="cb7-234"><a href="#cb7-234" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-235"><a href="#cb7-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-236"><a href="#cb7-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-237"><a href="#cb7-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-238"><a href="#cb7-238" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using the theme</span></span>
+<span id="cb7-239"><a href="#cb7-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-240"><a href="#cb7-240" aria-hidden="true" tabindex="-1"></a>Once you have you custom <span class="in">`.theme`</span> file, you'll want to apply it to your site. According to the <span class="co">[</span><span class="ot">{distill} documentation</span><span class="co">](https://rstudio.github.io/distill/#syntax-highlighting)</span>, you can apply a syntax highlighting theme with the following YAML:</span>
+<span id="cb7-241"><a href="#cb7-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-242"><a href="#cb7-242" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-243"><a href="#cb7-243" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb7-244"><a href="#cb7-244" aria-hidden="true" tabindex="-1"></a><span class="in">output:</span></span>
+<span id="cb7-245"><a href="#cb7-245" aria-hidden="true" tabindex="-1"></a><span class="in">  distill::distill_article:</span></span>
+<span id="cb7-246"><a href="#cb7-246" aria-hidden="true" tabindex="-1"></a><span class="in">    highlight: my_highlighting.theme</span></span>
+<span id="cb7-247"><a href="#cb7-247" aria-hidden="true" tabindex="-1"></a><span class="in">---  </span></span>
+<span id="cb7-248"><a href="#cb7-248" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-249"><a href="#cb7-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-250"><a href="#cb7-250" aria-hidden="true" tabindex="-1"></a>Here, the available options for <span class="in">`highlight`</span> include <span class="in">`default`</span>, <span class="in">`rstudio`</span> (the default RStudio editor theme), and the <span class="in">`haddock`</span>, <span class="in">`kate`</span>, <span class="in">`monochrome`</span>, <span class="in">`pygments`</span> and <span class="in">`tango`</span> <span class="co">[</span><span class="ot">pandoc highlighting themes</span><span class="co">](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)</span>. Also, most importantly for us, it can also take the path to a <span class="in">`.theme`</span> file.</span>
+<span id="cb7-251"><a href="#cb7-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-252"><a href="#cb7-252" aria-hidden="true" tabindex="-1"></a>Presumably, we should be able to add this to our <span class="in">`_site.yml`</span> file to have the theme apply site-wide (though note you'll have to rebuild the site and re-knit any posts where you want to it apply). However, that's not working for me. I have raised an <span class="co">[</span><span class="ot">issue</span><span class="co">](https://github.com/rstudio/distill/issues/370)</span> about it. If you face the same problem, it would be helpful if you could comment there too.</span>
+<span id="cb7-253"><a href="#cb7-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-254"><a href="#cb7-254" aria-hidden="true" tabindex="-1"></a>There is a workaround, though, which is that the above YAML can also be included in individual .Rmd articles, in which case the theme applies just fine, though note that if your <span class="in">`.theme`</span> file is in you root directory, you'll need to give the full path to it.^<span class="co">[</span><span class="ot">If you happen to inspect the source code for this post, you might notice that I have copied `ek_syntax_highlighting.theme` into the directory. This is *not* necessary for my site (using the full path to the `.theme` folder in my root directory is sufficient). However, I needed to do this to get the theme to show in the version of this post in the [distillery](https://distillery.rbind.io).</span><span class="co">]</span> And if it sounds like a bit of a pain to have to add that every time you write a new post, consider creating a template for your posts, including those lines, and then starting new posts with the {distilltools} function <span class="co">[</span><span class="ot">`create_post_from_template()`</span><span class="co">](https://ellakaye.github.io/distilltools/reference/create_post_from_template.html)</span>.^<span class="co">[</span><span class="ot">Note that the `create_post_from_template()` function is likely to get wrapped into {distill} itself, or its functionality included in `distill::create_post()`, and will be depreciated from {distilltools} if so. (I have had some discussion with the {distill} team about this and will be submitting a PR in the near future.)</span><span class="co">]</span></span>
+<span id="cb7-255"><a href="#cb7-255" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+
+
+
+</div><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

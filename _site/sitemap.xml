@@ -1,47 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ellakaye.rbind.io/posts/highlighting-qmd/index.html</loc>
-    <lastmod>2022-08-18T15:12:21.228Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/awesome-icon/index.html</loc>
-    <lastmod>2022-08-18T15:12:21.831Z</lastmod>
-  </url>
-  <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2022-08-18T15:12:22.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/callout-blocks/index.html</loc>
-    <lastmod>2022-08-18T15:12:23.317Z</lastmod>
+    <lastmod>2022-08-21T21:13:19.733Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020/index.html</loc>
-    <lastmod>2022-08-18T15:12:25.319Z</lastmod>
+    <lastmod>2022-08-21T21:04:23.643Z</lastmod>
   </url>
   <url>
-    <loc>https://ellakaye.rbind.io/posts/syntax-highlighting/index.html</loc>
-    <lastmod>2022-08-18T15:12:26.035Z</lastmod>
+    <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
+    <lastmod>2022-08-21T21:46:12.307Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2022-08-18T15:12:26.801Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/icon-links/index.html</loc>
-    <lastmod>2022-08-18T15:12:27.419Z</lastmod>
+    <lastmod>2022-08-21T21:04:27.275Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-18T15:12:27.761Z</lastmod>
+    <lastmod>2022-08-21T21:04:27.699Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/projects.html</loc>
+    <lastmod>2022-08-21T21:04:29.058Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-18T15:12:28.429Z</lastmod>
+    <lastmod>2022-08-21T21:04:29.398Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-18T15:12:28.888Z</lastmod>
+    <lastmod>2022-08-21T22:01:15.877Z</lastmod>
   </url>
 </urlset>

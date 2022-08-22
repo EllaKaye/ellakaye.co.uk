@@ -14,6 +14,7 @@ website:
     right:
       - posts.qmd
       - talks.qmd
+      - projects.qmd
       - text: CV
         file: CV.pdf
       - icon: github

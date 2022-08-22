@@ -28,19 +28,19 @@ twitter-card:
 draft: false
 execute: 
   echo: false
-include-in-header: ../_includes/fontawesome-local.html
+include-in-header: ../../_includes/fontawesome-2up.html
   
 ---
 
 ```{css}
 #| echo: false
-.callout {
+.top-callout {
   margin-top: 0;
 }
 ```
 
 
-:::{.callout-note collapse="false"}
+:::{.callout-note collapse="false" .top-callout}
 ## Update: August 2022
 
 Since this post was originally written, I have replaced my {disill} website with this one built with [Quarto](https://quarto.org).
@@ -96,23 +96,23 @@ library(distilltools)
 
 - John Helveston
 
-<a href="https://www.jhelvy.com" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
-<a href="https://github.com/jhelvy/jhelvy.com" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
+`r icon_link("globe", "site", "https://www.jhelvy.com", style = "regular")`
+`r icon_link("github", "source", "https://github.com/jhelvy/jhelvy.com")`
 
-
-I particularly like his `icon_link` buttons (as demonstrated just above)^[Since I've updated my site to Quarto, the `icon_link` function is very temperamental - it needs rewriting. When porting this post from my {distill} to Quarto site, I've used raw HTML rather than `icon_link` to recreate these.], and the second collection for talks. John tells me he is turn took inspiration for this from [Emi Tanaka's site](https://emitanaka.org/).
+I particularly like his `icon_link` buttons (as demonstrated just above), and the second collection for talks. John tells me he is turn took inspiration for this from [Emi Tanaka's site](https://emitanaka.org/).
 
 - Ijeamaka Anyene
 
-<a href="https://ijeamaka-anyene.netlify.app/" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
-<a href="https://github.com/Ijeamakaanyene/ijeamaka-anyene" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
+`r icon_link("globe", "site", "https://ijeamaka-anyene.netlify.app/", style = "regular")`
+`r icon_link("github", "source", "https://github.com/Ijeamakaanyene/ijeamaka-anyene")`
 
 Ijeamaka has a really cool projects page, where she's created a card for each project, which I've implemented on my site.
 
 - Tom Mock
 
-<a href="https://themockup.blog" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
-<a href="https://github.com/jthomasmock/radix_themockup" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
+`r icon_link("globe", "site", "https://themockup.blog", style = "regular")`
+`r icon_link("github", "source", "https://github.com/jthomasmock/radix_themockup")`
+
 
 Come for the minimalist, stylish design, stay for the fantastic blog content, not just on {distill}, but also on {gt}, R Markdown, #TidyTuesday and much more besides.
 
@@ -136,8 +136,9 @@ There are a number of folk who tweet about {distill} (alongside other #rstats co
 
 Inspiried by the above-mentioned posts from John Helveston and Eric Ekholm, I've started working on a package, {distilltools}, a collection of tools to support the creation and styling of content on websites created using {distill}. 
 
-<a href="https://ellakaye.github.io/distilltools/" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
-<a href="https://github.com/EllaKaye/distilltools" class="icon-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> source</a>
+`r icon_link("globe", "site", "https://ellakaye.github.io/distilltools/", style = "regular")`
+`r icon_link("github", "source", "https://github.com/EllaKaye/distilltools")`
+
 
 It is in the very early stages of development. I am actively seeking contributions - both ideas and code - to help build the package to be broadly useful to a wide variety of {distill} users. The idea is for the package to become a curated, collaborative, community-driven project. Please see the [contributing guide](https://ellakaye.github.io/distilltools/CONTRIBUTING.html) for more details on how to get involved. In terms of relationship between packages, I hope in time that {distilltools} can be for {distill} something like what [{xaringanExtra}](https://pkg.garrickadenbuie.com/xaringanExtra/#/) and [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/) are for [{xaringan}](https://github.com/yihui/xaringan). Some of what I have in mind may sit better within the distill package itself, and I am in touch with the {distill} team about that.
 

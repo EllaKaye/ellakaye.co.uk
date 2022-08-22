@@ -1,0 +1,125 @@
+---
+title: "Experimenting with icon links"
+author: "Ella Kaye"
+date: "2022-08-01"
+categories: [news, code, analysis]
+image: "image.jpg"
+image-alt: |
+  The image is missing
+execute: 
+  echo: false
+draft: true
+---
+
+Here an article: [custom syntax highlighting for {distill}: modifying the theme](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/).
+
+
+<!-- # Here's `SOME code` in h1 -->
+
+## Here's `SOME code` in h2
+
+### Here's `SOME code` in h3
+
+#### Here's `SOME code` in h4
+
+##### Here's `SOME code` in h5
+
+###### Here's `SOME code` in h6
+
+This is a post with executable code.
+
+```{r}
+1 + 1
+```
+
+Add bootstrap icons:
+
+<i class="bi bi-alarm"></i> <i class="bi-apple"></i> <i class="bi bi-badge-tm-fill"></i>
+
+Add fontawesome icons using the extension:
+
+{{< fa thumbs-up >}} {{< fa chess-pawn >}} 
+
+Compare bi, fa
+<i class="bi bi-hand-thumbs-up-fill"></i>, {{< fa thumbs-up >}} 
+
+## Experimenting with `distilltools::icon_link` in Quarto
+
+```{r}
+library(distilltools)
+```
+
+In a code block puts them all on separate lines.
+
+```{r}
+icon_link(icon = "fas fa-images",
+          text = "slides",
+          url = "https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1")
+icon_link(icon = "fab fa-github",
+          text = "materials",
+          url = "https://github.com/EllaKaye/Rladies-Coventry-getting-help-in-R")
+icon_link(icon = "fas fa-play-circle",
+          text = "video",
+          url = "https://www.youtube.com/watch?v=YhR1gKhWmxs&t=1661s")
+```
+
+
+But using inline chunks gets them on the same line (as long as there are no line breaks between them):
+
+`r icon_link(icon = "fas fa-images",
+          text = "slides",
+          url = "https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1")` 
+`r icon_link(icon = "fab fa-github",
+          text = "materials",
+          url = "https://github.com/EllaKaye/Rladies-Coventry-getting-help-in-R")`
+`r icon_link(icon = "fas fa-play-circle",
+          text = "video",
+          url = "https://www.youtube.com/watch?v=YhR1gKhWmxs&t=1661s")`
+          
+
+          
+also, note, need `display: inline-block` in the css
+
+## Using `btn` and svg
+
+<button type="button" class="btn icon-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+</svg>
+                materials
+              </button>
+<button type="button" class="btn icon-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+</svg>
+                materials 2
+              </button>
+              
+## Using `btn` and `<i>`
+<button type="button" class="btn icon-link">
+<i class="bi bi-github"></i>
+                materials
+              </button>
+
+## Conclusion
+Original strategy, `<a>` styled to look like button, is probably best (see [this StackOverflow](https://stackoverflow.com/questions/2906582/how-do-i-create-an-html-button-that-acts-like-a-link)).
+
+Also, use `<i>` rather than `<svg>` as that's what Quarto seems to do (though note can style `<svg>` with CSS).
+
+Also, using `font-size` CSS property makes both icon and text bigger with `<i>` tag, but not `<svg>`.
+
+## With bigger icon?
+
+<a href="https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-images fa-2x"></i> slides</a>
+
+## In a header
+
+### `r icon_link(icon = "fab fa-github", text = "materials", url = "https://github.com/EllaKaye/Rladies-Coventry-getting-help-in-R")`
+
+## `icon_link` html with bookstrap icon:
+
+<a href="https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1" class="icon-link" target="_blank" rel="noopener"><i class="bi bi-github"></i> slides</a>
+
+## Iconify
+
+{{< iconify exploding-head >}}

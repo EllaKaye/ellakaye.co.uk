@@ -21,3 +21,25 @@
   margin-bottom: 1rem;
 }
 
+#quarto-margin-sidebar .quarto-listing-category {
+  font-size: 0.8rem;
+}
+
+div.listing-description {
+  font-size: 0.875rem;
+}
+
+div.quarto-post .body .listing-subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*
+// left align edge of callout block with text
+// without this, text inside callout block is left aligned with body text,
+// which maybe looks better?
+div.callout.callout {
+  margin-left: 0;
+}
+*/

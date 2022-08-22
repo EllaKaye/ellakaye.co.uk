@@ -26,5 +26,5 @@ execute:
   message: true
   warning: true
   
-include-in-header: _includes/giscus.html
-include-after-body: _includes/div-giscus.html
+include-in-header: ../_includes/giscus.html
+include-after-body: ../_includes/div-giscus.html

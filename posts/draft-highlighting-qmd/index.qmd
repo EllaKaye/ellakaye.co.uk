@@ -1,0 +1,19 @@
+---
+title: "Syntax Highlighting in Quarto"
+author: "Ella Kaye"
+date: "2022-07-29"
+categories: [Quarto]
+draft: true
+---
+
+## Distill to Quarto
+
+Last year, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I've rewritten my website using Quarto, this post is an update on that process for this format.
+
+### An extra colour
+
+Quarto, like distill, uses a theme called arrow as its default. There are, however, some differences between the implementations for distill and Quarto. Firstly, when I applied my custom highlighting scheme, with its five-colour palette, to my Quarto site, I noticed an extra colour had slipped in.
+
+
+
+### Light and dark modes

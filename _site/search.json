@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "posts/highlighting-qmd/index.html",
-    "href": "posts/highlighting-qmd/index.html",
-    "title": "Syntax Highlighting in Quarto",
-    "section": "",
-    "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye and Ella Kaye},\n  title = {Syntax {Highlighting} in {Quarto}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/highlighting-qmd},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye, and Ella Kaye. 2022. “Syntax Highlighting in\nQuarto.” July 29, 2022. https://ellakaye.rbind.io/posts/highlighting-qmd."
-  },
-  {
-    "objectID": "posts/awesome-icon/index.html",
-    "href": "posts/awesome-icon/index.html",
-    "title": "Awesome Icon",
-    "section": "",
-    "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye},\n  title = {Awesome {Icon}},\n  date = {2022-08-05},\n  url = {https://ellakaye.rbind.io/posts/awesome-icon},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2022. “Awesome Icon.” August 5, 2022. https://ellakaye.rbind.io/posts/awesome-icon."
-  },
-  {
     "objectID": "posts/2021-05-08_welcome-distill/index.html",
     "href": "posts/2021-05-08_welcome-distill/index.html",
     "title": "Welcome to my {distill} website!",
@@ -39,7 +25,7 @@
     "href": "posts/2021-05-08_welcome-distill/index.html#inspirationscode",
     "title": "Welcome to my {distill} website!",
     "section": "Inspirations/Code",
-    "text": "Inspirations/Code\nI’m extremely grateful to the authors of the above posts for taking the time to write up what they’ve developed and what they know/have learnt to do, therefore making it easy for others to apply. I guess that’s what blogs are for! But I’ve also learnt a lot from finding sites that I simply like the look of, or have cool features, and looking at the source code on GitHub and adapting it for my own site. Here are some sites that I’ve drawn on for inspiration and code2:\n\n\n\n\nJohn Helveston\n\n site  source\nI particularly like his icon_link buttons (as demonstrated just above)3, and the second collection for talks. John tells me he is turn took inspiration for this from Emi Tanaka’s site.\n\nIjeamaka Anyene\n\n site  source\nIjeamaka has a really cool projects page, where she’s created a card for each project, which I’ve implemented on my site.\n\nTom Mock\n\n site  source\nCome for the minimalist, stylish design, stay for the fantastic blog content, not just on {distill}, but also on {gt}, R Markdown, #TidyTuesday and much more besides."
+    "text": "Inspirations/Code\nI’m extremely grateful to the authors of the above posts for taking the time to write up what they’ve developed and what they know/have learnt to do, therefore making it easy for others to apply. I guess that’s what blogs are for! But I’ve also learnt a lot from finding sites that I simply like the look of, or have cool features, and looking at the source code on GitHub and adapting it for my own site. Here are some sites that I’ve drawn on for inspiration and code2:\n\n\n\n\nJohn Helveston\n\n site  source\nI particularly like his icon_link buttons (as demonstrated just above), and the second collection for talks. John tells me he is turn took inspiration for this from Emi Tanaka’s site.\n\nIjeamaka Anyene\n\n site  source\nIjeamaka has a really cool projects page, where she’s created a card for each project, which I’ve implemented on my site.\n\nTom Mock\n\n site  source\nCome for the minimalist, stylish design, stay for the fantastic blog content, not just on {distill}, but also on {gt}, R Markdown, #TidyTuesday and much more besides."
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#finding-out-more",
@@ -54,13 +40,6 @@
     "title": "Welcome to my {distill} website!",
     "section": "A sneak-peek at {distilltools}",
     "text": "A sneak-peek at {distilltools}\nInspiried by the above-mentioned posts from John Helveston and Eric Ekholm, I’ve started working on a package, {distilltools}, a collection of tools to support the creation and styling of content on websites created using {distill}.\n site  source\nIt is in the very early stages of development. I am actively seeking contributions - both ideas and code - to help build the package to be broadly useful to a wide variety of {distill} users. The idea is for the package to become a curated, collaborative, community-driven project. Please see the contributing guide for more details on how to get involved. In terms of relationship between packages, I hope in time that {distilltools} can be for {distill} something like what {xaringanExtra} and {xaringanthemer} are for {xaringan}. Some of what I have in mind may sit better within the distill package itself, and I am in touch with the {distill} team about that.\nAt the time of writing, there are just three functions:\n\nicon_link: creates the html for a link button with icon and text (as seen above). Output of icon_link will need styling via the icon-link class to make it look like a button.\ncreate_talk(): a wrapper around distill::create_post() that creates a post in the talk directory and includes buttons (made with icon-link()) for slides (both web and pdf), material, video and project. These can easily be edited in the resulting .Rmd file.\ncreate_post_from_template(): this function operates almost identically to distill::create_post() except for the addition of a path argument, which allows the user to pass in a path to an .Rmd file that can be used as a template for the post. (Note that this function is likely going to be pulled into the {distill} package and hence be depreciated here.)\n\nExpect to hear much more from me, both on this blog and twitter, about {distilltools} in the near future."
-  },
-  {
-    "objectID": "posts/callout-blocks/index.html",
-    "href": "posts/callout-blocks/index.html",
-    "title": "Testing callout blocks",
-    "section": "",
-    "text": "Here are my tests of callout blocks.\nSee the documentation.\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nDo do this!\n\n\n\n\n\n\n\n\nTip With Caption\n\n\n\nThis is an example of a callout with a caption.\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n\n\n\nDon’t do that! simple appearance.\n\n\n\n\n\n\n\n\n\nDon’t do that! minimal appearance.\n\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye,\n  author = {Ella Kaye},\n  title = {Testing Callout Blocks},\n  url = {https://ellakaye.rbind.io/posts/callout-blocks},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. n.d. “Testing Callout Blocks.” https://ellakaye.rbind.io/posts/callout-blocks."
   },
   {
     "objectID": "posts/2020-12-09_advent-of-code-2020/index.html",
@@ -154,11 +133,46 @@
     "text": "Next\nI was late to the game, and that was as far as I managed to get in December 2020. I’m looking forward to taking on the challenge again in 2021!"
   },
   {
-    "objectID": "posts/syntax-highlighting/index.html",
-    "href": "posts/syntax-highlighting/index.html",
-    "title": "Syntax Highlighting",
-    "section": "",
-    "text": "#| label: code-demo-py\n#| eval: false\n#| message: false\n#| warning: false\n\nimport numpy as np\n\n\nToggle the code\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\"penguin\" == 5\n\nmy_var <- 218\n\nc(1,5,6) |> mean()\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2022,\n  author = {Ella Kaye and Ella Kaye},\n  title = {Syntax {Highlighting}},\n  date = {2022-07-29},\n  url = {https://ellakaye.rbind.io/posts/syntax-highlighting},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye, and Ella Kaye. 2022. “Syntax Highlighting.” July\n29, 2022. https://ellakaye.rbind.io/posts/syntax-highlighting."
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#tldr",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#tldr",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "TL;DR",
+    "text": "TL;DR\nThe {distill} package for R can be used to build easy-to-maintain websites written only in R Markdown, such as this one.2\nI wrote a function to modify the default syntax highlighting theme. This modify_default_highlighting function is now part of the {distilltools} package.\nHere’s the function in action, to get the theme used on this site:\n\n\nToggle the code\n# get distilltools, requires remotes >= 2.2\nremotes::install_github(\"EllaKaye/distilltools\") \n\nlibrary(distilltools)\nmodify_default_highlighting(\n  name = \"ek_syntax_highlighting\",\n  numeric = \"#B6005B\", # replaces the default red\n  strings = \"#008643\", # replaces the default green\n  functions = \"#005BB6\", # replaces the default purple\n  control = \"#5B00B6\", # replaces the default blue\n  constant = \"#B65B00\" # replaces the default brown\n)\n\n\nAnd here’s the theme in action:\n\n\nToggle the code\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\nThis is the first in a series of two posts on implementing a custom syntax highlighting theme for a website or blog built with {distill}. Read on here for why and how this function was built, what it does and doesn’t do, and its inclusion in the {distilltools} package. This post also outlines the criteria that were important to me when choosing colours for my theme, but take a look at Part 2, custom syntax highlighting for {distill}: creating the palette, for a deep dive into considerations about colour choices, in respect to both colour theory and accessibility, and how I ensured my criteria were met."
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#but-first-the-default",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#but-first-the-default",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "But first, the default",
+    "text": "But first, the default\n\nIn praise of the default\nBefore I delve into how to create a custom syntax highlighting scheme, I want to take a minute to admire the default. The authors of {distill}, in particular Alison Hill, have thought and worked hard to ensure that {distill} provides a good user experience, both for the site’s author AND for those reading it. One of the key considerations for the latter is a default syntax highlighting scheme with colours that are optimised for accessibility and colour contrast. I say more about what that means below and in Part 2. Also, it appears that the colours in the scheme work well together, and overall, on the many {distill} websites where I’ve seen the scheme used, I think it looks really good! For a great example of the default in action, check out this code-chunk-heavy post by Tom Mock.\n\n\nSo, why change?\n\n\n\nWhen I used the default syntax highlighting theme on my site I found, to my eye, that the red used for numeric variables clashed with the bright pink (closest colour name “razzmatazz”) I’ve used in my logo and elsewhere throughout the site. So, I decided to tweak the default theme swapping the red for my pink and, to match it, more vibrant versions of the remaining colours.\n\n\nDistill/pandoc documentation\nMy first task was to find out whether this was possible, and if, so, how. Thankfully, the {distill} documentation contains a section on syntax highlighting, showing that there is an option to give distill_article a path to a custom .theme file. The linked pandoc documentation on syntax highlighting demonstrates how to use pandoc in the command line to save a personal version of the pygments highlighting theme. The documentation points out that that copy of the pygments .theme file can then be edited to create a custom theme.\n\n\nFinding and saving the default\nOnce I had a general strategy of copying and editing an existing .theme file, my next task was to find the .theme file for the default used in {distill}, because that’s what I’d already decided to take as my starting point.\nI cloned the distill repo from GitHub and opened it in RStudio.3 From there I began my detective work with one of my favourite RStudio features, ‘Find in Files’ (⇧ + ⌘ + F on a Mac), which searches across all files in a project. I searched for “highlight” and followed various trails until I discovered that the default is called arrow.theme and is stored in inst/rmarkdown/templates/distill_article/resources/. Thankfully, because it’s in the inst folder, the file is accessible to users who have the {distill} package installed. In the RStudio project for my website, I created a new script, syntax_highlighting.R, in the R folder I have in my root directory, then I ran the following to save a copy of arrow.theme into my website’s root directory:\n\n\nToggle the code\narrow_theme_path <- system.file(\n  \"rmarkdown/templates/distill_article/resources/arrow.theme\", \n  package = \"distill\"\n)\n\nfile.copy(arrow_theme_path, \"arrow.theme\")\n\n\nWhen I had run that once, I commented out the above lines. I don’t want any future changes in arrow.theme in {distill} to break what I do next.\n\n\nCloser inspection of the default\nFrom there I could open up my copy of the arrow.theme file and manually inspect it. I use a great Mac app for building colour palettes, ColorSlurp.4 The basic version is free, though the pro version has useful features for testing accessibility - more on that in Part 2. I set up a new palette in ColorSlurp and, for each hex colour code I encountered, I saved it there.\nThere are 29 types of text-styles in the theme, of which:\n\n8 are assigned a grey, #5E5E5E, things like Comment and Documentation\n1 is off-black, #111111, Variable\n3 are blue, #007BA5, Other, ControlFlow and Keyword\n4 are green, #20794D, corresponding to various types of string\n1 is purple, #4758AB, Function\n7 are red, #AD0000, a mix of numeric (e.g. BaseN, Float) and things like Alert and Error\n1 is a brown, #8F5902, for Constant\n4 types are not assigned a colour - they are left as null\n\nI was happy to stick with the groupings, grey, off-black and null in the default, so now I knew I had to pick five colours for my theme."
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#building-my-own-palette",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#building-my-own-palette",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "Building my own palette",
+    "text": "Building my own palette\nI had four criteria for building a colour palette to use for my syntax highlighting theme:\n\nIt be based on the pink that I use in my logo and elsewhere throughout this site\nIt uses colour theory to pick colours that look appealing together\nIt meets WCAG web accessibility guidelines, by ensuring sufficient colour contrast, i.e. a ratio of 4.5:1, between each of the colours in the theme and this site’s background colour (white)\nThe colours in the palette are colourblind-friendly, i.e. still distinguishable to people with various difference types of colourblindness.\n\nI was originally going to write up how I went about building such a palette, both in terms of the thought process and tools used, as part of this post, but it was getting a little long5, so I’ve spun it out into a separate post, custom syntax highlighting for {distill} part 2: creating the palette.\nAt the end of the process, the palette for my syntax highlighting scheme is as in Figure 1.\n\n\n\n\n\nFigure 1: The color palette used for syntax highlighting throughout this site."
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#modifying-arrow.theme",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#modifying-arrow.theme",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "Modifying arrow.theme",
+    "text": "Modifying arrow.theme\nWith all the pieces in place, it’s now just a case of swapping out the default colour codes for our own choices. Although it’s possible to manually edit the arrow.theme file we now have in our directory, to aid reproducibility, and with a view to writing this up as a function, I edited it using R code instead. I read in the file, substituted the hex codes, then saved the resulting theme into a new ek_syntax_highlighting.theme file (leaving arrow.theme unchanged). Below are two approaches, one using base R, the other in the tidyverse, that I put in my syntax_highlighting.R script.\n\n\nToggle the code\n# read in the default theme\ntheme <- readLines(\"arrow.theme\")\n\n# base R approach\ntheme <- gsub(\"#AD0000\", \"#B6005B\", theme) # red -> pink\ntheme <- gsub(\"#8f5902\", \"#B65B00\", theme) # brown -> brown \ntheme <- gsub(\"#007BA5\", \"#5B00B6\", theme) # blue -> purple\ntheme <- gsub(\"#20794D\", \"#B65B00\", theme) # green -> green\ntheme <- gsub(\"#4758AB\", \"#005BB6\", theme) # purple -> blue\n\n# alternatively, tidyverse approach\nlibrary(stringr)\nlibrary(magrittr)\n\ntheme <- readLines(\"arrow.theme\") %>%\n   str_replace_all(\"#AD0000\", \"#B6005B\") %>% # red -> pink\n   str_replace_all(\"#8f5902\", \"#B65B00\") %>% # brown -> brown \n   str_replace_all(\"#007BA5\", \"#5B00B6\") %>% # blue -> purple\n   str_replace_all(\"#20794D\", \"#008643\") %>% # green -> green\n   str_replace_all(\"#4758AB\", \"#005BB6\")     # purple -> blue\n\n# save new theme\nwriteLines(theme, \"ek_syntax_highlighting.theme\")\n\n\nI now have the file ek_syntax_highlighting.theme in my root directory, with my colour choices.\nIt is, of course, possible to modify it further, either manually or by making further substutions in the code above. There is a quirk, though: if I swap one of the default hex codes for my own colour choice, that implements just fine, but if I swap any of the nulls for a colour, that doesn’t show up when I apply the theme."
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#wrapping-in-a-distilltools-function",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#wrapping-in-a-distilltools-function",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "Wrapping in a {distilltools} function",
+    "text": "Wrapping in a {distilltools} function\nWhen I figure out code to do something that I think I might want to do again, or think others might find useful, I generally like to write it up as a function, and that’s what I’ve done with the above, wrapping it in a function called modify_default_highlighting and putting it in the {distilltools} package. {distilltools} is in the very early stages of development, an (expanding) collection of tools to support the creation and styling of content on websites created using {distill}.\nWhen I first announced the package, I included in the ‘future functionality’ section of the package README the intention to add a create_highlight_theme function. I don’t think what I’ve done is quite versatile or fully-featured enough to warrant that name. Instead, I called it modify_default_highlighting because that’s all it does, allowing you to swap out the five colours in the default scheme for five colours of your choosing. It does, however, create a .theme file in your working directory, that can be further edited manually, or with your own R code, if further modifications are desired.\nThe first argument to modify_default_highlighting is name, the name you want to give your theme (which will create the file name.theme). It then takes five colour arguments, which can be specified either in the hex form “#RRGGBB” or as a named colour, from the colour names in grDevices::colors(). For a list of the colour names available in R, see page 3 of the R color cheatsheet for a one page summary, or Colors in R for a slightly less visually overwhelming list. The final argument, overwrite (defaults to TRUE) specifies whether to overwrite name.theme if it already exists in the working directory. Here’s the function in action again, this time using colour names (note that I have not tested the visual properties of this as a palette, just dropped in some colour names into the function):\n\n\nToggle the code\nlibrary(distilltools)\nmodify_default_highlighting(\n  name = \"ek_syntax_highlighting\",\n  numeric = \"deeppink\", # replaces the default red\n  strings = \"forestgreen\", # replaces the default green\n  functions = \"darkorchid3\", # replaces the default purple\n  control = \"royalbkue3\", # replaces the default blue\n  constant = \"darkorange1\" # replaces the default brown\n)"
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#using-the-theme",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#using-the-theme",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "Using the theme",
+    "text": "Using the theme\nOnce you have you custom .theme file, you’ll want to apply it to your site. According to the {distill} documentation, you can apply a syntax highlighting theme with the following YAML:\n---\noutput:\n  distill::distill_article:\n    highlight: my_highlighting.theme\n---  \nHere, the available options for highlight include default, rstudio (the default RStudio editor theme), and the haddock, kate, monochrome, pygments and tango pandoc highlighting themes. Also, most importantly for us, it can also take the path to a .theme file.\nPresumably, we should be able to add this to our _site.yml file to have the theme apply site-wide (though note you’ll have to rebuild the site and re-knit any posts where you want to it apply). However, that’s not working for me. I have raised an issue about it. If you face the same problem, it would be helpful if you could comment there too.\nThere is a workaround, though, which is that the above YAML can also be included in individual .Rmd articles, in which case the theme applies just fine, though note that if your .theme file is in you root directory, you’ll need to give the full path to it.6 And if it sounds like a bit of a pain to have to add that every time you write a new post, consider creating a template for your posts, including those lines, and then starting new posts with the {distilltools} function create_post_from_template().7"
   },
   {
     "objectID": "posts/2017-06-17_n-letter-words/index.html",
@@ -166,76 +180,6 @@
     "title": "n_letter_words and a personal (publicly available) package",
     "section": "",
     "text": "The function, n_letter_words, came about because I wanted to be able to generate row and column names for a large matrix - didn’t matter what they were, as long as they were unique. Since I was in the habit of using the built-in LETTERS vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was stackoverflow to the rescue. There, I learnt about expand.grid and could then use some tidyverse tools to get the vector I was after:\n\n\nToggle the code\nlibrary(tidyverse)\nout <- expand.grid(LETTERS, LETTERS) %>%\n  as_tibble() %>%\n  unite(word, 1:2, sep = \"\") %>%\n  pull()\nc(head(out), tail(out))\n\n\n [1] \"AA\" \"BA\" \"CA\" \"DA\" \"EA\" \"FA\" \"UZ\" \"VZ\" \"WZ\" \"XZ\" \"YZ\" \"ZZ\"\n\n\nSorted! At least I thought so, until, a couple of months later, when I wanted to generate names for a 1000*1000 matrix, and realised both that I’d forgotten the expand.grid trick, and once I’d re-found the stackoverflow post, that it didn’t give me enough words. That was enough to make it worth writing a function, taking n as an argument, that gives all ‘words’ of length \\(n\\).\nWriting functions always makes me think of what other arguments might be useful. What if we want something between the 676 two-letter words and 17,576 three-letter words (or the 456,976 four-letter words, etc)? Hence the argument num_letters, which can be set between 1 and 26, and results in a total of num_letters\\(^n\\) words. By default, the function returns a tibble, but setting as_vector = TRUE does what you’d expect. And I threw in a case argument too.\nNow that I had my function, what to do with it? I remembered articles I’d read about the usefulness of making and sharing a personal package. Now seemed like the time to do that myself.\nSo, here is my personal package, EMK. If you think that n_letter_words might be of use to you, then feel free to install!\n\n\nToggle the code\ndevtools::install_github(\"EllaKaye/EMK\")\n\n\nSome examples of n_letter_words:\n\n\nToggle the code\nlibrary(EMK)\n\nn_letter_words(2)\n\n\n# A tibble: 676 × 1\n   word \n   <chr>\n 1 AA   \n 2 BA   \n 3 CA   \n 4 DA   \n 5 EA   \n 6 FA   \n 7 GA   \n 8 HA   \n 9 IA   \n10 JA   \n# … with 666 more rows\n\n\nToggle the code\nsome_three_letter_words <- n_letter_words(\n  n = 3, \n  num_letters = 10, \n  case = \"lower\", \n  as_vector = TRUE\n)\n\nc(head(some_three_letter_words), tail(some_three_letter_words))\n\n\n [1] \"aaa\" \"baa\" \"caa\" \"daa\" \"eaa\" \"faa\" \"ejj\" \"fjj\" \"gjj\" \"hjj\" \"ijj\" \"jjj\"\n\n\nToggle the code\nlength(some_three_letter_words)\n\n\n[1] 1000\n\n\nFor now, my personal package has only this one function, but watch this space! No doubt I’ll be adding more that I find useful. Perhaps, you’ll find them useful too.\nIncidentally, none of the above would have happened if I’d just thought, for my test matrix A, to set dimnames(A) <- list(1:nrow(A), 1:ncol(A))!\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2017,\n  author = {Ella Kaye},\n  title = {N\\_letter\\_words and a Personal (Publicly Available) Package},\n  date = {2017-06-17},\n  url = {https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2017. “N_letter_words and a Personal (Publicly\nAvailable) Package.” June 17, 2017. https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words."
-  },
-  {
-    "objectID": "posts/icon-links/index.html",
-    "href": "posts/icon-links/index.html",
-    "title": "Experimenting with icon links",
-    "section": "",
-    "text": "Here an article: custom syntax highlighting for {distill}: modifying the theme."
-  },
-  {
-    "objectID": "posts/icon-links/index.html#heres-some-code-in-h2",
-    "href": "posts/icon-links/index.html#heres-some-code-in-h2",
-    "title": "Experimenting with icon links",
-    "section": "Here’s SOME code in h2",
-    "text": "Here’s SOME code in h2\n\nHere’s SOME code in h3\n\nHere’s SOME code in h4\n\nHere’s SOME code in h5\n\nHere’s SOME code in h6\nThis is a post with executable code.\n\n\n[1] 2\n\n\nAdd bootstrap icons:\n  \nAdd fontawesome icons using the extension:\n \nCompare bi, fa ,"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "href": "posts/icon-links/index.html#experimenting-with-distilltoolsicon_link-in-quarto",
-    "title": "Experimenting with icon links",
-    "section": "Experimenting with distilltools::icon_link in Quarto",
-    "text": "Experimenting with distilltools::icon_link in Quarto\n\n\n\nIn a code block puts them all on separate lines.\n\n\n slides\n\n\n materials\n\n\n video\n\n\nBut using inline chunks gets them on the same line (as long as there are no line breaks between them):\n slides  materials  video\nalso, note, need display: inline-block in the css"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#using-btn-and-svg",
-    "href": "posts/icon-links/index.html#using-btn-and-svg",
-    "title": "Experimenting with icon links",
-    "section": "Using btn and svg",
-    "text": "Using btn and svg\n\n\n\n\nmaterials\n\n\n\n\n\nmaterials 2"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#using-btn-and-i",
-    "href": "posts/icon-links/index.html#using-btn-and-i",
-    "title": "Experimenting with icon links",
-    "section": "Using btn and <i>",
-    "text": "Using btn and <i>\n\n materials"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#conclusion",
-    "href": "posts/icon-links/index.html#conclusion",
-    "title": "Experimenting with icon links",
-    "section": "Conclusion",
-    "text": "Conclusion\nOriginal strategy, <a> styled to look like button, is probably best (see this StackOverflow).\nAlso, use <i> rather than <svg> as that’s what Quarto seems to do (though note can style <svg> with CSS).\nAlso, using font-size CSS property makes both icon and text bigger with <i> tag, but not <svg>."
-  },
-  {
-    "objectID": "posts/icon-links/index.html#with-bigger-icon",
-    "href": "posts/icon-links/index.html#with-bigger-icon",
-    "title": "Experimenting with icon links",
-    "section": "With bigger icon?",
-    "text": "With bigger icon?\n slides"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#in-a-header",
-    "href": "posts/icon-links/index.html#in-a-header",
-    "title": "Experimenting with icon links",
-    "section": "In a header",
-    "text": "In a header\n\n materials"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
-    "href": "posts/icon-links/index.html#icon_link-html-with-bookstrap-icon",
-    "title": "Experimenting with icon links",
-    "section": "icon_link html with bookstrap icon:",
-    "text": "icon_link html with bookstrap icon:\n slides"
-  },
-  {
-    "objectID": "posts/icon-links/index.html#iconify",
-    "href": "posts/icon-links/index.html#iconify",
-    "title": "Experimenting with icon links",
-    "section": "Iconify",
-    "text": "Iconify"
   },
   {
     "objectID": "talks.html",
@@ -256,6 +200,6 @@
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "Also include icon-link\n\n\n\n\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTAG_1\n\n\nTAG_2\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nElla Kaye, Ella Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye, Ella Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2022\n\n\nElla Kaye, Ella Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+    "text": "Modifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   }
 ]

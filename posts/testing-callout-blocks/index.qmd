@@ -1,0 +1,58 @@
+---
+title: "Testing callout blocks"
+description: Also include icon-link
+include-in-header: ../../_includes/fontawesome-2up.html
+draft: true
+---
+
+<a href="https://ellakaye.github.io/distilltools/" class="icon-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> site</a>
+
+```{r}
+#| echo: false
+library(distilltools)
+icon_link(icon = "fas fa-images",
+          text = "slides",
+          url = "https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1")
+icon_link(icon = "fab fa-github",
+          text = "materials",
+          url = "https://github.com/EllaKaye/Rladies-Coventry-getting-help-in-R")
+```
+
+
+Here are my tests of callout blocks.
+
+See the [documentation](https://quarto.org/docs/authoring/callouts.html).
+
+:::{.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+:::{.callout-warning}
+Don't do that! simple appearance.
+:::
+
+:::{.callout-important}
+Do do this!
+:::
+
+:::{.callout-tip}
+## Tip With Caption
+
+This is an example of a callout with a caption.
+:::
+
+:::{.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+:::{.callout-caution appearance="simple"}
+Don't do that! simple appearance.
+:::
+
+:::{.callout-caution appearance="minimal"}
+Don't do that! minimal appearance.
+:::
+

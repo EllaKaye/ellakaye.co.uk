@@ -213,6 +213,10 @@ a:hover {
 }
 
 /*
+a.nav-link {
+  position: relative;
+}
+
 .navbar .navbar-nav .nav-item {
   position: relative;
 }
@@ -234,6 +238,7 @@ a:hover {
 }
 */
 
+
 // header styles
 #quarto-header {
   text-transform: uppercase;
@@ -242,5 +247,9 @@ a:hover {
 
 h1, h2, h3 {
   text-transform: uppercase;
+}
+
+div.tippy-content a:hover {
+  text-decoration-color: $primary;
 }
 

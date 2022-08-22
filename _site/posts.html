@@ -68,9 +68,9 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -142,6 +142,9 @@ ga('send', {
     <a class="nav-link" href="./talks.html">talks</a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./projects.html">Projects</a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./CV.pdf">CV</a>
   </li>  
   <li class="nav-item compact">
@@ -169,7 +172,7 @@ ga('send', {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Advent of Code">Advent of Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TAG_1">TAG_1 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TAG_2">TAG_2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="distill">distill <span class="quarto-category-count">(1)</span></div><div class="category" data-category="distilltools">distilltools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="package development">package development <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Advent of Code">Advent of Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="accessibility">accessibility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="colour">colour <span class="quarto-category-count">(1)</span></div><div class="category" data-category="distill">distill <span class="quarto-category-count">(2)</span></div><div class="category" data-category="distilltools">distilltools <span class="quarto-category-count">(2)</span></div><div class="category" data-category="package development">package development <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -195,70 +198,43 @@ ga('send', {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1660835537354" data-listing-reading-time-sort="0.48">
+<div class="quarto-post image-right" data-index="0" data-categories="distill,distilltools,colour,accessibility" data-listing-date-sort="1621897200000" data-listing-file-modified-sort="1661118370270" data-listing-reading-time-sort="12.74">
 <div class="thumbnail">
-<a href="./posts/callout-blocks/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/callout-blocks/index.html"></a></p>
+<p><a href="./posts/2021-05-25_custom-highlighting-distill-1/index.html"> <img src="./posts/2021-05-25_custom-highlighting-distill-1/more-theme-in-action.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
-<a href="./posts/callout-blocks/index.html">
+<a href="./posts/2021-05-25_custom-highlighting-distill-1/index.html">
 <h3 class="no-anchor listing-title">
-Testing callout blocks
+Custom Syntax Highlighting for {distill} Part 1
 </h3>
 <div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-<p>Also include icon-link</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/callout-blocks/index.html">
-<div class="listing-author">
-Ella Kaye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TAG_1,TAG_2" data-listing-date-sort="1659654000000" data-listing-file-modified-sort="1660209379237" data-listing-reading-time-sort="0.055">
-<div class="thumbnail">
-<a href="./posts/awesome-icon/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/awesome-icon/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/awesome-icon/index.html">
-<h3 class="no-anchor listing-title">
-Awesome Icon
-</h3>
-<div class="listing-subtitle">
-
+Modifying the default theme
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TAG_1'); return false;">
-TAG_1
+<div class="listing-category" onclick="window.quartoListingCategory('distill'); return false;">
+distill
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('TAG_2'); return false;">
-TAG_2
+<div class="listing-category" onclick="window.quartoListingCategory('distilltools'); return false;">
+distilltools
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('colour'); return false;">
+colour
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('accessibility'); return false;">
+accessibility
 </div>
 </div>
-<a href="./posts/awesome-icon/index.html">
+<a href="./posts/2021-05-25_custom-highlighting-distill-1/index.html">
 <div class="listing-description">
-<p>Post description</p>
+<p>A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/awesome-icon/index.html">
+<a href="./posts/2021-05-25_custom-highlighting-distill-1/index.html">
 <div class="listing-date">
-Aug 5, 2022
+May 25, 2021
 </div>
 <div class="listing-author">
 Ella Kaye
@@ -266,127 +242,7 @@ Ella Kaye
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="news,code,analysis" data-listing-date-sort="1659308400000" data-listing-file-modified-sort="1660759150173" data-listing-reading-time-sort="3.405">
-<div class="thumbnail">
-<p><a href="./posts/icon-links/index.html"> <img src="./posts/icon-links/image.jpg" class="thumnail-image" alt="The image is missing
-"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/icon-links/index.html">
-<h3 class="no-anchor listing-title">
-Experimenting with icon links
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<a href="./posts/icon-links/index.html">
-<div class="listing-description">
-Here an article: custom syntax highlighting for {distill}: modifying the theme.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/icon-links/index.html">
-<div class="listing-date">
-Aug 1, 2022
-</div>
-<div class="listing-author">
-Ella Kaye, Ella Kaye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Quarto" data-listing-date-sort="1659049200000" data-listing-file-modified-sort="1659730109778" data-listing-reading-time-sort="0.475">
-<div class="thumbnail">
-<a href="./posts/highlighting-qmd/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/highlighting-qmd/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/highlighting-qmd/index.html">
-<h3 class="no-anchor listing-title">
-Syntax Highlighting in Quarto
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-Quarto
-</div>
-</div>
-<a href="./posts/highlighting-qmd/index.html">
-<div class="listing-description">
-Last year, I wrote two extensive blog posts on designing and implementing a custom syntax highlighting theme for my website, written in {distill}. Now that I’ve rewritten my website using Quarto, this post is an update on that process for this format.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/highlighting-qmd/index.html">
-<div class="listing-date">
-Jul 29, 2022
-</div>
-<div class="listing-author">
-Ella Kaye, Ella Kaye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1659049200000" data-listing-file-modified-sort="1660342846786" data-listing-reading-time-sort="0.465">
-<div class="thumbnail">
-<a href="./posts/syntax-highlighting/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/syntax-highlighting/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/syntax-highlighting/index.html">
-<h3 class="no-anchor listing-title">
-Syntax Highlighting
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./posts/syntax-highlighting/index.html">
-<div class="listing-description">
-Let’s test some syntax highlighting!
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/syntax-highlighting/index.html">
-<div class="listing-date">
-Jul 29, 2022
-</div>
-<div class="listing-author">
-Ella Kaye, Ella Kaye
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="distill,distilltools,package development" data-listing-date-sort="1620428400000" data-listing-file-modified-sort="1660835143065" data-listing-reading-time-sort="7.885">
+<div class="quarto-post image-right" data-index="1" data-categories="distill,distilltools,package development" data-listing-date-sort="1620428400000" data-listing-file-modified-sort="1661105549540" data-listing-reading-time-sort="7.61">
 <div class="thumbnail">
 <p><a href="./posts/2021-05-08_welcome-distill/index.html"> <img src="./posts/2021-05-08_welcome-distill/distill-logo.png" class="thumnail-image" alt="A hexagon with a dark blue border and a mid-blue fill. Inside, a stylised white
 drop of water, with the word distill underneath, in white.
@@ -429,7 +285,7 @@ Ella Kaye
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="R,Advent of Code" data-listing-date-sort="1607472000000" data-listing-file-modified-sort="1660468458399" data-listing-reading-time-sort="32.305">
+<div class="quarto-post image-right" data-index="2" data-categories="R,Advent of Code" data-listing-date-sort="1607472000000" data-listing-file-modified-sort="1660468458399" data-listing-reading-time-sort="32.305">
 <div class="thumbnail">
 <p><a href="./posts/2020-12-09_advent-of-code-2020/index.html"> <img src="./posts/2020-12-09_advent-of-code-2020/advent-of-code-2020.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -467,7 +323,7 @@ Ella Kaye
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="R,package development" data-listing-date-sort="1497654000000" data-listing-file-modified-sort="1660669953547" data-listing-reading-time-sort="2.29">
+<div class="quarto-post image-right" data-index="3" data-categories="R,package development" data-listing-date-sort="1497654000000" data-listing-file-modified-sort="1660669953547" data-listing-reading-time-sort="2.29">
 <div class="thumbnail">
 <p><a href="./posts/2017-06-17_n-letter-words/index.html"> <img src="./posts/2017-06-17_n-letter-words/EMK-hex.png" class="thumnail-image" alt="A hexagon with a bright pink outline. Inside it, the letters E, M and K in the
 same bright pink, on a white background
