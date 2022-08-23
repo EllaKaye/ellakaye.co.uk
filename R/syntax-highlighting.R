@@ -4,7 +4,6 @@
 
 theme_light <- readLines("template-light.theme")
 # theme renamed from arrow-light.theme, found in quarto-cli, then saved into my root directory
-# text-styles manually rearranged alphabetically
 # also added in text-styles present in arrow-dark but not in arrow-light
 
 
