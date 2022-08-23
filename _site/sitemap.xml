@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2022-08-21T21:13:19.733Z</lastmod>
+    <lastmod>2022-08-23T15:05:42.163Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020/index.html</loc>
@@ -10,11 +10,11 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-08-21T21:46:12.307Z</lastmod>
+    <lastmod>2022-08-23T12:12:20.101Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2022-08-21T21:04:27.275Z</lastmod>
+    <lastmod>2022-08-23T15:05:42.989Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
@@ -26,10 +26,14 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-21T21:04:29.398Z</lastmod>
+    <lastmod>2022-08-22T13:53:03.180Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-21T22:01:15.877Z</lastmod>
+    <lastmod>2022-08-23T15:05:43.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
+    <lastmod>2022-08-23T15:05:47.251Z</lastmod>
   </url>
 </urlset>

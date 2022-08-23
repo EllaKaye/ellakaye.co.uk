@@ -4,6 +4,9 @@ subtitle: "Modifying the default theme"
 description: |
   A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}
 date: 2021-05-25
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.rbind.io/
 image: more-theme-in-action.png
 #image-alt: |
@@ -175,6 +178,22 @@ At the end of the process, the palette for my syntax highlighting scheme is as i
 
 ```{r fig-ek-syntax-highlighting-palette, echo = FALSE, fig.cap="The color palette used for syntax highlighting throughout this site.", fig.alt="A swatch of five colours, a bright pink, orange, green, blue and purple."}
 knitr::include_graphics("ek-syntax-highlighting-palette.png")
+```
+
+
+```{r fig-final-palette, echo = FALSE, eval = FALSE, fig.cap = "The palette I settled on for my syntax highlighting scheme.", fig.alt="A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white."}
+ek_highlight_colours <- c("#5B00B6", "#005BB6", "#008643", "#B65B00", "#B6005B")
+
+library(ggplot2)
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_highlight_colours)) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+#swatchplot(rev(ek_highlight_colours), border = "transparent")
+# Using the above code gives too much white around the swatches, so I ran the code, took a screen shot to crop it, then include that image back in.
+
 ```
 
 ## Modifying `arrow.theme`

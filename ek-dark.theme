@@ -50,7 +50,7 @@
             "underline": false
         },
         "ControlFlow": {
-            "text-color": "#F8F8FA",
+            "text-color": "#FF962C",
             "background-color": null,
             "bold": false,
             "italic": false,

@@ -3,6 +3,9 @@ title: "n_letter_words and a personal (publicly available) package"
 description: |
   How I created a handy function and a personal package
 date: 2017-06-17
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.rbind.io/
 image: EMK-hex.png
 image-alt: |

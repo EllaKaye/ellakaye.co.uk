@@ -6,7 +6,7 @@
   --quarto-hl-an-color: #DCDCE6;
   --quarto-hl-fu-color: #2C95FF;
   --quarto-hl-st-color: #00E673;
-  --quarto-hl-cf-color: #F8F8FA;
+  --quarto-hl-cf-color: #FF962C;
   --quarto-hl-op-color: #DCDCE6;
   --quarto-hl-er-color: #FF2B95;
   --quarto-hl-bn-color: #FF2B95;
@@ -79,7 +79,7 @@ code span.st {
 }
 
 code span.cf {
-  color: #F8F8FA;
+  color: #FF962C;
 }
 
 code span.op {

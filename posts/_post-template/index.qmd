@@ -3,6 +3,9 @@ title: Post Title
 description: |
   Post description
 date: UPDATE
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.rbind.io/
 #image: IMAGE.png
 #image-alt: |
