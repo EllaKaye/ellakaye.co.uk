@@ -6,12 +6,12 @@ date: 2020-10-29
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
-site-url: https://ellakaye.rbind.io/
 image: how-to-get-help-in-r.png
+# N.B. Don't use "" in image-alt
 image-alt: |
-  Front slide of the presentation desk, with the talk title, "getting help in R"
-  in white on a blue background. Underneath, a line with the text "Ella Kaye | bseeR | 
-  January 28th, 2021"
+  Front slide of the presentation desk, with the talk title, 'getting help in R'
+  in white on a blue background. Underneath, a line with the text 'Ella Kaye | bseeR | 
+  January 28th, 2021'
 #categories:
  # - TAG_1
 #  - TAG_2
@@ -84,14 +84,14 @@ I gave a very slightly updated version of the talk again three months later:
 
 ## Slides
 
-<iframe class="slide-deck-4-3" src="https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html" title="Getting Help in R slides">
+<iframe class="slide-deck-4-3" src="https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1" title="Getting Help in R slides">
 </iframe>
 
-Keyboard Shortcuts for Slideshow (once you've clicked inside it):
+Keyboard shortcuts for slideshow (once you've clicked inside it):
 
 - Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.
 
-- Use <kbd>o</kbd> to view an overview of all slides.
+- Use <kbd>o</kbd> for an overview of all slides.
 
 - Use <kbd>h</kbd> to see a list of other shortcuts 
   

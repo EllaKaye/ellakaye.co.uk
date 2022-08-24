@@ -186,7 +186,7 @@
     "href": "talks.html",
     "title": "talks",
     "section": "",
-    "text": "<img src=“/talks/2020-10-29_how-to-get-help-in-r/how-to-get-help-in-r.png” class=“thumnail-image” alt=“Front slide of the presentation desk, with the talk title, &quot;getting help in R” in white on a blue background. Underneath, a line with the text “Ella Kaye | bseeR | January 28th, 2021” “> \n\n\n\n\n\n\n\n\nTips for looking for answers and asking questions about R\n\n\n\n\n\n\nOct 29, 2020\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+    "text": "Tips for looking for answers and asking questions about R\n\n\n\n\n\n\nOct 29, 2020\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -305,6 +305,6 @@
     "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#slides",
     "title": "How to get help in R",
     "section": "Slides",
-    "text": "Slides\n\n\nKeyboard Shortcuts for Slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
+    "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   }
 ]

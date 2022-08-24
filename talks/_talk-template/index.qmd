@@ -6,12 +6,13 @@ date: UPDATE
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
-site-url: https://ellakaye.rbind.io/
-#image: IMAGE.png
-#image-alt: |
-categories:
-  - TAG_1
-  - TAG_2
+#site-url: https://ellakaye.rbind.io/
+image: IMAGE.png
+# N.B. Don't use "" in image-alt
+image-alt: |
+#categories:
+#  - TAG_1
+#  - TAG_2
 #twitter-card: 
 # uncomment lines below for different title and description to post
 #  title: |
@@ -31,9 +32,8 @@ library(distilltools)
 ```
 
 
-# [TODO]: fill in urls
-# [TODO]: delete any unessary icons (or add more)
-# [TODO]: css styling for .icon-link and .icon-link:hover
+### [TODO]: fill in urls
+### [TODO]: delete any unessary icons (or add more)
 
 `r icon_link(
   icon = "images",
@@ -72,17 +72,25 @@ library(distilltools)
 ## Key points
 
 - Point 1
+
 - Point 2
+
 - ...
 
-## Slides
 
-** EMBED SLIDES - SEE EXAMPLE FROM AMESOME QUARTO**
+## Slides - fill in iframe and link in last bullet point
 
-Keyboard Shortcuts for Slides **CHECK**
+<iframe class="slide-deck-4-3" src="FILL IN" title="FILL IN">
+</iframe>
+
+Keyboard shortcuts for slideshow (once you've clicked inside it):
 
 - Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.
-- Use <kbd>f</kbd> to toggle full screen.
-- Use <kbd>o</kbd> to view an overview of all slides.
-- Use <kbd>h</kbd> to see a list of other shortcuts.
 
+- Use <kbd>o</kbd> for an overview of all slides.
+
+- Use <kbd>h</kbd> to see a list of other shortcuts 
+  
+  - <kbd>f</kbd> to toggle full screen not working, but the rest are fine.
+  
+  - For full screen slides, go to [slides]("") then press <kbd>f</kbd>.
