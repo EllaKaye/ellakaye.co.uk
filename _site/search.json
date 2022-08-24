@@ -186,7 +186,7 @@
     "href": "talks.html",
     "title": "talks",
     "section": "",
-    "text": "No matching items"
+    "text": "<img src=“/talks/2020-10-29_how-to-get-help-in-r/how-to-get-help-in-r.png” class=“thumnail-image” alt=“Front slide of the presentation desk, with the talk title, &quot;getting help in R” in white on a blue background. Underneath, a line with the text “Ella Kaye | bseeR | January 28th, 2021” “> \n\n\n\n\n\n\n\n\nTips for looking for answers and asking questions about R\n\n\n\n\n\n\nOct 29, 2020\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -236,5 +236,75 @@
     "title": "Custom Syntax Highlighting for {distill} Part 2",
     "section": "Back to Part 1",
     "text": "Back to Part 1\nNow that I have chosen my colour palette, head back to Part 1 for details of how to modify the default {distill} syntax highlighting theme to incorporate them, and how to apply the custom theme to a {distill} site."
+  },
+  {
+    "objectID": "talks/first-talk/index.html",
+    "href": "talks/first-talk/index.html",
+    "title": "A first talk",
+    "section": "",
+    "text": "slides  materials  video  package"
+  },
+  {
+    "objectID": "talks/first-talk/index.html#overview",
+    "href": "talks/first-talk/index.html#overview",
+    "title": "A first talk",
+    "section": "Overview",
+    "text": "Overview"
+  },
+  {
+    "objectID": "talks/first-talk/index.html#event-details",
+    "href": "talks/first-talk/index.html#event-details",
+    "title": "A first talk",
+    "section": "Event details",
+    "text": "Event details\nEvent: GROUP\nDate: DATE\nTime: TIME\nLocation: LOCATION"
+  },
+  {
+    "objectID": "talks/first-talk/index.html#key-points",
+    "href": "talks/first-talk/index.html#key-points",
+    "title": "A first talk",
+    "section": "Key points",
+    "text": "Key points\n\nPoint 1\nPoint 2\n…"
+  },
+  {
+    "objectID": "talks/first-talk/index.html#slides",
+    "href": "talks/first-talk/index.html#slides",
+    "title": "A first talk",
+    "section": "Slides",
+    "text": "Slides\n** EMBED SLIDES - SEE EXAMPLE FROM AMESOME QUARTO**\nKeyboard Shortcuts for Slides CHECK\n\nUse ← and → to navigate through the slides.\nUse f to toggle full screen.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts."
+  },
+  {
+    "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html",
+    "href": "talks/2020-10-29_how-to-get-help-in-r/index.html",
+    "title": "How to get help in R",
+    "section": "",
+    "text": "slides  materials  video"
+  },
+  {
+    "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#overview",
+    "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#overview",
+    "title": "How to get help in R",
+    "section": "Overview",
+    "text": "Overview\nThis session will be led by Ella Kaye - an R enthusiast and statistics PhD researcher at the University of Warwick. In the session, Ella will talk us through different ways to get help when you get stuck on a problem in R. We’ll cover how and where to look for answers and how to ask and post good questions that make it easy for others to help you, including a demo of the excellent reprex and datapasta packages. So whether you’re an R novice or more experienced R user, hopefully there’ll be some useful tips for you!"
+  },
+  {
+    "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#event-details",
+    "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#event-details",
+    "title": "How to get help in R",
+    "section": "Event details",
+    "text": "Event details\nEvent: R Ladies Coventry (the inaugural talk)\nDate: October 29th, 2020\nLocation: Zoom\nI gave a very slightly updated version of the talk again three months later:\nEvent: bseeR\nDate: January 28th, 2021\nLocation: Microsoft Teams"
+  },
+  {
+    "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#key-points",
+    "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#key-points",
+    "title": "How to get help in R",
+    "section": "Key points",
+    "text": "Key points\n\nWhen faced with a question/problem, have a good look for an answer in R itself and/or online\nDon’t be shy about asking questions!\nWrite reproducible examples, best with the {reprex} package\nGive thought to where you ask/post your question\nGive back by helping others"
+  },
+  {
+    "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#slides",
+    "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#slides",
+    "title": "How to get help in R",
+    "section": "Slides",
+    "text": "Slides\n\n\nKeyboard Shortcuts for Slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   }
 ]

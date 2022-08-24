@@ -253,3 +253,8 @@ div.tippy-content a:hover {
   text-decoration-color: $primary;
 }
 
+iframe.slide-deck-4-3 {
+  border: 3px solid $gray-700;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}

@@ -1,0 +1,14 @@
+{
+  "hash": "2164318aaf8f70e6d7ce78bdc5723f4f",
+  "result": {
+    "markdown": "---\ntitle: A first talk\ndescription: |\n  Talk description\ndate: today\nauthor: \n  - name: Ella Kaye\n    url: https://twitter.com/ellamkaye\nsite-url: https://ellakaye.rbind.io/\n#image: IMAGE.png\n#image-alt: |\ncategories:\n  - TAG_1\n  - TAG_2\n#twitter-card: \n# uncomment lines below for different title and description to post\n#  title: |\n#  description: |\n# uncomment for different image to post\n#  image: |\n#  image-alt: |\n#  defaults to 500 x 500 summary: uncomment lines below for large card\n#  image-width: 600 \n#  image-height: 314\n#  card-style: \"summary_large_image\" \ndraft: false\n---\n\n::: {.cell}\n\n:::\n\n\n- [ ] TODO: fill in urls\n- [ ] TODO: delete any unessary icons (or add more)\n- [ ] TODO: css styling for .icon-link and .icon-link:hover\n\n`<a href=\"\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-images\"></i> slides</a>`{=html}\n`<a href=\"\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> materials</a>`{=html}\n`<a href=\"\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-play-circle\"></i> video</a>`{=html}\n`<a href=\"\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-box-open\"></i> package</a>`{=html}\n\n## Overview \n\n\n## Event details\n\n**Event:** [GROUP](url)\n\n**Date:** DATE\n\n**Time:** TIME\n\n**Location:** LOCATION\n\n## Key points\n\n- Point 1\n- Point 2\n- ...\n\n## Slides\n\n** EMBED SLIDES - SEE EXAMPLE FROM AMESOME QUARTO**\n\nKeyboard Shortcuts for Slides **CHECK**\n\n- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.\n- Use <kbd>f</kbd> to toggle full screen.\n- Use <kbd>o</kbd> to view an overview of all slides.\n- Use <kbd>h</kbd> to see a list of other shortcuts.\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

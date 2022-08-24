@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-21T21:04:27.699Z</lastmod>
+    <lastmod>2022-08-24T14:21:54.224Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/projects.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-22T13:53:03.180Z</lastmod>
+    <lastmod>2022-08-24T11:55:25.918Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
@@ -35,5 +35,13 @@
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
     <lastmod>2022-08-23T15:24:37.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks/first-talk/index.html</loc>
+    <lastmod>2022-08-23T20:56:41.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
+    <lastmod>2022-08-24T14:21:53.765Z</lastmod>
   </url>
 </urlset>

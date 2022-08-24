@@ -238,3 +238,9 @@ h1, h2, h3 {
 kbd {
   background-color: $body-bg;
 }
+
+iframe.slide-deck-4-3 {
+  border: 3px solid $gray-300;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
