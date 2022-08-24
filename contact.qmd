@@ -1,0 +1,34 @@
+---
+title: Hello!
+include-in-header: "_includes/fontawesome-2up.html"
+---
+
+I'd love to hear from you!
+
+You can leave a note about any of my [posts](posts.qmd), [talks](talks.qmd) or [projects](projects.qmd) using the comment box at the bottom of each page.
+
+You can find me on elsewhere online:
+
+```{r}
+#| echo: false
+library(distilltools)
+```
+
+
+`r icon_link(
+  icon = "twitter",
+  text = "Twitter",
+  url = "https://twitter.com/ellamkaye"
+)`
+`r icon_link(
+  icon = "github",
+  text = "GitHub",
+  url = "https://github.com/EllaKaye"
+)`
+`r icon_link(
+  icon = "linkedin",
+  text = "LinkedIn",
+  url = "https://www.linkedin.com/in/ella-kaye-9b878248/"
+)`
+
+Or, you can drop me an e-mail at <ella.kaye at gmail.com>

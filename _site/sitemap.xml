@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ellakaye.rbind.io/contact.html</loc>
+    <lastmod>2022-08-24T21:48:15.982Z</lastmod>
+  </url>
+  <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2022-08-24T15:03:45.642Z</lastmod>
+    <lastmod>2022-08-24T21:48:18.824Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020/index.html</loc>
-    <lastmod>2022-08-21T21:04:23.643Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-08-24T15:04:03.135Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2022-08-23T15:05:42.989Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-24T14:35:41.810Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/projects.html</loc>
-    <lastmod>2022-08-21T21:04:29.058Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-24T11:55:25.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-24T15:04:38.365Z</lastmod>
+    <lastmod>2022-08-24T21:48:20.817Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2022-08-24T15:04:37.808Z</lastmod>
+    <lastmod>2022-08-24T21:48:25.174Z</lastmod>
   </url>
   <url>
-    <loc>https://ellakaye.rbind.io/talks/first-talk/index.html</loc>
-    <lastmod>2022-08-23T20:56:41.569Z</lastmod>
+    <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
+    <lastmod>2022-08-24T21:48:26.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
+    <lastmod>2022-08-24T21:48:27.607Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks.html</loc>
+    <lastmod>2022-08-24T21:48:27.945Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
-    <lastmod>2022-08-24T14:35:41.340Z</lastmod>
+    <lastmod>2022-08-24T21:48:28.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks/2019-10-05_working-with-text-in-r/index.html</loc>
+    <lastmod>2022-08-24T21:48:28.914Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/projects.html</loc>
+    <lastmod>2022-08-24T21:48:29.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/index.html</loc>
+    <lastmod>2022-08-24T21:48:30.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts.html</loc>
+    <lastmod>2022-08-24T21:48:30.550Z</lastmod>
   </url>
 </urlset>

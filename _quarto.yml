@@ -15,8 +15,8 @@ website:
       - posts.qmd
       - talks.qmd
       - projects.qmd
-      - text: CV
-        file: CV.pdf
+      - text: contact
+        href: contact.qmd
       - icon: github
         href: https://github.com/EllaKaye
       - icon: twitter
