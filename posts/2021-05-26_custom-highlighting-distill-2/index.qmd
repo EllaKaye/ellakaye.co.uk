@@ -15,6 +15,7 @@ categories:
   - distill
   - colour
   - accessibility
+  - R
 twitter-card: 
 # uncomment lines below for different title and description to post
 #  title: |
