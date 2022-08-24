@@ -1,0 +1,100 @@
+---
+title: "How to get help in R"
+description: |
+  Tips for looking for answers and asking questions about R
+date: 2020-10-29
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
+site-url: https://ellakaye.rbind.io/
+image: how-to-get-help-in-r.png
+image-alt: |
+  Front slide of the presentation desk, with the talk title, "getting help in R"
+  in white on a blue background. Underneath, a line with the text "Ella Kaye | bseeR | 
+  January 28th, 2021"
+#categories:
+ # - TAG_1
+#  - TAG_2
+#twitter-card: 
+# uncomment lines below for different title and description to post
+#  title: |
+#  description: |
+# uncomment for different image to post
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: "summary_large_image" 
+draft: false
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+`r icon_link(
+  icon = "images",
+  text = "slides",
+  url = "https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1"
+)`
+`r icon_link(
+  icon = "github",
+  text = "materials",
+  url = "https://github.com/EllaKaye/Rladies-Coventry-getting-help-in-R"
+)`
+`r icon_link(
+  icon = "play-circle",
+  text = "video",
+  url = "https://www.youtube.com/watch?v=YhR1gKhWmxs&t=1661s"
+)`
+
+## Overview 
+
+This session will be led by Ella Kaye - an R enthusiast and statistics PhD researcher at the University of Warwick. In the session, Ella will talk us through different ways to get help when you get stuck on a problem in R. We’ll cover how and where to look for answers and how to ask and post good questions that make it easy for others to help you, including a demo of the excellent `reprex` and `datapasta` packages. So whether you’re an R novice or more experienced R user, hopefully there’ll be some useful tips for you!
+
+## Event details
+
+**Event:** [R Ladies Coventry](https://www.meetup.com/rladies-coventry/events/273429872/) (the inaugural talk)
+
+**Date:** October 29th, 2020 
+
+**Location:** Zoom
+
+I gave a very slightly updated version of the talk again three months later:
+
+**Event**: [bseeR](https://www.ellenwebborn.com/rusergroup/)
+
+**Date:** January 28th, 2021
+
+**Location:** Microsoft Teams
+
+## Key points
+
+- When faced with a question/problem, have a good look for an answer in R itself and/or online
+
+- Don't be shy about asking questions!
+
+- Write reproducible examples, best with the {reprex} package
+
+- Give thought to where you ask/post your question
+
+- Give back by helping others
+
+
+## Slides
+
+<iframe class="slide-deck-4-3" src="https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html" title="Getting Help in R slides">
+</iframe>
+
+Keyboard Shortcuts for Slideshow (once you've clicked inside it):
+
+- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.
+
+- Use <kbd>o</kbd> to view an overview of all slides.
+
+- Use <kbd>h</kbd> to see a list of other shortcuts 
+  
+  - <kbd>f</kbd> to toggle full screen not working, but the rest are fine.
+  
+  - For full screen slides, go to [slides](https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html) then press <kbd>f</kbd>.

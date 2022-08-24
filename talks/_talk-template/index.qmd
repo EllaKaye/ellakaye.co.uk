@@ -1,0 +1,88 @@
+---
+title: Talk Title
+description: |
+  Talk description
+date: UPDATE
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
+site-url: https://ellakaye.rbind.io/
+#image: IMAGE.png
+#image-alt: |
+categories:
+  - TAG_1
+  - TAG_2
+#twitter-card: 
+# uncomment lines below for different title and description to post
+#  title: |
+#  description: |
+# uncomment for different image to post
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: "summary_large_image" 
+draft: true
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+# [TODO]: fill in urls
+# [TODO]: delete any unessary icons (or add more)
+# [TODO]: css styling for .icon-link and .icon-link:hover
+
+`r icon_link(
+  icon = "images",
+  text = "slides",
+  url = ""
+)`
+`r icon_link(
+  icon = "github",
+  text = "materials",
+  url = ""
+)`
+`r icon_link(
+  icon = "play-circle",
+  text = "video",
+  url = ""
+)`
+`r `icon_link(
+  icon = "box-open",
+  text = "package",
+  url = ""
+)`
+
+## Overview 
+
+
+## Event details
+
+**Event:** [GROUP](url)
+
+**Date:** DATE
+
+**Time:** TIME
+
+**Location:** LOCATION
+
+## Key points
+
+- Point 1
+- Point 2
+- ...
+
+## Slides
+
+** EMBED SLIDES - SEE EXAMPLE FROM AMESOME QUARTO**
+
+Keyboard Shortcuts for Slides **CHECK**
+
+- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.
+- Use <kbd>f</kbd> to toggle full screen.
+- Use <kbd>o</kbd> to view an overview of all slides.
+- Use <kbd>h</kbd> to see a list of other shortcuts.
+
