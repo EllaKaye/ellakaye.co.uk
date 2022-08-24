@@ -168,18 +168,30 @@ pre.sourceCode {
 }
 
 
-
 a {
   color: $body-color;
   text-decoration-thickness: 1.5px;
-  //text-underline-position: under;
   text-underline-offset: 2px;
+  //text-underline-position: under;
 }
 
 a:hover {
   color: $primary;
   text-decoration-color: $primary;
 }
+
+/*
+#quarto-document-content a {
+  color: $body-color;
+  border-bottom: 1px solid $body-color;
+  text-decoration: none;
+}
+
+#quarto-document-content a:hover {
+  color: $primary;
+  border-bottom: 1px solid $primary;
+}
+*/
 
 .toc-actions a:hover {
   color: $primary;

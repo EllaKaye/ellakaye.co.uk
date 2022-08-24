@@ -5,7 +5,7 @@ include-in-header: "_includes/fontawesome-2up.html"
 
 I'd love to hear from you!
 
-You can leave a note about any of my [posts](posts.qmd), [talks](talks.qmd) or [projects](projects.qmd) using the comment box at the bottom of each page.
+You can leave a note about any of my posts, talks or projects using the comment box at the bottom of each page.
 
 You can find me on elsewhere online:
 
