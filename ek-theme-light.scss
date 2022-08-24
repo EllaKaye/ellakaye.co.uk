@@ -171,7 +171,9 @@ pre.sourceCode {
 
 a {
   color: $body-color;
-  text-underline-position: under;
+  text-decoration-thickness: 1.5px;
+  //text-underline-position: under;
+  text-underline-offset: 2px;
 }
 
 a:hover {
