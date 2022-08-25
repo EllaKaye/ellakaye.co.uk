@@ -140,27 +140,6 @@ $callout-color-warning: $orange;
 $callout-color-important: $red;
 
 /*-- scss:rules --*/
-
-.icon-link, div.quarto-about-jolla .about-link {
-    background-color: transparent;
-    color: $primary;
-    border: 2px solid;
-    border-color: $primary;
-    padding: 5px .4rem 5px .4rem;
-    margin-top: 4px;
-    margin-right: 8px;
-    margin-bottom: 4px;
-    border-radius: 5px; 
-    display: inline-block;
-    text-decoration: none;
-}
-
-.icon-link:hover, div.quarto-about-jolla .about-link:hover{
-    background-color: $primary;
-    border-color: $primary;
-    color: $body-bg;
-    text-decoration: none;
-}
   
 pre.sourceCode {
   border-radius: 0;
@@ -171,7 +150,7 @@ pre.sourceCode {
 a {
   color: $body-color;
   text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+  text-underline-offset: .1rem;
   //text-underline-position: under;
 }
 
@@ -192,6 +171,11 @@ a:hover {
   border-bottom: 1px solid $primary;
 }
 */
+
+.toc-actions a {
+  text-decoration: none !important;  
+  border-bottom: 0;
+}
 
 .toc-actions a:hover {
   color: $primary;
@@ -272,4 +256,25 @@ iframe.slide-deck-4-3 {
   border: 3px solid $gray-700;
   width: 100%;
   aspect-ratio: 4 / 3;
+}
+
+.icon-link, div.quarto-about-jolla .about-link {
+    background-color: transparent;
+    color: $primary;
+    border: 2px solid !important;
+    border-color: $primary;
+    padding: 5px .4rem 5px .4rem !important;
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    border-radius: 5px; 
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon-link:hover, div.quarto-about-jolla .about-link:hover{
+    background-color: $primary;
+    border-color: $primary;
+    color: $body-bg;
+    text-decoration: none;
 }

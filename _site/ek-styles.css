@@ -48,3 +48,31 @@ code span.cf {
   font-weight: normal;
 }
 
+.top-callout {
+  margin-top: 0;
+}
+
+#quarto-content a {
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid;
+}
+
+#TOC > ul > li a {
+  border-bottom: 0 !important;
+}
+
+div.toc-actions a {
+  border-bottom: 0 !important;
+}
+
+div.quarto-listing a {
+  border-bottom: 0 !important;
+}
+
+a.anchorjs-link {
+  border-bottom: 0 !important;
+}
+
+
+

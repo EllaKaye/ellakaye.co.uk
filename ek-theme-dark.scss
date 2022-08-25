@@ -141,27 +141,6 @@ $callout-color-important: $red;
 
 
 /*-- scss:rules --*/
-
-.icon-link, div.quarto-about-jolla .about-link {
-    background-color: transparent;
-    color: $primary;
-    border: 2px solid;
-    border-color: $primary;
-    padding: 5px .4rem 5px .4rem;
-    margin-top: 4px;
-    margin-right: 8px;
-    margin-bottom: 4px;
-    border-radius: 5px; 
-    display: inline-block;
-    text-decoration: none;
-}
-
-.icon-link:hover, div.quarto-about-jolla .about-link:hover{
-    background-color: $primary;
-    border-color: $primary;
-    color: $body-bg;
-    text-decoration: none;
-}
   
 pre.sourceCode {
   border-radius: 0;
@@ -246,4 +225,25 @@ iframe.slide-deck-4-3 {
   border: 3px solid $gray-300;
   width: 100%;
   aspect-ratio: 4 / 3;
+}
+
+.icon-link, div.quarto-about-jolla .about-link {
+    background-color: transparent;
+    color: $primary;
+    border: 2px solid !important;
+    border-color: $primary;
+    padding: 5px .4rem 5px .4rem !important;
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    border-radius: 5px; 
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon-link:hover, div.quarto-about-jolla .about-link:hover{
+    background-color: $primary;
+    border-color: $primary;
+    color: $body-bg;
+    text-decoration: none;
 }
