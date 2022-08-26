@@ -29,6 +29,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -140,38 +141,24 @@ ga('send', {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="images/profile.jpeg" class="about-image
-  rounded " style="width: 15em;">
- <main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<div class="cell">
+
+</div>
+<div class="column-screen">
+<p><img src="hexagons-row.png" class="img-fluid"></p>
+</div>
 <p><strong>THIS WEBSITE IS UNDER CONSTRUCTION.</strong></p>
 <p>PLEASE SEE <a href="https://ellakaye.rbind.io" class="uri">https://ellakaye.rbind.io</a> FOR MY CURRENT SITE.</p>
 <p>Hello and welcome to my personal website!</p>
 <p>I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.</p>
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com/ellamkaye" class="about-link">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://github.com/EllaKaye" class="about-link">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.linkedin.com/in/ella-kaye-9b878248/" class="about-link">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="mailto:ella.kaye@gmail.com" class="about-link">
-    <i class="bi bi-envelope-fill"></i>
-     <span class="about-link-text">E-mail</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -295,6 +282,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
   } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

@@ -1,23 +1,41 @@
 ---
 # title: ELLA KAYE
-image: images/profile.jpeg
-about:
-  template: jolla
-  image-shape: rounded
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/ellamkaye
-    - icon: github
-      text: Github
-      href: https://github.com/EllaKaye
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/ella-kaye-9b878248/
-    - icon: envelope-fill
-      text: E-mail
-      href: mailto:ella.kaye@gmail.com
+# image: images/profile.jpeg
+# about:
+#   template: jolla
+#   image-shape: rounded
+#   links:
+#     - icon: twitter
+#       text: Twitter
+#       href: https://twitter.com/ellamkaye
+#     - icon: github
+#       text: Github
+#       href: https://github.com/EllaKaye
+#     - icon: linkedin
+#       text: LinkedIn
+#       href: https://www.linkedin.com/in/ella-kaye-9b878248/
+#     - icon: envelope-fill
+#       text: E-mail 
+#       href: mailto:ella.kaye@gmail.com
+knitr:
+  opts_chunk: 
+    collapse: true
+execute: 
+  echo: false
 ---
+
+```{css}
+#| eval: false
+body {
+  background-image: url("hexagon-outlines-tr.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+```
+
+:::{.column-screen}
+![](hexagons-row.png)
+:::
 
 **THIS WEBSITE IS UNDER CONSTRUCTION.**
 
