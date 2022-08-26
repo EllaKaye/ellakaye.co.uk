@@ -25,7 +25,7 @@ execute:
 ---
 
 ```{css}
-#| eval: false
+#| eval: true
 body {
   background-image: url("hexagon-outlines-tr.png");
   background-repeat: no-repeat;
@@ -33,9 +33,9 @@ body {
 }
 ```
 
-:::{.column-screen}
-![](hexagons-row.png)
-:::
+<!-- :::{.column-screen} -->
+<!-- ![](hexagons-triangular.png) -->
+<!-- ::: -->
 
 **THIS WEBSITE IS UNDER CONSTRUCTION.**
 
