@@ -301,18 +301,23 @@ iframe.slide-deck-4-3 {
     color: $body-bg;
 }
 
-.card {
+#card-first-color {
   background-color: $body-bg;
   border: 2px solid $primary;
   border-radius: 5px; 
 }
 
+
 #card-second-color {
-  border-color: $purple;
+  background-color: $body-bg;
+  border: 2px solid $purple;
+  border-radius: 5px; 
 }
 
 #card-third-color {
-  border-color: $blue;
+  background-color: $body-bg;
+  border: 2px solid $blue;
+  border-radius: 5px; 
 }
 
 .heading-font {

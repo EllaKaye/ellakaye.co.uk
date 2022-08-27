@@ -3,7 +3,7 @@ title: "talks"
 listing:
   contents: talks
   sort: "date desc"
-  type: default
+  type: grid
   categories: false
   sort-ui: false
   filter-ui: false
