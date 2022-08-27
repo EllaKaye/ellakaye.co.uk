@@ -74,6 +74,7 @@ $indigo: #0000D4;
 $purple: #6A00D4;
 $orange: #D46A00;
 $yellow: #D4D400;
+$green-bright: #6AD400;
 
 $primary:       $green !default;
 $secondary:     $gray-400 !default;
@@ -101,7 +102,7 @@ $body-color: $light;
 $navbar-bg: $body-bg;
 $navbar-fg: $body-color;
 $code-bg: $dark;
-$code-color: $cyan;
+$code-color: $green-bright;
 
 // font size tweaks - adjust to make Fira Mono same size as Lemon Milk Light
 $code-font-size: $font-size-base;
@@ -246,4 +247,36 @@ iframe.slide-deck-4-3 {
     border-color: $primary;
     color: $body-bg;
     text-decoration: none;
+}
+
+.second-color {
+  color: $green-bright;
+  border-color: $green-bright;
+}
+
+.second-color:hover{
+    background-color: $green-bright;
+    border-color: $green-bright;
+    color: $body-bg;
+}
+
+.third-color {
+  color: $orange;
+  border-color: $orange;
+}
+
+.third-color:hover{
+    background-color: $orange;
+    border-color: $orange;
+    color: $body-bg;
+}
+
+.card {
+  background-color: $body-bg;
+  border: 2px solid $gray-700;
+  border-radius: 5px; 
+}
+
+.heading-font {
+  font-family: $headings-font-family;
 }

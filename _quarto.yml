@@ -12,15 +12,17 @@ website:
     #logo: ELLAKAYE-logo-light.png
     title: "ELLA<span class='icon-line'></span>KAYE"
     right:
+      - text: about
+        href: about.qmd
       - posts.qmd
       - talks.qmd
       - projects.qmd
       - text: contact
         href: contact.qmd
-      - icon: github
-        href: https://github.com/EllaKaye
-      - icon: twitter
-        href: https://twitter.com/ellamkaye
+      #- icon: github
+      #  href: https://github.com/EllaKaye
+      #- icon: twitter
+      #  href: https://twitter.com/ellamkaye
   favicon: images/favicon.png
   twitter-card: 
     description: The personal website of Ella Kaye

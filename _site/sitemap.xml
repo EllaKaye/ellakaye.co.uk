@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.rbind.io/contact.html</loc>
-    <lastmod>2022-08-25T09:52:01.128Z</lastmod>
+    <lastmod>2022-08-27T11:48:21.339Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
@@ -38,14 +38,18 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/projects.html</loc>
-    <lastmod>2022-08-26T21:17:12.861Z</lastmod>
+    <lastmod>2022-08-27T13:22:32.623Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-26T21:15:01.552Z</lastmod>
+    <lastmod>2022-08-27T13:31:33.044Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
     <lastmod>2022-08-26T21:15:04.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/about.html</loc>
+    <lastmod>2022-08-27T13:22:35.102Z</lastmod>
   </url>
 </urlset>

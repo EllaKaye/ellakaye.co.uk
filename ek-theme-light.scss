@@ -278,3 +278,35 @@ iframe.slide-deck-4-3 {
     color: $body-bg;
     text-decoration: none;
 }
+
+.second-color {
+  color: $purple;
+  border-color: $purple;
+}
+
+.second-color:hover{
+    background-color: $purple;
+    border-color: $purple;
+    color: $body-bg;
+}
+
+.third-color {
+  color: $blue;
+  border-color: $blue;
+}
+
+.third-color:hover{
+    background-color: $blue;
+    border-color: $blue;
+    color: $body-bg;
+}
+
+.card {
+  background-color: $body-bg;
+  border: 2px solid $gray-300;
+  border-radius: 5px; 
+}
+
+.heading-font {
+  font-family: $headings-font-family;
+}

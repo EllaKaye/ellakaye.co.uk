@@ -25,17 +25,30 @@ execute:
 ---
 
 ```{css}
-#| eval: true
-body {
-  background-image: url("hexagon-outlines-tr.png");
+#| eval: false
+#quarto-content {
+  background-image: url("hexagons-triangular.svg");
   background-repeat: no-repeat;
   background-position: top right;
 }
+
+.content {
+  margin: auto;
+}
 ```
 
-<!-- :::{.column-screen} -->
-<!-- ![](hexagons-triangular.png) -->
-<!-- ::: -->
+```{css}
+#| eval: true
+
+#quarto-document-content {
+  padding-top: 0;
+  margin-top: 0;
+}
+```
+
+:::{.column-screen}
+![](hexagons-triangular.svg)
+:::
 
 **THIS WEBSITE IS UNDER CONSTRUCTION.**
 
@@ -45,3 +58,33 @@ Hello and welcome to my personal website!
 
 I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.
 
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+```{html}
+<div class="card">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+<a href="#" class="icon-link heading-font">POSTS</a>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+<a href="#" class="icon-link second-color heading-font">TALKS</a>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+<a href="#" class="icon-link third-color heading-font">PROJECTS</a>
+</div>
+</div>
+:::
+:::

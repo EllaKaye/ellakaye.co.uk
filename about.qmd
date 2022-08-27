@@ -1,0 +1,24 @@
+---
+execute:
+  echo: false
+---
+
+```{css}
+img {
+  border-radius: 5px;
+}
+```
+
+```{r}
+knitr::include_graphics("images/profile.jpeg")
+```
+
+
+Hello! I am a postgraduate researcher in Statistics at the University of Warwick. I am part of the [OxWaSP programme](http://www.oxwasp-cdt.ac.uk). I am interested in Applied Statistics, particularly as applied in the Social Sciences. I am currently working on a project about student educational trajectories, analysing data from applications to undergraduate statistics courses in the Statistics department at Warwick. I am supervised by [Dr Julia Brettschneider](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/brettschneider/) and [Dr Anastasia Papavasiliou](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/papavasiliou/).
+
+I love R! I use it daily in my research for analysing and visualising data, as well as for personal projects. This website is built using the [{distill}](https://rstudio.github.io/distill/) package, alongside my and [John Paul Helveston's](https://www.jhelvy.com) (very much still in development) package [{distilltools}](https://ellakaye.github.io/distilltools/). I am also the author, along with [Prof David Firth](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/) of the {BradleyTerryScalable package}, which is available on [GitHub](https://github.com/EllaKaye/BradleyTerryScalable). 
+
+I love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language (RainbowR is currently in the process of being revived after a few years of dormancy - more details soon!). I am also the previous co-organiser of the [Oxford R User Group](https://www.meetup.com/Oxford-R-User-Group/) and also a member of the [Warwick R User Group](https://www.meetup.com/Warwick-useRs/) and [R-Ladies Coventry](https://www.meetup.com/rladies-coventry/). I get great pleasure from sharing what I know/am learning about R with others, particularly by speaking at [R-Ladies](https://rladies.org) and [R User Group](https://benubah.github.io/r-community-explorer/rugs.html) meetups. Here are some [talks](talks.html) I've given. Please get in touch if you'd like me to speak at your group. I find being asked to speak on a topic is a good excuse for me to learn something about it!
+
+Prior to my current studies, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge) and an MSc in Applied Statistics (University of Oxford). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.
+
