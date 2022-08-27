@@ -310,3 +310,11 @@ iframe.slide-deck-4-3 {
 .heading-font {
   font-family: $headings-font-family;
 }
+
+#navbarCollapse > ul > li:nth-child(3) > a:hover {
+  color: $purple;
+}
+
+#navbarCollapse > ul > li:nth-child(4) > a:hover {
+  color: $blue;
+}
