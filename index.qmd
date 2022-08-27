@@ -48,8 +48,7 @@ format:
   margin-top: 0;
 }
 
-
-
+/*
 .page-columns .column-page {
     grid-column: page-start/page-end;
     z-index: 998;
@@ -65,10 +64,11 @@ format:
     grid-row: content-top/content-bottom;
     align-content: flex-start;
 }
+*/
 
 #quarto-content {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  width: 80%;
+  margin: auto;
 }
 
 
