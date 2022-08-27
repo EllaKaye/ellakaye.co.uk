@@ -273,8 +273,16 @@ iframe.slide-deck-4-3 {
 
 .card {
   background-color: $body-bg;
-  border: 2px solid $gray-700;
+  border: 2px solid $primary;
   border-radius: 5px; 
+}
+
+#card-second-color {
+  border-color: $green-bright;
+}
+
+#card-third-color {
+  border-color: $orange;
 }
 
 .heading-font {

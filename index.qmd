@@ -95,7 +95,7 @@ I am a postgraduate researcher in Statistics at the University of Warwick and an
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}
-<div class="card">
+<div class="card" id="card-first-color">
 <div class="card-body">
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
 <a href="#" class="icon-link heading-font">POSTS</a>
@@ -104,7 +104,7 @@ I am a postgraduate researcher in Statistics at the University of Warwick and an
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-<div class="card">
+<div class="card" id="card-second-color">
 <div class="card-body">
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
 <a href="#" class="icon-link second-color heading-font">TALKS</a>
@@ -113,7 +113,7 @@ I am a postgraduate researcher in Statistics at the University of Warwick and an
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-<div class="card">
+<div class="card" id="card-third-color">
 <div class="card-body">
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
 <a href="#" class="icon-link third-color heading-font">PROJECTS</a>
