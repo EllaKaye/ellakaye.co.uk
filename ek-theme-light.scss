@@ -150,7 +150,7 @@ pre.sourceCode {
 a {
   color: $body-color;
   text-decoration-thickness: 1.5px;
-  text-underline-offset: .1rem;
+  //text-underline-offset: .1rem;
   //text-underline-position: under;
 }
 
@@ -311,10 +311,19 @@ iframe.slide-deck-4-3 {
   font-family: $headings-font-family;
 }
 
-#navbarCollapse > ul > li:nth-child(3) > a:hover {
+#navbarCollapse > ul > li:nth-child(2) > a:hover {
   color: $purple;
 }
 
-#navbarCollapse > ul > li:nth-child(4) > a:hover {
+#navbarCollapse > ul > li:nth-child(3) > a:hover {
   color: $blue;
+}
+
+#navbarCollapse > ul > li:nth-child(5) > a:hover {
+  color: $purple;
+}
+
+.home-header {
+  font-family: $headings-font-family;
+  font-size: $h3-font-size;
 }

@@ -298,7 +298,7 @@
     "href": "index.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "THIS WEBSITE IS UNDER CONSTRUCTION.\nPLEASE SEE https://ellakaye.rbind.io FOR MY CURRENT SITE.\nHello and welcome to my personal website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPOSTS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nTALKS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPROJECTS"
+    "text": "Hello and welcome to my personal (work-in-progress) website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPOSTS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nTALKS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPROJECTS"
   },
   {
     "objectID": "posts.html",
@@ -313,5 +313,12 @@
     "title": "ELLA KAYE",
     "section": "",
     "text": "Hello! I am a postgraduate researcher in Statistics at the University of Warwick. I am part of the OxWaSP programme. I am interested in Applied Statistics, particularly as applied in the Social Sciences. I am currently working on a project about student educational trajectories, analysing data from applications to undergraduate statistics courses in the Statistics department at Warwick. I am supervised by Dr Julia Brettschneider and Dr Anastasia Papavasiliou.\nI love R! I use it daily in my research for analysing and visualising data, as well as for personal projects. This website is built using the {distill} package, alongside my and John Paul Helveston’s (very much still in development) package {distilltools}. I am also the author, along with Prof David Firth of the {BradleyTerryScalable package}, which is available on GitHub.\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language (RainbowR is currently in the process of being revived after a few years of dormancy - more details soon!). I am also the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. I get great pleasure from sharing what I know/am learning about R with others, particularly by speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group. I find being asked to speak on a topic is a good excuse for me to learn something about it!\nPrior to my current studies, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge) and an MSc in Applied Statistics (University of Oxford). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research."
+  },
+  {
+    "objectID": "index.html#hello-and-welcome-to-my-personal-website",
+    "href": "index.html#hello-and-welcome-to-my-personal-website",
+    "title": "ELLA KAYE",
+    "section": "Hello and welcome to my personal website!",
+    "text": "Hello and welcome to my personal website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPOSTS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nTALKS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPROJECTS"
   }
 ]

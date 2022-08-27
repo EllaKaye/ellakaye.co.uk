@@ -46,15 +46,11 @@ execute:
 }
 ```
 
-:::{.column-screen}
+:::{.column-screen-right}
 ![](hexagons-triangular.svg)
 :::
 
-**THIS WEBSITE IS UNDER CONSTRUCTION.**
-
-PLEASE SEE <https://ellakaye.rbind.io> FOR MY CURRENT SITE.
-
-Hello and welcome to my personal website!
+[Hello and welcome to my personal (work-in-progress) website!]{.home-header}
 
 I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.
 
