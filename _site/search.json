@@ -306,5 +306,12 @@
     "title": "posts",
     "section": "",
     "text": "Creating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ELLA KAYE",
+    "section": "",
+    "text": "Hello and welcome to my personal (work-in-progress) website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPOSTS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nTALKS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPROJECTS"
   }
 ]

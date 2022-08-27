@@ -22,9 +22,7 @@ knitr:
     collapse: true
 execute: 
   echo: false
-format:
-  html: 
-    page-layout: custom
+page-layout: full
 ---
 
 ```{css}
@@ -38,6 +36,11 @@ format:
 .content {
   margin: auto;
 }
+
+
+#quarto-content {
+  width: 80%;
+  margin: auto;
 ```
 
 ```{css}
@@ -65,10 +68,6 @@ format:
     align-content: flex-start;
 }
 */
-
-#quarto-content {
-  width: 80%;
-  margin: auto;
 }
 
 
