@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.rbind.io/contact.html</loc>
-    <lastmod>2022-08-28T14:34:15.128Z</lastmod>
+    <lastmod>2022-08-28T21:28:20.611Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2022-08-28T10:29:10.123Z</lastmod>
+    <lastmod>2022-08-28T15:35:47.007Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-08-28T10:29:11.834Z</lastmod>
+    <lastmod>2022-08-28T15:35:51.604Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
@@ -26,11 +26,11 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-28T14:34:22.006Z</lastmod>
+    <lastmod>2022-08-28T21:28:29.839Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
-    <lastmod>2022-08-28T10:29:13.939Z</lastmod>
+    <lastmod>2022-08-28T15:44:17.667Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2019-10-05_working-with-text-in-r/index.html</loc>
@@ -38,18 +38,22 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/projects.html</loc>
-    <lastmod>2022-08-28T14:34:24.207Z</lastmod>
+    <lastmod>2022-08-28T21:01:32.184Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-28T14:07:57.730Z</lastmod>
+    <lastmod>2022-08-28T22:38:03.728Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/about.html</loc>
-    <lastmod>2022-08-28T14:34:26.775Z</lastmod>
+    <lastmod>2022-08-28T21:43:59.928Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-28T14:34:20.242Z</lastmod>
+    <lastmod>2022-08-28T21:28:27.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/hexagons.html</loc>
+    <lastmod>2022-08-28T17:42:25.770Z</lastmod>
   </url>
 </urlset>

@@ -35,4 +35,4 @@ library(distilltools)
   url = "https://www.linkedin.com/in/ella-kaye-9b878248/"
 )`
 
-Or, you can drop me an e-mail at <ella.kaye at gmail.com>
+Or, you can drop me an e-mail at [ella.kaye @ gmail.com]{.heading-font}

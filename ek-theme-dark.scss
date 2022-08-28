@@ -252,23 +252,23 @@ iframe.slide-deck-4-3 {
     text-decoration: none;
 }
 
-.second-color {
+.second-color-link {
   color: $second-color;
   border-color: $second-color;
 }
 
-.second-color:hover{
+.second-color-link:hover{
     background-color: $second-color;
     border-color: $second-color;
     color: $body-bg;
 }
 
-.third-color {
+.third-color-link {
   color: $third-color;
   border-color: $third-color;
 }
 
-.third-color:hover{
+.third-color-link:hover{
     background-color: $third-color;
     border-color: $third-color;
     color: $body-bg;
@@ -305,13 +305,17 @@ iframe.slide-deck-4-3 {
   color: $third-color;
 }
 
-#navbarCollapse > ul > li:nth-child(5) > a:hover {
+#navbarCollapse > ul > li:nth-child(4) > a:hover {
   color: $second-color;
+}
+
+#navbarCollapse > ul > li:nth-child(5) > a:hover {
+  color: $third-color;
 }
 
 .home-header {
   font-family: $headings-font-family;
-  font-size: $h3-font-size;
+  font-size: $font-size-base * 3;
 }
 
 .primary {
@@ -324,4 +328,13 @@ iframe.slide-deck-4-3 {
 
 .third-color {
   color: $third-color;
+}
+
+.card-body > p {
+  margin-bottom: 6px;
+}
+
+.card-body > .icon-link {
+  padding-bottom: 0;
+  padding-top: 0;
 }

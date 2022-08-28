@@ -106,28 +106,69 @@ I am a postgraduate researcher in Statistics at the University of Warwick and an
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-<div class="card" id="card-first-color">
-<div class="card-body">
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
-<a href="#" class="icon-link heading-font">POSTS</a>
+<div class="card h-100" id="card-first-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">About me, my work, my interests and experience.</p>
+<div style="margin-top: auto;"><a href="about.qmd" class="icon-link heading-font">ABOUT</a></div>
+<!-- <a href="about.qmd" class="icon-link heading-font mt-auto align-self-end">ABOUT</a> -->
+<!-- <a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> -->
+<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">ABOUT</button> -->
 </div>
 </div>
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-<div class="card" id="card-second-color">
-<div class="card-body">
+<div class="card h-100" id="card-second-color">
+<div class="card-body d-flex flex-column">
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
-<a href="#" class="icon-link second-color heading-font">TALKS</a>
+<!-- <a href="posts.qmd" class="icon-link second-color-link heading-font mt-auto align-self-end">POSTS</a> -->
+<div style="margin-top: auto;"><a href="posts.qmd" class="icon-link heading-font second-color-link">POSTS</a></div>
+<!-- <a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> -->
+<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">POSTS</button> -->
 </div>
 </div>
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-<div class="card" id="card-third-color">
-<div class="card-body">
+<div class="card h-100" id="card-third-color">
+<div class="card-body d-flex flex-column">
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
-<a href="#" class="icon-link third-color heading-font">PROJECTS</a>
+<!-- <a href="talks.qmd" class="icon-link third-color-link heading-font mt-auto align-self-end">TALKS</a> -->
+<a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a>
+<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">TALKS</button> -->
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-second-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+<a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a>
+
+<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">PACKAGES</button> -->
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-third-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>
+<!-- <a href="community.qmd" class="icon-link third-color-link heading-font mt-auto align-self-end">COMMUNITY</a> -->
+<a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a>
+<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">COMMUNITY</button> -->
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-first-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">Where to find me online and how to get in touch</p>
+<!-- <a href="contact.qmd" class="icon-link heading-font mt-auto align-self-end">CONTACT</a> -->
+<a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a>
+<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">CONTACT</button> -->
 </div>
 </div>
 :::
