@@ -83,13 +83,9 @@ page-layout: full
 :::
 :::
 
-::: {.grid}
-::: {.g-col-12}
 [Hello and welcome to my personal (work-in-progress) website!]{.home-header}
 
 I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.
-:::
-:::
 
 ::: {.grid}
 

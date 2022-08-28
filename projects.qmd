@@ -1,76 +1,11 @@
 ---
-title: "Projects"
+#title: "Projects"
+page-layout: full
+knitr:
+  opts_chunk: 
+    collapse: true
 execute: 
   echo: false
 ---
 
-```{r}
-library(bs4cards)
-library(distilltools)
-#galleries
-```
-
-```{r}
-#| eval: false
-galleries %>% 
-  cards(
-    title = long_name,
-    link = gallery_url,
-    image = image_url,
-    footer = paste("posted:", date)
-  )
-```
-
-```{r}
-#| eval: false
-galleries %>% 
-  cards(
-    title = long_name,
-    text = blurb,
-    link = gallery_url,
-    image = image_url,
-    tags = paste("all;", paintbrushes),
-    footer = paintbrushes,
-    layout = "label-right", 
-    width = 4,
-    border_radius = 5
-  )
-```
-
-
-```{r}
-#| eval: false
-create_proj_card(
-  img_src = "images/projects/distilltools-hex.png",
-  url = "https://ellakaye.github.io/distilltools/",
-  title = "{distilltools}",
-  text = "The {distilltools} R package is a collection of tools to support the creation and styling of content on blogs/wesbites made with the {distill} package.",
-  text2 = NULL
-)
-
-create_proj_card(
-  img_src = "images/projects/TidyTuesday.png",
-  url = "https://github.com/EllaKaye/TidyTuesday",
-  title = "TidyTuesday",
-  text = "My (infrequent) contributions to #TidyTuesday",
-  text2 = NULL
-)
-
-create_proj_card(
-  img_src = "images/projects/BradleyTerryScalable-hex.png",
-  url = "https://ellakaye.github.io/BradleyTerryScalable/",
-  title = "{BradleyTerryScalable}",
-  text = "An R pacakge for fitting the Bradley-Terry model to potentially large and sparse networks for paired comparison data.",
-  text2 = NULL
-)
-
-create_proj_card(
-  img_src = "images/projects/EMK-hex.png",
-  url = "https://github.com/EllaKaye/EMK",
-  title = "{EMK}",
-  text = "A personal R package of a collection of miscellaneous functions I find useful.",
-  text2 = NULL
-)
-```
-
-
+# [PROJECTS]{.third-color}

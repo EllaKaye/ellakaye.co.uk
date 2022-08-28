@@ -85,6 +85,9 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 
+$second-color:  $purple;
+$third-color:   $blue;
+
 // font sizes;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -280,24 +283,24 @@ iframe.slide-deck-4-3 {
 }
 
 .second-color {
-  color: $purple;
-  border-color: $purple;
+  color: $second-color;
+  border-color: $second-color;
 }
 
 .second-color:hover{
-    background-color: $purple;
-    border-color: $purple;
+    background-color: $second-color;
+    border-color: $second-color;
     color: $body-bg;
 }
 
 .third-color {
-  color: $blue;
-  border-color: $blue;
+  color: $third-color;
+  border-color: $third-color;
 }
 
 .third-color:hover{
-    background-color: $blue;
-    border-color: $blue;
+    background-color: $third-color;
+    border-color: $third-color;
     color: $body-bg;
 }
 
@@ -310,13 +313,13 @@ iframe.slide-deck-4-3 {
 
 #card-second-color {
   background-color: $body-bg;
-  border: 2px solid $purple;
+  border: 2px solid $second-color;
   border-radius: 5px; 
 }
 
 #card-third-color {
   background-color: $body-bg;
-  border: 2px solid $blue;
+  border: 2px solid $third-color;
   border-radius: 5px; 
 }
 
@@ -325,18 +328,30 @@ iframe.slide-deck-4-3 {
 }
 
 #navbarCollapse > ul > li:nth-child(2) > a:hover {
-  color: $purple;
+  color: $second-color;
 }
 
 #navbarCollapse > ul > li:nth-child(3) > a:hover {
-  color: $blue;
+  color: $third-color;
 }
 
 #navbarCollapse > ul > li:nth-child(5) > a:hover {
-  color: $purple;
+  color: $second-color;
 }
 
 .home-header {
   font-family: $headings-font-family;
   font-size: $h3-font-size;
+}
+
+.primary {
+  color: $primary;
+}
+
+.second-color {
+  color: $second-color;
+}
+
+.third-color {
+  color: $third-color;
 }

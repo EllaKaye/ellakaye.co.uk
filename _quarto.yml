@@ -12,9 +12,12 @@ website:
     #logo: ELLAKAYE-logo-light.png
     title: "ELLA<span class='icon-line'></span>KAYE"
     right:
-      - posts.qmd
-      - talks.qmd
-      - projects.qmd
+      - text: posts
+        href: posts.qmd
+      - text: talks
+        href: talks.qmd
+      - text: projects
+        href: projects.qmd
       - text: about
         href: about.qmd
       - text: contact

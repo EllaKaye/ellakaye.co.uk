@@ -1,9 +1,13 @@
 ---
-title: Hello!
 include-in-header: "_includes/fontawesome-2up.html"
+knitr:
+  opts_chunk: 
+    collapse: true
+execute: 
+  echo: false
 ---
 
-I'd love to hear from you!
+# [I'd love to hear from you!]{.second-color}
 
 You can leave a note about any of my posts, talks or projects using the comment box at the bottom of each page.
 

@@ -1,5 +1,5 @@
 ---
-title: "talks"
+#title: "talks"
 listing:
   contents: talks
   sort: "date desc"
@@ -9,5 +9,11 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: false
+knitr:
+  opts_chunk: 
+    collapse: true
+execute: 
+  echo: false
 ---
 
+# [TALKS]{.second-color}

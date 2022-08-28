@@ -1,5 +1,5 @@
 ---
-title: "posts"
+#title: "posts"
 listing:
   contents: posts
   sort: "date desc"
@@ -9,4 +9,11 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: false
+knitr:
+  opts_chunk: 
+    collapse: true
+execute: 
+  echo: false
 ---
+
+# [POSTS]{.primary}

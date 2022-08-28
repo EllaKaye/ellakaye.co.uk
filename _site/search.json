@@ -2,7 +2,7 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "Hello!",
+    "title": "ELLA KAYE",
     "section": "",
     "text": "You can leave a note about any of my posts, talks or projects using the comment box at the bottom of each page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  GitHub  LinkedIn\nOr, you can drop me an e-mail at <ella.kaye at gmail.com>"
   },
@@ -226,9 +226,9 @@
   {
     "objectID": "talks.html",
     "href": "talks.html",
-    "title": "talks",
+    "title": "ELLA KAYE",
     "section": "",
-    "text": "Tips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "How to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html",
@@ -294,24 +294,24 @@
     "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "ELLA KAYE",
-    "section": "",
-    "text": "Hello! I am a postgraduate researcher in Statistics at the University of Warwick. I am part of the OxWaSP programme. I am interested in Applied Statistics, particularly as applied in the Social Sciences. I am currently working on a project about student educational trajectories, analysing data from applications to undergraduate statistics courses in the Statistics department at Warwick. I am supervised by Dr Julia Brettschneider and Dr Anastasia Papavasiliou.\nI love R! I use it daily in my research for analysing and visualising data, as well as for personal projects. This website is built using the {distill} package, alongside my and John Paul Helveston’s (very much still in development) package {distilltools}. I am also the author, along with Prof David Firth of the {BradleyTerryScalable package}, which is available on GitHub.\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language (RainbowR is currently in the process of being revived after a few years of dormancy - more details soon!). I am also the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. I get great pleasure from sharing what I know/am learning about R with others, particularly by speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group. I find being asked to speak on a topic is a good excuse for me to learn something about it!\nPrior to my current studies, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge) and an MSc in Applied Statistics (University of Oxford). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research."
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
-    "section": "",
-    "text": "Creating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "Hello and welcome to my personal (work-in-progress) website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPOSTS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nTALKS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPROJECTS"
+    "text": "Hello and welcome to my personal (work-in-progress) website!\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPOSTS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nTALKS\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPROJECTS"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "ELLA KAYE",
+    "section": "",
+    "text": "HELLO!\nI am a postgraduate researcher in Statistics at the University of Warwick. I am part of the OxWaSP programme. I am interested in Applied Statistics, particularly as applied in the Social Sciences. I am currently working on a project about student educational trajectories, analysing data from applications to undergraduate statistics courses in the Statistics department at Warwick. I am supervised by Dr Julia Brettschneider and Dr Anastasia Papavasiliou.\nI love R! I use it daily in my research for analysing and visualising data, as well as for personal projects. This website is built using the {distill} package, alongside my and John Paul Helveston’s (very much still in development) package {distilltools}. I am also the author, along with Prof David Firth of the {BradleyTerryScalable package}, which is available on GitHub.\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language (RainbowR is currently in the process of being revived after a few years of dormancy - more details soon!). I am also the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. I get great pleasure from sharing what I know/am learning about R with others, particularly by speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group. I find being asked to speak on a topic is a good excuse for me to learn something about it!\nPrior to my current studies, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge) and an MSc in Applied Statistics (University of Oxford). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "ELLA KAYE",
+    "section": "",
+    "text": "Custom Syntax Highlighting for {distill} Part 2\n\n\nCreating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 1\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my {distill} website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a personal (publicly available) package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   }
 ]
