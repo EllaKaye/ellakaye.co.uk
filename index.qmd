@@ -89,16 +89,18 @@ page-layout: full
 
 ::: {.grid}
 
-::: {.g-col-12}
-![](hexagons-row-three-colors.svg)
-:::
+<!-- ::: {.g-col-12} -->
+<!-- ![](hexagons-row-three-colors.svg) -->
+<!-- ::: -->
 
 <!-- ::: {.g-col-12 .g-col-md-6 .g-start-md-7} -->
 <!-- ![](hexagons-triangular-full-width.svg) -->
 <!-- ::: -->
 
 ::: {.g-col-12}
-[Hello and welcome to my personal (work-in-progress) website!]{.home-header}
+[Hello and welcome!]{.home-header}
+
+<!-- ![](hexagons-row-three-colors.svg) -->
 
 I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.
 :::

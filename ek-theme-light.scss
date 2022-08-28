@@ -199,15 +199,19 @@ a:hover {
 }
 */
 
+.navbar-title {
+  font-size: $font-size-base * 1.75;
+}
+
 .icon-line {
   display: block;
   background: $primary;
   width: 100%;
-  height: 5px;
+  height: 6px;
   margin: auto;
   display: table;
-  margin-top: -4px;
-  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-bottom: -6px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
@@ -306,20 +310,20 @@ iframe.slide-deck-4-3 {
 
 #card-first-color {
   background-color: $body-bg;
-  border: 2px solid $primary;
+  border: 4px solid $primary;
   border-radius: 5px; 
 }
 
 
 #card-second-color {
   background-color: $body-bg;
-  border: 2px solid $second-color;
+  border: 4px solid $second-color;
   border-radius: 5px; 
 }
 
 #card-third-color {
   background-color: $body-bg;
-  border: 2px solid $third-color;
+  border: 4px solid $third-color;
   border-radius: 5px; 
 }
 
@@ -341,7 +345,7 @@ iframe.slide-deck-4-3 {
 
 .home-header {
   font-family: $headings-font-family;
-  font-size: $h3-font-size;
+  font-size: $font-size-base * 4;
 }
 
 .primary {
