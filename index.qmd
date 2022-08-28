@@ -23,12 +23,14 @@ knitr:
 execute: 
   echo: false
 page-layout: full
+# include-before-body: 
+#   file: hexagons.qmd
 ---
 
 ```{css}
 #| eval: false
 #quarto-content {
-  background-image: url("hexagons-triangular.svg");
+  background-image: url("hexagons-row-full-width.svg");
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -38,13 +40,16 @@ page-layout: full
 }
 
 
+/*
 #quarto-content {
   width: 80%;
   margin: auto;
+}
+*/
 ```
 
 ```{css}
-#| eval: true
+#| eval: false
 
 #quarto-document-content {
   padding-top: 0;
@@ -67,27 +72,36 @@ page-layout: full
     grid-row: content-top/content-bottom;
     align-content: flex-start;
 }
-*/
 }
-
+*/
 
 ```
 
 <!-- :::{.column-screen} -->
-<!-- ![](hexagons-triangular.svg) -->
+<!-- ![](hexagons-triangular-full-width.svg) -->
+<!-- ::: -->
+
+<!-- ::: {.grid} -->
+<!-- ::: {.g-col-12 .g-col-md-6 .g-start-md-7} -->
+<!-- ![](hexagons-triangular-full-width.svg) -->
+<!-- ::: -->
 <!-- ::: -->
 
 ::: {.grid}
-::: {.g-col-12 .g-col-md-6 .g-start-md-7}
-![](hexagons-triangular-full-width.svg)
-:::
+
+::: {.g-col-12}
+![](hexagons-row-three-colors.svg)
 :::
 
+<!-- ::: {.g-col-12 .g-col-md-6 .g-start-md-7} -->
+<!-- ![](hexagons-triangular-full-width.svg) -->
+<!-- ::: -->
+
+::: {.g-col-12}
 [Hello and welcome to my personal (work-in-progress) website!]{.home-header}
 
 I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.
-
-::: {.grid}
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 <div class="card" id="card-first-color">
@@ -115,4 +129,9 @@ I am a postgraduate researcher in Statistics at the University of Warwick and an
 </div>
 </div>
 :::
+
+<!-- ::: {.g-col-12} -->
+<!-- ![](hexagons-triangular-full-width.svg) -->
+<!-- ::: -->
+
 :::

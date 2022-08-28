@@ -10,6 +10,7 @@ img {
 ```
 
 ```{r}
+#| fig-align: center  
 knitr::include_graphics("images/profile.jpeg")
 ```
 
