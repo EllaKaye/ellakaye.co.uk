@@ -1,67 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ellakaye.rbind.io/community.html</loc>
+    <lastmod>2022-08-29T10:33:49.686Z</lastmod>
+  </url>
+  <url>
     <loc>https://ellakaye.rbind.io/contact.html</loc>
-    <lastmod>2022-08-29T10:09:54.775Z</lastmod>
+    <lastmod>2022-08-29T10:33:50.613Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2022-08-28T10:29:03.789Z</lastmod>
+    <lastmod>2022-08-29T10:33:53.392Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020/index.html</loc>
-    <lastmod>2022-08-28T10:29:05.750Z</lastmod>
+    <lastmod>2022-08-29T10:33:55.303Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2022-08-28T15:35:47.007Z</lastmod>
+    <lastmod>2022-08-29T10:33:59.523Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-08-28T15:35:51.604Z</lastmod>
+    <lastmod>2022-08-29T10:34:01.135Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2022-08-28T10:29:12.577Z</lastmod>
+    <lastmod>2022-08-29T10:34:01.846Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-29T10:10:06.187Z</lastmod>
+    <lastmod>2022-08-29T10:34:02.577Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
-    <lastmod>2022-08-28T15:44:17.667Z</lastmod>
+    <lastmod>2022-08-29T10:34:03.201Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2019-10-05_working-with-text-in-r/index.html</loc>
-    <lastmod>2022-08-28T10:29:14.272Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/projects.html</loc>
-    <lastmod>2022-08-28T21:01:32.184Z</lastmod>
+    <lastmod>2022-08-29T10:34:03.519Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-29T10:32:04.795Z</lastmod>
+    <lastmod>2022-08-29T10:34:38.223Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/about.html</loc>
-    <lastmod>2022-08-29T10:16:59.081Z</lastmod>
+    <lastmod>2022-08-29T10:34:04.969Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-29T10:10:04.756Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellakaye.rbind.io/hexagons.html</loc>
-    <lastmod>2022-08-28T17:42:25.770Z</lastmod>
+    <lastmod>2022-08-29T10:34:05.879Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/packages.html</loc>
-    <lastmod>2022-08-29T10:10:07.379Z</lastmod>
+    <lastmod>2022-08-29T10:34:06.580Z</lastmod>
   </url>
   <url>
-    <loc>https://ellakaye.rbind.io/community.html</loc>
-    <lastmod>2022-08-29T10:09:42.728Z</lastmod>
+    <loc>https://ellakaye.rbind.io/hexagons.html</loc>
+    <lastmod>2022-08-29T10:34:06.873Z</lastmod>
   </url>
 </urlset>
