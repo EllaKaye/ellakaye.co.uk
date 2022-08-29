@@ -298,7 +298,7 @@
     "href": "index.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "Hello and welcome!\n\nI am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.\n\n\n\n\n\nAbout me, my work, my interests and experience.\n\n\nABOUT\n\n\n\n\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\n\n\nPOSTS\n\n\n\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\n\nPACKAGES \n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\nPACKAGES\n\n\n\n\n\n\n\n\nSome quick example text to build on the card title and make up the bulk of the card content.\n\n\nPACKAGES \n\n\n\n\n\n\n\nWhere to find me online and how to get in touch\n\n\nPACKAGES"
+    "text": "Hello and welcome!\nI am a postgraduate researcher in Statistics at the University of Warwick and an  enthusiast.\n\n\n\n\n\nAbout me, my work, my interests and experience. And a photo!\n\n\nABOUT\n\n\n\n\n\n\n\n\nI sometimes write about what I’m doing and learning.\n\n\nPOSTS\n\n\n\n\n\n\n\n\nSlides and resourses from talks I’ve given at R and RLadies user groups and conferences.\n\n\nTALKS\n\n\n\n\n\n\n\n\nI develop R packages. Here are links to their repos, websites and any other resources.\n\n\nPACKAGES\n\n\n\n\n\n\n\n\nI love the R community! These are the groups and projects that I help organise or contribute to.\n\n\nCOMMUNITY\n\n\n\n\n\n\n\n\nWhere to find me online and how to get in touch. I’d love to hear from you!\n\n\nCONTACT"
   },
   {
     "objectID": "about.html",
@@ -313,5 +313,12 @@
     "title": "ELLA KAYE",
     "section": "",
     "text": "Custom Syntax Highlighting for {distill} Part 2\n\n\nCreating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 1\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my {distill} website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a personal (publicly available) package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "packages.html",
+    "href": "packages.html",
+    "title": "ELLA KAYE",
+    "section": "",
+    "text": "No matching items"
   }
 ]

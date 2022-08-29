@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.rbind.io/contact.html</loc>
-    <lastmod>2022-08-28T21:28:20.611Z</lastmod>
+    <lastmod>2022-08-29T10:09:54.775Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-08-28T21:28:29.839Z</lastmod>
+    <lastmod>2022-08-29T10:10:06.187Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
@@ -42,18 +42,26 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-28T22:38:03.728Z</lastmod>
+    <lastmod>2022-08-29T10:32:04.795Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/about.html</loc>
-    <lastmod>2022-08-28T21:43:59.928Z</lastmod>
+    <lastmod>2022-08-29T10:16:59.081Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-28T21:28:27.101Z</lastmod>
+    <lastmod>2022-08-29T10:10:04.756Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/hexagons.html</loc>
     <lastmod>2022-08-28T17:42:25.770Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/packages.html</loc>
+    <lastmod>2022-08-29T10:10:07.379Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/community.html</loc>
+    <lastmod>2022-08-29T10:09:42.728Z</lastmod>
   </url>
 </urlset>

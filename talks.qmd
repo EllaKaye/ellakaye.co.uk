@@ -16,4 +16,4 @@ execute:
   echo: false
 ---
 
-# [TALKS]{.second-color}
+# [TALKS]{.third-color}

@@ -286,28 +286,6 @@ iframe.slide-deck-4-3 {
     text-decoration: none;
 }
 
-.second-color-link {
-  color: $second-color;
-  border-color: $second-color;
-}
-
-.second-color-link:hover{
-    background-color: $second-color;
-    border-color: $second-color;
-    color: $body-bg;
-}
-
-.third-color-link {
-  color: $third-color;
-  border-color: $third-color;
-}
-
-.third-color-link:hover{
-    background-color: $third-color;
-    border-color: $third-color;
-    color: $body-bg;
-}
-
 #card-first-color {
   background-color: $body-bg;
   border: 4px solid $primary;
@@ -364,11 +342,53 @@ iframe.slide-deck-4-3 {
   color: $third-color;
 }
 
+/*
 .card-body > p {
   margin-bottom: 6px;
 }
-
 .card-body > .icon-link {
   padding-bottom: 0;
   padding-top: 0;
 }
+*/
+
+.card-link {
+    background-color: $primary;
+    color: $body-bg;
+    border: 4px solid $primary;
+    border-color: $primary;
+    padding: 5px .5rem 5px .5rem !important;
+    margin: 0;
+    border-radius: 5px; 
+    display: inline-block;
+    text-decoration: none;  
+    font-size: $h5-font-size;
+}
+
+.card-link:hover {
+  background-color: $body-bg;
+  color: $primary;
+}
+
+.second-color-link{
+    background-color: $second-color;
+    border-color: $second-color;
+    color: $body-bg;
+}
+
+.second-color-link:hover {
+  color: $second-color;
+  border-color: $second-color;
+}
+
+.third-color-link{
+    background-color: $third-color;
+    border-color: $third-color;
+    color: $body-bg;
+}
+
+.third-color-link:hover {
+  color: $third-color;
+  border-color: $third-color;
+}
+

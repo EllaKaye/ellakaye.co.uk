@@ -7,7 +7,7 @@ execute:
   echo: false
 ---
 
-# [I'd love to hear from you!]{.second-color}
+# [I'd love to hear from you!]{.primary}
 
 You can leave a note about any of my posts, talks or projects using the comment box at the bottom of each page.
 

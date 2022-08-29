@@ -1,10 +1,10 @@
 ---
-#title: "posts"
+#title: "talks"
 listing:
-  contents: posts
+  contents: packages
   sort: "date desc"
-  type: default
-  categories: true
+  type: grid
+  categories: false
   sort-ui: false
   filter-ui: false
 page-layout: full
@@ -16,4 +16,4 @@ execute:
   echo: false
 ---
 
-# [POSTS]{.second-color}
+# [PACKAGES]{.second-color}

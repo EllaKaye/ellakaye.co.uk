@@ -1,6 +1,6 @@
 ---
-#title: "Projects"
-page-layout: full
+#title: "Community"
+#page-layout: full
 knitr:
   opts_chunk: 
     collapse: true
@@ -8,4 +8,4 @@ execute:
   echo: false
 ---
 
-# [PROJECTS]{.third-color}
+# [COMMUNITY]{.third-color}

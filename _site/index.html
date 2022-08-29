@@ -71,6 +71,7 @@ ga('send', {
 });
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="ek-styles.css">
@@ -113,10 +114,10 @@ ga('send', {
     <a class="nav-link" href="./talks.html">talks</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./packages.qmd">packages</a>
+    <a class="nav-link" href="./packages.html">packages</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.qmd">community</a>
+    <a class="nav-link" href="./community.html">community</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./contact.html">contact</a>
@@ -140,44 +141,20 @@ ga('send', {
 
 
 
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
-<!-- :::{.column-screen} -->
-<!-- ![](hexagons-triangular-full-width.svg) -->
-<!-- ::: -->
-<!-- ::: {.grid} -->
-<!-- ::: {.g-col-12 .g-col-md-6 .g-start-md-7} -->
-<!-- ![](hexagons-triangular-full-width.svg) -->
-<!-- ::: -->
-<!-- ::: -->
 <div class="grid">
-<!-- ::: {.g-col-12} -->
-<!-- ![](hexagons-row-three-colors.svg) -->
-<!-- ::: -->
-<!-- ::: {.g-col-12 .g-col-md-6 .g-start-md-7} -->
-<!-- ![](hexagons-triangular-full-width.svg) -->
-<!-- ::: -->
 <div class="g-col-12">
 <p><span class="home-header">Hello and welcome!</span></p>
-<!-- ![](hexagons-row-three-colors.svg) -->
-<p>I am a postgraduate researcher in Statistics at the University of Warwick and an R enthusiast.</p>
+<p>I am a postgraduate researcher in Statistics at the University of Warwick and an <i class="fa-brands fa-r-project" aria-label="R project"></i> enthusiast.</p>
 </div>
 <div class="g-col-12 g-col-md-4">
 <div id="card-first-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-About me, my work, my interests and experience.
+About me, my work, my interests and experience. And a photo!
 </p>
 <div style="margin-top: auto;">
-<a href="./about.html" class="icon-link heading-font">ABOUT</a>
+<a href="./about.html" class="card-link heading-font">ABOUT</a>
 </div>
-<!-- <a href="about.qmd" class="icon-link heading-font mt-auto align-self-end">ABOUT</a> -->
-<!-- <a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> -->
-<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">ABOUT</button> -->
 </div>
 </div>
 </div>
@@ -185,14 +162,11 @@ About me, my work, my interests and experience.
 <div id="card-second-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-Some quick example text to build on the card title and make up the bulk of the card content.
+I sometimes write about what I’m doing and learning.
 </p>
-<!-- <a href="posts.qmd" class="icon-link second-color-link heading-font mt-auto align-self-end">POSTS</a> -->
 <div style="margin-top: auto;">
-<a href="./posts.html" class="icon-link heading-font second-color-link">POSTS</a>
+<a href="./posts.html" class="card-link second-color-link heading-font">POSTS</a>
 </div>
-<!-- <a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> -->
-<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">POSTS</button> -->
 </div>
 </div>
 </div>
@@ -200,10 +174,11 @@ Some quick example text to build on the card title and make up the bulk of the c
 <div id="card-third-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-Some quick example text to build on the card title and make up the bulk of the card content.
+Slides and resourses from talks I’ve given at R and RLadies user groups and conferences.
 </p>
-<!-- <a href="talks.qmd" class="icon-link third-color-link heading-font mt-auto align-self-end">TALKS</a> -->
-<p><a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> <!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">TALKS</button> --></p>
+<div style="margin-top: auto;">
+<a href="./talks.html" class="card-link third-color-link heading-font">TALKS</a>
+</div>
 </div>
 </div>
 </div>
@@ -211,10 +186,11 @@ Some quick example text to build on the card title and make up the bulk of the c
 <div id="card-second-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-Some quick example text to build on the card title and make up the bulk of the card content.
+I develop R packages. Here are links to their repos, websites and any other resources.
 </p>
-<p><a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a></p>
-<!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">PACKAGES</button> -->
+<div style="margin-top: auto;">
+<a href="./packages.html" class="card-link second-color-link heading-font">PACKAGES</a>
+</div>
 </div>
 </div>
 </div>
@@ -222,10 +198,11 @@ Some quick example text to build on the card title and make up the bulk of the c
 <div id="card-third-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-Some quick example text to build on the card title and make up the bulk of the card content.
+I love the R community! These are the groups and projects that I help organise or contribute to.
 </p>
-<!-- <a href="community.qmd" class="icon-link third-color-link heading-font mt-auto align-self-end">COMMUNITY</a> -->
-<p><a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> <!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">COMMUNITY</button> --></p>
+<div style="margin-top: auto;">
+<a href="./community.html" class="card-link third-color-link heading-font">COMMUNITY</a>
+</div>
 </div>
 </div>
 </div>
@@ -233,16 +210,14 @@ Some quick example text to build on the card title and make up the bulk of the c
 <div id="card-first-color" class="card h-100">
 <div class="card-body d-flex flex-column">
 <p class="card-text">
-Where to find me online and how to get in touch
+Where to find me online and how to get in touch. I’d love to hear from you!
 </p>
-<!-- <a href="contact.qmd" class="icon-link heading-font mt-auto align-self-end">CONTACT</a> -->
-<p><a href="package.qmd" class="align-self-end icon-link second-color-link heading-font" style="margin-top: auto;">PACKAGES</a> <!-- <button type="button" class="align-self-end btn btn-block btn-primary" style="margin-top: auto;">CONTACT</button> --></p>
+<div style="margin-top: auto;">
+<a href="./contact.html" class="card-link heading-font">CONTACT</a>
 </div>
 </div>
 </div>
-<!-- ::: {.g-col-12} -->
-<!-- ![](hexagons-triangular-full-width.svg) -->
-<!-- ::: -->
+</div>
 </div>
 
 
