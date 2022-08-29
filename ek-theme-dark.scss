@@ -224,18 +224,12 @@ div.tippy-content a:hover {
 }
 
 // then override colors so they match cards
-#navbarCollapse > ul > li:nth-child(2) > a:hover {
-  color: $second-color;
-}
-
-#navbarCollapse > ul > li:nth-child(3) > a:hover {
-  color: $third-color;
-}
-
+#navbarCollapse > ul > li:nth-child(2) > a:hover,
 #navbarCollapse > ul > li:nth-child(4) > a:hover {
   color: $second-color;
 }
 
+#navbarCollapse > ul > li:nth-child(3) > a:hover,
 #navbarCollapse > ul > li:nth-child(5) > a:hover {
   color: $third-color;
 }
@@ -249,7 +243,7 @@ a.nav-link {
   position: relative;
 }
 
-.navbar .navbar-nav .nav-item:nth-child(1)::after, .navbar .navbar-nav .nav-item:nth-child(6)::after {
+.navbar .navbar-nav .nav-item::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -262,30 +256,14 @@ a.nav-link {
   transition: all 0.3s;
 }
 
-.navbar .navbar-nav .nav-item:nth-child(2)::after, .navbar .navbar-nav .nav-item:nth-child(4)::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.navbar .navbar-nav .nav-item:nth-child(2)::after, 
+.navbar .navbar-nav .nav-item:nth-child(4)::after {
   background-color: $second-color;
-  width: 0%;
-  content: "";
-  height: 4px;
-  transition: all 0.3s;
 }
 
-.navbar .navbar-nav .nav-item:nth-child(3)::after, .navbar .navbar-nav .nav-item:nth-child(5)::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.navbar .navbar-nav .nav-item:nth-child(3)::after, 
+.navbar .navbar-nav .nav-item:nth-child(5)::after {
   background-color: $third-color;
-  width: 0%;
-  content: "";
-  height: 4px;
-  transition: all 0.3s;
 }
 
 .navbar .navbar-nav .nav-item:hover::after {
