@@ -1,5 +1,5 @@
 ---
-#title: "talks"
+#title: "packages"
 listing:
   contents: packages
   sort: "date desc"

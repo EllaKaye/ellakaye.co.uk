@@ -103,10 +103,9 @@ $body-color: $dark;
 $navbar-bg: $body-bg;
 $navbar-fg: $body-color;
 $code-bg: $light;
-$code-color: $purple;
+$code-color: $second-color;
 
 // font size tweaks - adjust to make Fira Mono same size as Lemon Milk Light
-
 $code-font-size: $font-size-base;
 
 h1 code {
@@ -133,8 +132,6 @@ h6 code {
   font-size: $h6-font-size;
 }
 
-
-
 // callouts
 $callout-color-note: $blue;
 $callout-color-tip: $darker-green;
@@ -143,13 +140,35 @@ $callout-color-warning: $orange;
 $callout-color-important: $red;
 
 /*-- scss:rules --*/
-  
-pre.sourceCode {
-  border-radius: 0;
-  border-left-color: $gray-200;
+
+// color classes
+.primary {
+  color: $primary;
 }
 
+.second-color {
+  color: $second-color;
+}
 
+.third-color {
+  color: $third-color;
+}
+
+// code
+pre.sourceCode {
+  border-radius: 0;
+  border-left-color: $gray-300;
+}
+
+// light vs dark modes
+.light-mode {
+  display: block; 
+}
+.dark-mode {
+  display: none;
+}
+
+// links
 a {
   color: $body-color;
   text-decoration-thickness: 1.5px;
@@ -162,19 +181,6 @@ a:hover {
   text-decoration-color: $primary;
 }
 
-/*
-#quarto-document-content a {
-  color: $body-color;
-  border-bottom: 1px solid $body-color;
-  text-decoration: none;
-}
-
-#quarto-document-content a:hover {
-  color: $primary;
-  border-bottom: 1px solid $primary;
-}
-*/
-
 .toc-actions a {
   text-decoration: none !important;  
   border-bottom: 0;
@@ -184,25 +190,17 @@ a:hover {
   color: $primary;
 }
 
-
-
-/*
-.light-mode { display: block; }
-.dark-mode { display: none; }
-*/
-
-/*
-.navbar-brand > img {
-  max-height: 60px;
-  width: 78px;
-  //margin-top: 18px;
+div.tippy-content a:hover {
+  text-decoration-color: $primary;
 }
-*/
 
+// navbar
 .navbar-title {
   font-size: $font-size-base * 1.75;
 }
 
+// the line in the navbar logo
+// animation defined in ek-styles.css
 .icon-line {
   display: block;
   background: $primary;
@@ -214,11 +212,28 @@ a:hover {
   margin-bottom: -6px;
 }
 
+// hover on navbar
 .navbar-expand-lg .navbar-nav .nav-link:hover {
   color: $primary;
 }
+// then override colors so they match cards
+#navbarCollapse > ul > li:nth-child(2) > a:hover {
+  color: $second-color;
+}
 
-/*
+#navbarCollapse > ul > li:nth-child(3) > a:hover {
+  color: $third-color;
+}
+
+#navbarCollapse > ul > li:nth-child(4) > a:hover {
+  color: $second-color;
+}
+
+#navbarCollapse > ul > li:nth-child(5) > a:hover {
+  color: $third-color;
+}
+
+// animated underline on hover
 a.nav-link {
   position: relative;
 }
@@ -226,7 +241,8 @@ a.nav-link {
 .navbar .navbar-nav .nav-item {
   position: relative;
 }
-.navbar .navbar-nav .nav-item::after {
+
+.navbar .navbar-nav .nav-item:nth-child(1)::after, .navbar .navbar-nav .nav-item:nth-child(6)::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -235,17 +251,42 @@ a.nav-link {
   background-color: $primary;
   width: 0%;
   content: "";
-  height: 5px;
-  transition: all 0.5s;
+  height: 4px;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-nav .nav-item:nth-child(2)::after, .navbar .navbar-nav .nav-item:nth-child(4)::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $second-color;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-nav .nav-item:nth-child(3)::after, .navbar .navbar-nav .nav-item:nth-child(5)::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $third-color;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all 0.3s;
 }
 
 .navbar .navbar-nav .nav-item:hover::after {
-  width: 100%;
+  width: 90%;
 }
-*/
 
 
-// header styles
+// header styles (more in ek-styles.css)
 #quarto-header {
   text-transform: uppercase;
   font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
@@ -255,16 +296,23 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-div.tippy-content a:hover {
-  text-decoration-color: $primary;
+.heading-font {
+  font-family: $headings-font-family;
 }
 
+.home-header {
+  font-family: $headings-font-family;
+  font-size: $font-size-base * 3;
+}
+
+// iframes for slides embedded in talks pages
 iframe.slide-deck-4-3 {
   border: 3px solid $gray-700;
   width: 100%;
   aspect-ratio: 4 / 3;
 }
 
+// icon-links
 .icon-link, div.quarto-about-jolla .about-link {
     background-color: transparent;
     color: $primary;
@@ -286,12 +334,12 @@ iframe.slide-deck-4-3 {
     text-decoration: none;
 }
 
+// for cards on home page
 #card-first-color {
   background-color: $body-bg;
   border: 4px solid $primary;
   border-radius: 5px; 
 }
-
 
 #card-second-color {
   background-color: $body-bg;
@@ -305,52 +353,6 @@ iframe.slide-deck-4-3 {
   border-radius: 5px; 
 }
 
-.heading-font {
-  font-family: $headings-font-family;
-}
-
-#navbarCollapse > ul > li:nth-child(2) > a:hover {
-  color: $second-color;
-}
-
-#navbarCollapse > ul > li:nth-child(3) > a:hover {
-  color: $third-color;
-}
-
-#navbarCollapse > ul > li:nth-child(4) > a:hover {
-  color: $second-color;
-}
-
-#navbarCollapse > ul > li:nth-child(5) > a:hover {
-  color: $third-color;
-}
-
-.home-header {
-  font-family: $headings-font-family;
-  font-size: $font-size-base * 3;
-}
-
-.primary {
-  color: $primary;
-}
-
-.second-color {
-  color: $second-color;
-}
-
-.third-color {
-  color: $third-color;
-}
-
-/*
-.card-body > p {
-  margin-bottom: 6px;
-}
-.card-body > .icon-link {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-*/
 
 .card-link {
     background-color: $primary;

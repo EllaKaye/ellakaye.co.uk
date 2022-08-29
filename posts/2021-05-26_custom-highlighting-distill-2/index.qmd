@@ -32,27 +32,6 @@ bibliography: bibliography.bib
 draft: false
 ---
 
-```{css}
-#| echo: false
-#| eval: false
-.top-callout {
-  margin-top: 0;
-}
-
-#quarto-content a {
-  text-decoration: none;
-  border-bottom: 1px solid;
-}
-
-#TOC > ul > li a {
-  border-bottom: 0;
-}
-
-div.toc-actions a {
-  border-bottom: 0 !important;
-}
-```
-
 :::{.callout-note collapse="false" .top-callout}
 ## Update: August 2022
 

@@ -24,8 +24,6 @@ execute:
   echo: false
 page-layout: full
 include-in-header: _includes/fontawesome-2up.html
-# include-before-body: 
-#   file: hexagons.qmd
 ---
 
 ::: {.grid}
