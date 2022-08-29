@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/contact.html</loc>
-    <lastmod>2022-08-29T10:33:50.613Z</lastmod>
+    <lastmod>2022-08-29T11:53:57.846Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
@@ -17,12 +17,8 @@
     <lastmod>2022-08-29T10:33:55.303Z</lastmod>
   </url>
   <url>
-    <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2022-08-29T10:33:59.523Z</lastmod>
-  </url>
-  <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-08-29T10:34:01.135Z</lastmod>
+    <lastmod>2022-08-29T12:06:24.791Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
@@ -42,7 +38,7 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-08-29T10:44:24.868Z</lastmod>
+    <lastmod>2022-08-29T12:06:50.027Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/about.html</loc>
@@ -50,7 +46,7 @@
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-08-29T10:34:05.879Z</lastmod>
+    <lastmod>2022-08-29T12:06:52.256Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/packages.html</loc>
@@ -59,5 +55,9 @@
   <url>
     <loc>https://ellakaye.rbind.io/hexagons.html</loc>
     <lastmod>2022-08-29T10:34:06.873Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
+    <lastmod>2022-08-29T12:06:59.970Z</lastmod>
   </url>
 </urlset>

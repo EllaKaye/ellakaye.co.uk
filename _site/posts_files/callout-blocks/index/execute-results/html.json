@@ -1,0 +1,14 @@
+{
+  "hash": "bff6234c936f2400beec899836121b30",
+  "result": {
+    "markdown": "---\ntitle: \"Testing callout blocks\"\ndescription: Also include icon-link\ninclude-in-header: ../../_includes/fontawesome-2up.html\n---\n\n\n<a href=\"https://ellakaye.github.io/distilltools/\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fa-solid fa-globe\"></i> site</a>\n\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<a href=\"https://ellakaye.github.io/Rladies-Coventry-getting-help-in-R/getting_help_in_R.html#1\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-images\"></i> slides</a>\n```\n:::\n\n::: {.cell-output-display}\n```{=html}\n<a href=\"https://github.com/EllaKaye/Rladies-Coventry-getting-help-in-R\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> materials</a>\n```\n:::\n:::\n\n\n\nHere are my tests of callout blocks.\n\nSee the [documentation](https://quarto.org/docs/authoring/callouts.html).\n\n:::{.callout-note}\nNote that there are five types of callouts, including:\n`note`, `warning`, `important`, `tip`, and `caution`.\n:::\n\n:::{.callout-warning}\nDon't do that! simple appearance.\n:::\n\n:::{.callout-important}\nDo do this!\n:::\n\n:::{.callout-tip}\n## Tip With Caption\n\nThis is an example of a callout with a caption.\n:::\n\n:::{.callout-caution collapse=\"true\"}\n## Expand To Learn About Collapse\n\nThis is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse=\"true\"` to collapse it by default or `collapse=\"false\"` to make a collapsible callout that is expanded by default.\n:::\n\n:::{.callout-caution appearance=\"simple\"}\nDon't do that! simple appearance.\n:::\n\n:::{.callout-caution appearance=\"minimal\"}\nDon't do that! minimal appearance.\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
