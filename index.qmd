@@ -48,7 +48,7 @@ I am a postgraduate researcher in Statistics at the University of Warwick and an
 ::: {.g-col-12 .g-col-md-4}
 <div class="card h-100" id="card-second-color">
 <div class="card-body d-flex flex-column">
-<p class="card-text">I sometimes write about what I'm doing and learning.</p>
+<p class="card-text">I sometimes write about what I'm doing and learning, mostly about R and building websites.</p>
 <div style="margin-top: auto;"><a href="posts.qmd" class="card-link second-color-link heading-font">POSTS</a></div>
 </div>
 </div>
