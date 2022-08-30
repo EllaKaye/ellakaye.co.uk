@@ -291,10 +291,13 @@ h1, h2, h3 {
 }
 
 // iframes for slides embedded in talks pages
-iframe.slide-deck-4-3 {
+iframe.slide-deck {
   border: 3px solid $gray-700;
   width: 100%;
-  aspect-ratio: 4 / 3;
+}
+
+.ar-4-3 {
+  aspect-ratio: 4 / 3;  
 }
 
 // icon-links

@@ -1,3 +1,0 @@
-:::{.column-screen}
-![](hexagons-triangular-full-width.svg)
-:::

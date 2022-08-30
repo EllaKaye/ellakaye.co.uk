@@ -75,7 +75,7 @@ I then gave an updated version of the talk a few months later (links at the top 
 
 ## Slides
 
-<iframe class="slide-deck-4-3" src="https://ellakaye.github.io/RLadies-Tbilisi-talk/text_in_R_Tbilisi.html#1" title="Working with text in R slides">
+<iframe class="slide-deck ar-4-3" src="https://ellakaye.github.io/RLadies-Tbilisi-talk/text_in_R_Tbilisi.html#1" title="Working with text in R slides">
 </iframe>
 
 Keyboard shortcuts for slideshow (once you've clicked inside it):
