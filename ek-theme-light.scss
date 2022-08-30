@@ -17,9 +17,14 @@ $theme: "litera" !default;
   src: local('LEMONMILKPro-Light'), url('fonts/LEMONMILKPro-Light.woff2') format('woff2'), url('fonts/LEMONMILKPro-Light.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'MonoLisa-Regular';
+  src: local('MonoLisa-Regular'), url('fonts/MonoLisa-Regular.woff2') format('woff2'), url('fonts/MonoLisa-Regular.woff') format('woff');
+}
+
 // fonts
 $font-family-sans-serif: "LEMONMILKPro-Light", Jost, Helvetica, sans-serif !default;
-$font-family-monospace: "Fira Mono", monospace;
+$font-family-monospace: "MonoLisa-Regular", "Fira Mono", monospace;
 $headings-font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif !default;
 
 // litera bootswatch theme colors
@@ -89,13 +94,13 @@ $second-color:  $purple;
 $third-color:   $blue;
 
 // font sizes;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$font-size-base:   1rem !default; // Assumes the browser default, typically `16px`
+$h1-font-size:     $font-size-base * 2.5 !default;
+$h2-font-size:     $font-size-base * 2 !default;
+$h3-font-size:     $font-size-base * 1.75 !default;
+$h4-font-size:     $font-size-base * 1.5 !default;
+$h5-font-size:     $font-size-base * 1.25 !default;
+$h6-font-size:     $font-size-base !default;
 
 // colour tweaks to theme
 $body-bg: $light;
@@ -104,6 +109,8 @@ $navbar-bg: $body-bg;
 $navbar-fg: $body-color;
 $code-bg: $light;
 $code-color: $second-color;
+$card-bg: $body-bg;
+$card-border-color: $gray-300;
 
 // font size tweaks - adjust to make Fira Mono same size as Lemon Milk Light
 $code-font-size: $font-size-base;
@@ -226,42 +233,43 @@ div.tippy-content a:hover {
 #navbarCollapse > ul > li:nth-child(5) > a:hover {
   color: $third-color;
 }
-// animated underline on hover
-a.nav-link {
-  position: relative;
+// animated underline on hover, when navbar shows as row
+@media screen and (min-width: 992px) {
+  a.nav-link {
+    position: relative;
+  }
+  
+  .navbar .navbar-nav .nav-item {
+    position: relative;
+  }
+  
+  .navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $primary;
+    width: 0%;
+    content: "";
+    height: 4px;
+    transition: all 0.3s;
+  }
+  
+  .navbar .navbar-nav .nav-item:nth-child(2)::after, 
+  .navbar .navbar-nav .nav-item:nth-child(4)::after {
+    background-color: $second-color;
+  }
+  
+  .navbar .navbar-nav .nav-item:nth-child(3)::after, 
+  .navbar .navbar-nav .nav-item:nth-child(5)::after {
+    background-color: $third-color;
+  }
+  
+  .navbar .navbar-nav .nav-item:hover::after {
+    width: 90%;
+  }
 }
-
-.navbar .navbar-nav .nav-item {
-  position: relative;
-}
-
-.navbar .navbar-nav .nav-item::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: $primary;
-  width: 0%;
-  content: "";
-  height: 4px;
-  transition: all 0.3s;
-}
-
-.navbar .navbar-nav .nav-item:nth-child(2)::after, 
-.navbar .navbar-nav .nav-item:nth-child(4)::after {
-  background-color: $second-color;
-}
-
-.navbar .navbar-nav .nav-item:nth-child(3)::after, 
-.navbar .navbar-nav .nav-item:nth-child(5)::after {
-  background-color: $third-color;
-}
-
-.navbar .navbar-nav .nav-item:hover::after {
-  width: 90%;
-}
-
 
 // header styles (more in ek-styles.css)
 #quarto-header {
@@ -330,7 +338,6 @@ iframe.slide-deck-4-3 {
   border-radius: 5px; 
 }
 
-
 .card-link {
     background-color: $primary;
     color: $body-bg;
@@ -370,4 +377,7 @@ iframe.slide-deck-4-3 {
   color: $third-color;
   border-color: $third-color;
 }
+
+
+
 
