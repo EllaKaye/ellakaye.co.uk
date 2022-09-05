@@ -235,7 +235,42 @@
     "href": "talks.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "How to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "How to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nSetting up you PhD (or other research project!) as an R package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/2018-08-23_phd-as-package/index.html",
+    "href": "talks/2018-08-23_phd-as-package/index.html",
+    "title": "Setting up you PhD (or other research project!) as an R package",
+    "section": "",
+    "text": "slides  materials"
+  },
+  {
+    "objectID": "talks/2018-08-23_phd-as-package/index.html#overview",
+    "href": "talks/2018-08-23_phd-as-package/index.html#overview",
+    "title": "Setting up you PhD (or other research project!) as an R package",
+    "section": "Overview",
+    "text": "Overview\nIn this talk, I will try to convince you that if you have any of your own data or write any of your own R functions, then you should put them into an R package. Benefits include reproducibility and keeping everything together and accessible. Also, it’s really easy to do, and to prove it, I will build a package from scratch before your very eyes. I will also introduce the bookdown package for writing reports and even your thesis. Filled with tips and tricks from my own experiences, this talk could save you hours!"
+  },
+  {
+    "objectID": "talks/2018-08-23_phd-as-package/index.html#event-details",
+    "href": "talks/2018-08-23_phd-as-package/index.html#event-details",
+    "title": "Setting up you PhD (or other research project!) as an R package",
+    "section": "Event details",
+    "text": "Event details\nEvent: Birmingham R User Group\nDate: August 8th, 2018\nTime: 18:00-20:00 GMT+1\nLocation: Faraday Wharf, Innovation Birmingham Campus, Holt Street, Birmingham Science Park, B7 4BB"
+  },
+  {
+    "objectID": "talks/2018-08-23_phd-as-package/index.html#key-points",
+    "href": "talks/2018-08-23_phd-as-package/index.html#key-points",
+    "title": "Setting up you PhD (or other research project!) as an R package",
+    "section": "Key points",
+    "text": "Key points\n\nPoint 1\nPoint 2\n…"
+  },
+  {
+    "objectID": "talks/2018-08-23_phd-as-package/index.html#slides",
+    "href": "talks/2018-08-23_phd-as-package/index.html#slides",
+    "title": "Setting up you PhD (or other research project!) as an R package",
+    "section": "Slides",
+    "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html",

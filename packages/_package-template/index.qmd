@@ -1,8 +1,8 @@
 ---
-title: Talk Title
+title: Package Title
 description: |
-  Talk description
-date: UPDATE
+  Package description
+#date: UPDATE # initial commit date? Publish date? No date?
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
@@ -33,64 +33,23 @@ library(distilltools)
 
 
 ### [TODO]: fill in urls
-### [TODO]: delete any unessary icons (or add more)
+### [TODO]: delete any unnecessary icons (or add more)
 
 `r icon_link(
-  icon = "images",
-  text = "slides",
-  url = ""
-)`
-`r icon_link(
   icon = "github",
-  text = "materials",
-  url = ""
-)`
-`r icon_link(
-  icon = "play-circle",
-  text = "video",
+  text = "source",
   url = ""
 )`
 `r `icon_link(
   icon = "box-open",
-  text = "package",
+  text = "website",
   url = ""
 )`
 
-## Overview 
+## Resources
+
+### [TODO] Links to any blog posts, talks etc
+
+## Overview (COPY GITHUB README?)
 
 
-## Event details
-
-**Event:** [GROUP](url)
-
-**Date:** DATE
-
-**Time:** TIME
-
-**Location:** LOCATION
-
-## Key points
-
-- Point 1
-
-- Point 2
-
-- ...
-
-
-## Slides - fill in iframe and link in last bullet point
-
-<iframe class="slide-deck-4-3" src="FILL IN" title="FILL IN">
-</iframe>
-
-Keyboard shortcuts for slideshow (once you've clicked inside it):
-
-- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.
-
-- Use <kbd>o</kbd> for an overview of all slides.
-
-- Use <kbd>h</kbd> to see a list of other shortcuts 
-  
-  - <kbd>f</kbd> to toggle full screen not working, but the rest are fine.
-  
-  - For full screen slides, go to [slides]("") then press <kbd>f</kbd>.

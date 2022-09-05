@@ -1,0 +1,55 @@
+---
+title: EMK
+description: |
+  Package description
+#date: UPDATE # initial commit date? Publish date? No date?
+author: 
+  - name: Ella Kaye
+    url: https://twitter.com/ellamkaye
+#site-url: https://ellakaye.rbind.io/
+#image: IMAGE.png
+# N.B. Don't use "" in image-alt
+#image-alt: |
+#categories:
+#  - TAG_1
+#  - TAG_2
+#twitter-card: 
+# uncomment lines below for different title and description to post
+#  title: |
+#  description: |
+# uncomment for different image to post
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: "summary_large_image" 
+draft: true
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+### [TODO]: fill in urls
+### [TODO]: delete any unnecessary icons (or add more)
+
+`r icon_link(
+  icon = "github",
+  text = "source",
+  url = ""
+)`
+`r `icon_link(
+  icon = "box-open",
+  text = "website",
+  url = ""
+)`
+
+## Resources
+
+### [TODO] Links to any blog posts, talks etc
+
+## Overview (COPY GITHUB README?)
+
+

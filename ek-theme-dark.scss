@@ -3,9 +3,25 @@
 // use litera as the base
 // https://github.com/thomaspark/bootswatch/tree/v5/dist/litera
 $theme: "litera" !default;
-
+/*
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Jost&display=swap);
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Lemon Milk Pro™ by Marsnev
+ * URL: https://www.myfonts.com/collections/lemon-milk-pro-font-marsnev
+ * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2020 MyFonts Incn*/
 
 @font-face {
   font-family: 'LEMONMILKPro-Regular';
@@ -17,9 +33,23 @@ $theme: "litera" !default;
   src: local('LEMONMILKPro-Light'), url('fonts/LEMONMILKPro-Light.woff2') format('woff2'), url('fonts/LEMONMILKPro-Light.woff') format('woff');
 }
 
+/*!
+  * @preserve
+  * MonoLisa
+  * Release date: 2022-02-28
+  * This font is subject to a EULA. A user-licence can be acquired at:
+  *   https://monolisa.dev
+  * © 2022 FaceType Foundry. All Rights Reserved.
+  */
+
 @font-face {
   font-family: 'MonoLisa-Regular';
   src: local('MonoLisa-Regular'), url('fonts/MonoLisa-Regular.woff2') format('woff2'), url('fonts/MonoLisa-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MonoLisa-RegularItalic';
+  src: local('MonoLisa-RegularItalic'), url('fonts/MonoLisa-RegularItalic.woff2') format('woff2'), url('fonts/MonoLisa-RegularItalic.woff') format('woff');
 }
 
 // fonts
@@ -114,8 +144,16 @@ $code-color: $second-color;
 $card-bg: $body-bg;
 $card-border-color: $gray-700;
 
-// font size tweaks - adjust to make Fira Mono same size as Lemon Milk Light
+// font size and OpenType tweaks - adjust to make Fira Mono same size as Lemon Milk Light
 $code-font-size: $font-size-base;
+
+code {
+  font-feature-settings: 'dlig' 0, 'liga' 0, 'calt' 1, 'zero' 1, 'ss02' 0;
+}
+
+code span.co {
+  font-family: "MonoLisa-RegularItalic", "Fira Mono", monospace;
+}
 
 h1 code {
   font-size: $h1-font-size;

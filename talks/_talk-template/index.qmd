@@ -33,7 +33,7 @@ library(distilltools)
 
 
 ### [TODO]: fill in urls
-### [TODO]: delete any unessary icons (or add more)
+### [TODO]: delete any unnecessary icons (or add more)
 
 `r icon_link(
   icon = "images",

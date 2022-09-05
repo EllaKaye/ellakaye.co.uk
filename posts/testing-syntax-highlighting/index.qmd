@@ -5,6 +5,16 @@ categories: [news]
 draft: true
 ---
 
+Let's test code font!
+
+Some inline code: `x <- y`, `x != g0`. `1/2` `m^2`
+
+```{r}
+x <- 1/2 
+TRUE != FALSE # a comment
+```
+
+
 Let's test some syntax highlighting!
 
 ```{.python}
