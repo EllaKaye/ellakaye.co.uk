@@ -2,62 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.rbind.io/community.html</loc>
-    <lastmod>2022-09-05T20:33:36.728Z</lastmod>
+    <lastmod>2022-09-10T21:33:06.968Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/contact.html</loc>
-    <lastmod>2022-09-05T20:33:38.061Z</lastmod>
+    <lastmod>2022-09-10T21:33:07.789Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2022-09-05T20:28:33.829Z</lastmod>
+    <lastmod>2022-09-10T21:33:10.566Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020/index.html</loc>
-    <lastmod>2022-09-05T20:28:35.698Z</lastmod>
+    <lastmod>2022-09-10T21:33:12.419Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2022-09-05T20:28:39.917Z</lastmod>
+    <lastmod>2022-09-10T21:33:16.784Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-09-05T20:31:07.303Z</lastmod>
+    <lastmod>2022-09-10T21:33:18.408Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2022-09-05T20:28:42.390Z</lastmod>
+    <lastmod>2022-09-10T21:33:19.118Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks.html</loc>
-    <lastmod>2022-09-05T20:33:32.955Z</lastmod>
+    <lastmod>2022-09-10T21:33:19.895Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2018-08-23_phd-as-package/index.html</loc>
-    <lastmod>2022-09-05T20:28:43.995Z</lastmod>
+    <lastmod>2022-09-10T21:33:20.498Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
-    <lastmod>2022-09-05T20:28:44.349Z</lastmod>
+    <lastmod>2022-09-10T21:33:20.971Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/talks/2019-10-05_working-with-text-in-r/index.html</loc>
-    <lastmod>2022-09-05T20:28:44.677Z</lastmod>
+    <lastmod>2022-09-10T21:33:21.312Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks/2017-07-06_introducing-BradleyTerryScalable/index.html</loc>
+    <lastmod>2022-09-10T21:33:21.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.rbind.io/talks/2017-05-25_overview-of-htmlwidgets/index.html</loc>
+    <lastmod>2022-09-10T21:33:21.971Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/index.html</loc>
-    <lastmod>2022-09-05T20:33:31.159Z</lastmod>
+    <lastmod>2022-09-10T21:33:22.665Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/about.html</loc>
-    <lastmod>2022-09-05T20:33:46.082Z</lastmod>
+    <lastmod>2022-09-10T21:33:23.455Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/posts.html</loc>
-    <lastmod>2022-09-05T20:28:49.043Z</lastmod>
+    <lastmod>2022-09-10T21:33:25.512Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.rbind.io/packages.html</loc>
-    <lastmod>2022-09-05T20:33:34.863Z</lastmod>
+    <lastmod>2022-09-10T21:33:26.205Z</lastmod>
   </url>
 </urlset>

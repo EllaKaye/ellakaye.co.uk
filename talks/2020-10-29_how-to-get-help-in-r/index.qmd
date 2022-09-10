@@ -6,7 +6,7 @@ date: 2020-10-29
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
-image: how-to-get-help-in-r.png
+image: seth-meyers-help.png
 # N.B. Don't use "" in image-alt
 image-alt: |
   Front slide of the presentation desk, with the talk title, 'getting help in R'

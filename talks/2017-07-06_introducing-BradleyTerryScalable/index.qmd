@@ -7,7 +7,7 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 #site-url: https://ellakaye.rbind.io/
-#image: IMAGE.png
+image: football_pic.jpg
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
@@ -24,7 +24,7 @@ author:
 #  image-width: 600 
 #  image-height: 314
 #  card-style: "summary_large_image" 
-draft: true
+draft: false
 ---
 
 ```{r libraries}
@@ -42,17 +42,19 @@ library(distilltools)
   text = "materials (2017)",
   url = "https://github.com/EllaKaye/useR-2017-talk"
 )`
+
 `r icon_link(
   icon = "images",
   text = "slides (2022)",
-  url = ""
+  url = "https://rse-interview-pres.netlify.app/#/title-slide"
 )`
 `r icon_link(
   icon = "github",
   text = "materials (2022)",
-  url = ""
+  url = "https://github.com/EllaKaye/rse-interview-pres"
 )`
-`r `icon_link(
+
+`r icon_link(
   icon = "box-open",
   text = "package",
   url = "https://ellakaye.github.io/BradleyTerryScalable/"
@@ -91,7 +93,7 @@ I reworked this presentation for a job interview. The 2022 slides and materials 
 
 ## Slides (2017) - fill in iframe and link in last bullet point
 
-<iframe class="slide-deck ar-4-3" src="FILL IN" title="FILL IN">
+<iframe class="slide-deck ar-4-3" src="https://ellakaye.github.io/useR-2017-talk/useR_presentation" title="Introducing BradleyTerryScalable at useR!2017">
 </iframe>
 
 Keyboard shortcuts for slideshow (once you've clicked inside it):
@@ -104,6 +106,9 @@ Keyboard shortcuts for slideshow (once you've clicked inside it):
   
   - <kbd>f</kbd> to toggle full screen not working, but the rest are fine.
   
-  - For full screen slides, go to [slides]("") then press <kbd>f</kbd>.
+  - For full screen slides, go to [slides]("https://ellakaye.github.io/useR-2017-talk/useR_presentation") then press <kbd>f</kbd>.
   
 ## Slides (2022) - fill in iframe and link in last bullet point
+
+<iframe class="slide-deck ar-3-2" src="https://rse-interview-pres.netlify.app/#/title-slide" title="An overview of BradleyTerryScalable">
+</iframe>

@@ -7,7 +7,7 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 #site-url: https://ellakaye.rbind.io/
-image: working-with-text-in-r.png
+image: text-hexes.png
 # N.B. Don't use "" in image-alt
 image-alt: |
   A title slide with white text on a purple background. The first line says 'Working with text in R'. The second line says 'Ella Kaye' and the third line says 'July 4th, 2020, RLadies Tbilisi'

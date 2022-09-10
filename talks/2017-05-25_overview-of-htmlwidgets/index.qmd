@@ -24,7 +24,7 @@ author:
 #  image-width: 600 
 #  image-height: 314
 #  card-style: "summary_large_image" 
-draft: true
+draft: false
 ---
 
 ```{r libraries}

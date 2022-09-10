@@ -7,9 +7,10 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 #site-url: https://ellakaye.rbind.io/
-#image: IMAGE.png
+image: ups_guy_package.jpg
 # N.B. Don't use "" in image-alt
-#image-alt: |
+image-alt: |
+  A handsome man wearing a UPS uniform holding a package, taken from the musical Legally Blonde
 #categories:
 #  - TAG_1
 #  - TAG_2
