@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -56,7 +61,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -69,7 +74,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -194,14 +199,14 @@ document.addEventListener('DOMContentLoaded', function () {
 <link rel="stylesheet" href="../../ek-styles.css">
 <meta property="og:title" content="ELLA KAYE - Custom Syntax Highlighting for {distill} Part 1">
 <meta property="og:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
-<meta property="og:image" content="https://ellakaye.rbind.io/images/logo-white-background.png">
+<meta property="og:image" content="https://ellakaye.co.uk/images/logo-white-background.png">
 <meta property="og:site-name" content="ELLA KAYE">
 <meta property="og:locale" content="en-GB">
 <meta property="og:image:height" content="500">
 <meta property="og:image:width" content="500">
 <meta name="twitter:title" content="ELLA KAYE - Custom Syntax Highlighting for {distill} Part 1">
 <meta name="twitter:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
-<meta name="twitter:image" content="https://ellakaye.rbind.io/images/logo-white-background.png">
+<meta name="twitter:image" content="https://ellakaye.co.uk/images/logo-white-background.png">
 <meta name="twitter:creator" content="@ellamkaye">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="500">
@@ -214,9 +219,11 @@ document.addEventListener('DOMContentLoaded', function () {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ELLA<span class="icon-line"></span>KAYE</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -294,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
   <ul>
@@ -461,7 +468,7 @@ Update: August 2022
 <div id="fig-ek-syntax-highlighting-palette" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="ek-syntax-highlighting-palette.png" class="img-fluid figure-img" alt="A swatch of five colours, a bright pink, orange, green, blue and purple." width="550"></p>
-<p></p><figcaption class="figure-caption">Figure 1: The color palette used for syntax highlighting throughout this site.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: The color palette used for syntax highlighting throughout this site.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -542,27 +549,28 @@ output:
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1" role="doc-endnote"><p>If you’d like to see the original theme in action, you can see it over at the <a href="https://distillery.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/">distillery</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>For more on resources and inspirations for setting up a {distill} website, see my previous post, <a href="https://ellakaye.rbind.io/posts/2021-05-08-welcome-to-my-distill-website/">Welcome to my {distill} website</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p>From RStudio, go to ‘File’ in the menu bar, then ‘New Project…’ Chose ‘Version Control’, then ‘Git’, then enter <code>https://github.com/rstudio/distill.git</code> as the ‘Repository URL:’ and click ‘Create Project’<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4" role="doc-endnote"><p>I don’t have experience of colour apps on other operating systems, but a quick search for ColorSlurp alternatives suggest there are <a href="https://alternativeto.net/software/colorslurp/">a bunch to pick from</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5" role="doc-endnote"><p>As part of the process of writing the post, I learnt much more about colour theory, and alternatives to the approach that I had originally taken, and I wanted to share it all!<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6" role="doc-endnote"><p>If you happen to inspect the source code for this post, you might notice that I have copied <code>ek_syntax_highlighting.theme</code> into the directory. This is <em>not</em> necessary for my site (using the full path to the <code>.theme</code> folder in my root directory is sufficient). However, I needed to do this to get the theme to show in the version of this post in the <a href="https://distillery.rbind.io">distillery</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7" role="doc-endnote"><p>Note that the <code>create_post_from_template()</code> function is likely to get wrapped into {distill} itself, or its functionality included in <code>distill::create_post()</code>, and will be depreciated from {distilltools} if so. (I have had some discussion with the {distill} team about this and will be submitting a PR in the near future.)<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>If you’d like to see the original theme in action, you can see it over at the <a href="https://distillery.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/">distillery</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For more on resources and inspirations for setting up a {distill} website, see my previous post, <a href="https://ellakaye.rbind.io/posts/2021-05-08-welcome-to-my-distill-website/">Welcome to my {distill} website</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>From RStudio, go to ‘File’ in the menu bar, then ‘New Project…’ Chose ‘Version Control’, then ‘Git’, then enter <code>https://github.com/rstudio/distill.git</code> as the ‘Repository URL:’ and click ‘Create Project’<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>I don’t have experience of colour apps on other operating systems, but a quick search for ColorSlurp alternatives suggest there are <a href="https://alternativeto.net/software/colorslurp/">a bunch to pick from</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>As part of the process of writing the post, I learnt much more about colour theory, and alternatives to the approach that I had originally taken, and I wanted to share it all!<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>If you happen to inspect the source code for this post, you might notice that I have copied <code>ek_syntax_highlighting.theme</code> into the directory. This is <em>not</em> necessary for my site (using the full path to the <code>.theme</code> folder in my root directory is sufficient). However, I needed to do this to get the theme to show in the version of this post in the <a href="https://distillery.rbind.io">distillery</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Note that the <code>create_post_from_template()</code> function is likely to get wrapped into {distill} itself, or its functionality included in <code>distill::create_post()</code>, and will be depreciated from {distilltools} if so. (I have had some discussion with the {distill} team about this and will be submitting a PR in the near future.)<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
   author = {Ella Kaye},
+  editor = {},
   title = {Custom {Syntax} {Highlighting} for \{Distill\} {Part} 1},
   date = {2021-05-25},
-  url = {https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1},
+  url = {https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
 Ella Kaye. 2021. <span>“Custom Syntax Highlighting for {Distill} Part
-1.”</span> May 25, 2021. <a href="https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1">https://ellakaye.rbind.io/posts/2021-05-25_custom-highlighting-distill-1</a>.
+1.”</span> May 25, 2021. <a href="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1">https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1</a>.
 </div></div></section></div></main> <!-- /main -->
 <div class="giscus">
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,6 +643,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           toggle.classList.remove("alternate");
         }
       }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
     }
   }
   const isFileUrl = () => { 
@@ -788,7 +806,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

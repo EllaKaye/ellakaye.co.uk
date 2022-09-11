@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -56,7 +61,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -69,7 +74,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -195,14 +200,14 @@ document.addEventListener('DOMContentLoaded', function () {
 <link rel="stylesheet" href="../../ek-styles.css">
 <meta property="og:title" content="ELLA KAYE - Advent of Code 2020">
 <meta property="og:description" content="My attempts at Advent of Code, 2020">
-<meta property="og:image" content="https://ellakaye.rbind.io/images/logo-white-background.png">
+<meta property="og:image" content="https://ellakaye.co.uk/images/logo-white-background.png">
 <meta property="og:site-name" content="ELLA KAYE">
 <meta property="og:locale" content="en-GB">
 <meta property="og:image:height" content="500">
 <meta property="og:image:width" content="500">
 <meta name="twitter:title" content="ELLA KAYE - Advent of Code 2020">
 <meta name="twitter:description" content="My attempts at Advent of Code, 2020">
-<meta name="twitter:image" content="https://ellakaye.rbind.io/images/logo-white-background.png">
+<meta name="twitter:image" content="https://ellakaye.co.uk/images/logo-white-background.png">
 <meta name="twitter:creator" content="@ellamkaye">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image-height" content="500">
@@ -215,9 +220,11 @@ document.addEventListener('DOMContentLoaded', function () {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ELLA<span class="icon-line"></span>KAYE</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -291,62 +298,62 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#day-1-report-repair" id="toc-day-1-report-repair" class="nav-link active" data-scroll-target="#day-1-report-repair">Day 1: <span>Report Repair</span></a>
-  <ul class="collapse">
+  <li><a href="#day-1-report-repair" id="toc-day-1-report-repair" class="nav-link active" data-scroll-target="#day-1-report-repair">Day 1: Report Repair</a>
+  <ul>
   <li><a href="#part-1-two-numbers" id="toc-part-1-two-numbers" class="nav-link" data-scroll-target="#part-1-two-numbers">Part 1: Two numbers</a></li>
   <li><a href="#part-2-three-numbers" id="toc-part-2-three-numbers" class="nav-link" data-scroll-target="#part-2-three-numbers">Part 2: Three numbers</a></li>
   </ul></li>
-  <li><a href="#day-2-password-philosophy" id="toc-day-2-password-philosophy" class="nav-link" data-scroll-target="#day-2-password-philosophy">Day 2: <span>Password Philosophy</span></a>
-  <ul class="collapse">
+  <li><a href="#day-2-password-philosophy" id="toc-day-2-password-philosophy" class="nav-link" data-scroll-target="#day-2-password-philosophy">Day 2: Password Philosophy</a>
+  <ul>
   <li><a href="#part-1-number-of-letters" id="toc-part-1-number-of-letters" class="nav-link" data-scroll-target="#part-1-number-of-letters">Part 1: Number of letters</a></li>
   <li><a href="#part-2-position-of-letters" id="toc-part-2-position-of-letters" class="nav-link" data-scroll-target="#part-2-position-of-letters">Part 2: Position of letters</a></li>
   </ul></li>
-  <li><a href="#day-3-toboggan-trajectory" id="toc-day-3-toboggan-trajectory" class="nav-link" data-scroll-target="#day-3-toboggan-trajectory">Day 3: <span>Toboggan Trajectory</span></a>
-  <ul class="collapse">
+  <li><a href="#day-3-toboggan-trajectory" id="toc-day-3-toboggan-trajectory" class="nav-link" data-scroll-target="#day-3-toboggan-trajectory">Day 3: Toboggan Trajectory</a>
+  <ul>
   <li><a href="#part-1-encountering-trees" id="toc-part-1-encountering-trees" class="nav-link" data-scroll-target="#part-1-encountering-trees">Part 1: Encountering trees</a></li>
   <li><a href="#part-2-checking-further-slopes" id="toc-part-2-checking-further-slopes" class="nav-link" data-scroll-target="#part-2-checking-further-slopes">Part 2: Checking further slopes</a></li>
   </ul></li>
-  <li><a href="#day-4-passport-processing" id="toc-day-4-passport-processing" class="nav-link" data-scroll-target="#day-4-passport-processing">Day 4: <span>Passport Processing</span></a>
-  <ul class="collapse">
+  <li><a href="#day-4-passport-processing" id="toc-day-4-passport-processing" class="nav-link" data-scroll-target="#day-4-passport-processing">Day 4: Passport Processing</a>
+  <ul>
   <li><a href="#part-1-complete-passports" id="toc-part-1-complete-passports" class="nav-link" data-scroll-target="#part-1-complete-passports">Part 1: Complete passports</a></li>
   <li><a href="#part-2-valid-passports" id="toc-part-2-valid-passports" class="nav-link" data-scroll-target="#part-2-valid-passports">Part 2: Valid passports</a></li>
   </ul></li>
-  <li><a href="#day-5-binary-boarding" id="toc-day-5-binary-boarding" class="nav-link" data-scroll-target="#day-5-binary-boarding">Day 5: <span>Binary Boarding</span></a>
-  <ul class="collapse">
+  <li><a href="#day-5-binary-boarding" id="toc-day-5-binary-boarding" class="nav-link" data-scroll-target="#day-5-binary-boarding">Day 5: Binary Boarding</a>
+  <ul>
   <li><a href="#part-1-finding-all-seat-ids" id="toc-part-1-finding-all-seat-ids" class="nav-link" data-scroll-target="#part-1-finding-all-seat-ids">Part 1: Finding all seat IDs</a></li>
   <li><a href="#part-2-finding-my-seat-id" id="toc-part-2-finding-my-seat-id" class="nav-link" data-scroll-target="#part-2-finding-my-seat-id">Part 2: Finding my seat ID</a></li>
   </ul></li>
-  <li><a href="#day-6-custom-customs" id="toc-day-6-custom-customs" class="nav-link" data-scroll-target="#day-6-custom-customs">Day 6: <span>Custom Customs</span></a>
-  <ul class="collapse">
+  <li><a href="#day-6-custom-customs" id="toc-day-6-custom-customs" class="nav-link" data-scroll-target="#day-6-custom-customs">Day 6: Custom Customs</a>
+  <ul>
   <li><a href="#part-1-anyone-answers" id="toc-part-1-anyone-answers" class="nav-link" data-scroll-target="#part-1-anyone-answers">Part 1: Anyone answers</a></li>
   <li><a href="#part-2-everyone-answers" id="toc-part-2-everyone-answers" class="nav-link" data-scroll-target="#part-2-everyone-answers">Part 2: Everyone answers</a></li>
   </ul></li>
-  <li><a href="#day-7-handy-haverstocks" id="toc-day-7-handy-haverstocks" class="nav-link" data-scroll-target="#day-7-handy-haverstocks">Day 7: <span>Handy Haverstocks</span></a>
-  <ul class="collapse">
+  <li><a href="#day-7-handy-haverstocks" id="toc-day-7-handy-haverstocks" class="nav-link" data-scroll-target="#day-7-handy-haverstocks">Day 7: Handy Haverstocks</a>
+  <ul>
   <li><a href="#part-1-number-of-colour-bags" id="toc-part-1-number-of-colour-bags" class="nav-link" data-scroll-target="#part-1-number-of-colour-bags">Part 1: Number of colour bags</a></li>
   <li><a href="#part-2-number-of-bags" id="toc-part-2-number-of-bags" class="nav-link" data-scroll-target="#part-2-number-of-bags">Part 2: Number of bags</a></li>
   </ul></li>
-  <li><a href="#day-8-handheld-halting" id="toc-day-8-handheld-halting" class="nav-link" data-scroll-target="#day-8-handheld-halting">Day 8: <span>Handheld Halting</span></a>
-  <ul class="collapse">
+  <li><a href="#day-8-handheld-halting" id="toc-day-8-handheld-halting" class="nav-link" data-scroll-target="#day-8-handheld-halting">Day 8: Handheld Halting</a>
+  <ul>
   <li><a href="#part-1-infinite-loop" id="toc-part-1-infinite-loop" class="nav-link" data-scroll-target="#part-1-infinite-loop">Part 1: Infinite Loop</a></li>
   <li><a href="#part-2-fixing-the-programme" id="toc-part-2-fixing-the-programme" class="nav-link" data-scroll-target="#part-2-fixing-the-programme">Part 2: Fixing the programme</a></li>
   </ul></li>
-  <li><a href="#day-9-encoding-error" id="toc-day-9-encoding-error" class="nav-link" data-scroll-target="#day-9-encoding-error">Day 9: <span>Encoding Error</span></a>
-  <ul class="collapse">
+  <li><a href="#day-9-encoding-error" id="toc-day-9-encoding-error" class="nav-link" data-scroll-target="#day-9-encoding-error">Day 9: Encoding Error</a>
+  <ul>
   <li><a href="#part-1-weak-link" id="toc-part-1-weak-link" class="nav-link" data-scroll-target="#part-1-weak-link">Part 1: Weak Link</a></li>
   <li><a href="#part-2-contiguous-set" id="toc-part-2-contiguous-set" class="nav-link" data-scroll-target="#part-2-contiguous-set">Part 2: Contiguous set</a></li>
   </ul></li>
-  <li><a href="#day-10-adapter-array" id="toc-day-10-adapter-array" class="nav-link" data-scroll-target="#day-10-adapter-array">Day 10: <span>Adapter Array</span></a>
-  <ul class="collapse">
+  <li><a href="#day-10-adapter-array" id="toc-day-10-adapter-array" class="nav-link" data-scroll-target="#day-10-adapter-array">Day 10: Adapter Array</a>
+  <ul>
   <li><a href="#part-1-adapter-distribution" id="toc-part-1-adapter-distribution" class="nav-link" data-scroll-target="#part-1-adapter-distribution">Part 1: Adapter Distribution</a></li>
   <li><a href="#part-2-adapter-combinations" id="toc-part-2-adapter-combinations" class="nav-link" data-scroll-target="#part-2-adapter-combinations">Part 2: Adapter combinations</a></li>
   </ul></li>
-  <li><a href="#day-11-seating-system" id="toc-day-11-seating-system" class="nav-link" data-scroll-target="#day-11-seating-system">Day 11: <span>Seating System</span></a>
-  <ul class="collapse">
+  <li><a href="#day-11-seating-system" id="toc-day-11-seating-system" class="nav-link" data-scroll-target="#day-11-seating-system">Day 11: Seating System</a>
+  <ul>
   <li><a href="#part-1-changing-layout" id="toc-part-1-changing-layout" class="nav-link" data-scroll-target="#part-1-changing-layout">Part 1: Changing layout</a></li>
   <li><a href="#part-2-looking-further" id="toc-part-2-looking-further" class="nav-link" data-scroll-target="#part-2-looking-further">Part 2: Looking further</a></li>
   </ul></li>
@@ -1604,14 +1611,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2020,
   author = {Ella Kaye},
+  editor = {},
   title = {Advent of {Code} 2020},
   date = {2020-12-09},
-  url = {https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020},
+  url = {https://ellakaye.co.uk/posts/2020-12-09_advent-of-code-2020},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2020" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
 Ella Kaye. 2020. <span>“Advent of Code 2020.”</span> December 9, 2020.
-<a href="https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020">https://ellakaye.rbind.io/posts/2020-12-09_advent-of-code-2020</a>.
+<a href="https://ellakaye.co.uk/posts/2020-12-09_advent-of-code-2020">https://ellakaye.co.uk/posts/2020-12-09_advent-of-code-2020</a>.
 </div></div></section></div></main> <!-- /main -->
 <div class="giscus">
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1684,6 +1692,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           toggle.classList.remove("alternate");
         }
       }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
     }
   }
   const isFileUrl = () => { 
@@ -1837,7 +1855,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

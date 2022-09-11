@@ -3,7 +3,7 @@ project:
 
 website:
   title: "ELLA KAYE"
-  site-url: "https://ellakaye.rbind.io"
+  site-url: "https://ellakaye.co.uk"
   repo-url: https://github.com/EllaKaye/ellakaye-quarto
   repo-actions: issue
 #  image:
@@ -56,8 +56,6 @@ website:
 
 format:
   html:
-    #metadata: 
-    #  pagetitle: "Ella Kaye"
     theme: 
       light: ek-theme-light.scss
       dark: ek-theme-dark.scss

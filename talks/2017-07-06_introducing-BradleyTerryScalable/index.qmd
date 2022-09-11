@@ -7,7 +7,7 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 #site-url: https://ellakaye.rbind.io/
-image: football_pic.jpg
+image: BradleyTerryScalable.png
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
