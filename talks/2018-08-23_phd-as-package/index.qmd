@@ -67,7 +67,7 @@ In this talk, I will try to convince you that if you have any of your own data o
 
 ## Slides
 
-<iframe class="slide-deck ar-4-3" src="https://ellakaye.github.io/BirminghamR-talk/PhD_to_package_birmR.html#1" title="PhD as package slide deck">
+<iframe class="slide-deck ar4x3" src="https://ellakaye.github.io/BirminghamR-talk/PhD_to_package_birmR.html#1" title="PhD as package slide deck">
 </iframe>
 
 Keyboard shortcuts for slideshow (once you've clicked inside it):

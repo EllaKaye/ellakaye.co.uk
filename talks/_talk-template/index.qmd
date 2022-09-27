@@ -80,7 +80,7 @@ library(distilltools)
 
 ## Slides - fill in iframe and link in last bullet point
 
-<iframe class="slide-deck ar-4-3" src="FILL IN" title="FILL IN">
+<iframe class="slide-deck ar4x3" src="FILL IN" title="FILL IN">
 </iframe>
 
 Keyboard shortcuts for slideshow (once you've clicked inside it):

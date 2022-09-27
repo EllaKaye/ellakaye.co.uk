@@ -21,6 +21,9 @@
   },
   {
     "listing": "/packages.html",
-    "items": []
+    "items": [
+      "/packages/distilltools/index.html",
+      "/packages/BradleyTerryScalable/index.html"
+    ]
   }
 ]

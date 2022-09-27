@@ -7,6 +7,7 @@ listing:
   categories: false
   sort-ui: false
   filter-ui: false
+  image-height: 416px
 page-layout: full
 title-block-banner: false
 knitr:

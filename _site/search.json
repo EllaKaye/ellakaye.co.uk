@@ -417,14 +417,49 @@
     "href": "index.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "Hello and welcome!\nI am a postgraduate researcher in Statistics at the University of Warwick and an  enthusiast.\n\n\n\n\n\nAbout me, my work, my interests and experience. And a photo!\n\n\nABOUT\n\n\n\n\n\n\n\n\nI sometimes write about what I’m doing and learning, mostly about R and building websites.\n\n\nPOSTS\n\n\n\n\n\n\n\n\nSlides and resourses from talks I’ve given at R and RLadies user groups and conferences.\n\n\nTALKS\n\n\n\n\n\n\n\n\nI develop R packages. Here are links to their repos, websites and any other resources.\n\n\nPACKAGES\n\n\n\n\n\n\n\n\nI love the R community! These are the groups and projects that I help organise or contribute to.\n\n\nCOMMUNITY\n\n\n\n\n\n\n\n\nWhere to find me online and how to get in touch. I’d love to hear from you!\n\n\nCONTACT"
+    "text": "Hello and welcome!\n\n\n\n\n\nAbout me, my interests and experience, and my work as a Research Software Engineer.\n\n\nABOUT\n\n\n\n\n\n\n\n\nI sometimes write about what I’m doing and learning, mostly about  and building websites.\n\n\nPOSTS\n\n\n\n\n\n\n\n\nSlides and resourses from talks I’ve given at R and RLadies user groups and conferences.\n\n\nTALKS\n\n\n\n\n\n\n\n\nI develop R packages. Here are links to their repos, websites and any other resources.\n\n\nPACKAGES\n\n\n\n\n\n\n\n\nI love the R community! These are the groups and projects that I help organise or contribute to.\n\n\nCOMMUNITY\n\n\n\n\n\n\n\n\nWhere to find me online and how to get in touch. I’d love to hear from you!\n\n\nCONTACT"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "HELLO!\nI am a postgraduate researcher in Statistics at the University of Warwick. I am part of the OxWaSP programme. I am interested in Applied Statistics, particularly as applied in the Social Sciences. I am currently working on a project about student educational trajectories, analysing data from applications to undergraduate statistics courses in the Statistics department at Warwick. I am supervised by Dr Julia Brettschneider and Dr Anastasia Papavasiliou.\nI love R! I use it daily in my research for analysing and visualising data, as well as for personal projects. This website is built using the {distill} package, alongside my and John Paul Helveston’s (very much still in development) package {distilltools}. I am also the author, along with Prof David Firth of the {BradleyTerryScalable package}, which is available on GitHub.\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language (RainbowR is currently in the process of being revived after a few years of dormancy - more details soon!). I am also the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. I get great pleasure from sharing what I know/am learning about R with others, particularly by speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group. I find being asked to speak on a topic is a good excuse for me to learn something about it!\nPrior to my current studies, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge) and an MSc in Applied Statistics (University of Oxford). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research."
+    "text": "HELLO!\nI am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at Warwick University.\n💪 Community-building in the R and RSE communities with a focus on EDI.\n\nMy  Journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast AND professional 😀\n\nI love R! I have used in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. Here’s more on the communities that I’m involved with.\nI get great pleasure from sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI am so lucky to have a job that involves developing both R and the community around it 💕.\n\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research. You can check out my CV for more details.\n\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
+  },
+  {
+    "objectID": "packages/distilltools/index.html#main-resources",
+    "href": "packages/distilltools/index.html#main-resources",
+    "title": "distilltools",
+    "section": "Main resources",
+    "text": "Main resources\n source  documentation  hex sticker"
+  },
+  {
+    "objectID": "packages/distilltools/index.html#additional-resources",
+    "href": "packages/distilltools/index.html#additional-resources",
+    "title": "distilltools",
+    "section": "Additional resources",
+    "text": "Additional resources\ndistilltools: Creating a Curated, Collaborative Community Package\nA book chapter in The Future of Data Science from Data Science by Design, outlining the vision for {distilltools}\n book chapter\nA blog post giving a sneak-peek at {distilltools}:\n blog post"
+  },
+  {
+    "objectID": "packages/distilltools/index.html#overview-copy-github-readme",
+    "href": "packages/distilltools/index.html#overview-copy-github-readme",
+    "title": "distilltools",
+    "section": "Overview (COPY GITHUB README?)",
+    "text": "Overview (COPY GITHUB README?)"
+  },
+  {
+    "objectID": "packages/BradleyTerryScalable/index.html#main-resources",
+    "href": "packages/BradleyTerryScalable/index.html#main-resources",
+    "title": "BradleyTerryScalable",
+    "section": "Main resources",
+    "text": "Main resources\n source  documentation  hex sticker"
+  },
+  {
+    "objectID": "packages/BradleyTerryScalable/index.html#additional-resources",
+    "href": "packages/BradleyTerryScalable/index.html#additional-resources",
+    "title": "BradleyTerryScalable",
+    "section": "Additional resources",
+    "text": "Additional resources\nAn overview of the BradleyTerryScalable package (2022):\n slides  materials\nA presentation introducing the BradleyTerryScalable package (2017):\n slides  materials"
   },
   {
     "objectID": "posts.html",
@@ -438,6 +473,6 @@
     "href": "packages.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "No matching items"
+    "text": "distilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

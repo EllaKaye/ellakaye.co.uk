@@ -1,13 +1,17 @@
 ---
 title: distilltools
 description: |
-  Package description
+  {distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.
 #date: UPDATE # initial commit date? Publish date? No date?
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
+  - name: John Paul Helveston
+    url: https://jhelvy.com
+  - name: Michael McCarthy
+    url: https://michaelmccarthy.tidytales.ca
 #site-url: https://ellakaye.rbind.io/
-#image: IMAGE.png
+image: distilltools.png
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
@@ -24,37 +28,50 @@ author:
 #  image-width: 600 
 #  image-height: 314
 #  card-style: "summary_large_image" 
-draft: true
+draft: false
 ---
 
 ```{r libraries}
 library(distilltools)
 ```
 
-
-### [TODO]: fill in urls
-### [TODO]: delete any unnecessary icons (or add more)
+## Main resources
 
 `r icon_link(
   icon = "github",
   text = "source",
-  url = ""
-)`
-`r `icon_link(
+  url = "https://github.com/ellakaye/distilltools" 
+)` 
+`r icon_link(   
   icon = "box-open",
-  text = "website",
-  url = ""
+  text = "documentation",
+  url = "https://ellakaye.github.io/distilltools"
+)` 
+`r icon_link(
+  icon = "dice-d6",   
+  text = "hex sticker",   
+  url = "distilltools.png"
 )`
 
-## Resources
+## Additional resources
 
-#### [TODO] Links to any blog posts, talks etc
+**distilltools: Creating a Curated, Collaborative Community Package**
 
-#### Posts
+A book chapter in [*The Future of Data Science*](https://datasciencebydesign.org/book){target="_blank"} from [Data Science by Design](https://datasciencebydesign.org){target="_blank"}, outlining the vision for {distilltools}
 
-#### Book chapters
+`r icon_link(
+  icon = "book",
+  text = "book chapter",
+  url = "https://datasciencebydesign.org/blog/distilltools-creating-a-curated-collaborative-community-package" 
+)`
 
-- Include DSxD chapter
+A blog post giving a sneak-peek at {distilltools}:
+
+`r icon_link(
+  icon = "blog",
+  text = "blog post",
+  url = "../../posts/2021-05-08_welcome-distill/index.qmd" 
+)`
 
 ## Overview (COPY GITHUB README?)
 

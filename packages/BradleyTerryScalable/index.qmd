@@ -1,13 +1,14 @@
 ---
 title: BradleyTerryScalable
 description: |
-  Package description
+  {BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number of objects.
 #date: UPDATE # initial commit date? Publish date? No date?
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
+  - name: David Firth
 #site-url: https://ellakaye.rbind.io/
-#image: IMAGE.png
+image: BradleyTerryScalable.png
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
@@ -24,32 +25,26 @@ author:
 #  image-width: 600 
 #  image-height: 314
 #  card-style: "summary_large_image" 
-draft: true
+draft: false
 ---
 
 ```{r libraries}
 library(distilltools)
 ```
 
+<!-- ![](BradleyTerryScalable.png){width="200"} -->
 
-### [TODO]: fill in urls
-### [TODO]: delete any unnecessary icons (or add more)
+## Main resources
 
-`r icon_link(
-  icon = "github",
-  text = "source",
-  url = ""
-)`
-`r `icon_link(
-  icon = "box-open",
-  text = "website",
-  url = ""
-)`
+`r icon_link(   icon = "github",   text = "source",   url = "https://github.com/ellakaye/bradleyterryscalable" )` `r icon_link(   icon = "box-open",   text = "documentation",   url = "https://ellakaye.github.io/BradleyTerryScalable/" )` `r icon_link(   icon = "dice-d6",   text = "hex sticker",   url = "BradleyTerryScalable.png" )`
 
-## Resources
+## Additional resources
 
-### [TODO] Links to any blog posts, talks etc
+An overview of the BradleyTerryScalable package (2022):
 
-## Overview (COPY GITHUB README?)
+`r icon_link(   icon = "images",   text = "slides",   url = "https://rse-interview-pres.netlify.app/#/title-slide" )` `r icon_link(   icon = "github",   text = "materials",   url = "https://github.com/EllaKaye/rse-interview-pres" )`
 
 
+A presentation introducing the BradleyTerryScalable package (2017):
+
+`r icon_link(   icon = "images",   text = "slides",   url = "https://ellakaye.github.io/useR-2017-talk/useR_presentation.html#1" )` `r icon_link(   icon = "github",   text = "materials",   url = "https://github.com/EllaKaye/useR-2017-talk" )`

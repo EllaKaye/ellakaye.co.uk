@@ -35,6 +35,10 @@ div.quarto-post .body .listing-subtitle {
   font-weight: bold;
 }
 
+.quarto-grid-item .card-title {
+    margin-bottom: .5em;
+}
+
 /*
 // left align edge of callout block with text
 // without this, text inside callout block is left aligned with body text,

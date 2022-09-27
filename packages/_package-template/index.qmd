@@ -35,18 +35,25 @@ library(distilltools)
 ### [TODO]: fill in urls
 ### [TODO]: delete any unnecessary icons (or add more)
 
+## Main resources
+
 `r icon_link(
   icon = "github",
   text = "source",
   url = ""
 )`
-`r `icon_link(
+`r icon_link(
   icon = "box-open",
-  text = "website",
+  text = "documentation",
+  url = ""
+)`
+`r icon_link(
+  icon = "dice-d6",
+  text = "hex sticker",
   url = ""
 )`
 
-## Resources
+## Additional resources
 
 ### [TODO] Links to any blog posts, talks etc
 

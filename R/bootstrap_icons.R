@@ -9,7 +9,3 @@ bi_icons |> tibble::enframe()
 # fontawesome (piggyback off fontawesome R package)
 
 fa_icons <- fontawesome:::fa_tbl
-
-# academicons
-
-
