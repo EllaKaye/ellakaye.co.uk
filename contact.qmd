@@ -29,10 +29,15 @@ library(distilltools)
   text = "GitHub",
   url = "https://github.com/EllaKaye"
 )`
-`r icon_link(
+
+```{r}
+#| echo: false
+#| eval: false
+icon_link(
   icon = "linkedin",
   text = "LinkedIn",
   url = "https://www.linkedin.com/in/ella-kaye-9b878248/"
-)`
+)
+```
 
-Or, you can drop me an e-mail at [ella.kaye @ gmail.com]{.heading-font}
+Or, you can drop me an e-mail at [hello @ ellakaye.co.uk]{.heading-font}

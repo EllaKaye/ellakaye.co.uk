@@ -6,7 +6,7 @@ date: 2017-05-25
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
-#site-url: https://ellakaye.rbind.io/
+site-url: https://ellakaye.co.uk
 image: htmlwidgets-4.png
 # N.B. Don't use "" in image-alt
 #image-alt: |

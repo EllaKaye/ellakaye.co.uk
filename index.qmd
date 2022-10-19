@@ -53,7 +53,7 @@ include-in-header: _includes/fontawesome-2up.html
 ::: {.g-col-12 .g-col-md-4}
 <div class="card h-100" id="card-third-color">
 <div class="card-body d-flex flex-column">
-<p class="card-text">Slides and resourses from talks I've given at R and RLadies user groups and conferences.</p>
+<p class="card-text">Slides and resources from talks I've given at R and RLadies user groups and conferences.</p>
 <div style="margin-top: auto;"><a href="talks.qmd" class="card-link third-color-link heading-font">TALKS</a></div>
 </div>
 </div>

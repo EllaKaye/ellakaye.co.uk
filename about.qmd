@@ -28,6 +28,12 @@ This involves:
 
 💪 Community-building in the R and RSE communities with a focus on EDI.
 
+#### [Previously]{.primary}
+
+Prior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the [OxWaSP programme](http://www.oxwasp-cdt.ac.uk){target="_blank"} for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research. 
+
+<!-- You can check out my [CV](CV.pdf) for more details. -->
+
 #### [My {{< fa brands r-project >}} Journey]{.primary}
 
 -   2014: first R course as part of MSc in Applied Statistics
@@ -54,6 +60,6 @@ I get great pleasure from sharing what I know/am learning about R with others, p
 
 I am so lucky to have a job that involves developing both R and the community around it 💕.
 
-#### [Previously]{.primary}
+I live in Oxford, UK, with my wife and our two young children.
 
-Prior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the [OxWaSP programme](http://www.oxwasp-cdt.ac.uk){target="_blank"} for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research. You can check out my [CV](CV.pdf) for more details.
+

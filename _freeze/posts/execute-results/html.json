@@ -1,0 +1,16 @@
+{
+  "hash": "f6ca48de1e5ad8971b835a6bf6c95c1c",
+  "result": {
+    "markdown": "---\n#title: \"posts\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: false\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [POSTS]{.second-color}",
+    "supporting": [
+      "posts_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

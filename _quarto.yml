@@ -1,5 +1,8 @@
 project:
   type: website
+  
+execute:
+  freeze: true
 
 website:
   title: "ELLA KAYE"

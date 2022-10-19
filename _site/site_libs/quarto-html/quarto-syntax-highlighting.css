@@ -34,7 +34,7 @@
 
 /* other quarto variables */
 :root {
-  --quarto-font-monospace: "MonoLisa-Regular", "Fira Mono", monospace;
+  --quarto-font-monospace: "MonoLisa-Regular", monospace;
 }
 
 pre > code.sourceCode > span {

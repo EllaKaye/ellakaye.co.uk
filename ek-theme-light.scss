@@ -4,10 +4,7 @@
 // https://github.com/thomaspark/bootswatch/tree/v5/dist/litera
 $theme: "litera" !default;
 
-@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Jost&display=swap);
-
-/**
+/*
  * @license
  * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
  * 
@@ -21,7 +18,8 @@ $theme: "litera" !default;
  * URL: https://www.myfonts.com/collections/lemon-milk-pro-font-marsnev
  * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
  * 
- * © 2020 MyFonts Incn*/
+ * © 2020 MyFonts Incn
+*/
 
 @font-face {
   font-family: 'LEMONMILKPro-Regular';
@@ -53,9 +51,9 @@ $theme: "litera" !default;
 }
 
 // fonts
-$font-family-sans-serif: "LEMONMILKPro-Light", Jost, Helvetica, sans-serif !default;
-$font-family-monospace: "MonoLisa-Regular", "Fira Mono", monospace;
-$headings-font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif !default;
+$font-family-sans-serif: "LEMONMILKPro-Light", Helvetica, sans-serif !default;
+$font-family-monospace: "MonoLisa-Regular", monospace;
+$headings-font-family: "LEMONMILKPro-Regular", Helvetica, sans-serif !default;
 
 // litera bootswatch theme colors
 /*
