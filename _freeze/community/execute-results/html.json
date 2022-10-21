@@ -1,0 +1,14 @@
+{
+  "hash": "9a6570890342aa2f3facc513279c8560",
+  "result": {
+    "markdown": "---\n#title: \"Community\"\n#page-layout: full\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [COMMUNITY]{.third-color}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

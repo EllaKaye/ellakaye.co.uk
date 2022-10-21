@@ -8,7 +8,7 @@ author:
     url: https://twitter.com/ellamkaye
   - name: David Firth
 site-url: https://ellakaye.co.uk
-image: BradleyTerryScalable.png
+image: ../../images/hex/BradleyTerryScalable.png
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
@@ -36,7 +36,7 @@ library(distilltools)
 
 ## Main resources
 
-`r icon_link(   icon = "github",   text = "source",   url = "https://github.com/ellakaye/bradleyterryscalable" )` `r icon_link(   icon = "box-open",   text = "documentation",   url = "https://ellakaye.github.io/BradleyTerryScalable/" )` `r icon_link(   icon = "dice-d6",   text = "hex sticker",   url = "BradleyTerryScalable.png" )`
+`r icon_link(   icon = "github",   text = "source",   url = "https://github.com/ellakaye/bradleyterryscalable" )` `r icon_link(   icon = "box-open",   text = "documentation",   url = "https://ellakaye.github.io/BradleyTerryScalable/" )` `r icon_link(   icon = "dice-d6",   text = "hex sticker",   url = "../../images/hex/BradleyTerryScalable.png" )`
 
 ## Additional resources
 

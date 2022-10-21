@@ -7,9 +7,10 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.co.uk
-#image: IMAGE.png
+image: ../../images/hex/EMK.png
 # N.B. Don't use "" in image-alt
-#image-alt: |
+image-alt: |
+  A hexagon with a bright pink outline and white background with the initials E M K also in bright pink
 #categories:
 #  - TAG_1
 #  - TAG_2
@@ -32,8 +33,7 @@ library(distilltools)
 ```
 
 
-### [TODO]: fill in urls
-### [TODO]: delete any unnecessary icons (or add more)
+## Main resources
 
 `r icon_link(
   icon = "github",

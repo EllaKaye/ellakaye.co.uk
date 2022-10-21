@@ -11,7 +11,7 @@ author:
   - name: Michael McCarthy
     url: https://michaelmccarthy.tidytales.ca
 site-url: https://ellakaye.co.uk
-image: distilltools.png
+image: ../../images/hex/distilltools.png
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
@@ -50,7 +50,7 @@ library(distilltools)
 `r icon_link(
   icon = "dice-d6",   
   text = "hex sticker",   
-  url = "distilltools.png"
+  url = "../../images/hex/distilltools.png"
 )`
 
 ## Additional resources

@@ -7,7 +7,7 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.co.uk
-image: BradleyTerryScalable.png
+image: ../../images/hex/BradleyTerryScalable.png
 # N.B. Don't use "" in image-alt
 #image-alt: |
 #categories:
