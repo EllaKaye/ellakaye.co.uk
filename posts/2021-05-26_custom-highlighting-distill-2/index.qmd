@@ -41,6 +41,8 @@ draft: false
 renv::use(lockfile = "renv.lock")
 ```
 
+Test!
+
 :::{.callout-note collapse="false" .top-callout}
 ## Update: August 2022
 

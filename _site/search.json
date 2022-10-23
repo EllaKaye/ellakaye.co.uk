@@ -467,5 +467,12 @@
     "title": "ELLA KAYE",
     "section": "",
     "text": "distilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html",
+    "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html",
+    "title": "Custom Syntax Highlighting for {distill} Part 2",
+    "section": "",
+    "text": "Test!"
   }
 ]
