@@ -1,0 +1,14 @@
+{
+  "hash": "eb71aafe5856669faa8229e27e0b5f8f",
+  "result": {
+    "markdown": "---\ntitle: An Overview of htmlwidgets\ndescription: |\n  A brief overview of htmlwidgets in R\ndate: 2017-05-25\nauthor: \n  - name: Ella Kaye\n    url: https://twitter.com/ellamkaye\n#site-url: https://ellakaye.rbind.io/\nimage: htmlwidgets-4.png\n# N.B. Don't use \"\" in image-alt\n#image-alt: |\n#categories:\n#  - TAG_1\n#  - TAG_2\n#twitter-card: \n# uncomment lines below for different title and description to post\n#  title: |\n#  description: |\n# uncomment for different image to post\n#  image: |\n#  image-alt: |\n#  defaults to 500 x 500 summary: uncomment lines below for large card\n#  image-width: 600 \n#  image-height: 314\n#  card-style: \"summary_large_image\" \ndraft: false\n---\n\n::: {.cell}\n\n:::\n\n\n\n`<a href=\"https://ellakaye.shinyapps.io/htmlwidgets_overview/#1\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-images\"></i> slides</a>`{=html}\n`<a href=\"https://github.com/EllaKaye/htmlwidgets_WRUG_pres\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> materials</a>`{=html}\n\n## Overview \n\nThe [`htmlwidgets`](http://www.htmlwidgets.org/index.html) package allows developers to create R bindings to JavaScript libraries. The resulting R packages allow the embedding of interactive content in R Markdown documents and Shiny web apps. There are over 50 available widgets. In this talk I give an overview of the `htmlwidget` framework and demonstrate the use of the [`DT`](https://rstudio.github.io/DT/), [`leaflet`](http://rstudio.github.io/leaflet/) and [`DiagrammeR`](http://rich-iannone.github.io/DiagrammeR/) packages.\n\n## Event details\n\n**Event:** [Warwick R User Group](https://warwick.ac.uk/fac/sci/wdsi/events/wrug/)\n\n**Date:** May 25th, 2017\n\n**Time:** 17:00 \n\n**Location:** University of Warwick\n\n## Key points\n\n- Point 1\n\n- Point 2\n\n- ...\n\n\n## Slides - fill in iframe and link in last bullet point\n\n<iframe class=\"slide-deck ar-4-3\" src=\"FILL IN\" title=\"FILL IN\">\n</iframe>\n\nKeyboard shortcuts for slideshow (once you've clicked inside it):\n\n- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.\n\n- Use <kbd>o</kbd> for an overview of all slides.\n\n- Use <kbd>h</kbd> to see a list of other shortcuts \n  \n  - <kbd>f</kbd> to toggle full screen not working, but the rest are fine.\n  \n  - For full screen slides, go to [slides](\"\") then press <kbd>f</kbd>.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

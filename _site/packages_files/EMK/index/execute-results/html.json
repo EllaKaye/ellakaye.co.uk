@@ -1,0 +1,14 @@
+{
+  "hash": "71daa976da18d1c944e50e84f4344a2d",
+  "result": {
+    "markdown": "---\ntitle: EMK\ndescription: |\n  Package description\n#date: UPDATE # initial commit date? Publish date? No date?\nauthor: \n  - name: Ella Kaye\n    url: https://twitter.com/ellamkaye\n#site-url: https://ellakaye.rbind.io/\n#image: IMAGE.png\n# N.B. Don't use \"\" in image-alt\n#image-alt: |\n#categories:\n#  - TAG_1\n#  - TAG_2\n#twitter-card: \n# uncomment lines below for different title and description to post\n#  title: |\n#  description: |\n# uncomment for different image to post\n#  image: |\n#  image-alt: |\n#  defaults to 500 x 500 summary: uncomment lines below for large card\n#  image-width: 600 \n#  image-height: 314\n#  card-style: \"summary_large_image\" \ndraft: true\n---\n\n::: {.cell}\n\n:::\n\n\n\n### [TODO]: fill in urls\n### [TODO]: delete any unnecessary icons (or add more)\n\n`<a href=\"\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> source</a>`{=html}\n`r `icon_link(\n  icon = \"box-open\",\n  text = \"website\",\n  url = \"\"\n)`\n\n## Resources\n\n### [TODO] Links to any blog posts, talks etc\n\n## Overview (COPY GITHUB README?)\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

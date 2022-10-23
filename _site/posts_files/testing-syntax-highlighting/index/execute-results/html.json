@@ -1,0 +1,14 @@
+{
+  "hash": "f7975d001b08b475724c35683d542794",
+  "result": {
+    "markdown": "---\ntitle: \"Syntax Highlighting\"\ndate: \"2022-07-29\"\ncategories: [news]\ndraft: false\n---\n\n\nLet's test code font!\n\nSome inline code: `x <- y`, `x != g0`. `1/2` `m^2`\n\n\n::: {.cell}\n\n```{.r .cell-code}\nx <- 1/2 \nTRUE != FALSE # a comment\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] TRUE\n```\n:::\n:::\n\n\n\nLet's test some syntax highlighting!\n\n```{.python}\n#| label: code-demo-py\n#| eval: false\n#| message: false\n#| warning: false\n\nimport numpy as np\n```\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\"penguin\" == 5\n\nmy_var <- 218\n\nc(1,5,6) |> mean()\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
