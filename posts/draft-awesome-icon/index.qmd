@@ -3,7 +3,7 @@ title: Test plot
 description: |
   Post description
 date: 2022-08-05
-base_url: https://ellakaye.rbind.io/
+site-url: https://ellakaye.co.uk/
 # image: IMAGE.png
 #categories:
 #  - TAG_1

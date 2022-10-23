@@ -40,6 +40,8 @@ include-in-header: ../../_includes/fontawesome-2up.html
 #| echo: false
 #| results: 'hide'
 
+long_slug <- "2021-05-08_welcome-distill"
+
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
 renv::use(lockfile = "renv.lock")
@@ -154,3 +156,15 @@ At the time of writing, there are just three functions:
 - `create_post_from_template()`: this function operates almost identically to `distill::create_post()` except for the addition of a `path` argument, which allows the user to pass in a path to an .Rmd file that can be used as a template for the post. (Note that this function is likely going to be pulled into the {distill} package and hence be depreciated here.)
 
 Expect to hear much more from me, both on this blog and [twitter](https://twitter.com/ellamkaye), about {distilltools} in the near future.
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye-quarto", 
+  name = long_slug
+)
+```

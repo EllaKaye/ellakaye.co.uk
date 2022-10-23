@@ -49,6 +49,20 @@
     "text": "A sneak-peek at {distilltools}\nInspiried by the above-mentioned posts from John Helveston and Eric Ekholm, I’ve started working on a package, {distilltools}, a collection of tools to support the creation and styling of content on websites created using {distill}.\n site  source\nIt is in the very early stages of development. I am actively seeking contributions - both ideas and code - to help build the package to be broadly useful to a wide variety of {distill} users. The idea is for the package to become a curated, collaborative, community-driven project. Please see the contributing guide for more details on how to get involved. In terms of relationship between packages, I hope in time that {distilltools} can be for {distill} something like what {xaringanExtra} and {xaringanthemer} are for {xaringan}. Some of what I have in mind may sit better within the distill package itself, and I am in touch with the {distill} team about that.\nAt the time of writing, there are just three functions:\n\nicon_link: creates the html for a link button with icon and text (as seen above). Output of icon_link will need styling via the icon-link class to make it look like a button.\ncreate_talk(): a wrapper around distill::create_post() that creates a post in the talk directory and includes buttons (made with icon-link()) for slides (both web and pdf), material, video and project. These can easily be edited in the resulting .Rmd file.\ncreate_post_from_template(): this function operates almost identically to distill::create_post() except for the addition of a path argument, which allows the user to pass in a path to an .Rmd file that can be used as a template for the post. (Note that this function is likely going to be pulled into the {distill} package and hence be depreciated here.)\n\nExpect to hear much more from me, both on this blog and twitter, about {distilltools} in the near future."
   },
   {
+    "objectID": "posts/2021-05-08_welcome-distill/index.html#last-updated",
+    "href": "posts/2021-05-08_welcome-distill/index.html#last-updated",
+    "title": "Welcome to my {distill} website!",
+    "section": "Last updated",
+    "text": "Last updated\n\n2022-10-23 21:51:59 BST"
+  },
+  {
+    "objectID": "posts/2021-05-08_welcome-distill/index.html#details",
+    "href": "posts/2021-05-08_welcome-distill/index.html#details",
+    "title": "Welcome to my {distill} website!",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
+  },
+  {
     "objectID": "posts/2020-12-09_advent-of-code-2020/index.html",
     "href": "posts/2020-12-09_advent-of-code-2020/index.html",
     "title": "Advent of Code 2020",
@@ -140,6 +154,20 @@
     "text": "Next\nI was late to the game, and that was as far as I managed to get in December 2020. I’m looking forward to taking on the challenge again in 2021!"
   },
   {
+    "objectID": "posts/2020-12-09_advent-of-code-2020/index.html#last-updated",
+    "href": "posts/2020-12-09_advent-of-code-2020/index.html#last-updated",
+    "title": "Advent of Code 2020",
+    "section": "Last updated",
+    "text": "Last updated\n\n2022-10-23 21:50:59 BST"
+  },
+  {
+    "objectID": "posts/2020-12-09_advent-of-code-2020/index.html#details",
+    "href": "posts/2020-12-09_advent-of-code-2020/index.html#details",
+    "title": "Advent of Code 2020",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
+  },
+  {
     "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html#part-1-recap-and-part-2-overview",
     "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html#part-1-recap-and-part-2-overview",
     "title": "Custom Syntax Highlighting for {distill} Part 2",
@@ -173,6 +201,20 @@
     "title": "Custom Syntax Highlighting for {distill} Part 2",
     "section": "Back to Part 1",
     "text": "Back to Part 1\nNow that I have chosen my colour palette, head back to Part 1 for details of how to modify the default {distill} syntax highlighting theme to incorporate them, and how to apply the custom theme to a {distill} site."
+  },
+  {
+    "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html#last-updated",
+    "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html#last-updated",
+    "title": "Custom Syntax Highlighting for {distill} Part 2",
+    "section": "Last updated",
+    "text": "Last updated\n\n2022-10-23 21:55:55 BST"
+  },
+  {
+    "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html#details",
+    "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html#details",
+    "title": "Custom Syntax Highlighting for {distill} Part 2",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
   },
   {
     "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#tldr",
@@ -217,11 +259,39 @@
     "text": "Using the theme\nOnce you have you custom .theme file, you’ll want to apply it to your site. According to the {distill} documentation, you can apply a syntax highlighting theme with the following YAML:\n---\noutput:\n  distill::distill_article:\n    highlight: my_highlighting.theme\n---  \nHere, the available options for highlight include default, rstudio (the default RStudio editor theme), and the haddock, kate, monochrome, pygments and tango pandoc highlighting themes. Also, most importantly for us, it can also take the path to a .theme file.\nPresumably, we should be able to add this to our _site.yml file to have the theme apply site-wide (though note you’ll have to rebuild the site and re-knit any posts where you want to it apply). However, that’s not working for me. I have raised an issue about it. If you face the same problem, it would be helpful if you could comment there too.\nThere is a workaround, though, which is that the above YAML can also be included in individual .Rmd articles, in which case the theme applies just fine, though note that if your .theme file is in you root directory, you’ll need to give the full path to it.6 And if it sounds like a bit of a pain to have to add that every time you write a new post, consider creating a template for your posts, including those lines, and then starting new posts with the {distilltools} function create_post_from_template().7"
   },
   {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#last-updated",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#last-updated",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "Last updated",
+    "text": "Last updated\n\n2022-10-23 21:54:45 BST"
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#details",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#details",
+    "title": "Custom Syntax Highlighting for {distill} Part 1",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
+  },
+  {
     "objectID": "posts/2017-06-17_n-letter-words/index.html",
     "href": "posts/2017-06-17_n-letter-words/index.html",
     "title": "n_letter_words and a personal (publicly available) package",
     "section": "",
-    "text": "The function, n_letter_words, came about because I wanted to be able to generate row and column names for a large matrix - didn’t matter what they were, as long as they were unique. Since I was in the habit of using the built-in LETTERS vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was stackoverflow to the rescue. There, I learnt about expand.grid and could then use some tidyverse tools to get the vector I was after:\n\n\nToggle the code\nlibrary(tidyverse)\nout <- expand.grid(LETTERS, LETTERS) %>%\n  as_tibble() %>%\n  unite(word, 1:2, sep = \"\") %>%\n  pull()\nc(head(out), tail(out))\n\n\n [1] \"AA\" \"BA\" \"CA\" \"DA\" \"EA\" \"FA\" \"UZ\" \"VZ\" \"WZ\" \"XZ\" \"YZ\" \"ZZ\"\n\n\nSorted! At least I thought so, until, a couple of months later, when I wanted to generate names for a 1000*1000 matrix, and realised both that I’d forgotten the expand.grid trick, and once I’d re-found the stackoverflow post, that it didn’t give me enough words. That was enough to make it worth writing a function, taking n as an argument, that gives all ‘words’ of length \\(n\\).\nWriting functions always makes me think of what other arguments might be useful. What if we want something between the 676 two-letter words and 17,576 three-letter words (or the 456,976 four-letter words, etc)? Hence the argument num_letters, which can be set between 1 and 26, and results in a total of num_letters\\(^n\\) words. By default, the function returns a tibble, but setting as_vector = TRUE does what you’d expect. And I threw in a case argument too.\nNow that I had my function, what to do with it? I remembered articles I’d read about the usefulness of making and sharing a personal package. Now seemed like the time to do that myself.\nSo, here is my personal package, EMK. If you think that n_letter_words might be of use to you, then feel free to install!\n\n\nToggle the code\ndevtools::install_github(\"EllaKaye/EMK\")\n\n\nSome examples of n_letter_words:\n\n\nToggle the code\nlibrary(EMK)\n\nn_letter_words(2)\n\n\n# A tibble: 676 × 1\n   word \n   <chr>\n 1 AA   \n 2 BA   \n 3 CA   \n 4 DA   \n 5 EA   \n 6 FA   \n 7 GA   \n 8 HA   \n 9 IA   \n10 JA   \n# … with 666 more rows\n\n\nToggle the code\nsome_three_letter_words <- n_letter_words(\n  n = 3, \n  num_letters = 10, \n  case = \"lower\", \n  as_vector = TRUE\n)\n\nc(head(some_three_letter_words), tail(some_three_letter_words))\n\n\n [1] \"aaa\" \"baa\" \"caa\" \"daa\" \"eaa\" \"faa\" \"ejj\" \"fjj\" \"gjj\" \"hjj\" \"ijj\" \"jjj\"\n\n\nToggle the code\nlength(some_three_letter_words)\n\n\n[1] 1000\n\n\nFor now, my personal package has only this one function, but watch this space! No doubt I’ll be adding more that I find useful. Perhaps, you’ll find them useful too.\nIncidentally, none of the above would have happened if I’d just thought, for my test matrix A, to set dimnames(A) <- list(1:nrow(A), 1:ncol(A))!\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{kaye2017,\n  author = {Ella Kaye},\n  editor = {},\n  title = {N\\_letter\\_words and a Personal (Publicly Available) Package},\n  date = {2017-06-17},\n  url = {https://ellakaye.co.uk/posts/2017-06-17_n-letter-words},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nElla Kaye. 2017. “N_letter_words and a Personal (Publicly\nAvailable) Package.” June 17, 2017. https://ellakaye.co.uk/posts/2017-06-17_n-letter-words."
+    "text": "There’s a little R function that I wrote and packaged up to generate a vector or data frame of words of a given length. I find it useful in a wide variety of contexts and thought other might too. To kick off my new blog, here’s a post about it.\nThe function, n_letter_words, came about because I wanted to be able to generate row and column names for a large matrix - didn’t matter what they were, as long as they were unique. Since I was in the habit of using the built-in LETTERS vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was stackoverflow to the rescue. There, I learnt about expand.grid and could then use some tidyverse tools to get the vector I was after:\nSorted! At least I thought so, until, a couple of months later, when I wanted to generate names for a 1000*1000 matrix, and realised both that I’d forgotten the expand.grid trick, and once I’d re-found the stackoverflow post, that it didn’t give me enough words. That was enough to make it worth writing a function, taking n as an argument, that gives all ‘words’ of length \\(n\\).\nWriting functions always makes me think of what other arguments might be useful. What if we want something between the 676 two-letter words and 17,576 three-letter words (or the 456,976 four-letter words, etc)? Hence the argument num_letters, which can be set between 1 and 26, and results in a total of num_letters\\(^n\\) words. By default, the function returns a tibble, but setting as_vector = TRUE does what you’d expect. And I threw in a case argument too.\nNow that I had my function, what to do with it? I remembered articles I’d read about the usefulness of making and sharing a personal package. Now seemed like the time to do that myself.\nSo, here is my personal package, EMK. If you think that n_letter_words might be of use to you, then feel free to install!\nSome examples of n_letter_words:\nFor now, my personal package has only this one function, but watch this space! No doubt I’ll be adding more that I find useful. Perhaps, you’ll find them useful too.\nIncidentally, none of the above would have happened if I’d just thought, for my test matrix A, to set dimnames(A) <- list(1:nrow(A), 1:ncol(A))!"
+  },
+  {
+    "objectID": "posts/2017-06-17_n-letter-words/index.html#last-updated",
+    "href": "posts/2017-06-17_n-letter-words/index.html#last-updated",
+    "title": "n_letter_words and a personal (publicly available) package",
+    "section": "Last updated",
+    "text": "Last updated\n\n2022-10-23 21:45:45 BST"
+  },
+  {
+    "objectID": "posts/2017-06-17_n-letter-words/index.html#details",
+    "href": "posts/2017-06-17_n-letter-words/index.html#details",
+    "title": "n_letter_words and a personal (publicly available) package",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
   },
   {
     "objectID": "talks.html",

@@ -34,6 +34,8 @@ draft: false
 #| echo: false
 #| results: 'hide'
 
+long_slug <- "2021-05-25_custom-highlighting-distill-1"
+
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
 renv::use(lockfile = "renv.lock")
@@ -304,4 +306,14 @@ Presumably, we should be able to add this to our `_site.yml` file to have the th
 
 There is a workaround, though, which is that the above YAML can also be included in individual .Rmd articles, in which case the theme applies just fine, though note that if your `.theme` file is in you root directory, you'll need to give the full path to it.^[If you happen to inspect the source code for this post, you might notice that I have copied `ek_syntax_highlighting.theme` into the directory. This is *not* necessary for my site (using the full path to the `.theme` folder in my root directory is sufficient). However, I needed to do this to get the theme to show in the version of this post in the [distillery](https://distillery.rbind.io).] And if it sounds like a bit of a pain to have to add that every time you write a new post, consider creating a template for your posts, including those lines, and then starting new posts with the {distilltools} function [`create_post_from_template()`](https://ellakaye.github.io/distilltools/reference/create_post_from_template.html).^[Note that the `create_post_from_template()` function is likely to get wrapped into {distill} itself, or its functionality included in `distill::create_post()`, and will be depreciated from {distilltools} if so. (I have had some discussion with the {distill} team about this and will be submitting a PR in the near future.)]
 
+<!--------------- appendices go here ----------------->
 
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye-quarto", 
+  name = long_slug
+)
+```

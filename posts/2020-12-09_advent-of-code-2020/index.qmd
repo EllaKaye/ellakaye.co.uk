@@ -6,7 +6,7 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 date: 2020-12-09
-base_url: https://ellakaye.rbind.io/
+site-url: https://ellakaye.co.uk/
 image: advent-of-code-2020.jpg
 categories:
   - R
@@ -21,6 +21,8 @@ draft: false
 ```{r}
 #| echo: false
 #| results: 'hide'
+
+long_slug <- "2020-12-09_advent-of-code-2020"
 
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
@@ -1100,3 +1102,15 @@ I am unsatisfied both by how many lines of code this has taken as well as the ti
 ## Next
 
 I was late to the game, and that was as far as I managed to get in December 2020. I'm looking forward to taking on the challenge again in 2021!
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye-quarto", 
+  name = long_slug
+)
+```

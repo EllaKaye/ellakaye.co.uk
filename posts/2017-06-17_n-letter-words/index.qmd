@@ -32,6 +32,8 @@ draft: false
 #| echo: false
 #| results: 'hide'
 
+long_slug <- "2017-06-17_n-letter-words"
+
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
 renv::use(lockfile = "renv.lock")
@@ -85,3 +87,15 @@ length(some_three_letter_words)
 For now, my personal package has only this one function, but watch this space! No doubt I'll be adding more that I find useful. Perhaps, you'll find them useful too.
 
 Incidentally, none of the above would have happened if I'd just thought, for my test matrix `A`, to set `dimnames(A) <- list(1:nrow(A), 1:ncol(A))`!
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye-quarto", 
+  name = long_slug
+)
+```

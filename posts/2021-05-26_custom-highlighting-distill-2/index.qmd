@@ -36,6 +36,8 @@ draft: false
 #| echo: false
 #| results: 'hide'
 
+long_slug <- "2021-05-26_custom-highlighting-distill-2"
+
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
 renv::use(lockfile = "renv.lock")
@@ -503,6 +505,17 @@ Going through the process of building a colour palette that meets my criteria pu
 
 Now that I have chosen my colour palette, head back to [Part 1](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/) for details of how to modify the default {distill} syntax highlighting theme to incorporate them, and how to apply the custom theme to a {distill} site.
 
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye-quarto", 
+  name = long_slug
+)
+```
 
 
 
