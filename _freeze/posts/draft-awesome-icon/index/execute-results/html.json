@@ -1,0 +1,16 @@
+{
+  "hash": "ae96e293ed40a78c81b30ffcb0f3d30c",
+  "result": {
+    "markdown": "---\ntitle: Test plot\ndescription: |\n  Post description\ndate: 2022-08-05\nbase_url: https://ellakaye.rbind.io/\n# image: IMAGE.png\n#categories:\n#  - TAG_1\n#  - TAG_2\ntwitter:\n  site: \"@ellamkaye\"\n  creator: \"@ellamkaye\"\ndraft: false\ncss: styles.css\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\n\nggplot(mpg, aes(displ, hwy, colour = class)) + \n  geom_point()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n<!-- ## TL;DR -->\n<!-- I made an awesome animated icon for my navbar. -->\n\n<!-- <div class=\"contain-icon\">ELLA<span class='icon-line'></span>KAYE</div> -->\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

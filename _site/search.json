@@ -175,6 +175,20 @@
     "text": "Back to Part 1\nNow that I have chosen my colour palette, head back to Part 1 for details of how to modify the default {distill} syntax highlighting theme to incorporate them, and how to apply the custom theme to a {distill} site."
   },
   {
+    "objectID": "posts/draft-awesome-icon/index.html",
+    "href": "posts/draft-awesome-icon/index.html",
+    "title": "Test plot",
+    "section": "",
+    "text": "Reusehttps://creativecommons.org/licenses/by-sa/4.0/CitationBibTeX citation:@online{2022,\n  author = {},\n  editor = {},\n  title = {Test Plot},\n  date = {2022-08-05},\n  url = {https://ellakaye.co.uk/posts/draft-awesome-icon},\n  langid = {en}\n}\nFor attribution, please cite this work as:\n“Test Plot.” 2022. August 5, 2022. https://ellakaye.co.uk/posts/draft-awesome-icon."
+  },
+  {
+    "objectID": "posts/draft-awesome-icon/index.html#tldr",
+    "href": "posts/draft-awesome-icon/index.html#tldr",
+    "title": "Awesome Icon",
+    "section": "TL;DR",
+    "text": "TL;DR\nI made an awesome animated icon for my navbar.\n\nELLAKAYE"
+  },
+  {
     "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#tldr",
     "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#tldr",
     "title": "Custom Syntax Highlighting for {distill} Part 1",
@@ -459,7 +473,7 @@
     "href": "posts.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "Custom Syntax Highlighting for {distill} Part 2\n\n\nCreating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 1\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my {distill} website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a personal (publicly available) package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+    "text": "Test plot\n\n\n\n\n\nPost description\n\n\n\n\n\n\nAug 5, 2022\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 2\n\n\nCreating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 1\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my {distill} website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a personal (publicly available) package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "packages.html",
@@ -467,12 +481,5 @@
     "title": "ELLA KAYE",
     "section": "",
     "text": "distilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html",
-    "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html",
-    "title": "Custom Syntax Highlighting for {distill} Part 2",
-    "section": "",
-    "text": "Test!"
   }
 ]

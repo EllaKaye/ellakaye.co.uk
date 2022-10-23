@@ -1,5 +1,5 @@
 ---
-title: Awesome Icon
+title: Test plot
 description: |
   Post description
 date: 2022-08-05
@@ -11,13 +11,20 @@ base_url: https://ellakaye.rbind.io/
 twitter:
   site: "@ellamkaye"
   creator: "@ellamkaye"
-draft: true
+draft: false
 css: styles.css
 ---
 
+```{r}
+library(ggplot2)
 
-## TL;DR
-I made an awesome animated icon for my navbar.
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+```
 
-<div class="contain-icon">ELLA<span class='icon-line'></span>KAYE</div>
+
+<!-- ## TL;DR -->
+<!-- I made an awesome animated icon for my navbar. -->
+
+<!-- <div class="contain-icon">ELLA<span class='icon-line'></span>KAYE</div> -->
 
