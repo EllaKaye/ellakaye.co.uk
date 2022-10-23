@@ -30,11 +30,13 @@ twitter-card:
 draft: false
 ---
 
-```{css}
+```{r}
 #| echo: false
-.top-callout {
-  margin-top: 0;
-}
+#| results: 'hide'
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+renv::use(lockfile = "renv.lock")
 ```
 
 :::{.callout-note collapse="false" .top-callout}
@@ -175,21 +177,20 @@ I had four criteria for building a colour palette to use for my syntax highlight
 
 I was originally going to write up how I went about building such a palette, both in terms of the thought process and tools used, as part of this post, but it was getting a little long^[As part of the process of writing the post, I learnt much more about colour theory, and alternatives to the approach that I had originally taken, and I wanted to share it all!], so I've spun it out into a separate post, [custom syntax highlighting for {distill} part 2: creating the palette ](https://ellakaye.rbind.io/posts/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/).
 
-At the end of the process, the palette for my syntax highlighting scheme is as in @fig-ek-syntax-highlighting-palette.
+At the end of the process, the palette for my syntax highlighting scheme is as in @fig-final-palette-light.
 
-```{r fig-ek-syntax-highlighting-palette, echo = FALSE, eval = TRUE, fig.cap="The color palette used for syntax highlighting throughout this site.", fig.alt="A swatch of five colours, a bright pink, orange, green, blue and purple."}
+```{r fig-ek-syntax-highlighting-palette, echo = FALSE, eval = FALSE, fig.cap="The color palette used for syntax highlighting throughout this site.", fig.alt="A swatch of five colours, a bright pink, orange, green, blue and purple."}
 knitr::include_graphics("ek-syntax-highlighting-palette.png")
 ```
 
 
 ```{r fig-final-palette-light}
 #| echo: false
-#| eval: false
+#| eval: true
 #| fig-cap: "The palette I settled on for my syntax highlighting scheme."
 #| fig-alt: "A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white."
 #| fig-width: 6.5
 #| fig-height: 4
-#| classes: light-mode
 #| 
 ek_highlight_colours <- c("#5B00B6", "#005BB6", "#008643", "#B65B00", "#B6005B")
 

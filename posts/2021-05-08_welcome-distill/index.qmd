@@ -36,13 +36,14 @@ include-in-header: ../../_includes/fontawesome-2up.html
   
 ---
 
-```{css}
+```{r}
 #| echo: false
-.top-callout {
-  margin-top: 0;
-}
-```
+#| results: 'hide'
 
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+renv::use(lockfile = "renv.lock")
+```
 
 :::{.callout-note collapse="false" .top-callout}
 ## Update: August 2022

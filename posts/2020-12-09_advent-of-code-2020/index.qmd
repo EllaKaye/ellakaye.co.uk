@@ -18,6 +18,14 @@ twitter:
 draft: false
 ---
 
+```{r}
+#| echo: false
+#| results: 'hide'
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+renv::use(lockfile = "renv.lock")
+```
 
 [Advent of Code](https://adventofcode.com) is a series of small programming challenges, released daily throughout December in the run-up to Christmas. Part 1 of the challenge is given first. On its successful completion, Part 2 is revealed. The challenges are designed to be solved in any programming language. I will be using R. 
 

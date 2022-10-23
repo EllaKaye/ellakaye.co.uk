@@ -26,5 +26,13 @@ categories:
 draft: true
 ---
 
+```{r}
+#| echo: false
+#| results: 'hide'
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+renv::use(lockfile = "renv.lock")
+```
 
 ## TL;DR

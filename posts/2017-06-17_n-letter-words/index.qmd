@@ -28,6 +28,16 @@ categories:
 draft: false
 ---
 
+```{r}
+#| echo: false
+#| results: 'hide'
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+renv::use(lockfile = "renv.lock")
+```
+
+
 There's a little R function that I wrote and packaged up to generate a vector or data frame of words of a given length. I find it useful in a wide variety of contexts and thought other might too. To kick off my new blog, here's a post about it.
 
 The function, `n_letter_words`, came about because I wanted to be able to generate row and column names for a large matrix - didn't matter what they were, as long as they were unique. Since I was in the habit of using the built-in `LETTERS` vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was [stackoverflow](https://stackoverflow.com/questions/11388359/unique-combination-of-all-elements-from-two-or-more-vectors) to the rescue. There, I learnt about `expand.grid` and could then use some tidyverse tools to get the vector I was after:

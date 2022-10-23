@@ -32,6 +32,15 @@ bibliography: bibliography.bib
 draft: false
 ---
 
+```{r}
+#| echo: false
+#| results: 'hide'
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+renv::use(lockfile = "renv.lock")
+```
+
 :::{.callout-note collapse="false" .top-callout}
 ## Update: August 2022
 
@@ -123,13 +132,37 @@ If you don't use ColorSlurp or a similar app, there are many online options for 
 
 At the end of this stage of the process, based purely on my pink and colour theory, my syntax highlighting palette now stood as in @fig-colour-theory-palette. In the HSB space, these colours all have a saturation of 100% and a brightness of 83%.
 
-```{r fig-colour-theory-palette, echo = FALSE, fig.cap = "Colours for syntax highlighting, starting from my main pink, based only on colour theory", fig.alt="A swatch of five colours, very bright and vibrant shades of pink, orange, green, blue and purple."}
+```{r fig-colour-theory-palette-png, echo = FALSE, eval = FALSE, fig.cap = "Colours for syntax highlighting, starting from my main pink, based only on colour theory", fig.alt="A swatch of five colours, very bright and vibrant shades of pink, orange, green, blue and purple."}
 library(colorspace)
 #ek_pure_highlight_colours <- c("#D4006A", "#D46A00", "#00D46A", "#006AD4", "#6A00D4")
 #swatchplot(ek_pure_highlight_colours, border = "transparent")
 # Using the above code gives too much white around the swatches, so I ran the code, took a screen shot to crop it, then include that image back in.
 knitr::include_graphics("first-colour-swatch.png")
 ```
+
+```{r fig-colour-theory-palette}
+#| echo: false
+#| eval: true
+#| fig-cap: "Colours for syntax highlighting, starting from my main pink, based only on colour theory."
+#| fig-alt: "A swatch of five colours, very bright and vibrant shades of pink, orange, green, blue and purple."
+#| fig-width: 6.5
+#| fig-height: 4
+
+library(colorspace)
+ek_pure_highlight_colours <- c("#D4006A", "#D46A00", "#00D46A", "#006AD4", "#6A00D4")
+
+library(ggplot2)
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_pure_highlight_colours)) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+#swatchplot(rev(ek_highlight_colours), border = "transparent")
+# Using the above code gives too much white around the swatches, so I ran the code, took a screen shot to crop it, then include that image back in.
+
+```
+
 
 ### Adapting for web accessibility
 
@@ -145,34 +178,90 @@ The `r bg_col("#D4006A", "pink")`, `r bg_col("#006AD4", "blue")` and `r bg_col("
 
 My first thought was to keep the pink, blue and purple the same, and to just reduce the brightness of the orange and green until the contrast ratio was a bit better than required. In the HSB space, that gives the palette in @fig-orange-green-less-bright. 
 
-```{r fig-orange-green-less-bright, echo  = FALSE, fig.cap= "Reducing brightness in just the orange and green to achieve desired contrasts.", fig.alt="A swatch of five colours, very bright and vibrant shades of pink, blue and purple, with less-bright shades of orange and green"}
+```{r fig-orange-green-less-bright-png, echo  = FALSE, eval = FALSE, fig.cap= "Reducing brightness in just the orange and green to achieve desired contrasts.", fig.alt="A swatch of five colours, very bright and vibrant shades of pink, blue and purple, with less-bright shades of orange and green"}
 #ek_pure_highlight_colours_og <- c("#D4006A", "#B65B00", "#008643", "#006AD4", "#6A00D4")
 #swatchplot(ek_pure_highlight_colours_og, border = "transparent")
 # Using the above code gives too much white around the swatches, so I ran the code, took a screen shot to crop it, then include that image back in.
 knitr::include_graphics("second-colour-swatch.png")
 ```
 
+```{r fig-orange-green-less-bright}
+#| echo: false
+#| eval: true
+#| fig-cap: "Reducing brightness in just the orange and green to achieve desired contrasts."
+#| fig-alt: "A swatch of five colours, very bright and vibrant shades of pink, blue and purple, with less-bright shades of orange and green."
+#| fig-width: 6.5
+#| fig-height: 4
+
+ek_pure_highlight_colours_og <- c("#D4006A", "#B65B00", "#008643", "#006AD4", "#6A00D4")
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_pure_highlight_colours_og)) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+
+```
+
+
 It's not bad, but when I applied that palette as a syntax highlighting scheme, to my eye the pink, blue and purple looked a little too bright relative to the orange.
 
 My next thought was to reduce the brightness on all the colours to the level of the least bright colour that passes the accessibility check (the green, at 53%). That gives the palette in @fig-all-less-bright.
 
-```{r fig-all-less-bright, echo  = FALSE, fig.cap= "Reducing brightness in all colours to the level of the green.", fig.alt = "A swatch of five colours, less bright versions of all five colours in the original palette."}
+```{r fig-all-less-bright-png, echo  = FALSE, eval = FALSE, fig.cap= "Reducing brightness in all colours to the level of the green.", fig.alt = "A swatch of five colours, less bright versions of all five colours in the original palette."}
 #ek_darker_highlight_colours <- c("#860043", "#884400", "#008643", "#004489", "#440088")
 #swatchplot(ek_darker_highlight_colours, border = "transparent")
 # Using the above code gives too much white around the swatches, so I ran the code, took a screen shot to crop it, then include that image back in.
 knitr::include_graphics("third-colour-swatch.png")
 ```
 
+```{r fig-all-less-bright}
+#| echo: false
+#| eval: true
+#| fig-cap: "Reducing brightness in all colours to the level of the green."
+#| fig-alt: "A swatch of five colours, less bright versions of all five colours in the original palette."
+#| fig-width: 6.5
+#| fig-height: 4
+
+ek_darker_highlight_colours <- c("#860043", "#884400", "#008643", "#004489", "#440088")
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_darker_highlight_colours)) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+
+```
+
+
 That looks way too dark for my liking. I don't think it's vibrant enough, and, although the colours all have good contrast against the white background, they don't have much contrast with each other.
 
 So, I settled on a compromise position. I reduced the brightness of the original pink, blue and purple from 83% to match the brightness of the accessibility-passing orange (71%), leaving only the green at a brightness of 53%, which it needs to pass the contrast check. This gives the palette in @fig-final-palette. To my eye, the green doesn't appear considerably more dark/less bright than the other four colours. If anything, the greens in @fig-colour-theory-palette and @fig-all-less-bright which both have uniform brighness, look a little too bright compared to the other colours. I guess this is a result of the lack of perceptual uniformity of the HSB space. 
 
-```{r fig-final-palette, echo = FALSE, fig.cap = "The palette I settled on for my syntax highlighting scheme.", fig.alt="A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white."}
+```{r fig-final-palette-png, echo = FALSE, eval = FALSE, fig.cap = "The palette I settled on for my syntax highlighting scheme.", fig.alt="A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white."}
 ek_highlight_colours <- c("#5B00B6", "#005BB6", "#008643", "#B65B00", "#B6005B")
 #swatchplot(rev(ek_highlight_colours), border = "transparent")
 # Using the above code gives too much white around the swatches, so I ran the code, took a screen shot to crop it, then include that image back in.
 knitr::include_graphics("ek-syntax-highlighting-palette.png")
 ```
+
+```{r fig-final-palette}
+#| echo: false
+#| eval: true
+#| fig-cap: "The palette I settled on for my syntax highlighting scheme."
+#| fig-alt: "A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white."
+#| fig-width: 6.5
+#| fig-height: 4
+
+ek_highlight_colours <- c("#5B00B6", "#005BB6", "#008643", "#B65B00", "#B6005B")
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_highlight_colours)) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+```
+
 
 I'm happy with that, and that's the syntax highlighting scheme I've adopted throughout this site, despite the fact that the palette now doesn't actually include the pink that I set out to build my scheme around! However, because of the process I've followed, the pink that is in the palette does tone well with the brighter pink and I think my site still has a consistent look. In the end, it was more important that all the colours in the palette looked consistent together and met accessibility guidelines. 
 
@@ -265,18 +354,51 @@ purple_hcl
 ```
 
 
-```{r fig-hcl-six, echo = FALSE, fig.cap = "Six colours, with hues approximately 60° apart and roughly equal luminance, based around my pink.", fig.alt="A swatch of six colours in the HCL space, a brown, two greens, a blue, magenta, and my pink"}
+```{r fig-hcl-six-png, echo = FALSE, eval = FALSE, fig.cap = "Six colours, with hues approximately 60° apart and roughly equal luminance, based around my pink.", fig.alt="A swatch of six colours in the HCL space, a brown, two greens, a blue, magenta, and my pink"}
 #swatchplot(hcl_six, border = "transparent")
 knitr::include_graphics("hcl-six.png")
 ```
 
+```{r fig-hcl-six}
+#| echo: false
+#| eval: true
+#| fig-cap: "Six colours, with hues approximately 60° apart and roughly equal luminance, based around my pink."
+#| fig-alt: "A swatch of six colours in the HCL space, a brown, two greens, a blue, magenta, and my pink."
+#| fig-width: 6.5
+#| fig-height: 4
+
+ggplot() +
+  geom_tile(aes(x=1:6, y = rep(1,6)), fill = rev(hcl_six)) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+```
+
 The only personal decision I make in this section is which of these six colours to discard. Removing the first of the greens gives me the palette in @fig-hcl-five.
 
-```{r fig-hcl-five, fig.cap="As in the previous figure but minus a green and rearranged", fig.alt="A swatch of five colours in the HCL space, my pink, a brown, green, blue and magenta.", echo = FALSE}
+```{r fig-hcl-five-png, eval = FALSE, fig.cap="As in the previous figure but minus a green and rearranged", fig.alt="A swatch of five colours in the HCL space, my pink, a brown, green, blue and magenta.", echo = FALSE}
 hcl_five <- hcl_six[c(6, 1, 3:5)]
 #swatchplot(hcl_five, border = "transparent")
 knitr::include_graphics("hcl-five.png")
 ```
+
+```{r fig-hcl-five}
+#| echo: false
+#| eval: true
+#| fig-cap: "As in the previous figure but minus a green and rearranged."
+#| fig-alt: "A swatch of five colours in the HCL space, my pink, a brown, green, blue and magenta."
+#| fig-width: 6.5
+#| fig-height: 4
+
+hcl_five <- hcl_six[c(6, 1, 3:5)]
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = hcl_five) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+```
+
 
 ```{r eval = FALSE, echo = FALSE}
 seq_72 <- seq(from = -288, to = 288, by = 72)
@@ -342,10 +464,26 @@ while (any_too_light) {
 
 At the end of the process, the palette looks like this:
 
-```{r fig-hcl-darkened, fig.cap="An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white", fig.alt = "A swatch of five colours, pink, brown, green, blue, magenta, all slightly darker than in the previous figure.", echo = FALSE}
+```{r fig-hcl-darkened-png, eval = FALSE, fig.cap="An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white", fig.alt = "A swatch of five colours, pink, brown, green, blue, magenta, all slightly darker than in the previous figure.", echo = FALSE}
 #swatchplot(palette, border = "transparent")
 knitr::include_graphics("hcl-darkened.png")
 ```
+
+```{r fig-hcl-darkened}
+#| echo: false
+#| eval: true
+#| fig-cap: "An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white."
+#| fig-alt: "A swatch of five colours, pink, brown, green, blue, magenta, all slightly darker than in the previous figure."
+#| fig-width: 6.5
+#| fig-height: 4
+
+ggplot() +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = palette) +
+  theme_void() +
+  #theme(plot.background = element_rect(fill='transparent', color=NA))
+  theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
+```
+
 
 ### Checking for colourblindness
 
