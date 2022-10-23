@@ -26,13 +26,29 @@ categories:
 draft: true
 ---
 
+<!--------------- set up ----------------->
+
 ```{r}
 #| echo: false
 #| results: 'hide'
+
+long_slug <- "FILL THIS IN"
 
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
 renv::use(lockfile = "renv.lock")
 ```
 
-## TL;DR
+<!--------------- post content ----------------->
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye-quarto", 
+  name = long_slug
+)
+```
