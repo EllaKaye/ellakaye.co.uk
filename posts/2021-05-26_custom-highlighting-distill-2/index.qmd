@@ -35,13 +35,12 @@ draft: false
 ```{r}
 #| echo: false
 #| results: 'hide'
+#| eval: false
 
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
 renv::use(lockfile = "renv.lock")
 ```
-
-Test!
 
 :::{.callout-note collapse="false" .top-callout}
 ## Update: August 2022
