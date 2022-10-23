@@ -3,7 +3,7 @@ title: "Custom Syntax Highlighting for {distill} Part 2"
 subtitle: "Creating the Palette"
 description: |
   How to create an appealing and accessible colour palette for a syntax highlighting scheme
-date: 2022-05-26
+date: 2021-05-26
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
