@@ -83,7 +83,7 @@ This post spins out from Part 1 with a brief primer on colour theory and then a 
 ### Colour harmonies
 
 ```{r fig-hsl-colour-wheel, fig.cap="An HSL colour wheel. Screen shot from [https://www.canva.com/colors/color-wheel/](https://www.canva.com/colors/color-wheel/), annotations adapted from [https://dev.to/rneha725/hsl-and-hsla-in-css-31j3](https://dev.to/rneha725/hsl-and-hsla-in-css-31j3).", fig.alt="A circle filled with hues of red at the top (0 degrees), moving smoothly through orange, yellow (60 degrees), green (120 degrees), cyan (180 degrees), blue (240 degrees) and magenta(300 degrees) as you rotate clockwise round the circle. The colours are more saturated towards the edge of the circle and greyer towards the centre.", echo = FALSE}
-knitr::include_graphics("hsl-colour-wheel-d4006a-annotated.png")
+knitr::include_graphics("hsl-colour-wheel-d4006a.png")
 ```
 
 Colour theory determines which colours 'look good' together, based on their relative position on a colour wheel, such as that in @fig-hsl-colour-wheel, somewhat analogously, I think, to how certain musical intervals sound more pleasing/harmonious than others, depending on the ratio of their frequencies. As shown in @fig-colour-harmonies, there are various different types of colour palettes that are in colour harmony, such as complementary (comprised of colours opposite each other on the wheel), analogous (three colours side by side) and triadic (three colours evenly spaced around the wheel). Note that all the colour schemes are derived from the same twelve colours, spaced evenly around a circle. 
@@ -196,7 +196,7 @@ knitr::include_graphics("second-colour-swatch.png")
 ek_pure_highlight_colours_og <- c("#D4006A", "#B65B00", "#008643", "#006AD4", "#6A00D4")
 
 ggplot() +
-  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_pure_highlight_colours_og)) +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = ek_pure_highlight_colours_og) +
   theme_void() +
   #theme(plot.background = element_rect(fill='transparent', color=NA))
   theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
@@ -226,7 +226,7 @@ knitr::include_graphics("third-colour-swatch.png")
 ek_darker_highlight_colours <- c("#860043", "#884400", "#008643", "#004489", "#440088")
 
 ggplot() +
-  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_darker_highlight_colours)) +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = ek_darker_highlight_colours) +
   theme_void() +
   #theme(plot.background = element_rect(fill='transparent', color=NA))
   theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
