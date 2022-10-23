@@ -35,7 +35,6 @@ draft: false
 ```{r}
 #| echo: false
 #| results: 'hide'
-#| eval: false
 
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
