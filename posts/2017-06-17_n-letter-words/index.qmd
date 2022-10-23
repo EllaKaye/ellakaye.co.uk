@@ -6,7 +6,7 @@ date: 2017-06-17
 author: 
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
-site-url: https://ellakaye.rbind.io/
+site-url: https://ellakaye.co.uk
 image: ../../images/hex/EMK.png
 image-alt: |
   A hexagon with a bright pink outline. Inside it, the letters E, M and K in the 
