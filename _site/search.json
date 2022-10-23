@@ -140,13 +140,6 @@
     "text": "Next\nI was late to the game, and that was as far as I managed to get in December 2020. I’m looking forward to taking on the challenge again in 2021!"
   },
   {
-    "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html",
-    "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html",
-    "title": "Custom Syntax Highlighting for {distill} Part 2",
-    "section": "",
-    "text": "Update: August 2022\n\n\n\n\n\nSince this post was originally written, I have replaced my {disill} website with this one built with Quarto.\nThe highlighting you’ll see below is not quite the same as it appeared on my previous site, because the default arrow theme is implemented differently in {distill} and Quarto.1 Moreover, I’m now using a very pale gray rather than white background, which necessitated a small shift in the green to achieve a sufficient colour contrast. And if you’re reading this in dark mode, it’s a whole different scheme again, though built on the same principles as described below.\nI am keeping this post otherwise as was on the blog for posterity. Most of the content holds, regardless of how the site was built."
-  },
-  {
     "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html#part-1-recap-and-part-2-overview",
     "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html#part-1-recap-and-part-2-overview",
     "title": "Custom Syntax Highlighting for {distill} Part 2",
