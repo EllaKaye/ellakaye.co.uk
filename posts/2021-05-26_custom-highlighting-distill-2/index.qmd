@@ -154,7 +154,7 @@ ek_pure_highlight_colours <- c("#D4006A", "#D46A00", "#00D46A", "#006AD4", "#6A0
 library(ggplot2)
 
 ggplot() +
-  geom_tile(aes(x=1:5, y = rep(1,5)), fill = rev(ek_pure_highlight_colours)) +
+  geom_tile(aes(x=1:5, y = rep(1,5)), fill = ek_pure_highlight_colours) +
   theme_void() +
   #theme(plot.background = element_rect(fill='transparent', color=NA))
   theme(plot.background = element_rect(fill="#F8F9FA", color = "#F8F9FA"))
