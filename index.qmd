@@ -87,3 +87,40 @@ include-in-header: _includes/fontawesome-2up.html
 :::
 
 :::
+
+```{r}
+#| echo: false
+
+# redirects strategy from djnavarro
+# https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects
+# list names of post folders
+posts <- list.dirs(
+  path = here::here("posts"),
+  full.names = FALSE,
+  recursive = FALSE
+)
+
+# extract the slugs
+slugs <- gsub("^.*_", "", posts)
+
+# redirects from distill site
+distill_redirects <- c("/posts/2017-06-17-n-letter-words/ /posts/2017-06-17_n-letter-words/",
+                  "/posts/2020-12-09-advent-of-code-2020/ /2020-12-09_advent-of-code-2020/",
+                  "/2021-05-08-welcome-to-my-distill-website/  /posts/2021-05-08_welcome-distill/",
+                  "/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/ /posts/2021-05-25_custom-highlighting-distill-1/",
+                  "/2021-05-26-custom-syntax-highlighting-for-distill-part-2-creating-the-palette/ /posts/2021-05-26_custom-highlighting-distill-2/",
+                  "/talks/2017-05-25-an-overview-of-htmlwidgets/ /talks/2017-05-25_overview-of-htmlwidgets/",
+                  "/talks/2017-07-06-introducing-bradleyterryscalable/ /talks/2017-07-06_introducing-bradleyterryscalable/",
+                  "/talks/2018-08-23-phd-as-package/ /talks/2018-08-23_phd-as-package/",
+                  "/talks/2019-10-05-working-with-text-in-r/ /talks/2019-10-05_working-with-text-in-r/",
+                  "/talks/2020-10-29-how-to-get-help-in-r/ /talks/2020-10-29_how-to-get-help-in-r/",
+                  "/projects.html /packages.html")
+
+# lines to insert to a netlify _redirect file
+new_redirects <- paste0("/", slugs, " ", "/posts/", posts)
+redirects <- c(distill_redirects, new_redirects)
+
+# write the _redirect file
+writeLines(redirects, here::here("_site", "_redirects"))
+```
+
