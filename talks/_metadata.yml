@@ -7,6 +7,9 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: true
 
+citation: true
+license: CC BY-SA
+
 include-in-header: 
   - ../_includes/giscus.html
   - ../../_includes/fontawesome-2up.html
