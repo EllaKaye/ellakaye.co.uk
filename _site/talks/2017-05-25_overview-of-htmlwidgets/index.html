@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.247">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -139,15 +139,16 @@ document.addEventListener('DOMContentLoaded', function () {
 <meta property="og:description" content="A brief overview of htmlwidgets in R">
 <meta property="og:image" content="https://ellakaye.co.uk/images/logo-white-background.png">
 <meta property="og:site-name" content="ELLA KAYE">
-<meta property="og:locale" content="en-GB">
 <meta property="og:image:height" content="500">
 <meta property="og:image:width" content="500">
+<meta property="og:locale" content="en-GB">
 <meta property="og:image:alt" content="A screenshot of the htmlwidgets website featuring clips of the cards for the DiagrammeR, leaflet, DT and tmap packages.
 ">
 <meta name="twitter:title" content="ELLA KAYE - An Overview of htmlwidgets">
-<meta name="twitter:description" content="A brief overview of htmlwidgets in R">
+<meta name="twitter:description" content="The personal website of Ella Kaye">
 <meta name="twitter:image" content="https://ellakaye.co.uk/talks/2017-05-25_overview-of-htmlwidgets/htmlwidgets-4.png">
 <meta name="twitter:creator" content="@ellamkaye">
+<meta name="twitter:site" content="@ellamkaye">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image-height" content="1496">
 <meta name="twitter:image-width" content="1088">
@@ -172,22 +173,28 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">about</a>
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html">posts</a>
+    <a class="nav-link" href="../../posts.html">
+ <span class="menu-text">posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talks.html">talks</a>
+    <a class="nav-link" href="../../talks.html">
+ <span class="menu-text">talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../packages.html">packages</a>
+    <a class="nav-link" href="../../packages.html">
+ <span class="menu-text">packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../community.html">community</a>
+    <a class="nav-link" href="../../community.html">
+ <span class="menu-text">community</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html">contact</a>
+    <a class="nav-link" href="../../contact.html">
+ <span class="menu-text">contact</span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -227,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p class="date">May 25, 2017</p>
       </div>
     </div>
+    
       
     </div>
     
@@ -270,7 +278,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2017,
   author = {Ella Kaye},
-  editor = {},
   title = {An {Overview} of Htmlwidgets},
   date = {2017-05-25},
   url = {https://ellakaye.co.uk/talks/2017-05-25_overview-of-htmlwidgets},
@@ -413,7 +420,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -435,7 +444,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -471,24 +497,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

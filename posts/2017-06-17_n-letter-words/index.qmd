@@ -14,7 +14,8 @@ image-alt: |
 categories:
   - R
   - package development
-#twitter-card: 
+open-graph: true
+twitter-card: true
 # uncomment lines below for different title and description to post
 #  title: |
 #  description: |
@@ -25,6 +26,9 @@ categories:
 #  image-width: 600 
 #  image-height: 314
 #  card-style: summary_large_image 
+#  image-width: 500
+#  image-height: 500
+#  card-style: summary
 draft: false
 ---
 

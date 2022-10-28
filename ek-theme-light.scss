@@ -255,6 +255,16 @@ div.tippy-content a:hover {
   margin-bottom: -6px;
 }
 
+/* keep text the body colour when active
+this was a change in Quarto 1.2 - now defaults to a darker shade of $primary
+would be fine, except that I want to target the different list items to keep 
+the color that matches the card
+*/
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
+    color: $body-color;
+}
+
 // hover on navbar
 .navbar-expand-lg .navbar-nav .nav-link:hover {
   color: $primary;
@@ -269,6 +279,12 @@ div.tippy-content a:hover {
 #navbarCollapse > ul > li:nth-child(5) > a:hover {
   color: $third-color;
 }
+
+// stop the name in my icon from changing colour on hover
+.navbar-title:hover {
+  color: $body-color;
+}
+
 // animated underline on hover, when navbar shows as row
 @media screen and (min-width: 992px) {
   a.nav-link {
