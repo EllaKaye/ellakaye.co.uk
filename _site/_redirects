@@ -20,3 +20,13 @@
 /testing-callout-blocks /posts/testing-callout-blocks
 /testing-icon-links /posts/testing-icon-links
 /testing-syntax-highlighting /posts/testing-syntax-highlighting
+/talk-template /talks/_talk-template
+/overview-of-htmlwidgets /talks/2017-05-25_overview-of-htmlwidgets
+/introducing-BradleyTerryScalable /talks/2017-07-06_introducing-BradleyTerryScalable
+/phd-as-package /talks/2018-08-23_phd-as-package
+/working-with-text-in-r /talks/2019-10-05_working-with-text-in-r
+/how-to-get-help-in-r /talks/2020-10-29_how-to-get-help-in-r
+/package-template /packages/_package-template
+/BradleyTerryScalable /packages/BradleyTerryScalable
+/distilltools /packages/distilltools
+/EMK /packages/EMK

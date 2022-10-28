@@ -100,8 +100,22 @@ posts <- list.dirs(
   recursive = FALSE
 )
 
+talks <- list.dirs(
+  path = here::here("talks"),
+  full.names = FALSE,
+  recursive = FALSE
+)
+
+packages <- list.dirs(
+  path = here::here("packages"),
+  full.names = FALSE,
+  recursive = FALSE
+)
+
 # extract the slugs
-slugs <- gsub("^.*_", "", posts)
+posts_slugs <- gsub("^.*_", "", posts)
+talks_slugs <- gsub("^.*_", "", talks)
+packages_slugs <- gsub("^.*_", "", packages)
 
 # redirects from distill site
 distill_redirects <- c("/posts/2017-06-17-n-letter-words/ /posts/2017-06-17_n-letter-words/",
@@ -117,8 +131,13 @@ distill_redirects <- c("/posts/2017-06-17-n-letter-words/ /posts/2017-06-17_n-le
                   "/projects.html /packages.html")
 
 # lines to insert to a netlify _redirect file
-new_redirects <- paste0("/", slugs, " ", "/posts/", posts)
-redirects <- c(distill_redirects, new_redirects)
+posts_redirects <- paste0("/", posts_slugs, " ", "/posts/", posts)
+talks_redirects <- paste0("/", talks_slugs, " ", "/talks/", talks)
+packages_redirects <- paste0("/", packages_slugs, " ", "/packages/", packages)
+redirects <- c(distill_redirects,
+               posts_redirects,
+               talks_redirects,
+               packages_redirects)
 
 # write the _redirect file
 writeLines(redirects, here::here("_site", "_redirects"))

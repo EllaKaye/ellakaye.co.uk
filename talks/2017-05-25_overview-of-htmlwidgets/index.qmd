@@ -14,13 +14,14 @@ image-alt: |
 #categories:
 #  - TAG_1
 #  - TAG_2
-#twitter-card: 
+twitter-card: 
 # uncomment lines below for different title and description to post
 #  title: |
 #  description: |
 # uncomment for different image to post
-#  image: |
-#  image-alt: |
+  image: htmlwidgets-4.png
+  image-alt: |
+    A screenshot of the htmlwidgets website featuring clips of the cards for the DiagrammeR, leaflet, DT and tmap packages.
 #  defaults to 500 x 500 summary: uncomment lines below for large card
 #  image-width: 600 
 #  image-height: 314
