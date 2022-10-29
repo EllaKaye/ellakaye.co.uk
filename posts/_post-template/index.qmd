@@ -12,17 +12,21 @@ site-url: https://ellakaye.co.uk
 categories:
   - TAG_1
   - TAG_2
-#twitter-card: 
-# uncomment lines below for different title and description to post
+open-graph: true
+twitter-card: true
+# will inherit title, description, image
+# to change ANYTHING about card, need to fill in EVERYTHING below
 #  title: |
 #  description: |
-# uncomment for different image to post
 #  image: |
 #  image-alt: |
 #  defaults to 500 x 500 summary: uncomment lines below for large card
 #  image-width: 600 
 #  image-height: 314
-#  card-style: "summary_large_image" 
+#  card-style: summary_large_image 
+#  image-width: 500
+#  image-height: 500
+#  card-style: summary
 draft: true
 ---
 
