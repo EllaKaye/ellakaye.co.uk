@@ -10,6 +10,14 @@ title-block-banner: true
 citation: true
 license: CC BY-SA
 
+open-graph: true
+twitter-card:
+    image-width: 600
+    image-height: 314
+    card-style: summary_large_image
+    creator: "@ellamkaye"
+    site: "@ellamkaye"
+
 toc: true    
 toc-title: Contents
 
