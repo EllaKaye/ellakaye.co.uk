@@ -9,8 +9,7 @@ website:
   site-url: "https://ellakaye.co.uk"
   repo-url: https://github.com/EllaKaye/ellakaye-quarto
   repo-actions: issue
-#  image:
-#  image-alt:
+  image: images/logo.png
   navbar:
     #logo: ELLAKAYE-logo-light.png
     title: "ELLA<span class='icon-line'></span>KAYE"
@@ -33,12 +32,13 @@ website:
       #  href: https://twitter.com/ellamkaye
   favicon: images/favicon.png
   twitter-card: 
+    title: ELLA KAYE
     description: The personal website of Ella Kaye
-    image: "images/logo-white-background.png"
+    image: images/logo.png
     image-alt: |
-      A logo made from Ella Kaye's name - 
+      A square logo made from Ella Kaye's name - 
       first name on top of last name in dark gray capital letters, 
-      separated by a horizontal bright pink line, on a white background"
+      separated by a horizontal bright pink line, on a very light grey background"
     image-width: 500
     image-height: 500
     card-style: summary # alternative summary_large_image
@@ -46,11 +46,11 @@ website:
     site: "@ellamkaye"
   open-graph: 
     #description: The personal website of Ella Kaye
-    image: "images/logo-white-background.png"
+    image: images/logo.png
     image-alt: |
-      A logo made from Ella Kaye's name - 
+      A square logo made from Ella Kaye's name - 
       first name on top of last name in dark gray capital letters, 
-      separated by a horizontal bright pink line, on a white background"
+      separated by a horizontal bright pink line, on a very light grey background"
     image-width: 500
     image-height: 500
     locale: en-GB
