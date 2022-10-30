@@ -529,6 +529,34 @@
     "href": "packages.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "PACKAGES\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "PACKAGES\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEMK\n\n\nA collection of miscellaneous functions I have written that I personally find helpful in a variety of contexts.\n\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "packages/EMK/index.html#main-resources",
+    "href": "packages/EMK/index.html#main-resources",
+    "title": "EMK",
+    "section": "Main resources",
+    "text": "Main resources\n source  hex sticker"
+  },
+  {
+    "objectID": "packages/EMK/index.html#resources",
+    "href": "packages/EMK/index.html#resources",
+    "title": "EMK",
+    "section": "Resources",
+    "text": "Resources\n\n[TODO] Links to any blog posts, talks etc"
+  },
+  {
+    "objectID": "packages/EMK/index.html#overview-copy-github-readme",
+    "href": "packages/EMK/index.html#overview-copy-github-readme",
+    "title": "EMK",
+    "section": "Overview (COPY GITHUB README?)",
+    "text": "Overview (COPY GITHUB README?)"
+  },
+  {
+    "objectID": "packages/EMK/index.html#additional-resources",
+    "href": "packages/EMK/index.html#additional-resources",
+    "title": "EMK",
+    "section": "Additional resources",
+    "text": "Additional resources\nA blog post about the inspiration for creating this package and the n_letter_words() function in it:\n blog post"
   }
 ]

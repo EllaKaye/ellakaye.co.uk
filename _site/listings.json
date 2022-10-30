@@ -23,6 +23,7 @@
     "listing": "/packages.html",
     "items": [
       "/packages/distilltools/index.html",
+      "/packages/EMK/index.html",
       "/packages/BradleyTerryScalable/index.html"
     ]
   }
