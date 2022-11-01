@@ -6,6 +6,196 @@ knitr:
     collapse: true
 execute: 
   echo: false
+toc: true
 ---
 
+```{r}
+#| echo: false
+library(distilltools)
+```
+
 # [COMMUNITY]{.third-color}
+
+Sure, I love working in and with the {{< fa brands r-project >}} language, but what really got me hooked on it was the community around it. The R community has a reputation for being friendly and welcoming, diverse and inclusive. That, thankfully, has always been my experience of it.
+
+This page has information about and links to all kinds of community groups you may be interested in getting involved with, as well as more specifically the ones that I help organise or contribute to.
+
+## R User Groups
+
+There are local R User Groups (RUGs), affiliated with the R Consortium, all around the world. These are usually in person and offer an excellent way to meet other R users nearby. They all have Meetup pages. There's also a great Shiny app for exploring the groups:
+
+`r icon_link(
+  icon = "meetup",
+  text = "RUGs on meetup",
+  url = "https://www.meetup.com/pro/r-user-groups/"
+)`
+`r icon_link(
+  icon = "globe",
+  text = "RUGs Shiny app",
+  url = "https://benubah.github.io/r-community-explorer/rugs.html"
+)`
+
+I am on the organising committee of the Warwick R User Group (WRUG), and was previously an organiser of the Oxford R User Group.
+
+`r icon_link(
+  icon = "meetup",
+  text = "WRUG meetup",
+  url = "https://www.meetup.com/WarwickRUG/events/"
+)`
+`r icon_link(
+  icon = "globe",
+  text = "WRUG website",
+  url = "https://warwickrug.github.io/wrug_website/index.html"
+)`
+`r icon_link(
+  icon = "twitter",
+  text = "WRUG Twitter",
+  url = "https://twitter.com/WarwickRUG"
+)`
+`r icon_link(
+  icon = "github",
+  text = "WRUG GitHub",
+  url = "https://github.com/WarwickRUG"
+)`
+
+## RLadies
+
+RLadies has been around for over 10 years, promoting gender diversity in the R community. It is a worldwide organisation run by a global team, with local chapters all over the world. They also have a directory where you can browse their list of speakers for conferences & events, or view profiles of R-Ladies located by country.
+
+`r icon_link(
+  icon = "globe",
+  text = "global website",
+  url = "https://rladies.org"
+)`
+`r icon_link(
+  icon = "meetup",
+  text = "local meetups",
+  url = "https://www.meetup.com/pro/rladies/"
+)`
+`r icon_link(
+  icon = "globe",
+  text = "RLadies Shiny app",
+  url = "https://benubah.github.io/r-community-explorer/rladies.html"
+)`
+`r icon_link(
+  icon = "user",
+  text = "directory",
+  url = "https://benubah.github.io/r-community-explorer/rladies.html"
+)`
+
+## rainbowR
+
+rainbowR's mission is to support, promote and connect LGBTQ+ people in the R community and to and spread awareness of LGBTQ+ issues through data-driven activism. I am a co-founder and co-organiser of the group.
+
+`r icon_link(
+  icon = "globe",
+  text = "website",
+  url = "https://rainbowr.netlify.app"
+)`
+`r icon_link(
+  icon = "slack",
+  text = "join slack",
+  url = "https://docs.google.com/forms/d/1y7SOWE3IW-fpR_5Cd4mK-CMUpFZ-hvhY4cTj34JqTVE"
+)`
+`r icon_link(
+  icon = "slack",
+  text = "slack group",
+  url = "https://rainbowr.slack.com"
+)`
+`r icon_link(
+  icon = "twitter",
+  text = "Twitter",
+  url = "https://twitter.com/R_LGBTQ"
+)`
+`r icon_link(
+  icon = "github",
+  text = "GitHub",
+  url = "https://github.com/r-lgbtq"
+)`
+
+## R Forwards
+
+R Forwards is an R Foundation taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There's more info on the website, though it's rather out of date. The Twitter account is active.
+
+`r icon_link(
+  icon = "globe",
+  text = "website",
+  url = "https://rladies.org"
+)`
+`r icon_link(
+  icon = "twitter",
+  text = "Twitter",
+  url = "https://twitter.com/R_Forwards"
+)`
+
+## Data science, data visualisation and #TidyTuesday
+
+R for Data Science (R4DS) is a very friendly online learning community with an active slack group. It is a community of R users at all levels, working and learning together. There are learners and mentors and office hours, but everyone helps each other. 
+
+`r icon_link(
+  icon = "globe",
+  text = "website",
+  url = "https://www.rfordatasci.com"
+)`
+`r icon_link(
+  icon = "twitter",
+  text = "Twitter",
+  url = "https://twitter.com/R4DScommunity"
+)`
+
+R for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter with the hashtag #TIdyTuesday. All the datasets and participating guides are on GitHub.
+
+`r icon_link(
+  icon = "twitter",
+  text = "#TidyTuesday",
+  url = "https://twitter.com/hashtag/TidyTuesday"
+)`
+`r icon_link(
+  icon = "github",
+  text = "GitHub",
+  url = "https://github.com/rfordatascience/tidytuesday"
+)`
+
+I am an extremely infrequent contributor to #TidyTuesday. My contributions are on my GitHub.
+
+`r icon_link(
+  icon = "github",
+  text = "My TidyTuesday contributions",
+  url = "https://github.com/EllaKaye/TidyTuesday"
+)`
+
+## Data Science by Design
+
+Data Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collecting of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on [{distilltools}](packages/distilltools/index.qmd).
+
+`r icon_link(
+  icon = "globe",
+  text = "website",
+  url = "http://datasciencebydesign.org"
+)`
+`r icon_link(
+  icon = "twitter",
+  text = "Twitter",
+  url = "https://twitter.com/DataScixDesign"
+)`
+`r icon_link(
+  icon = "book",
+  text = "book",
+  url = "http://datasciencebydesign.org/book" 
+)`
+<!-- ## Developer community -->
+
+<!-- ## Community forums -->
+
+## Twitter
+
+You'll have seen above links to various groups on Twitter. To follow and engage with the R community on twitter more broadly, the #rstats hashtag is the best place to start.
+
+`r icon_link(
+  icon = "twitter",
+  text = "#rstats",
+  url = "https://twitter.com/hashtag/rstats"
+)`
+
+
+

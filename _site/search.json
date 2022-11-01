@@ -1,10 +1,52 @@
 [
   {
-    "objectID": "community.html",
-    "href": "community.html",
+    "objectID": "community.html#r-user-groups",
+    "href": "community.html#r-user-groups",
     "title": "ELLA KAYE",
-    "section": "",
-    "text": "COMMUNITY"
+    "section": "R User Groups",
+    "text": "R User Groups\nThere are local R User Groups (RUGs), affiliated with the R Consortium, all around the world. These are usually in person and offer an excellent way to meet other R users nearby. They all have Meetup pages. There’s also a great Shiny app for exploring the groups:\n RUGs on meetup  RUGs Shiny app\nI am on the organising committee of the Warwick R User Group (WRUG), and was previously an organiser of the Oxford R User Group.\n WRUG meetup  WRUG website  WRUG Twitter  WRUG GitHub"
+  },
+  {
+    "objectID": "community.html#rladies",
+    "href": "community.html#rladies",
+    "title": "ELLA KAYE",
+    "section": "RLadies",
+    "text": "RLadies\nRLadies has been around for over 10 years, promoting gender diversity in the R community. It is a worldwide organisation run by a global team, with local chapters all over the world. They also have a directory where you can browse their list of speakers for conferences & events, or view profiles of R-Ladies located by country.\n global website  local meetups  RLadies Shiny app  directory"
+  },
+  {
+    "objectID": "community.html#rainbowr",
+    "href": "community.html#rainbowr",
+    "title": "ELLA KAYE",
+    "section": "rainbowR",
+    "text": "rainbowR\nrainbowR’s mission is to support, promote and connect LGBTQ+ people in the R community and to and spread awareness of LGBTQ+ issues through data-driven activism. I am a co-founder and co-organiser of the group.\n website  join slack  slack group  Twitter  GitHub"
+  },
+  {
+    "objectID": "community.html#r-forwards",
+    "href": "community.html#r-forwards",
+    "title": "ELLA KAYE",
+    "section": "R Forwards",
+    "text": "R Forwards\nR Forwards is an R Foundation taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There’s more info on the website, though it’s rather out of date. The Twitter account is active.\n website  Twitter"
+  },
+  {
+    "objectID": "community.html#data-science-data-visualisation-and-tidytuesday",
+    "href": "community.html#data-science-data-visualisation-and-tidytuesday",
+    "title": "ELLA KAYE",
+    "section": "Data science, data visualisation and #TidyTuesday",
+    "text": "Data science, data visualisation and #TidyTuesday\nR for Data Science (R4DS) is a very friendly online learning community with an active slack group. It is a community of R users at all levels, working and learning together. There are learners and mentors and office hours, but everyone helps each other.\n website  Twitter\nR for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter with the hashtag #TIdyTuesday. All the datasets and participating guides are on GitHub.\n #TidyTuesday  GitHub\nI am an extremely infrequent contributor to #TidyTuesday. My contributions are on my GitHub.\n My TidyTuesday contributions"
+  },
+  {
+    "objectID": "community.html#data-science-by-design",
+    "href": "community.html#data-science-by-design",
+    "title": "ELLA KAYE",
+    "section": "Data Science by Design",
+    "text": "Data Science by Design\nData Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collecting of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on {distilltools}.\n website  Twitter  book"
+  },
+  {
+    "objectID": "community.html#twitter",
+    "href": "community.html#twitter",
+    "title": "ELLA KAYE",
+    "section": "Twitter",
+    "text": "Twitter\nYou’ll have seen above links to various groups on Twitter. To follow and engage with the R community on twitter more broadly, the #rstats hashtag is the best place to start.\n #rstats"
   },
   {
     "objectID": "contact.html",
@@ -473,14 +515,14 @@
     "href": "index.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "Hello and welcome!\n\n\n\n\n\nAbout me, my interests and experience, and my work as a Research Software Engineer.\n\n\nABOUT\n\n\n\n\n\n\n\n\nI sometimes write about what I’m doing and learning, mostly about  and building websites.\n\n\nPOSTS\n\n\n\n\n\n\n\n\nSlides and resources from talks I’ve given at R and RLadies user groups and conferences.\n\n\nTALKS\n\n\n\n\n\n\n\n\nI develop R packages. Here are links to their repos, websites and any other resources.\n\n\nPACKAGES\n\n\n\n\n\n\n\n\nI love the R community! These are the groups and projects that I help organise or contribute to.\n\n\nCOMMUNITY\n\n\n\n\n\n\n\n\nWhere to find me online and how to get in touch. I’d love to hear from you!\n\n\nCONTACT"
+    "text": "Hello and welcome!\n\n\n\n\n\nAbout me, my interests and experience, and my work as a Research Software Engineer.\n\n\nABOUT\n\n\n\n\n\n\n\n\nI sometimes write about what I’m doing and learning, mostly about  and building websites.\n\n\nPOSTS\n\n\n\n\n\n\n\n\nSlides and resources from talks I’ve given at R and RLadies user groups and conferences.\n\n\nTALKS\n\n\n\n\n\n\n\n\nI develop R packages. Here are links to their repos, websites and any other resources.\n\n\nPACKAGES\n\n\n\n\n\n\n\n\nI love the R community! Here’s how to get involved, and groups I help organise or contribute to.\n\n\nCOMMUNITY\n\n\n\n\n\n\n\n\nWhere to find me online and how to get in touch. I’d love to hear from you!\n\n\nCONTACT"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "HELLO!\nI am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at Warwick University.\n💪 Community-building in the R and RSE communities with a focus on EDI.\nLinks to my teaching resources are available from my professional webpage.\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.\n\n\n\nMy  Journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast AND professional 😀\n\nI love R! I have used in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. Here’s more on the communities that I’m involved with.\nI get great pleasure from sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children.\n\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
+    "text": "HELLO!\nI am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at Warwick University.\n💪 Community-building in the R and RSE communities with a focus on EDI.\nLinks to my teaching resources are available from my professional webpage.\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.\n\n\n\nMy  Journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast AND professional 😀\n\nI love R! I have used in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. Here’s more on the communities that I’m involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.\nI get great pleasure from sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children.\n\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
   },
   {
     "objectID": "packages/distilltools/index.html#main-resources",
@@ -502,6 +544,20 @@
     "title": "distilltools",
     "section": "Overview",
     "text": "Overview\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the distill package in R.\nIt is in the very early stages of development. I am actively seeking contributions - both ideas and code - to help build the package to be broadly useful to a wide variety of distill users. The idea is for the package to become a curated, collaborative, community-driven project. In terms of relationship between packages, I hope in time that distilltools can be for distill something like what xaringanExtra and xaringanthemer are for xaringan. Some of what I have in mind may sit better within the distill package itself, and I will be reaching out to the distill team about that.\n\nUpdate (2022-05-29)\nDevelopment on distilltools has been on a bit of a hiatus recently, but I will resume work on it. When I do, I want to ensure the package also has the functionality to support websites created in R with Quarto, and so I may also rename the package.\nAn article on distilltools, and my intentions for it, is featured in The Future of Sata Science anthology (written October 2021, published June 2022).\n\n\nInstallation\n\n# install.packages(\"remotes\")\n# requires remotes >= 2.2\nremotes::install_github(\"EllaKaye/distilltools\")\n\n# for remotes < 2.2\nremotes::install_github(\"EllaKaye/distilltools\", ref = \"main\")\n\n\n\nFunctionality\nThere are currently five exported functions in distilltools.\n\nBlogging functions\n\ncreate_post_from_template(): this function works almost identically to distill::create_post(), but extends it with an added path argument that specifies an .Rmd file to use as a template for the post. This function can also be run interactively using the Create post (from template) RStudio addin. See ?create_post_from_template and ?available_templates for details on using your R Markdown templates with the addin.\navailable_templates(): lists a named vector of available R Markdown templates for new posts, talks, etc.\ncreate_talk(): a wrapper around distill::create_post() that creates a post in the talk directory and includes buttons (made with icon-link()) for slides (both web and pdf), material, video and project. These can easily be edited in the resulting .Rmd file. This function was inspired by Eric Ekholm’s blog post.\n\n\n\nStyling functions\n\nicon_link(): creates the html for a link button with icon and text. Output of icon_link will need styling via the icon-link class to make it look like a button. For more details on this function, see this blog post from John Paul Helveston. For examples of styling the icon-link class, see John Paul Helveston’s css and Ella Kaye’s css.\nmodify_default_highlighting(): allows the user to swap the five colours used in {distill}’s default syntax highlighting scheme with five colours of their choice, and saves the resulting .theme file into the working directory.\n\n\n\n\nContributing to {distilltools}\nWe’re actively seeking contributions!\n\nDo you have a distill website? If so, what tools would you help you in the creation, upkeep and styling of your site? Let us know by with an issue.\nDo you have functions that you’ve written for your distill workflow? If they help you, they’ll almost certainly be helpful to others to. Consider submitting (generalized) versions of them for inclusion in distilltools!\n\nThere are lots of other ways to support and contribute to {distilltools}. Please see the contributing guide for more details.\n\n\nCode of Conduct\nPlease note that the distilltools project is released with a Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms."
+  },
+  {
+    "objectID": "packages/EMK/index.html#main-resources",
+    "href": "packages/EMK/index.html#main-resources",
+    "title": "EMK",
+    "section": "Main resources",
+    "text": "Main resources\n source  hex sticker"
+  },
+  {
+    "objectID": "packages/EMK/index.html#additional-resources",
+    "href": "packages/EMK/index.html#additional-resources",
+    "title": "EMK",
+    "section": "Additional resources",
+    "text": "Additional resources\nA blog post about the inspiration for creating this package and the n_letter_words() function in it:\n blog post"
   },
   {
     "objectID": "packages/BradleyTerryScalable/index.html#main-resources",
@@ -530,33 +586,5 @@
     "title": "ELLA KAYE",
     "section": "",
     "text": "PACKAGES\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEMK\n\n\nA collection of miscellaneous functions I have written that I personally find helpful in a variety of contexts.\n\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "packages/EMK/index.html#main-resources",
-    "href": "packages/EMK/index.html#main-resources",
-    "title": "EMK",
-    "section": "Main resources",
-    "text": "Main resources\n source  hex sticker"
-  },
-  {
-    "objectID": "packages/EMK/index.html#resources",
-    "href": "packages/EMK/index.html#resources",
-    "title": "EMK",
-    "section": "Resources",
-    "text": "Resources\n\n[TODO] Links to any blog posts, talks etc"
-  },
-  {
-    "objectID": "packages/EMK/index.html#overview-copy-github-readme",
-    "href": "packages/EMK/index.html#overview-copy-github-readme",
-    "title": "EMK",
-    "section": "Overview (COPY GITHUB README?)",
-    "text": "Overview (COPY GITHUB README?)"
-  },
-  {
-    "objectID": "packages/EMK/index.html#additional-resources",
-    "href": "packages/EMK/index.html#additional-resources",
-    "title": "EMK",
-    "section": "Additional resources",
-    "text": "Additional resources\nA blog post about the inspiration for creating this package and the n_letter_words() function in it:\n blog post"
   }
 ]
