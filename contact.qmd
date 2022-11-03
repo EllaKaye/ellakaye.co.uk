@@ -7,7 +7,7 @@ execute:
   echo: false
 ---
 
-# [I'd love to hear from you!]{.primary}
+# [I'D LOVE TO HEAR FROM YOU!]{.primary}
 
 You can leave a note about any of my posts, talks or packages using the comment box at the bottom of each page.
 

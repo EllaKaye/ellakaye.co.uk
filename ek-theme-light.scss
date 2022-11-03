@@ -52,8 +52,10 @@ $theme: "litera" !default;
 
 // fonts
 $font-family-sans-serif: "LEMONMILKPro-Light", Helvetica, sans-serif !default;
+//$font-family-sans-serif: "ABCSocialExtendedEdu-Regular", Helvetica, sans-serif !default;
 $font-family-monospace: "MonoLisa-Regular", monospace;
 $headings-font-family: "LEMONMILKPro-Regular", Helvetica, sans-serif !default;
+//$headings-font-family: "ABCSocialExtendedEdu-Bold", Helvetica, sans-serif !default;
 
 // litera bootswatch theme colors
 /*
@@ -142,6 +144,10 @@ $card-border-color: $gray-300;
 
 // font size and OpenType tweaks - adjust to make Fira Mono same size as Lemon Milk Light
 $code-font-size: $font-size-base;
+
+body {
+  font-feature-settings: "ss04";
+}
 
 code {
   font-feature-settings: 'dlig' 0, 'liga' 0, 'calt' 1, 'zero' 1, 'ss02' 0;
@@ -340,15 +346,25 @@ the color that matches the card
 // header styles (more in ek-styles.css)
 #quarto-header {
   text-transform: uppercase;
-  font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
+  //font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
+  // font-family: "ABCSocialExtendedEdu-Bold", Jost, Helvetica, sans-serif;
+  font-family: $headings-font-family;
 }
 
+/*
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
 }
+*/
+/*
+h1 {
+  text-transform: uppercase;
+}
+*/
 
 .heading-font {
   font-family: $headings-font-family;
+  //font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
 }
 
 .home-header {

@@ -1,7 +1,7 @@
 {
-  "hash": "93b211217ba3e78a80127374d1cdd99e",
+  "hash": "ba5f56fdb71b40288badf0c1f765746d",
   "result": {
-    "markdown": "---\ninclude-in-header: \"_includes/fontawesome-2up.html\"\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [I'd love to hear from you!]{.primary}\n\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of each page.\n\nYou can find me on elsewhere online:\n\n\n::: {.cell}\n\n:::\n\n\n\n`<a href=\"https://twitter.com/ellamkaye\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-twitter\"></i> Twitter</a>`{=html}\n`<a href=\"https://github.com/EllaKaye\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> GitHub</a>`{=html}\n\n\n::: {.cell}\n\n:::\n\n\nOr, you can drop me an e-mail at [hello @ ellakaye.co.uk]{.heading-font}",
+    "markdown": "---\ninclude-in-header: \"_includes/fontawesome-2up.html\"\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [I'D LOVE TO HEAR FROM YOU!]{.primary}\n\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of each page.\n\nYou can find me on elsewhere online:\n\n\n::: {.cell}\n\n:::\n\n\n\n`<a href=\"https://twitter.com/ellamkaye\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-twitter\"></i> Twitter</a>`{=html}\n`<a href=\"https://github.com/EllaKaye\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> GitHub</a>`{=html}\n\n\n::: {.cell}\n\n:::\n\n\nOr, you can drop me an e-mail at [hello @ ellakaye.co.uk]{.heading-font}",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

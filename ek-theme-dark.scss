@@ -348,12 +348,15 @@ the color that matches the card
 // header styles (more in ek-styles.css)
 #quarto-header {
   text-transform: uppercase;
-  font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
+  //font-family: "LEMONMILKPro-Regular", Jost, Helvetica, sans-serif;
+  font-family: $headings-font-family;
 }
 
+/*
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
 }
+*/
 
 .heading-font {
   font-family: $headings-font-family;
