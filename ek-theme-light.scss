@@ -50,12 +50,14 @@ $theme: "litera" !default;
   src: local('MonoLisa-RegularItalic'), url('fonts/MonoLisa-RegularItalic.woff2') format('woff2'), url('fonts/MonoLisa-RegularItalic.woff') format('woff');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
 // fonts
 $font-family-sans-serif: "LEMONMILKPro-Light", Helvetica, sans-serif !default;
 //$font-family-sans-serif: "ABCSocialExtendedEdu-Regular", Helvetica, sans-serif !default;
 $font-family-monospace: "MonoLisa-Regular", monospace;
 $headings-font-family: "LEMONMILKPro-Regular", Helvetica, sans-serif !default;
-//$headings-font-family: "ABCSocialExtendedEdu-Bold", Helvetica, sans-serif !default;
+
 
 // litera bootswatch theme colors
 /*
@@ -143,11 +145,14 @@ $card-bg: $body-bg;
 $card-border-color: $gray-300;
 
 // font size and OpenType tweaks - adjust to make Fira Mono same size as Lemon Milk Light
-$code-font-size: $font-size-base;
 
-body {
-  font-feature-settings: "ss04";
+/*
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
 }
+*/
+
+$code-font-size: $font-size-base;
 
 code {
   font-feature-settings: 'dlig' 0, 'liga' 0, 'calt' 1, 'zero' 1, 'ss02' 0;
