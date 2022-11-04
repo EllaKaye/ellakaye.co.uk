@@ -35,7 +35,7 @@ draft: false
 library(distilltools)
 ```
 
-## Main resources
+## Main Resources
 
 `r icon_link(
   icon = "github",
@@ -53,7 +53,7 @@ library(distilltools)
   url = "../../images/hex/distilltools.png"
 )`
 
-## Additional resources
+## Additional Resources
 
 **distilltools: Creating a Curated, Collaborative Community Package**
 
@@ -128,7 +128,7 @@ remotes::install_github("EllaKaye/distilltools", ref = "main")
 
 There are currently five exported functions in `distilltools`.
 
-#### Blogging functions
+#### Blogging Functions
 
 -   `create_post_from_template()`: this function works almost
     identically to `distill::create_post()`, but extends it with an
@@ -146,7 +146,7 @@ There are currently five exported functions in `distilltools`.
     function was inspired by [Eric Ekholm’s blog
     post](https://www.ericekholm.com/posts/2021-04-02-personalizing-the-distill-template/).
 
-#### Styling functions
+#### Styling Functions
 
 -   `icon_link()`: creates the html for a link button with icon and
     text. Output of `icon_link` will need styling via the `icon-link`

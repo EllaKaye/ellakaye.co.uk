@@ -37,7 +37,7 @@ library(distilltools)
 ```
 
 
-## Main resources
+## Main Resources
 
 `r icon_link(
   icon = "github",
@@ -50,7 +50,7 @@ library(distilltools)
   url = "../../images/hex/EMK.png"
 )`
 
-## Additional resources
+## Additional Resources
 
 A blog post about the inspiration for creating this package and the `n_letter_words()` function in it:
 

@@ -302,8 +302,8 @@ document.addEventListener('DOMContentLoaded', function () {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#main-resources" id="toc-main-resources" class="nav-link active" data-scroll-target="#main-resources">Main resources</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
+  <li><a href="#main-resources" id="toc-main-resources" class="nav-link active" data-scroll-target="#main-resources">Main Resources</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
@@ -324,11 +324,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </div>
 <section id="main-resources" class="level2">
-<h2 class="anchored" data-anchor-id="main-resources">Main resources</h2>
+<h2 class="anchored" data-anchor-id="main-resources">Main Resources</h2>
 <p><a href="https://github.com/ellakaye/distilltools" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> source</a> <a href="https://ellakaye.github.io/distilltools" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-box-open"></i> documentation</a> <a href="../../images/hex/distilltools.png" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-dice-d6"></i> hex sticker</a></p>
 </section>
 <section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
 <p><strong>distilltools: Creating a Curated, Collaborative Community Package</strong></p>
 <p>A book chapter in <a href="https://datasciencebydesign.org/book" target="_blank"><em>The Future of Data Science</em></a> from <a href="https://datasciencebydesign.org" target="_blank">Data Science by Design</a>, outlining the vision for {distilltools}</p>
 <p><a href="https://datasciencebydesign.org/blog/distilltools-creating-a-curated-collaborative-community-package" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-book"></i> book chapter</a></p>
@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <h3 class="anchored" data-anchor-id="functionality">Functionality</h3>
 <p>There are currently five exported functions in <code>distilltools</code>.</p>
 <section id="blogging-functions" class="level4">
-<h4 class="anchored" data-anchor-id="blogging-functions">Blogging functions</h4>
+<h4 class="anchored" data-anchor-id="blogging-functions">Blogging Functions</h4>
 <ul>
 <li><code>create_post_from_template()</code>: this function works almost identically to <code>distill::create_post()</code>, but extends it with an added <code>path</code> argument that specifies an <code>.Rmd</code> file to use as a template for the post. This function can also be run interactively using the <code>Create post (from template)</code> RStudio addin. See <code>?create_post_from_template</code> and <code>?available_templates</code> for details on using your R Markdown templates with the addin.</li>
 <li><code>available_templates()</code>: lists a named vector of available R Markdown templates for new posts, talks, etc.</li>
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </ul>
 </section>
 <section id="styling-functions" class="level4">
-<h4 class="anchored" data-anchor-id="styling-functions">Styling functions</h4>
+<h4 class="anchored" data-anchor-id="styling-functions">Styling Functions</h4>
 <ul>
 <li><code>icon_link()</code>: creates the html for a link button with icon and text. Output of <code>icon_link</code> will need styling via the <code>icon-link</code> class to make it look like a button. For more details on this function, see <a href="https://www.jhelvy.com/posts/2021-03-25-customizing-distill-with-htmltools-and-css/#link-buttons-with-icons-text">this blog post</a> from John Paul Helveston. For examples of styling the <code>icon-link</code> class, see <a href="https://github.com/jhelvy/jhelvy.com/blob/master/css/jhelvy.css">John Paul Helveston’s css</a> and <a href="https://github.com/EllaKaye/ellakaye-distill/blob/main/ek_theme.css">Ella Kaye’s css</a>.</li>
 <li><code>modify_default_highlighting()</code>: allows the user to swap the five colours used in {distill}’s default syntax highlighting scheme with five colours of their choice, and saves the resulting <code>.theme</code> file into the working directory.</li>

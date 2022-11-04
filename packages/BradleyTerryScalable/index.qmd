@@ -34,11 +34,11 @@ library(distilltools)
 
 <!-- ![](BradleyTerryScalable.png){width="200"} -->
 
-## Main resources
+## Main Resources
 
 `r icon_link(   icon = "github",   text = "source",   url = "https://github.com/ellakaye/bradleyterryscalable" )` `r icon_link(   icon = "box-open",   text = "documentation",   url = "https://ellakaye.github.io/BradleyTerryScalable/" )` `r icon_link(   icon = "dice-d6",   text = "hex sticker",   url = "../../images/hex/BradleyTerryScalable.png" )`
 
-## Additional resources
+## Additional Resources
 
 An overview of the BradleyTerryScalable package (2022):
 
