@@ -1,6 +1,6 @@
 ---
 title: "Custom Syntax Highlighting for {distill} Part 1"
-subtitle: "Modifying the default theme"
+subtitle: "Modifying the Default Theme"
 description: |
   A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}
 date: 2021-05-25

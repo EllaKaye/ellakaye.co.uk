@@ -59,7 +59,7 @@ library(distilltools)
 ## Overview 
 
 
-## Event details
+## Event Details
 
 **Event:** [GROUP](url)
 
@@ -69,7 +69,7 @@ library(distilltools)
 
 **Location:** LOCATION
 
-## Key points
+## Key Points
 
 - Point 1
 

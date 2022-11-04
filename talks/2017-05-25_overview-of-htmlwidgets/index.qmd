@@ -1,7 +1,7 @@
 ---
-title: An Overview of htmlwidgets
+title: An Overview of Htmlwidgets
 description: |
-  A brief overview of htmlwidgets in R
+  A brief overview of using htmlwidgets in R
 date: 2017-05-25
 author: 
   - name: Ella Kaye
@@ -44,7 +44,7 @@ library(distilltools)
 
 The [{htmlwidgets}](http://www.htmlwidgets.org/index.html){target="_blank"} package allows developers to create R bindings to JavaScript libraries. The resulting R packages allow the embedding of interactive content in R Markdown documents and Shiny web apps. There are over 50 available widgets. In this talk I give an overview of the `htmlwidget` framework and demonstrate the use of the [{DT}](https://rstudio.github.io/DT/){target="_blank"}, [{leaflet}](http://rstudio.github.io/leaflet/){target="_blank"} and [{DiagrammeR}](http://rich-iannone.github.io/DiagrammeR/){target="_blank"} packages.
 
-## Event details
+## Event Details
 
 **Event:** [Warwick R User Group](https://warwick.ac.uk/fac/sci/wdsi/events/wrug/){target="_blank"}
 

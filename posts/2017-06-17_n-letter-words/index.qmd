@@ -1,5 +1,5 @@
 ---
-title: "n_letter_words and a personal (publicly available) package"
+title: "`n_letter_words` and a Personal (Publicly Available) Package"
 description: |
   How I created a handy function and a personal package
 date: 2017-06-17

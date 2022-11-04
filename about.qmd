@@ -14,7 +14,7 @@ img {
 knitr::include_graphics("images/profile.jpeg")
 ```
 
-# [HELLO!]{.primary}
+# [Hello!]{.primary}
 
 I am a Research Software Engineer in the [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/){target="_blank"} at the University of Warwick, working with [Dr Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/){target="_blank"} on her [fellowship](https://society-rse.org/community/rse-fellows/){target="_blank"} "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project".
 

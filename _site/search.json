@@ -53,61 +53,61 @@
     "href": "contact.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "I’D LOVE TO HEAR FROM YOU!\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of each page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  GitHub\n\n\n\nOr, you can drop me an e-mail at hello @ ellakaye.co.uk"
+    "text": "I’d love to hear from you!\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of each page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  GitHub\n\n\n\nOr, you can drop me an e-mail at hello @ ellakaye.co.uk"
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html",
     "href": "posts/2021-05-08_welcome-distill/index.html",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "",
     "text": "Hello, and welcome to my new site, built using the {distill} package. Here’s why I switched from {blogdown}, and the resources and inspirations that helped me in the process."
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#why-distill",
     "href": "posts/2021-05-08_welcome-distill/index.html#why-distill",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "Why {distill}?",
     "text": "Why {distill}?\nAs the documentation says, {distill} for R Markdown is a web publishing format optimised for scientific and technical communication. Recent updates to the package, particularly the ability to customise the theme through the create_theme() function, have made it a really appealing choice for those wanting a personalised website based only on R Markdown. The fact that {distill} is made just in R Markdown is a big win for those not wanting to go down (or, like me, looking to get away from), the Hugo route. I’d had a Hugo Academic website for four years, built on {blogdown}, and had been stung a number of times by it breaking after updates to Hugo and Hugo Academic. Last year, I switched to {hugodown}, and that helped, but I had some serious FOMO following that shift after the release of {blogdown} v1.0 a few months later, with all its handy check functions. By then, anyway, I was also displeased with the shift from Hugo Academic to Wowchemy, and getting a little bored of that theme anyway. I had also started seeing more and more {distill} sites pop up from those I admire in the RStats community. I looked into it and and I loved the simplicity of it, both in looks and in management. No more impenetrable file structures! No more not being sure quite why my website is working/looking as it does! Attending Alison Hill’s incredible ‘Crafting Kind Tools’ talk, in which she described the care put into making the {distill} user experience an enjoyable one, was the last push I needed to start my website again (though, to be fair, that talk also described similar care put into the latest release of {blogdown}).\nI’m finding working with {distill} to be an absolute joy!"
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#resources",
     "href": "posts/2021-05-08_welcome-distill/index.html#resources",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "Resources",
     "text": "Resources\nThis post is not a guide on how to get a {distill} site up an running. There are already great resources for that. In particular, here are the resources I found helpful.\n\nThe basics\n\nThe blogpost from RStudio on (Re-)introducting Distill for R Markdown is a great place to start.\nFor getting up and running, the official {distill} documentation is excellent (and also a {distill} website).\nWhilst we’re on resources from the RStudio team, it’s worth remembering that because {distill} is built on {rmarkdown}, recent developments to that package, such as the ability to style a site with {sass} 1, and developments in {knitr}, such as the ability to easily add alt-text to images, follow through to {distill} too.\nThere’s a great building a blog with distill post from Tom Mock\nAnd one on building a {distill} website from Lisa Lendway\n\n\n\nNext steps\n\nThe {postcards} package from Sean Kross makes it incredibly easy to create simple, stylish, landing pages, and they make great home pages for {distill} sites. Alison Hill has a walk-through on how to set this up: M-F-E-O: postcards + distill\nTom Mock has another excellent {distill} post on including and meta tagging extra content in a distill blog, useful for if/when you want your site to contain content other than distill_articles\nWhilst the create_post() function in {distill} is a great way to get started on a blog post, Eric Ekholm shows how he developed a function wrapped around it to personalise the {distill} template\nFor styling content, John Helveston shows how to customise {distill} with {htmltools} and CSS.\nIf you want to allow readers to comment on your posts, then follow this guide from Vebash Naidoo on how to enable utterances with {distill}"
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#inspirationscode",
     "href": "posts/2021-05-08_welcome-distill/index.html#inspirationscode",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "Inspirations/Code",
     "text": "Inspirations/Code\nI’m extremely grateful to the authors of the above posts for taking the time to write up what they’ve developed and what they know/have learnt to do, therefore making it easy for others to apply. I guess that’s what blogs are for! But I’ve also learnt a lot from finding sites that I simply like the look of, or have cool features, and looking at the source code on GitHub and adapting it for my own site. Here are some sites that I’ve drawn on for inspiration and code2:\n\n\n\n\nJohn Helveston\n\n site  source\nI particularly like his icon_link buttons (as demonstrated just above), and the second collection for talks. John tells me he is turn took inspiration for this from Emi Tanaka’s site.\n\nIjeamaka Anyene\n\n site  source\nIjeamaka has a really cool projects page, where she’s created a card for each project, which I’ve implemented on my site.\n\nTom Mock\n\n site  source\nCome for the minimalist, stylish design, stay for the fantastic blog content, not just on {distill}, but also on {gt}, R Markdown, #TidyTuesday and much more besides."
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#finding-out-more",
     "href": "posts/2021-05-08_welcome-distill/index.html#finding-out-more",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "Finding out more",
     "text": "Finding out more\nThe above just scratches the surface. There are many more great sites built on {distill} out there, and lots more ways to customise them. Below are some good ways to find out more.\n\nThe distillery\nThe distillery is a {distill} blog about building {distill} blogs and websites. As the site’s GitHub README states:\n\nThis site was built for the community of distill users to find ways to build and customize their sites and to inspire one another. If you have a distill website or blog, we would love to have it included in the distillery showcase! Have a post about ways to customize or add new features to your blog? We would love to have it included on the distillery tips & tricks page!\n\nThe showcase is a great place to browse sites for inspiration and the tips and tricks page has loads of great resources (many of which I want to implement on my site in the future, for example Jannick Buhr’s post on making a dark mode for your {distill} site).\n\n\nTwitter\nThere are a number of folk who tweet about {distill} (alongside other #rstats content). I’ve seen useful tweets from Shannon Pileggi @PipingHotData, Lisa Lendway @lisalendway and John Helveston @JohnHelveston. And it pretty much goes without saying that anyone with an interest in {distill} should be following its authors (and general R Markdown gurus), Alison Hill @apreshill, Christophe Dervieux @chrisderv, Rich Iannone @riannone and Yihui Xie @xieyihui (note that the author and original creator of {distill} is JJ Allaire - he does have a twitter account but doesn’t seem to use it)."
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#a-sneak-peek-at-distilltools",
     "href": "posts/2021-05-08_welcome-distill/index.html#a-sneak-peek-at-distilltools",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "A sneak-peek at {distilltools}",
     "text": "A sneak-peek at {distilltools}\nInspiried by the above-mentioned posts from John Helveston and Eric Ekholm, I’ve started working on a package, {distilltools}, a collection of tools to support the creation and styling of content on websites created using {distill}.\n site  source\nIt is in the very early stages of development. I am actively seeking contributions - both ideas and code - to help build the package to be broadly useful to a wide variety of {distill} users. The idea is for the package to become a curated, collaborative, community-driven project. Please see the contributing guide for more details on how to get involved. In terms of relationship between packages, I hope in time that {distilltools} can be for {distill} something like what {xaringanExtra} and {xaringanthemer} are for {xaringan}. Some of what I have in mind may sit better within the distill package itself, and I am in touch with the {distill} team about that.\nAt the time of writing, there are just three functions:\n\nicon_link: creates the html for a link button with icon and text (as seen above). Output of icon_link will need styling via the icon-link class to make it look like a button.\ncreate_talk(): a wrapper around distill::create_post() that creates a post in the talk directory and includes buttons (made with icon-link()) for slides (both web and pdf), material, video and project. These can easily be edited in the resulting .Rmd file.\ncreate_post_from_template(): this function operates almost identically to distill::create_post() except for the addition of a path argument, which allows the user to pass in a path to an .Rmd file that can be used as a template for the post. (Note that this function is likely going to be pulled into the {distill} package and hence be depreciated here.)\n\nExpect to hear much more from me, both on this blog and twitter, about {distilltools} in the near future."
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#last-updated",
     "href": "posts/2021-05-08_welcome-distill/index.html#last-updated",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "Last updated",
-    "text": "Last updated\n\n2022-10-23 21:51:59 BST"
+    "text": "Last updated\n\n2022-11-04 21:43:33 GMT"
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#details",
     "href": "posts/2021-05-08_welcome-distill/index.html#details",
-    "title": "Welcome to my {distill} website!",
+    "title": "Welcome to My {distill} Website!",
     "section": "Details",
     "text": "Details\n\nsource code, R environment"
   },
@@ -312,7 +312,7 @@
     "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#last-updated",
     "title": "Custom Syntax Highlighting for {distill} Part 1",
     "section": "Last updated",
-    "text": "Last updated\n\n2022-10-23 22:12:49 BST"
+    "text": "Last updated\n\n2022-11-04 21:43:14 GMT"
   },
   {
     "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#details",
@@ -324,21 +324,21 @@
   {
     "objectID": "posts/2017-06-17_n-letter-words/index.html",
     "href": "posts/2017-06-17_n-letter-words/index.html",
-    "title": "n_letter_words and a personal (publicly available) package",
+    "title": "n_letter_words and a Personal (Publicly Available) Package",
     "section": "",
     "text": "There’s a little R function that I wrote and packaged up to generate a vector or data frame of words of a given length. I find it useful in a wide variety of contexts and thought other might too. To kick off my new blog, here’s a post about it.\nThe function, n_letter_words, came about because I wanted to be able to generate row and column names for a large matrix - didn’t matter what they were, as long as they were unique. Since I was in the habit of using the built-in LETTERS vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was stackoverflow to the rescue. There, I learnt about expand.grid and could then use some tidyverse tools to get the vector I was after:\nSorted! At least I thought so, until, a couple of months later, when I wanted to generate names for a 1000*1000 matrix, and realised both that I’d forgotten the expand.grid trick, and once I’d re-found the stackoverflow post, that it didn’t give me enough words. That was enough to make it worth writing a function, taking n as an argument, that gives all ‘words’ of length \\(n\\).\nWriting functions always makes me think of what other arguments might be useful. What if we want something between the 676 two-letter words and 17,576 three-letter words (or the 456,976 four-letter words, etc)? Hence the argument num_letters, which can be set between 1 and 26, and results in a total of num_letters\\(^n\\) words. By default, the function returns a tibble, but setting as_vector = TRUE does what you’d expect. And I threw in a case argument too.\nNow that I had my function, what to do with it? I remembered articles I’d read about the usefulness of making and sharing a personal package. Now seemed like the time to do that myself.\nSo, here is my personal package, EMK. If you think that n_letter_words might be of use to you, then feel free to install!\nSome examples of n_letter_words:\nFor now, my personal package has only this one function, but watch this space! No doubt I’ll be adding more that I find useful. Perhaps, you’ll find them useful too.\nIncidentally, none of the above would have happened if I’d just thought, for my test matrix A, to set dimnames(A) <- list(1:nrow(A), 1:ncol(A))!"
   },
   {
     "objectID": "posts/2017-06-17_n-letter-words/index.html#last-updated",
     "href": "posts/2017-06-17_n-letter-words/index.html#last-updated",
-    "title": "n_letter_words and a personal (publicly available) package",
+    "title": "n_letter_words and a Personal (Publicly Available) Package",
     "section": "Last updated",
-    "text": "Last updated\n\n2022-10-28 21:25:16 BST"
+    "text": "Last updated\n\n2022-11-04 21:45:26 GMT"
   },
   {
     "objectID": "posts/2017-06-17_n-letter-words/index.html#details",
     "href": "posts/2017-06-17_n-letter-words/index.html#details",
-    "title": "n_letter_words and a personal (publicly available) package",
+    "title": "n_letter_words and a Personal (Publicly Available) Package",
     "section": "Details",
     "text": "Details\n\nsource code, R environment"
   },
@@ -347,168 +347,168 @@
     "href": "talks.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up you PhD (or other research project!) as an R package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking Items Scalably with the Bradley-Terry Model\n\n\nIntroducing the BradleyTerryScalable package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Overview of htmlwidgets\n\n\nA brief overview of htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Get Help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking With Text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up Your PhD (or Other Research Rroject) as an R Package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking Items Scalably With the Bradley-Terry Model\n\n\nIntroducing the {BradleyTerryScalable} package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Overview of Htmlwidgets\n\n\nA brief overview of using htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html",
     "href": "talks/2018-08-23_phd-as-package/index.html",
-    "title": "Setting up you PhD (or other research project!) as an R package",
+    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
     "section": "",
     "text": "slides  materials"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#overview",
     "href": "talks/2018-08-23_phd-as-package/index.html#overview",
-    "title": "Setting up you PhD (or other research project!) as an R package",
+    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
     "section": "Overview",
     "text": "Overview\nIn this talk, I will try to convince you that if you have any of your own data or write any of your own R functions, then you should put them into an R package. Benefits include reproducibility and keeping everything together and accessible. Also, it’s really easy to do, and to prove it, I will build a package from scratch before your very eyes. I will also introduce the bookdown package for writing reports and even your thesis. Filled with tips and tricks from my own experiences, this talk could save you hours!"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#event-details",
     "href": "talks/2018-08-23_phd-as-package/index.html#event-details",
-    "title": "Setting up you PhD (or other research project!) as an R package",
-    "section": "Event details",
-    "text": "Event details\nEvent: Birmingham R User Group\nDate: August 8th, 2018\nTime: 18:00-20:00 GMT+1\nLocation: Faraday Wharf, Innovation Birmingham Campus, Holt Street, Birmingham Science Park, B7 4BB"
+    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "section": "Event Details",
+    "text": "Event Details\nEvent: Birmingham R User Group\nDate: August 8th, 2018\nTime: 18:00-20:00 GMT+1\nLocation: Faraday Wharf, Innovation Birmingham Campus, Holt Street, Birmingham Science Park, B7 4BB"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#key-points",
     "href": "talks/2018-08-23_phd-as-package/index.html#key-points",
-    "title": "Setting up you PhD (or other research project!) as an R package",
-    "section": "Key points",
-    "text": "Key points\n\nPoint 1\nPoint 2\n…"
+    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "section": "Key Points",
+    "text": "Key Points\n\nPut your data and functions in an R package\nR packages are good for reproducibility, for keeping everything together and for sharing\nExisting R packages such as {usethis}, {devtools} {roxygen2} and {testthat} take the friction out of writing your own packages"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#slides",
     "href": "talks/2018-08-23_phd-as-package/index.html#slides",
-    "title": "Setting up you PhD (or other research project!) as an R package",
+    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
     "section": "Slides",
     "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html",
     "href": "talks/2020-10-29_how-to-get-help-in-r/index.html",
-    "title": "How to get help in R",
+    "title": "How to Get Help in R",
     "section": "",
     "text": "slides  materials  video"
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#overview",
     "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#overview",
-    "title": "How to get help in R",
+    "title": "How to Get Help in R",
     "section": "Overview",
     "text": "Overview\nThis session will be led by Ella Kaye - an R enthusiast and statistics PhD researcher at the University of Warwick. In the session, Ella will talk us through different ways to get help when you get stuck on a problem in R. We’ll cover how and where to look for answers and how to ask and post good questions that make it easy for others to help you, including a demo of the excellent reprex and datapasta packages. So whether you’re an R novice or more experienced R user, hopefully there’ll be some useful tips for you!"
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#event-details",
     "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#event-details",
-    "title": "How to get help in R",
-    "section": "Event details",
-    "text": "Event details\nEvent: R Ladies Coventry (the inaugural talk)\nDate: October 29th, 2020\nLocation: Zoom\nI gave a very slightly updated version of the talk again three months later:\nEvent: bseeR\nDate: January 28th, 2021\nLocation: Microsoft Teams"
+    "title": "How to Get Help in R",
+    "section": "Event Details",
+    "text": "Event Details\nEvent: R Ladies Coventry (the inaugural talk)\nDate: October 29th, 2020\nLocation: Zoom\nI gave a very slightly updated version of the talk again three months later:\nEvent: bseeR\nDate: January 28th, 2021\nLocation: Microsoft Teams"
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#key-points",
     "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#key-points",
-    "title": "How to get help in R",
-    "section": "Key points",
-    "text": "Key points\n\nWhen faced with a question/problem, have a good look for an answer in R itself and/or online\nDon’t be shy about asking questions!\nWrite reproducible examples, best with the {reprex} package\nGive thought to where you ask/post your question\nGive back by helping others"
+    "title": "How to Get Help in R",
+    "section": "Key Points",
+    "text": "Key Points\n\nWhen faced with a question/problem, have a good look for an answer in R itself and/or online\nDon’t be shy about asking questions!\nWrite reproducible examples, best with the {reprex} package\nGive thought to where you ask/post your question\nGive back by helping others"
   },
   {
     "objectID": "talks/2020-10-29_how-to-get-help-in-r/index.html#slides",
     "href": "talks/2020-10-29_how-to-get-help-in-r/index.html#slides",
-    "title": "How to get help in R",
+    "title": "How to Get Help in R",
     "section": "Slides",
     "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },
   {
     "objectID": "talks/2019-10-05_working-with-text-in-r/index.html",
     "href": "talks/2019-10-05_working-with-text-in-r/index.html",
-    "title": "Working with text in R",
+    "title": "Working With Text in R",
     "section": "",
     "text": "slides  materials  video"
   },
   {
     "objectID": "talks/2019-10-05_working-with-text-in-r/index.html#overview",
     "href": "talks/2019-10-05_working-with-text-in-r/index.html#overview",
-    "title": "Working with text in R",
+    "title": "Working With Text in R",
     "section": "Overview",
     "text": "Overview\nTranscending its origins as a programming language for statistics, R provides excellent tools for working with text. This tidyverse-based talk will provide an overview of some of the fantastic packages available for this, including (but not limited to) stringr, RVerbalExpressions, tidytext, wordcloud and ggwordcloud."
   },
   {
     "objectID": "talks/2019-10-05_working-with-text-in-r/index.html#event-details",
     "href": "talks/2019-10-05_working-with-text-in-r/index.html#event-details",
-    "title": "Working with text in R",
-    "section": "Event details",
-    "text": "Event details\nEvent: RLadies Toronto\nDate: October 5th, 2019\nTime: 14:00-16:00 EDT\nLocation: Stewart Building, 149 College Street, Toronto\nI then gave an updated version of the talk a few months later (links at the top relate to this version):\nEvent: RLadies Tbilisi\nDate: July 4th, 2020\nTime: 09:00-10:00 GMT\nLocation: Zoom"
+    "title": "Working With Text in R",
+    "section": "Event Details",
+    "text": "Event Details\nEvent: RLadies Toronto\nDate: October 5th, 2019\nTime: 14:00-16:00 EDT\nLocation: Stewart Building, 149 College Street, Toronto\nI then gave an updated version of the talk a few months later (links at the top relate to this version):\nEvent: RLadies Tbilisi\nDate: July 4th, 2020\nTime: 09:00-10:00 GMT\nLocation: Zoom"
   },
   {
     "objectID": "talks/2019-10-05_working-with-text-in-r/index.html#slides",
     "href": "talks/2019-10-05_working-with-text-in-r/index.html#slides",
-    "title": "Working with text in R",
+    "title": "Working With Text in R",
     "section": "Slides",
     "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },
   {
     "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html",
     "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html",
-    "title": "Ranking Items Scalably with the Bradley-Terry Model",
+    "title": "Ranking Items Scalably With the Bradley-Terry Model",
     "section": "",
     "text": "slides (2017)  materials (2017)\nslides (2022)  materials (2022)\npackage"
   },
   {
     "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#overview",
     "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#overview",
-    "title": "Ranking Items Scalably with the Bradley-Terry Model",
+    "title": "Ranking Items Scalably With the Bradley-Terry Model",
     "section": "Overview",
     "text": "Overview\nI am very excited to be introducing the package BradleyTerryScalable at useR!2017. The package is available on GitHub.\nBradleyTerryScalable is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number of objects.\nGiven a number of items for which we have pair-comparison data, the Bradley-Terry model assigns a ‘strength’ parameter to each item. These can be used to rank the items. Moreover, they can be used to determine the probability that any given item will ‘beat’ any other given item when they are compared. Further details of the mathematical model, and the algorithms used to fit it, are available in the package vignette.\n\n\n\n\n\n\nUpdate: 2022\n\n\n\n\n\nI reworked this presentation for a job interview. The 2022 slides and materials are for that version. It’s a little shorter, at 10 minutes rather than 15 minutes. The main difference, however, is in the much-improved slidecraft and style!"
   },
   {
     "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#event-details",
     "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#event-details",
-    "title": "Ranking Items Scalably with the Bradley-Terry Model",
-    "section": "Event details",
-    "text": "Event details\nEvent: useR!2017\nDate: July 6th, 2017\nTime: 11:36 AM\nLocation: Brussels, Belgium"
+    "title": "Ranking Items Scalably With the Bradley-Terry Model",
+    "section": "Event Details",
+    "text": "Event Details\nEvent: useR!2017\nDate: July 6th, 2017\nTime: 11:36 AM\nLocation: Brussels, Belgium"
   },
   {
     "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#key-points",
     "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#key-points",
-    "title": "Ranking Items Scalably with the Bradley-Terry Model",
-    "section": "Key points",
-    "text": "Key points\n\nPoint 1\nPoint 2\n…"
+    "title": "Ranking Items Scalably With the Bradley-Terry Model",
+    "section": "Key Points",
+    "text": "Key Points\n\nThe\nPoint 2\n…"
   },
   {
-    "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2017---fill-in-iframe-and-link-in-last-bullet-point",
-    "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2017---fill-in-iframe-and-link-in-last-bullet-point",
-    "title": "Ranking Items Scalably with the Bradley-Terry Model",
-    "section": "Slides (2017) - fill in iframe and link in last bullet point",
-    "text": "Slides (2017) - fill in iframe and link in last bullet point\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
+    "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2017",
+    "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2017",
+    "title": "Ranking Items Scalably With the Bradley-Terry Model",
+    "section": "Slides (2017)",
+    "text": "Slides (2017)\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },
   {
-    "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2022---fill-in-iframe-and-link-in-last-bullet-point",
-    "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2022---fill-in-iframe-and-link-in-last-bullet-point",
-    "title": "Ranking Items Scalably with the Bradley-Terry Model",
-    "section": "Slides (2022) - fill in iframe and link in last bullet point",
-    "text": "Slides (2022) - fill in iframe and link in last bullet point"
+    "objectID": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2022",
+    "href": "talks/2017-07-06_introducing-BradleyTerryScalable/index.html#slides-2022",
+    "title": "Ranking Items Scalably With the Bradley-Terry Model",
+    "section": "Slides (2022)",
+    "text": "Slides (2022)"
   },
   {
     "objectID": "talks/2017-05-25_overview-of-htmlwidgets/index.html",
     "href": "talks/2017-05-25_overview-of-htmlwidgets/index.html",
-    "title": "An Overview of htmlwidgets",
+    "title": "An Overview of Htmlwidgets",
     "section": "",
     "text": "materials"
   },
   {
     "objectID": "talks/2017-05-25_overview-of-htmlwidgets/index.html#overview",
     "href": "talks/2017-05-25_overview-of-htmlwidgets/index.html#overview",
-    "title": "An Overview of htmlwidgets",
+    "title": "An Overview of Htmlwidgets",
     "section": "Overview",
     "text": "Overview\nThe {htmlwidgets} package allows developers to create R bindings to JavaScript libraries. The resulting R packages allow the embedding of interactive content in R Markdown documents and Shiny web apps. There are over 50 available widgets. In this talk I give an overview of the htmlwidget framework and demonstrate the use of the {DT}, {leaflet} and {DiagrammeR} packages."
   },
   {
     "objectID": "talks/2017-05-25_overview-of-htmlwidgets/index.html#event-details",
     "href": "talks/2017-05-25_overview-of-htmlwidgets/index.html#event-details",
-    "title": "An Overview of htmlwidgets",
-    "section": "Event details",
-    "text": "Event details\nEvent: Warwick R User Group\nDate: May 25th, 2017\nTime: 17:00\nLocation: University of Warwick"
+    "title": "An Overview of Htmlwidgets",
+    "section": "Event Details",
+    "text": "Event Details\nEvent: Warwick R User Group\nDate: May 25th, 2017\nTime: 17:00\nLocation: University of Warwick"
   },
   {
     "objectID": "index.html",
@@ -522,7 +522,7 @@
     "href": "about.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "HELLO!\nI am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at Warwick University.\n💪 Community-building in the R and RSE communities with a focus on EDI.\nLinks to my teaching resources are available from my professional webpage.\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.\n\n\n\nMy  Journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast AND professional 😀\n\nI love R! I have used in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. Here’s more on the communities that I’m involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.\nI get great pleasure from sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children.\n\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
+    "text": "Hello!\nI am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at Warwick University.\n💪 Community-building in the R and RSE communities with a focus on EDI.\nLinks to my teaching resources are available from my professional webpage.\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.\n\n\n\nMy  Journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast AND professional 😀\n\nI love R! I have used in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community! I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am the previous co-organiser of the Oxford R User Group and also a member of the Warwick R User Group and R-Ladies Coventry. Here’s more on the communities that I’m involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.\nI get great pleasure from sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children.\n\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
   },
   {
     "objectID": "packages/distilltools/index.html#main-resources",
@@ -578,7 +578,7 @@
     "href": "posts.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "POSTS\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 2\n\n\nCreating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 1\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my {distill} website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a personal (publicly available) package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
+    "text": "POSTS\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 2\n\n\nCreating the Palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom Syntax Highlighting for {distill} Part 1\n\n\nModifying the Default Theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to My {distill} Website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a Personal (Publicly Available) Package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "packages.html",

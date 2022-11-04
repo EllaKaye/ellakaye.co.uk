@@ -1,5 +1,5 @@
 ---
-title: "Welcome to my {distill} website!"
+title: "Welcome to My {distill} Website!"
 description: |
   Resources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users
 date: 2021-05-08
