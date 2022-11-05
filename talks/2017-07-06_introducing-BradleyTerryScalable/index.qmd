@@ -1,5 +1,5 @@
 ---
-title: Ranking Items Scalably With the Bradley-Terry Model
+title: Ranking Items Scalably with the Bradley-Terry Model
 description: |
   Introducing the {BradleyTerryScalable} package
 date: 2017-07-06

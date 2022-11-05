@@ -128,7 +128,7 @@ remotes::install_github("EllaKaye/distilltools", ref = "main")
 
 There are currently five exported functions in `distilltools`.
 
-#### Blogging Functions
+#### Blogging functions
 
 -   `create_post_from_template()`: this function works almost
     identically to `distill::create_post()`, but extends it with an
@@ -146,7 +146,7 @@ There are currently five exported functions in `distilltools`.
     function was inspired by [Eric Ekholm’s blog
     post](https://www.ericekholm.com/posts/2021-04-02-personalizing-the-distill-template/).
 
-#### Styling Functions
+#### Styling functions
 
 -   `icon_link()`: creates the html for a link button with icon and
     text. Output of `icon_link` will need styling via the `icon-link`
@@ -178,9 +178,9 @@ We’re actively seeking contributions!
 There are lots of other ways to support and contribute to {distilltools}. Please see the [contributing
 guide](https://github.com/EllaKaye/distilltools/blob/main/.github/CONTRIBUTING.md){target="_blank"} for more details.
 
-### Code of Conduct
+### Code of conduct
 
-Please note that the `distilltools` project is released with a [Contributor Code of Conduct](https://github.com/EllaKaye/distilltools/blob/main/.github/CODE_OF_CONDUCT.md){target="_blank"}. By
+Please note that the `distilltools` project is released with a [contributor code of conduct](https://github.com/EllaKaye/distilltools/blob/main/.github/CODE_OF_CONDUCT.md){target="_blank"}. By
 contributing to this project, you agree to abide by its terms.
 
 

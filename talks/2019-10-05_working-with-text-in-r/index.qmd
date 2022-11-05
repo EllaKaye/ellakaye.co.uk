@@ -1,5 +1,5 @@
 ---
-title: "Working With Text in R"
+title: "Working with Text in R"
 description: |
   An overview of a range of packages for working with text in R.
 date: 2019-10-05

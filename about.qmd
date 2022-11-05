@@ -36,7 +36,7 @@ Prior to my current role, my academic path has taken me from a BA in Mathematics
 
 <!-- You can check out my [CV](CV.pdf) for more details. -->
 
-#### [My {{< fa brands r-project >}} Journey]{.primary}
+#### [My {{< fa brands r-project >}} journey]{.primary}
 
 -   2014: first R course as part of MSc in Applied Statistics
 
