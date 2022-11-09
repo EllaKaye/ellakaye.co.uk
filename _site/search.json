@@ -347,40 +347,40 @@
     "href": "talks.html",
     "title": "ELLA KAYE",
     "section": "",
-    "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Get Help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with Text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up Your PhD (or Other Research Rroject) as an R Package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking Items Scalably with the Bradley-Terry Model\n\n\nIntroducing the {BradleyTerryScalable} package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Overview of Htmlwidgets\n\n\nA brief overview of using htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Get Help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with Text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up Your PhD (or Other Research Project) as an R Package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking Items Scalably with the Bradley-Terry Model\n\n\nIntroducing the {BradleyTerryScalable} package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn Overview of Htmlwidgets\n\n\nA brief overview of using htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html",
     "href": "talks/2018-08-23_phd-as-package/index.html",
-    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "title": "Setting Up Your PhD (or Other Research Project) as an R Package",
     "section": "",
     "text": "slides  materials"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#overview",
     "href": "talks/2018-08-23_phd-as-package/index.html#overview",
-    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "title": "Setting Up Your PhD (or Other Research Project) as an R Package",
     "section": "Overview",
     "text": "Overview\nIn this talk, I will try to convince you that if you have any of your own data or write any of your own R functions, then you should put them into an R package. Benefits include reproducibility and keeping everything together and accessible. Also, it’s really easy to do, and to prove it, I will build a package from scratch before your very eyes. I will also introduce the bookdown package for writing reports and even your thesis. Filled with tips and tricks from my own experiences, this talk could save you hours!"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#event-details",
     "href": "talks/2018-08-23_phd-as-package/index.html#event-details",
-    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "title": "Setting Up Your PhD (or Other Research Project) as an R Package",
     "section": "Event Details",
     "text": "Event Details\nEvent: Birmingham R User Group\nDate: August 8th, 2018\nTime: 18:00-20:00 GMT+1\nLocation: Faraday Wharf, Innovation Birmingham Campus, Holt Street, Birmingham Science Park, B7 4BB"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#key-points",
     "href": "talks/2018-08-23_phd-as-package/index.html#key-points",
-    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "title": "Setting Up Your PhD (or Other Research Project) as an R Package",
     "section": "Key Points",
     "text": "Key Points\n\nPut your data and functions in an R package\nR packages are good for reproducibility, for keeping everything together and for sharing\nExisting R packages such as {usethis}, {devtools} {roxygen2} and {testthat} take the friction out of writing your own packages"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html#slides",
     "href": "talks/2018-08-23_phd-as-package/index.html#slides",
-    "title": "Setting Up Your PhD (or Other Research Rroject) as an R Package",
+    "title": "Setting Up Your PhD (or Other Research Project) as an R Package",
     "section": "Slides",
     "text": "Slides\n\n\nKeyboard shortcuts for slideshow (once you’ve clicked inside it):\n\nUse ← and → to navigate through the slides.\nUse o for an overview of all slides.\nUse h to see a list of other shortcuts\n\nf to toggle full screen not working, but the rest are fine.\nFor full screen slides, go to slides then press f."
   },

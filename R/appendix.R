@@ -63,7 +63,7 @@ insert_lockfile <- function(repo_spec, name,
 insert_appendix <- function (repo_spec, name, collection = "posts") {
   appendices <- paste(
     markdown_appendix(
-      name = "Last updated",
+      name = "Last Updated",
       content = insert_timestamp()
     ),
     " ",

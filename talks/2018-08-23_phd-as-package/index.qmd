@@ -1,5 +1,5 @@
 ---
-title: Setting Up Your PhD (or Other Research Rroject) as an R Package
+title: Setting Up Your PhD (or Other Research Project) as an R Package
 description: |
   How I set up my PhD as an R package
 date: '2018-08-23'
@@ -7,10 +7,10 @@ author:
   - name: Ella Kaye
     url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.co.uk
-image: ups_guy_package.jpg
+image: pile_of_parcels.png
 # N.B. Don't use "" in image-alt
 image-alt: |
-  A handsome man wearing a UPS uniform holding a package, taken from the musical Legally Blonde
+  An AI generated image of a pencil sketch of a pile of packages.
 #categories:
 #  - TAG_1
 #  - TAG_2
