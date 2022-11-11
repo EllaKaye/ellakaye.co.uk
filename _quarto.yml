@@ -5,7 +5,7 @@ execute:
   freeze: true
 
 website:
-  title: "ELLA KAYE"
+  title: "Ella Kaye"
   site-url: "https://ellakaye.co.uk"
   repo-url: https://github.com/EllaKaye/ellakaye-quarto
   repo-actions: issue
