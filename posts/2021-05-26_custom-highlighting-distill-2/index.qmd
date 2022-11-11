@@ -1,5 +1,5 @@
 ---
-title: "Custom syntax highlighting for {distill}"
+title: "Custom syntax highlighting for {distill} part 2"
 subtitle: "Creating the palette"
 description: |
   How to create an appealing and accessible colour palette for a syntax highlighting scheme
@@ -168,7 +168,7 @@ ggplot() +
 
 ### Adapting for web accessibility
 
-As noted in [Part 1](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/) of this series, one key feature of the default syntax highlighting scheme for {distill} is that it is optimised for accessibility and colour contrast. According to the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), at the WCAG AA (minimum contrast) level, this requires that that contrast ratio between text and background colours be at least 4.5:1 for text of 14pt+ (which is the default text size for code in {distill}). The more stringent WCAG AAA (enhanced) level requires a ratio of at least 7:1.
+As noted in [part 1](../2021-05-25_custom-highlighting-distill-1/index.qmd) of this series, one key feature of the default syntax highlighting scheme for {distill} is that it is optimised for accessibility and colour contrast. According to the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), at the WCAG AA (minimum contrast) level, this requires that that contrast ratio between text and background colours be at least 4.5:1 for text of 14pt+ (which is the default text size for code in {distill}). The more stringent WCAG AAA (enhanced) level requires a ratio of at least 7:1.
 
 The pro version of ColorSlurp includes a contrast checker, as in @fig-colorslurp-contrast, though there are many websites that also offer this. WebAIM (Web with Accessibility in Mind) has a very handy [contrast checker](https://webaim.org/resources/contrastchecker/) which, like ColorSlurp, also includes sliders for adjusting the colours until the desired contrast is reached. Darkening a colour to improve contrast keeps the hue and saturation the same but reduces the brightness or lightness component (ColorSlurp uses HSB, WebAIM uses HSL).
 
