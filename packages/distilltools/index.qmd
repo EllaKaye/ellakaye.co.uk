@@ -35,7 +35,7 @@ draft: false
 library(distilltools)
 ```
 
-## Main Resources
+## Main resources
 
 `r icon_link(
   icon = "github",
@@ -53,7 +53,7 @@ library(distilltools)
   url = "../../images/hex/distilltools.png"
 )`
 
-## Additional Resources
+## Additional resources
 
 **distilltools: Creating a Curated, Collaborative Community Package**
 
