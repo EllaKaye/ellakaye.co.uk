@@ -1,6 +1,6 @@
 ---
-title: "Custom Syntax Highlighting for {distill} Part 2"
-subtitle: "Creating the Palette"
+title: "Custom syntax highlighting for {distill}"
+subtitle: "Creating the palette"
 description: |
   How to create an appealing and accessible colour palette for a syntax highlighting scheme
 date: 2021-05-26
@@ -68,8 +68,8 @@ bg_col <- function(bg_col, text = NULL, text_col = NULL) {
 }
 ```
 
-## Part 1 recap and Part 2 overview
-In Part 1 of this series, [custom syntax highlighting for {distill}: modifying the theme](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/), I describe how and why I went about the process of finding and modifying the default syntax highlighting for [{distill}]((https://rstudio.github.io/distill/)) and how I created a function that wrapped that process for [{distilltools}](https://ellakaye.github.io/distilltools). I discuss the default syntax highlighting theme used on {distill} sites, and how we can modify it by replacing the five colours used there with five colours of our choosing.
+## Part 1 recap and part 2 overview
+In part 1 of this series, [Custom syntax highlighting for {distill}: Modifying the theme](../2021-05-25_custom-highlighting-distill-1/index.qmd), I describe how and why I went about the process of finding and modifying the default syntax highlighting for [{distill}]((https://rstudio.github.io/distill/)) and how I created a function that wrapped that process for [{distilltools}](https://ellakaye.github.io/distilltools). I discuss the default syntax highlighting theme used on {distill} sites, and how we can modify it by replacing the five colours used there with five colours of our choosing.
 
 I also outline the four criteria that were important to me as I went about choosing colours for my own syntax highlighting theme:
 
@@ -501,9 +501,9 @@ knitr::include_graphics("hcl-darkened-colourblind.png")
 
 Going through the process of building a colour palette that meets my criteria purely in R, in as automated, reproducible and adaptable way as possible has been a great learning experience for me, and hopefully something that will be useful to others. I don't much like the palette it produced, though, especially in comparison to the one I came up with previously. Although the HCL-based palette probably has slightly better theoretical perceptual qualities, I prefer the vibrancy of the colours in the palette I came up with using my first approach, and that's the one I've adopted on this site. 
 
-## Back to Part 1
+## Back to part 1
 
-Now that I have chosen my colour palette, head back to [Part 1](https://ellakaye.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/) for details of how to modify the default {distill} syntax highlighting theme to incorporate them, and how to apply the custom theme to a {distill} site.
+Now that I have chosen my colour palette, head back to [part 1](../2021-05-25_custom-highlighting-distill-1/index.qmd) for details of how to modify the default {distill} syntax highlighting theme to incorporate them, and how to apply the custom theme to a {distill} site.
 
 <!--------------- appendices go here ----------------->
 
@@ -516,6 +516,34 @@ insert_appendix(
   name = long_slug
 )
 ```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+
 
 
 

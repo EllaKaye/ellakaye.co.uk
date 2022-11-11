@@ -29,13 +29,9 @@ div.listing-description {
   font-size: 0.875rem;
 }
 
-/*
 div.quarto-post .body .listing-subtitle {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
-*/
 
 .quarto-grid-item .card-title {
     margin-bottom: .5em;

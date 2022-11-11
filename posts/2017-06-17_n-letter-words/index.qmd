@@ -1,5 +1,5 @@
 ---
-title: "`n_letter_words` and a Personal (Publicly Available) Package"
+title: "`n_letter_words` and a personal (publicly available) package"
 description: |
   How I created a handy function and a personal package
 date: 2017-06-17
@@ -49,7 +49,8 @@ There's a little R function that I wrote and packaged up to generate a vector or
 The function, `n_letter_words`, came about because I wanted to be able to generate row and column names for a large matrix - didn't matter what they were, as long as they were unique. Since I was in the habit of using the built-in `LETTERS` vector to do this for small matrices, I naturally thought of using combinations of letters to do this in a larger case. In figuring out how to do this, as is so often the case, it was [stackoverflow](https://stackoverflow.com/questions/11388359/unique-combination-of-all-elements-from-two-or-more-vectors) to the rescue. There, I learnt about `expand.grid` and could then use some tidyverse tools to get the vector I was after:
 
 ```{r warning=FALSE, message=FALSE}
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 out <- expand.grid(LETTERS, LETTERS) %>%
   as_tibble() %>%
   unite(word, 1:2, sep = "") %>%
@@ -103,3 +104,29 @@ insert_appendix(
   name = long_slug
 )
 ```
+
+#### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>

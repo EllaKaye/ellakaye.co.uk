@@ -1,6 +1,6 @@
 ---
-title: "Custom Syntax Highlighting for {distill} Part 1"
-subtitle: "Modifying the Default Theme"
+title: "Custom syntax highlighting for {distill}"
+subtitle: "Modifying the default theme"
 description: |
   A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}
 date: 2021-05-25
@@ -317,3 +317,31 @@ insert_appendix(
   name = long_slug
 )
 ```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+

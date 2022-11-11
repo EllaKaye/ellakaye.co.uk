@@ -19,6 +19,7 @@ twitter-card:
     site: "@ellamkaye"
 
 toc: true    
+toc-depth: 3
 toc-title: Contents
 
 code-fold: show
