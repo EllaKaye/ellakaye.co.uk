@@ -1,5 +1,5 @@
 ---
-title: "How to Get Help in R"
+title: "How to get help in R"
 description: |
   Tips for looking for answers and asking questions about R
 date: 2020-10-29
@@ -53,7 +53,7 @@ library(distilltools)
 
 This session will be led by Ella Kaye - an R enthusiast and statistics PhD researcher at the University of Warwick. In the session, Ella will talk us through different ways to get help when you get stuck on a problem in R. We’ll cover how and where to look for answers and how to ask and post good questions that make it easy for others to help you, including a demo of the excellent `reprex` and `datapasta` packages. So whether you’re an R novice or more experienced R user, hopefully there’ll be some useful tips for you!
 
-## Event Details
+## Event details
 
 **Event:** [R Ladies Coventry](https://www.meetup.com/rladies-coventry/events/273429872/) (the inaugural talk)
 
@@ -69,7 +69,7 @@ I gave a very slightly updated version of the talk again three months later:
 
 **Location:** Microsoft Teams
 
-## Key Points
+## Key points
 
 - When faced with a question/problem, have a good look for an answer in R itself and/or online
 

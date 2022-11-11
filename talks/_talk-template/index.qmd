@@ -1,5 +1,5 @@
 ---
-title: Talk Title
+title: Talk title
 description: |
   Talk description
 date: UPDATE
@@ -59,7 +59,7 @@ library(distilltools)
 ## Overview 
 
 
-## Event Details
+## Event details
 
 **Event:** [GROUP](url)
 
@@ -69,7 +69,7 @@ library(distilltools)
 
 **Location:** LOCATION
 
-## Key Points
+## Key points
 
 - Point 1
 
