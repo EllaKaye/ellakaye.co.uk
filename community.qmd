@@ -128,7 +128,7 @@ R Forwards is an R Foundation taskforce that leads the R community forwards in w
   url = "https://twitter.com/R_Forwards"
 )`
 
-## Data Science, Data Visualisation and #TidyTuesday
+## Data science, data visualisation and #TidyTuesday
 
 R for Data Science (R4DS) is a very friendly online learning community with an active slack group. It is a community of R users at all levels, working and learning together. There are learners and mentors and office hours, but everyone helps each other. 
 
