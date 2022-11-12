@@ -54,6 +54,10 @@ code span.cf {
   margin-top: 0;
 }
 
+.profile-pic {
+  border-radius: 5px;
+}
+
 /*
 #quarto-content a {
   text-decoration: none;

@@ -54,8 +54,9 @@ website:
     image-width: 500
     image-height: 500
     locale: en-GB
-  google-analytics: "UA-101621242-1"
-    
+  google-analytics:
+    tracking-id: "G-7G8FLLRS4M"
+    anonymize-ip: true
 
 format:
   html:

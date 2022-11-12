@@ -1,20 +1,4 @@
----
-execute:
-  echo: false
----
-
-```{css}
-img {
-  border-radius: 5px;
-}
-```
-
-```{r}
-#| fig-align: center  
-knitr::include_graphics("images/profile.jpeg")
-```
-
-# [Hello!]{.primary}
+![](images/ellakaye-profile-pic.jpeg){.profile-pic fig-alt="Headshot of Ella Kaye, a woman of around 40 with short brown hair looking at the camera and smiling" fig-align="center" width="40%"}
 
 I am a Research Software Engineer in the [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/){target="_blank"} at the University of Warwick, working with [Dr Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/){target="_blank"} on her [fellowship](https://society-rse.org/community/rse-fellows/){target="_blank"} "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project".
 
@@ -24,19 +8,19 @@ This involves:
 
 📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).
 
-🚀 Capacity-building in R and data science at Warwick University.
+🚀 Capacity-building in R and data science at the University of Warwick.
 
 💪 Community-building in the R and RSE communities with a focus on EDI.
 
-Please see my [professional webpage](https://warwick.ac.uk/EllaKaye){target="_blank"} for more details, including links to my teaching resources. 
+Please see my [professional webpage](https://warwick.ac.uk/EllaKaye){target="_blank"} for more details, including links to my teaching resources.
 
-#### [Previously]{.primary}
+### Previously
 
-Prior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the [OxWaSP programme](http://www.oxwasp-cdt.ac.uk){target="_blank"} for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research. 
+Prior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the [OxWaSP programme](http://www.oxwasp-cdt.ac.uk){target="_blank"} for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.
 
 <!-- You can check out my [CV](CV.pdf) for more details. -->
 
-#### [My {{< fa brands r-project >}} journey]{.primary}
+### My {{< fa brands r-project >}} journey
 
 -   2014: first R course as part of MSc in Applied Statistics
 
@@ -50,16 +34,14 @@ Prior to my current role, my academic path has taken me from a BA in Mathematics
 
 -   2021: third time's the charm building a website in R, using [{distill}](https://rstudio.github.io/distill/){target="_blank"}
 
--   2022: as an RSE, I now get to be both an {{< fa brands r-project >}} enthusiast AND professional 😀
+-   2022: as an RSE, I now get to be both an {{< fa brands r-project >}} enthusiast *and* professional.
 
-[I love R!]{.primary} I have used in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing [packages](packages.qmd). My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about [Quarto](https://quarto.org){target="_blank"}. I have particularly enjoyed using it to build this website (my fourth!) [^1]
+I love R! I have used it in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing [packages](packages.qmd). My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about [Quarto](https://quarto.org){target="_blank"}. I have particularly enjoyed using it to build this website (my fourth!) [^about-1]
 
-[^1]: Previous versions were built with blogdown, then hugodown, then distill.
+[^about-1]: Previous versions were built with blogdown, then hugodown, then distill.
 
-[I love the R community!]{.primary} I am a co-founder and co-organiser of [RainbowR](https://rainbowr.netlify.app) a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of [R Forwards](https://forwards.github.io){target="_blank"}. I am the previous co-organiser of the [Oxford R User Group](https://www.meetup.com/Oxford-R-User-Group/) and also a member of the [Warwick R User Group](https://www.meetup.com/Warwick-useRs/) and [R-Ladies Coventry](https://www.meetup.com/rladies-coventry/). Here's more on the [communities](community.qmd) that I'm involved with, as well as lots of information about and links to groups that you may be interested in getting involved with. 
+I love the R community!] I am a co-founder and co-organiser of [RainbowR](https://rainbowr.netlify.app) a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of [R Forwards](https://forwards.github.io){target="_blank"}. I am on the organising committee of the [Warwick R User Group](https://www.meetup.com/Warwick-useRs/) and was previously co-organiser of the [Oxford R User Group](https://www.meetup.com/Oxford-R-User-Group/). Here's more on the [communities](community.qmd) that I'm involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.
 
-I get great pleasure from sharing what I know/am learning about R with others, particularly by writing blog [posts](posts.qmd) and speaking at [R-Ladies](https://rladies.org) and [R User Group](https://benubah.github.io/r-community-explorer/rugs.html) meetups. Here are some [talks](talks.qmd) I've given. Please [get in touch](contact.qmd) if you'd like me to speak at your group.
+I enjoy sharing what I know/am learning about R with others, particularly by writing blog [posts](posts.qmd) and speaking at [R-Ladies](https://rladies.org) and [R User Group](https://www.meetup.com/pro/r-user-groups/) meetups. Here are some [talks](talks.qmd) I've given. Please [get in touch](contact.qmd) if you'd like me to speak at your group.
 
 I live in Oxford, UK, with my wife and our two young children.
-
-
