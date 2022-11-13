@@ -2,7 +2,7 @@
 
 # light theme
 
-theme_light <- readLines("template-light.theme")
+theme_light <- readLines("assets/template-light.theme")
 # theme renamed from arrow-light.theme, found in quarto-cli, then saved into my root directory
 # also added in text-styles present in arrow-dark but not in arrow-light
 

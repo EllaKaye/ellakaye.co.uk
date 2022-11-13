@@ -61,13 +61,13 @@ website:
 format:
   html:
     theme: 
-      light: ek-theme-light.scss
-      dark: ek-theme-dark.scss
-    css: ek-styles.css
+      light: assets/ek-theme-light.scss
+      dark: assets/ek-theme-dark.scss
+    css: assets/ek-styles.css
     code-block-border-left: true
     highlight-style: 
-      light: ek-light.theme
-      dark: ek-dark.theme
+      light: assets/ek-light.theme
+      dark: assets/ek-dark.theme
     smooth-scroll: true
     
 editor: source
