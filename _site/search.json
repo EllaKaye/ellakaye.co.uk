@@ -312,7 +312,7 @@
     "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#last-updated",
     "title": "Custom syntax highlighting for {distill} part 1",
     "section": "Last updated",
-    "text": "Last updated\n\n2022-11-11 22:27:29 GMT"
+    "text": "Last updated\n\n2022-11-13 11:43:53 GMT"
   },
   {
     "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#details",
@@ -581,17 +581,10 @@
     "text": "PACKAGES\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEMK\n\n\nA collection of miscellaneous functions I have written that I personally find helpful in a variety of contexts.\n\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "about.html#previously",
-    "href": "about.html#previously",
-    "title": "Ella Kaye",
-    "section": "Previously",
-    "text": "Previously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research."
-  },
-  {
-    "objectID": "about.html#my-fa-brands-r-project-journey",
-    "href": "about.html#my-fa-brands-r-project-journey",
-    "title": "Ella Kaye",
-    "section": "My  journey",
-    "text": "My  journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast and professional.\n\nI love R! I have used it in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community!] I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am on the organising committee of the Warwick R User Group and was previously co-organiser of the Oxford R User Group. Here’s more on the communities that I’m involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.\nI enjoy sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children."
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#overview",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#overview",
+    "title": "Custom syntax highlighting for {distill} part 1",
+    "section": "Overview",
+    "text": "Overview\nThe {distill} package for R can be used to build easy-to-maintain websites written only in R Markdown, such as this one.2\nI wrote a function to modify the default syntax highlighting theme. This modify_default_highlighting function is now part of the {distilltools} package.\nHere’s the function in action, to get the theme used on this site:\n\n\nToggle the code\n# get distilltools, requires remotes >= 2.2\nremotes::install_github(\"EllaKaye/distilltools\") \n\nlibrary(distilltools)\nmodify_default_highlighting(\n  name = \"ek_syntax_highlighting\",\n  numeric = \"#B6005B\", # replaces the default red\n  strings = \"#008643\", # replaces the default green\n  functions = \"#005BB6\", # replaces the default purple\n  control = \"#5B00B6\", # replaces the default blue\n  constant = \"#B65B00\" # replaces the default brown\n)\n\n\nAnd here’s the theme in action:\n\n\nToggle the code\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\npenguins %>%\n  mutate(\n    long_flipper = case_when(\n      species == \"Adelie\" & flipper_length_mm > 195 ~ TRUE,\n      species == \"Chinstrap\" & flipper_length_mm > 200 ~ TRUE,\n      species == \"Gentoo\" & flipper_length_mm > 225 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  ) %>%\n  mutate(\n    long_bill = case_when(\n      species == \"Adelie\" & bill_length_mm > 42 ~ TRUE,\n      species == \"Chinstrap\" & bill_length_mm > 52 ~ TRUE,\n      species == \"Gentoo\" & bill_length_mm > 50 ~ TRUE,\n      TRUE ~ FALSE\n    )\n  )\n\n\nThis is the first in a series of two posts on implementing a custom syntax highlighting theme for a website or blog built with {distill}. Read on here for why and how this function was built, what it does and doesn’t do, and its inclusion in the {distilltools} package. This post also outlines the criteria that were important to me when choosing colours for my theme, but take a look at part 2, Custom syntax highlighting for {distill}: Creating the palette, for a deep dive into considerations about colour choices, in respect to both colour theory and accessibility, and how I ensured my criteria were met."
   }
 ]

@@ -49,7 +49,7 @@ Since this post was originally written, I have replaced my {disill} website with
 `arrow` is the default syntax highlighting theme for Quarto, as it was for {distill}, although it is implemented slightly differently here, and the process of modifying it for Quarto is not the same as it was before. I'll lay out the differences in a future post. Moreover, as a result, the highlighting you'll see below is not quite the same as it appeared on my previous site, and if you're reading this in dark mode, it's a whole different scheme again.^[If you'd like to see the original theme in action, you can see it over at the [distillery](https://distillery.rbind.io/posts/2021-05-25-custom-syntax-highlighting-for-distill-part-1-modifying-the-default-theme/).] That said, I am keeping this post otherwise as was on the blog for posterity. 
 :::
 
-## TL;DR
+## Overview
 
 The [{distill}](https://rstudio.github.io/distill/) package for R can be used to build easy-to-maintain websites written only in R Markdown, such as this one.^[For more on resources and inspirations for setting up a {distill} website, see my previous post, [Welcome to my {distill} website](../2021-05-08_welcome-distill/index.qmd).]
 

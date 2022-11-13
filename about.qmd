@@ -1,4 +1,4 @@
-![](images/ellakaye-profile-pic.jpeg){.profile-pic fig-alt="Headshot of Ella Kaye, a woman of around 40 with short brown hair looking at the camera and smiling" fig-align="center" width="40%"}
+![](images/ellakaye-profile.jpeg){.profile-pic fig-alt="Headshot of Ella Kaye, a woman of around 40 with short brown hair looking at the camera and smiling" fig-align="center" width="33%"}
 
 I am a Research Software Engineer in the [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/){target="_blank"} at the University of Warwick, working with [Dr Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/){target="_blank"} on her [fellowship](https://society-rse.org/community/rse-fellows/){target="_blank"} "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project".
 
