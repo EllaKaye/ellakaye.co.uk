@@ -5,3 +5,6 @@
 .DS_Store
 
 /.quarto/
+
+assets/giscus-light.css
+assets/giscus-light-custom.css
