@@ -1,6 +1,8 @@
 project:
   type: website
-  
+  #resources: 
+  #  - "*.css"
+    
 execute:
   freeze: true
 
