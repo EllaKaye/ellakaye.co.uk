@@ -25,6 +25,12 @@ library(distilltools)
   url = "https://twitter.com/ellamkaye"
 )`
 `r icon_link(
+  icon = "mastodon",
+  text = "Mastodon",
+  url = "https://fosstodon.org/@ellakaye",
+  rel = "me noopener"
+)`
+`r icon_link(
   icon = "github",
   text = "GitHub",
   url = "https://github.com/EllaKaye"

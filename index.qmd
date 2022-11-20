@@ -143,3 +143,4 @@ redirects <- c(distill_redirects,
 writeLines(redirects, here::here("_site", "_redirects"))
 ```
 
+[Mastodon verification](https://fosstodon.org/@ellakaye){rel="me" style="display: none;"}
