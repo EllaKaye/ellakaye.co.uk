@@ -1,4 +1,4 @@
-![](images/ellakaye-profile.jpeg){.profile-pic fig-alt="Headshot of Ella Kaye, a woman of around 40 with short brown hair looking at the camera and smiling" fig-align="center" width="33%"}
+![](images/ellakaye-profile.jpeg){.profile-pic fig-alt="Headshot of Ella Kaye, a woman of around 40 with short brown hair looking slightly off-camera and smiling" fig-align="center" width="33%"}
 
 I am a Research Software Engineer in the [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/){target="_blank"} at the University of Warwick, working with [Dr Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/){target="_blank"} on her [fellowship](https://society-rse.org/community/rse-fellows/){target="_blank"} "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project".
 
@@ -40,7 +40,7 @@ I love R! I have used it in extensively in my research as a statistician for vis
 
 [^about-1]: Previous versions were built with blogdown, then hugodown, then distill.
 
-I love the R community!] I am a co-founder and co-organiser of [RainbowR](https://rainbowr.netlify.app) a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of [R Forwards](https://forwards.github.io){target="_blank"}. I am on the organising committee of the [Warwick R User Group](https://www.meetup.com/Warwick-useRs/) and was previously co-organiser of the [Oxford R User Group](https://www.meetup.com/Oxford-R-User-Group/). Here's more on the [communities](community.qmd) that I'm involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.
+I love the R community! I am a co-founder and co-organiser of [rainbowR](https://rainbowr.netlify.app), a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am the [R Forwards](https://forwards.github.io){target="_blank"} community team co-lead. I am on the organising committee of the [Warwick R User Group](https://www.meetup.com/Warwick-useRs/) and was previously co-organiser of the [Oxford R User Group](https://www.meetup.com/Oxford-R-User-Group/). Here's more on the [communities](community.qmd) that I'm involved with, as well as lots of information about, and links to, groups that you may be interested in getting involved with.
 
 I enjoy sharing what I know/am learning about R with others, particularly by writing blog [posts](posts.qmd) and speaking at [R-Ladies](https://rladies.org) and [R User Group](https://www.meetup.com/pro/r-user-groups/) meetups. Here are some [talks](talks.qmd) I've given. Please [get in touch](contact.qmd) if you'd like me to speak at your group.
 

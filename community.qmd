@@ -18,11 +18,11 @@ library(distilltools)
 
 Sure, I love working in and with the {{< fa brands r-project >}} language, but what really got me hooked on it was the community around it. The R community has a reputation for being friendly and welcoming, diverse and inclusive. That, thankfully, has always been my experience of it.
 
-This page has information about and links to all kinds of community groups you may be interested in getting involved with, as well as more specifically the ones that I help organise or contribute to.
+This page has information about, and links to, all kinds of community groups you may be interested in getting involved with, as well as more specifically the ones that I help organise or contribute to.
 
 ## R User Groups
 
-There are local R User Groups (RUGs), affiliated with the R Consortium, all around the world. These are usually in person and offer an excellent way to meet other R users nearby. They all have Meetup pages. There's also a great Shiny app for exploring the groups:
+There are local R User Groups (RUGs), affiliated with the [R Consortium](https://www.r-consortium.org){target="_blank"}, all around the world. Many of these organise both in-person and online events and offer an excellent way to meet other R users nearby. They all have meetup pages. There's also a great Shiny app for exploring the groups:
 
 `r icon_link(
   icon = "meetup",
@@ -103,6 +103,11 @@ rainbowR's mission is to support, promote and connect LGBTQ+ people in the R com
   url = "https://rainbowr.slack.com"
 )`
 `r icon_link(
+  icon = "mastodon",
+  text = "tech.lgbt",
+  url = "https://tech.lgbt/@rainbowR"
+)`
+`r icon_link(
   icon = "twitter",
   text = "Twitter",
   url = "https://twitter.com/R_LGBTQ"
@@ -115,7 +120,7 @@ rainbowR's mission is to support, promote and connect LGBTQ+ people in the R com
 
 ## R Forwards
 
-R Forwards is an R Foundation taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There's more info on the website, though it's rather out of date. The Twitter account is active.
+R Forwards is an [R Foundation](https://www.r-project.org/foundation/){target="_blank"} taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There's more information on the website, though it's rather out of date. The Twitter account is active.
 
 `r icon_link(
   icon = "globe",
@@ -142,13 +147,23 @@ R for Data Science (R4DS) is a very friendly online learning community with an a
   text = "Twitter",
   url = "https://twitter.com/R4DScommunity"
 )`
+`r icon_link(
+  icon = "mastodon",
+  text = "fosstodon.org",
+  url = "https://fosstodon.org/@R4DSCommunity"
+)`
 
-R for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter with the hashtag #TIdyTuesday. All the datasets and participating guides are on GitHub.
+R for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter and/or Mastodon with the hashtag #TidyTuesday. All the datasets and participating guides are on GitHub.
 
 `r icon_link(
   icon = "twitter",
   text = "#TidyTuesday",
   url = "https://twitter.com/hashtag/TidyTuesday"
+)`
+`r icon_link(
+  icon = "mastodon",
+  text = "#TidyTuesday",
+  url = "https://fosstodon.org/tags/TidyTuesday"
 )`
 `r icon_link(
   icon = "github",
@@ -166,7 +181,7 @@ I am an extremely infrequent contributor to #TidyTuesday. My contributions are o
 
 ## Data Science by Design
 
-Data Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collecting of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on [{distilltools}](packages/distilltools/index.qmd).
+Data Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collections of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on [{distilltools}](packages/distilltools/index.qmd).
 
 `r icon_link(
   icon = "globe",
@@ -196,6 +211,22 @@ You'll have seen above links to various groups on Twitter. To follow and engage 
   text = "#rstats",
   url = "https://twitter.com/hashtag/rstats"
 )`
+
+## Mastodon
+
+There is an active, and growing, community of R users on Mastodon, an open-source social network that is becoming increasingly popular.^[Danielle Navarro has an [excellent guide](https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/){target="_blank"} for data science folks trying to navigate the fediverse.] The community is spread across different servers, though fosstodon.org appears the most popular. The #rstats tag is active here.
+
+`r icon_link(
+  icon = "mastodon",
+  text = "fosstodon",
+  url = "https://fosstodon.org/"
+)`
+`r icon_link(
+  icon = "mastodon",
+  text = "#rstats",
+  url = "https://fosstodon.org/tags/rstats"
+)`
+
 
 
 

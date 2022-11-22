@@ -1,7 +1,7 @@
 ---
 title: "Working with text in R"
 description: |
-  An overview of a range of packages for working with text in R.
+  An overview of a range of packages for working with text in R
 date: 2019-10-05
 author: 
   - name: Ella Kaye

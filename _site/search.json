@@ -4,7 +4,7 @@
     "href": "community.html#r-user-groups",
     "title": "Ella Kaye",
     "section": "R User Groups",
-    "text": "R User Groups\nThere are local R User Groups (RUGs), affiliated with the R Consortium, all around the world. These are usually in person and offer an excellent way to meet other R users nearby. They all have Meetup pages. There’s also a great Shiny app for exploring the groups:\n RUGs on meetup  RUGs Shiny app\nI am on the organising committee of the Warwick R User Group (WRUG), and was previously an organiser of the Oxford R User Group.\n WRUG meetup  WRUG website  WRUG Twitter  WRUG GitHub"
+    "text": "R User Groups\nThere are local R User Groups (RUGs), affiliated with the R Consortium, all around the world. Many of these organise both in-person and online events and offer an excellent way to meet other R users nearby. They all have meetup pages. There’s also a great Shiny app for exploring the groups:\n RUGs on meetup  RUGs Shiny app\nI am on the organising committee of the Warwick R User Group (WRUG), and was previously an organiser of the Oxford R User Group.\n WRUG meetup  WRUG website  WRUG Twitter  WRUG GitHub"
   },
   {
     "objectID": "community.html#rladies",
@@ -18,28 +18,28 @@
     "href": "community.html#rainbowr",
     "title": "Ella Kaye",
     "section": "rainbowR",
-    "text": "rainbowR\nrainbowR’s mission is to support, promote and connect LGBTQ+ people in the R community and to and spread awareness of LGBTQ+ issues through data-driven activism. I am a co-founder and co-organiser of the group.\n website  join slack  slack group  Twitter  GitHub"
+    "text": "rainbowR\nrainbowR’s mission is to support, promote and connect LGBTQ+ people in the R community and to and spread awareness of LGBTQ+ issues through data-driven activism. I am a co-founder and co-organiser of the group.\n website  join slack  slack group  tech.lgbt  Twitter  GitHub"
   },
   {
     "objectID": "community.html#r-forwards",
     "href": "community.html#r-forwards",
     "title": "Ella Kaye",
     "section": "R Forwards",
-    "text": "R Forwards\nR Forwards is an R Foundation taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There’s more info on the website, though it’s rather out of date. The Twitter account is active.\n website  Twitter"
+    "text": "R Forwards\nR Forwards is an R Foundation taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There’s more information on the website, though it’s rather out of date. The Twitter account is active.\n website  Twitter"
   },
   {
     "objectID": "community.html#data-science-data-visualisation-and-tidytuesday",
     "href": "community.html#data-science-data-visualisation-and-tidytuesday",
     "title": "Ella Kaye",
     "section": "Data science, data visualisation and #TidyTuesday",
-    "text": "Data science, data visualisation and #TidyTuesday\nR for Data Science (R4DS) is a very friendly online learning community with an active slack group. It is a community of R users at all levels, working and learning together. There are learners and mentors and office hours, but everyone helps each other.\n website  Twitter\nR for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter with the hashtag #TIdyTuesday. All the datasets and participating guides are on GitHub.\n #TidyTuesday  GitHub\nI am an extremely infrequent contributor to #TidyTuesday. My contributions are on my GitHub.\n My TidyTuesday contributions"
+    "text": "Data science, data visualisation and #TidyTuesday\nR for Data Science (R4DS) is a very friendly online learning community with an active slack group. It is a community of R users at all levels, working and learning together. There are learners and mentors and office hours, but everyone helps each other.\n website  Twitter  fosstodon.org\nR for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter and/or Mastodon with the hashtag #TidyTuesday. All the datasets and participating guides are on GitHub.\n #TidyTuesday  #TidyTuesday  GitHub\nI am an extremely infrequent contributor to #TidyTuesday. My contributions are on my GitHub.\n My TidyTuesday contributions"
   },
   {
     "objectID": "community.html#data-science-by-design",
     "href": "community.html#data-science-by-design",
     "title": "Ella Kaye",
     "section": "Data Science by Design",
-    "text": "Data Science by Design\nData Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collecting of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on {distilltools}.\n website  Twitter  book"
+    "text": "Data Science by Design\nData Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collections of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on {distilltools}.\n website  Twitter  book"
   },
   {
     "objectID": "community.html#twitter",
@@ -49,11 +49,18 @@
     "text": "Twitter\nYou’ll have seen above links to various groups on Twitter. To follow and engage with the R community on twitter more broadly, the #rstats hashtag is the best place to start.\n #rstats"
   },
   {
+    "objectID": "community.html#mastodon",
+    "href": "community.html#mastodon",
+    "title": "Ella Kaye",
+    "section": "Mastodon",
+    "text": "Mastodon\nThere is an active, and growing, community of R users on Mastodon, an open-source social network that is becoming increasingly popular.1 The community is spread across different servers, though fosstodon.org appears the most popular. The #rstats tag is active here.\n fosstodon  #rstats"
+  },
+  {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Ella Kaye",
     "section": "",
-    "text": "I’d love to hear from you!\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of each page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  Mastodon  GitHub\n\n\n\nOr, you can drop me an e-mail at hello @ ellakaye.co.uk"
+    "text": "I’d love to hear from you!\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of its page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  Mastodon  GitHub\n\n\n\nOr, you can drop me an e-mail at hello @ ellakaye.co.uk"
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html",
@@ -347,7 +354,7 @@
     "href": "talks.html",
     "title": "Ella Kaye",
     "section": "",
-    "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R.\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up your PhD (or other research project) as an R package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking items scalably with the Bradley-Terry model\n\n\nIntroducing the {BradleyTerryScalable} package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn overview of htmlwidgets\n\n\nA brief overview of using htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up your PhD (or other research project) as an R package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking items scalably with the Bradley-Terry model\n\n\nIntroducing the {BradleyTerryScalable} package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn overview of htmlwidgets\n\n\nA brief overview of using htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/2018-08-23_phd-as-package/index.html",
@@ -515,7 +522,7 @@
     "href": "about.html",
     "title": "Ella Kaye",
     "section": "",
-    "text": "I am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at the University of Warwick.\n💪 Community-building in the R and RSE communities with a focus on EDI.\nPlease see my professional webpage for more details, including links to my teaching resources.\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.\n\n\n\nMy  journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast and professional.\n\nI love R! I have used it in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community!] I am a co-founder and co-organiser of RainbowR a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am also on the Community team of R Forwards. I am on the organising committee of the Warwick R User Group and was previously co-organiser of the Oxford R User Group. Here’s more on the communities that I’m involved with, as well as lots of information about and links to groups that you may be interested in getting involved with.\nI enjoy sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children.\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
+    "text": "I am a Research Software Engineer in the Department of Statistics at the University of Warwick, working with Dr Heather Turner on her fellowship “Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project”.\nThis involves:\n👩‍💻 Contributing to the  project through code, infrastructure & outreach.\n📦 Contributing to packages on the Comprehensive R Archive Network (CRAN).\n🚀 Capacity-building in R and data science at the University of Warwick.\n💪 Community-building in the R and RSE communities with a focus on EDI.\nPlease see my professional webpage for more details, including links to my teaching resources.\n\nPreviously\nPrior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the OxWaSP programme for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.\n\n\n\nMy  journey\n\n2014: first R course as part of MSc in Applied Statistics\n2015: first taste of ggplot2\n2016: first R package\n2017: first community involvement (useR!2017, Oxford R User Group, rainbowR, @R_LGBTQ)\n2020: first TidyTuesday contribution\n2021: third time’s the charm building a website in R, using {distill}\n2022: as an RSE, I now get to be both an  enthusiast and professional.\n\nI love R! I have used it in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing packages. My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about Quarto. I have particularly enjoyed using it to build this website (my fourth!) 1\nI love the R community! I am a co-founder and co-organiser of rainbowR, a community that supports, promotes and connects LGBTQ+ people who code in the R language. I am the R Forwards community team co-lead. I am on the organising committee of the Warwick R User Group and was previously co-organiser of the Oxford R User Group. Here’s more on the communities that I’m involved with, as well as lots of information about, and links to, groups that you may be interested in getting involved with.\nI enjoy sharing what I know/am learning about R with others, particularly by writing blog posts and speaking at R-Ladies and R User Group meetups. Here are some talks I’ve given. Please get in touch if you’d like me to speak at your group.\nI live in Oxford, UK, with my wife and our two young children.\n\n\n\n\n\nFootnotes\n\n\nPrevious versions were built with blogdown, then hugodown, then distill.↩︎"
   },
   {
     "objectID": "packages/distilltools/index.html#main-resources",

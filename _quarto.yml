@@ -40,7 +40,7 @@ website:
     image-alt: |
       A square logo made from Ella Kaye's name - 
       first name on top of last name in dark gray capital letters, 
-      separated by a horizontal bright pink line, on a very light grey background"
+      separated by a horizontal bright pink line, on a very light grey background
     image-width: 500
     image-height: 500
     card-style: summary # alternative summary_large_image
@@ -52,7 +52,7 @@ website:
     image-alt: |
       A square logo made from Ella Kaye's name - 
       first name on top of last name in dark gray capital letters, 
-      separated by a horizontal bright pink line, on a very light grey background"
+      separated by a horizontal bright pink line, on a very light grey background
     image-width: 500
     image-height: 500
     locale: en-GB
