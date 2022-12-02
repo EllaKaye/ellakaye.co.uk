@@ -1,3 +1,3 @@
-Quarto website for Ella Kaye
+My personal website, built with [Quarto](https://quarto.org).
 
-UNDER CONSTRUCTION
+<https://ellakaye.co.uk>
