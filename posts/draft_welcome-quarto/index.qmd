@@ -1,0 +1,111 @@
+---
+title: Welcome to my Quarto website!
+description: |
+  Resources and sites I found inspiring and useful when building my new site, and plans for future posts
+date: 2022-12-02
+author: 
+  - name: Ella Kaye
+    url: https://fosstodon.org/@ellakaye
+site-url: https://ellakaye.co.uk
+#image: IMAGE.png
+#image-alt: |
+categories:
+  - Quarto
+  - distilltools
+open-graph: true
+twitter-card: true
+# will inherit title, description, image
+# to change ANYTHING about card, need to fill in EVERYTHING below
+#  title: |
+#  description: |
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: summary_large_image 
+#  image-width: 500
+#  image-height: 500
+#  card-style: summary
+draft: true
+---
+
+<!--------------- set up ----------------->
+
+```{r}
+#| echo: false
+#| results: 'hide'
+
+long_slug <- "draft_welcome-quarto"
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+# renv::use(lockfile = "renv.lock")
+```
+
+<!--------------- post content ----------------->
+
+Hello, and welcome to my new site, built using [Quarto](https://quarto.org){target="_blank"}. Here’s why I switched from {distill}, and the resources and inspirations that helped me in the process.
+
+## Why Quarto?
+
+It doesn't seem all that long ago that I built a website using {distill} and announced it in a [post](../2021-05-08_welcome-distill/index.qmd) that this post will rather echo.
+
+I was very happy with that site. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one consistent, coherent system to produce reports, presentations, books and websites. Moreover, Quarto brings with it a vast range of improvements on R Markdown, building on what RStudio/Posit learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again, so thought I may as well get on with it.
+
+I'm finding working with Quarto to be an absolute joy!
+
+## Resources
+
+This post is not a guide on how to get a Quarto website up and running. There are already great resources for that. In particular, these are the resources that I found most helpful.
+
+### The basics
+
+- The official Quarto [tutorials](https://quarto.org/docs/get-started/){target="_blank"} got me started.
+
+- The official Quarto [guide](https://quarto.org/docs/guide/){target="_blank"} is an absolute treasure trove. I think I may well have most of the section on [websites](https://quarto.org/docs/websites/) memorised at this point!
+
+- djnavarro/nick tierney.
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
+  name = long_slug
+)
+```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+
+
+
+

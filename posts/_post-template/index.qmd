@@ -5,7 +5,7 @@ description: |
 date: UPDATE
 author: 
   - name: Ella Kaye
-    url: https://twitter.com/ellamkaye
+    url: https://fosstodon.org/@ellakaye
 site-url: https://ellakaye.co.uk
 #image: IMAGE.png
 #image-alt: |
@@ -52,7 +52,7 @@ renv::use(lockfile = "renv.lock")
 
 source("../../R/appendix.R")
 insert_appendix(
-  repo_spec = "EllaKaye/ellakaye-quarto", 
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
   name = long_slug
 )
 ```
