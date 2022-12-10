@@ -374,12 +374,12 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 <section id="my-customisations-aka-how-long-could-this-possibly-take" class="level2">
 <h2 class="anchored" data-anchor-id="my-customisations-aka-how-long-could-this-possibly-take">My customisations AKA how long could this possibly take?</h2>
-<p>The more I worked on the site, the more I wanted to tweak. In doing so, I learnt a lot, and I’ve managed, with help, to implement customisations that I haven’t seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just <a href="https://www.youtube.com/watch?v=t8qtcDyCRFA" target="_blank">100 seconds</a>), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky.</p>
+<p>The more I worked on the site, the more I wanted to tweak. I’ve managed, with help, to implement customisations that I haven’t seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just <a href="https://www.youtube.com/watch?v=t8qtcDyCRFA" target="_blank">100 seconds</a>), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky.</p>
 <p>In this section, I’m going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.</p>
 <p>I am not, in <em>this</em> post, going to share how I achieved these customisation. If I started on that, this post would get unwieldy and take me too long to write and get round to publishing. Instead, I’m just going to note what I had to learn to implement these features. I intend to spin each of the points below into separate tutorial-style blog posts. If you’re interested in seeing how I implemented things in the meantime, you can check out this site’s <a href="https://github.com/EllaKaye/ellakaye.co.uk" target="_blank">repo</a>.</p>
 <section id="animated-css-logo" class="level3">
 <h3 class="anchored" data-anchor-id="animated-css-logo">Animated CSS logo</h3>
-<p>My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in <code>_quarto.yml</code> and the best place in the yaml to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by <a href="https://maya.rbind.io" target="_blank">Maya Gans</a>, who helped me a lot with the implementation.</p>
+<p>My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in <code>_quarto.yml</code> and the best place in that file to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by <a href="https://maya.rbind.io" target="_blank">Maya Gans</a>, who helped me a lot with the implementation.</p>
 <p>Creating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt <a href="https://github.com/quarto-dev/quarto-cli/discussions/1647" target="_blank">another strategy</a> for using different logo images in light and dark modes, using CSS to overwrite one .png image with another, which is useful if a logo doesn’t lend itself to creation in CSS.</p>
 </section>
 <section id="animated-navigation-bar-links-and-colours" class="level3">
@@ -405,11 +405,11 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 <section id="local-fonts-and-open-type-font-features" class="level3">
 <h3 class="anchored" data-anchor-id="local-fonts-and-open-type-font-features">Local fonts and open type font features</h3>
-<p>In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for <a href="" target="_blank">Lemon Milk Pro</a> (used for body and header text) and <a href="https://www.monolisa.dev" target="_blank">MonoLisa</a> (used for code). Having done so, I then had to learn the CSS/SCSS to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.[^As much as a love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it’s not then clear what they have to type to replicate it.]</p>
+<p>In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for <a href="" target="_blank">Lemon Milk Pro</a> (used for body and header text) and <a href="https://www.monolisa.dev" target="_blank">MonoLisa</a> (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 </section>
 <section id="icon-links" class="level3">
 <h3 class="anchored" data-anchor-id="icon-links">Icon links</h3>
-<p>As on my {distill} site, I’ve made copious use of the <code>icon_link()</code> function in <a href="https://github.com/EllaKaye/distilltools/" target="_blank">{distilltools}</a>, a handy R function that creates a link, with an icon and some text, that (with some additional CSS) is styled a bit like a button, e.g.&nbsp;</p>
+<p>As on my {distill} site, I’ve made copious use of the <code>icon_link()</code> function in <a href="https://github.com/EllaKaye/distilltools/" target="_blank">{distilltools}</a>, a handy R function that creates a link, with an icon and some text that, with some additional CSS, is styled a bit like a button, e.g.&nbsp;</p>
 <div class="cell">
 <details open="">
 <summary>Toggle the code</summary>
@@ -424,7 +424,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <a href="https://github.com/EllaKaye/ellakaye.co.uk" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> site repo</a>
 </div>
 </div>
-<p>The function still works on a Quarto site, but there’s a lot of set-up that’s different. Unlike {distill}, Quarto doesn’t support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the <code>icon-link</code> class from a distill site doesn’t look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.</p>
+<p>The function still works on a Quarto site, but there’s a lot of set-up that’s different. Unlike {distill}, Quarto doesn’t support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the <code>icon-link</code> class from a {distill} site doesn’t look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.</p>
+<p>The <code>icon_link()</code> function could do with an update, to include bootstrap icons (which are automatically available in Quarto sites), to update to the latest Font Awesome icons (it currently uses 5.15, whereas the latest release is 6.2) and possibly to add more icon sets.</p>
 </section>
 </section>
 <section id="so-how-long-did-it-take" class="level2">
@@ -448,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
 
-<p>2022-12-10 23:12:11 GMT</p>
+<p>2022-12-10 23:38:47 GMT</p>
 </div></section><section id="details" class="level2 appendix"><h2 class="quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
 
 <p><a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/draft_welcome-quarto/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/draft_welcome-quarto/renv.lock" target="_blank">R environment</a></p>
@@ -496,6 +497,7 @@ Toggle
 
 <ol>
 <li id="fn1"><p>This works best on a laptop/desktop but there’s a hint of it on a smartphone when the logo is pressed.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>As much as I love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it’s not then clear what they have to type to replicate it.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2022,
   author = {Ella Kaye},
@@ -898,7 +900,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## My customisations AKA how long could this possibly take?</span></span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>The more I worked on the site, the more I wanted to tweak. In doing so, I learnt a lot, and I've managed, with help, to implement customisations that I haven't seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just <span class="co">[</span><span class="ot">100 seconds</span><span class="co">](https://www.youtube.com/watch?v=t8qtcDyCRFA)</span>{target="_blank"}), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky. </span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>The more I worked on the site, the more I wanted to tweak. I've managed, with help, to implement customisations that I haven't seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just <span class="co">[</span><span class="ot">100 seconds</span><span class="co">](https://www.youtube.com/watch?v=t8qtcDyCRFA)</span>{target="_blank"}), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky. </span>
 <span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>In this section, I'm going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.</span>
 <span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
@@ -906,7 +908,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### Animated CSS logo</span></span>
 <span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.^<span class="co">[</span><span class="ot">This works best on a laptop/desktop but there's a hint of it on a smartphone when the logo is pressed.</span><span class="co">]</span> To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in <span class="in">`_quarto.yml`</span> and the best place in the yaml to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by <span class="co">[</span><span class="ot">Maya Gans</span><span class="co">](https://maya.rbind.io)</span>{target="_blank"}, who helped me a lot with the implementation. </span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.^<span class="co">[</span><span class="ot">This works best on a laptop/desktop but there's a hint of it on a smartphone when the logo is pressed.</span><span class="co">]</span> To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in <span class="in">`_quarto.yml`</span> and the best place in that file to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by <span class="co">[</span><span class="ot">Maya Gans</span><span class="co">](https://maya.rbind.io)</span>{target="_blank"}, who helped me a lot with the implementation. </span>
 <span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>Creating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt <span class="co">[</span><span class="ot">another strategy</span><span class="co">](https://github.com/quarto-dev/quarto-cli/discussions/1647)</span>{target="_blank"} for using different logo images in light and dark modes, using CSS to overwrite one .png image with another, which is useful if a logo doesn't lend itself to creation in CSS. </span>
 <span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
@@ -934,11 +936,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### Local fonts and open type font features</span></span>
 <span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for <span class="co">[</span><span class="ot">Lemon Milk Pro</span><span class="co">]()</span>{target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/SCSS to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.<span class="ot">[^As much as a love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.]</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for <span class="co">[</span><span class="ot">Lemon Milk Pro</span><span class="co">]()</span>{target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.^<span class="co">[</span><span class="ot">As much as I love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.</span><span class="co">]</span></span>
 <span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="fu">### Icon links</span></span>
 <span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>As on my {distill} site, I've made copious use of the <span class="in">`icon_link()`</span> function in <span class="co">[</span><span class="ot">{distilltools}</span><span class="co">](https://github.com/EllaKaye/distilltools/)</span>{target="_blank"}, a handy R function that creates a link, with an icon and some text, that (with some additional CSS) is styled a bit like a button, e.g. </span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>As on my {distill} site, I've made copious use of the <span class="in">`icon_link()`</span> function in <span class="co">[</span><span class="ot">{distilltools}</span><span class="co">](https://github.com/EllaKaye/distilltools/)</span>{target="_blank"}, a handy R function that creates a link, with an icon and some text that, with some additional CSS, is styled a bit like a button, e.g. </span>
 <span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
@@ -950,59 +952,61 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>The function still works on a Quarto site, but there's a lot of set-up that's different. Unlike {distill}, Quarto doesn't support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the <span class="in">`icon-link`</span> class from a distill site doesn't look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.</span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>The function still works on a Quarto site, but there's a lot of set-up that's different. Unlike {distill}, Quarto doesn't support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the <span class="in">`icon-link`</span> class from a {distill} site doesn't look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.</span>
 <span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a><span class="fu">## So, how long did it take?</span></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>The <span class="in">`icon_link()`</span> function could do with an update, to include bootstrap icons (which are automatically available in Quarto sites), to update to the latest Font Awesome icons (it currently uses 5.15, whereas the latest release is 6.2) and possibly to add more icon sets.</span>
 <span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project! </span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a><span class="fu">## So, how long did it take?</span></span>
 <span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>Shortly after I finally shared my site, I came across the <span class="co">[</span><span class="ot">The Programmers' Credo</span><span class="co">](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/)</span>. It rang true!</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project! </span>
 <span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; We do these things not because they are easy, but because we thought they were going to be easy.</span></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>Shortly after I finally shared my site, I came across the <span class="co">[</span><span class="ot">The Programmers' Credo</span><span class="co">](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/)</span>. It rang true!</span>
 <span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>That said, the fact that it turned out to be *not* easy turned out to be a positive, in that I've learnt a lot. And, once I've finished the series of blog posts on what I've learnt, hopefully you will have too.</span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; We do these things not because they are easy, but because we thought they were going to be easy.</span></span>
 <span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--------------- appendices go here -----------------&gt;</span></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>That said, the fact that it turned out to be *not* easy turned out to be a positive, in that I've learnt a lot. And, once I've finished the series of blog posts on what I've learnt, hopefully you will have too.</span>
 <span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r appendix}</span></span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../../R/appendix.R"</span>)</span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="fu">insert_appendix</span>(</span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo_spec =</span> <span class="st">"EllaKaye/ellakaye.co.uk"</span>, </span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> long_slug</span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Session info {.appendix}</span></span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--------------- appendices go here -----------------&gt;</span></span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{r appendix}</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../../R/appendix.R"</span>)</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="fu">insert_appendix</span>(</span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo_spec =</span> <span class="st">"EllaKaye/ellakaye.co.uk"</span>, </span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> long_slug</span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;details&gt;&lt;summary&gt;</span>Toggle<span class="kw">&lt;/summary&gt;</span></span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Session info {.appendix}</span></span>
 <span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sessioninfo)</span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="co"># save the session info as an object</span></span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>pkg_session <span class="ot">&lt;-</span> <span class="fu">session_info</span>(<span class="at">pkgs =</span> <span class="st">"attached"</span>)</span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="co"># get the quarto version</span></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>quarto_version <span class="ot">&lt;-</span> <span class="fu">system</span>(<span class="st">"quarto --version"</span>, <span class="at">intern =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a><span class="co"># inject the quarto info</span></span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>pkg_session<span class="sc">$</span>platform<span class="sc">$</span>quarto <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">system</span>(<span class="st">"quarto --version"</span>, <span class="at">intern =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>  <span class="st">"@"</span>, </span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>  quarto<span class="sc">::</span><span class="fu">quarto_path</span>()</span>
-<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="co"># print it out</span></span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>pkg_session</span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/details&gt;</span></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;details&gt;&lt;summary&gt;</span>Toggle<span class="kw">&lt;/summary&gt;</span></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sessioninfo)</span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="co"># save the session info as an object</span></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>pkg_session <span class="ot">&lt;-</span> <span class="fu">session_info</span>(<span class="at">pkgs =</span> <span class="st">"attached"</span>)</span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a><span class="co"># get the quarto version</span></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>quarto_version <span class="ot">&lt;-</span> <span class="fu">system</span>(<span class="st">"quarto --version"</span>, <span class="at">intern =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a><span class="co"># inject the quarto info</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>pkg_session<span class="sc">$</span>platform<span class="sc">$</span>quarto <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">system</span>(<span class="st">"quarto --version"</span>, <span class="at">intern =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>  <span class="st">"@"</span>, </span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>  quarto<span class="sc">::</span><span class="fu">quarto_path</span>()</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="co"># print it out</span></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>pkg_session</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/details&gt;</span></span>
 <span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 

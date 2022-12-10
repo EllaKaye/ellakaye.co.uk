@@ -87,7 +87,7 @@ These two posts, in particular, gave me the inspiration and most of the know-how
 
 ## My customisations AKA how long could this possibly take?
 
-The more I worked on the site, the more I wanted to tweak. In doing so, I learnt a lot, and I've managed, with help, to implement customisations that I haven't seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just [100 seconds](https://www.youtube.com/watch?v=t8qtcDyCRFA){target="_blank"}), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky. 
+The more I worked on the site, the more I wanted to tweak. I've managed, with help, to implement customisations that I haven't seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just [100 seconds](https://www.youtube.com/watch?v=t8qtcDyCRFA){target="_blank"}), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky. 
 
 In this section, I'm going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.
 
@@ -95,7 +95,7 @@ I am not, in *this* post, going to share how I achieved these customisation. If 
 
 ### Animated CSS logo
 
-My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.^[This works best on a laptop/desktop but there's a hint of it on a smartphone when the logo is pressed.] To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in `_quarto.yml` and the best place in the yaml to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by [Maya Gans](https://maya.rbind.io){target="_blank"}, who helped me a lot with the implementation. 
+My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.^[This works best on a laptop/desktop but there's a hint of it on a smartphone when the logo is pressed.] To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in `_quarto.yml` and the best place in that file to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by [Maya Gans](https://maya.rbind.io){target="_blank"}, who helped me a lot with the implementation. 
 
 Creating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt [another strategy](https://github.com/quarto-dev/quarto-cli/discussions/1647){target="_blank"} for using different logo images in light and dark modes, using CSS to overwrite one .png image with another, which is useful if a logo doesn't lend itself to creation in CSS. 
 
@@ -123,11 +123,11 @@ I would like to apply custom CSS to the giscus comments box in both light and da
 
 ### Local fonts and open type font features
 
-In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for [Lemon Milk Pro](){target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/SCSS to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.[^As much as a love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.]
+In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for [Lemon Milk Pro](){target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.^[As much as I love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.]
 
 ### Icon links
 
-As on my {distill} site, I've made copious use of the `icon_link()` function in [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"}, a handy R function that creates a link, with an icon and some text, that (with some additional CSS) is styled a bit like a button, e.g. 
+As on my {distill} site, I've made copious use of the `icon_link()` function in [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"}, a handy R function that creates a link, with an icon and some text that, with some additional CSS, is styled a bit like a button, e.g. 
 
 ```{r}
 #| echo: true
@@ -139,13 +139,15 @@ icon_link(
 )
 ```
 
-The function still works on a Quarto site, but there's a lot of set-up that's different. Unlike {distill}, Quarto doesn't support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the `icon-link` class from a distill site doesn't look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.
+The function still works on a Quarto site, but there's a lot of set-up that's different. Unlike {distill}, Quarto doesn't support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the `icon-link` class from a {distill} site doesn't look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.
+
+The `icon_link()` function could do with an update, to include bootstrap icons (which are automatically available in Quarto sites), to update to the latest Font Awesome icons (it currently uses 5.15, whereas the latest release is 6.2) and possibly to add more icon sets.
 
 ## So, how long did it take?
 
 I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project! 
 
-Shortly after I finally shared my site, I came across the [The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/). It rang true!
+Shortly after I finally shared my site, I came across the [The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/). It rang true.
 
 > We do these things not because they are easy, but because we thought they were going to be easy.
 
