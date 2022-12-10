@@ -7,13 +7,15 @@ author:
   - name: Ella Kaye
     url: https://fosstodon.org/@ellakaye
 site-url: https://ellakaye.co.uk
-#image: IMAGE.png
-#image-alt: |
+image: quarto.png
+image-alt: |
+  The quarto logo, a blue circle divided into quadrants followed by the word 'quarto'
 categories:
   - Quarto
   - distilltools
 open-graph: true
 twitter-card: true
+include-in-header: ../../_includes/fontawesome-2up.html
 # will inherit title, description, image
 # to change ANYTHING about card, need to fill in EVERYTHING below
 #  title: |
@@ -45,19 +47,19 @@ long_slug <- "draft_welcome-quarto"
 
 <!--------------- post content ----------------->
 
-Hello, and welcome to my new site, built using [Quarto](https://quarto.org){target="_blank"}. Here’s why I switched from {distill}, the resources and inspirations that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts.
+Hello, and welcome to my new site, built using [Quarto](https://quarto.org){target="_blank"}. Here’s why I switched from [{distill}](https://rstudio.github.io/distill/){target="_blank"} and the resources and inspirations that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts.
 
 ## Why Quarto? Why now?
 
 It doesn't seem all that long ago that I built a website using {distill} and announced it in a [post](../2021-05-08_welcome-distill/index.qmd) that this one will rather echo.
 
-I was very happy with that site. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one consistent, coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what RStudio/Posit learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again, so thought I may as well get on with it.
+I was very happy with that site. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one consistent, coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what [Posit](https://posit.co) (formerly RStudio) learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again, so thought I may as well get on with it.
 
 I'm finding working with Quarto to be an absolute joy!
 
 ## Resources
 
-This post is not a guide on how to get a Quarto website up and running. There are already great resources for that. Nor am I going to replicate the guidance on more advanced customisations that I found elsewhere since I can point you to the original sources. These are the resources that I found most helpful.
+This post is not a guide on how to get a Quarto website up and running and styled. There are already great resources for that. These are the the ones that I found most helpful.
 
 ### The basics
 
@@ -75,7 +77,7 @@ When it comes to building websites, Quarto is a natural successor to {distill}. 
 
 ### Going further
 
-The above resources were enough for me to pretty much replicate the website I'd built with {distill}, but as I worked on it a couple of excellent blog posts were published that showed how much customisation was possible, which massively increased my ambitions for my new site:
+The above resources were enough for me to replicate the website I'd built with {distill}, but as I worked on it a couple of excellent blog posts were published that showed how much customisation was possible, which massively increased my ambitions for my new site:
 
 - Albert Rapp's [ultimate guide to starting a Quarto blog ](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html){target="_blank"}.
 
@@ -85,13 +87,17 @@ These two posts, in particular, gave me the inspiration and most of the know-how
 
 ## My customisations AKA how long could this possibly take?
 
-The more I worked on the site, the more I wanted to tweak. In doing so, I learnt a lot, and I've managed, with help, to implement customisations that I haven't seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is pretty easy (in fact, Tom Mock shows how it can be done in just [100 seconds](https://www.youtube.com/watch?v=t8qtcDyCRFA){target="_blank"}), but extensive customisation, particularly when starting with a pretty rudimentary knowledge of HTML and CSS, turned out to be pretty tricky. In this section, I'm going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others will be pretty standard to those with a more advanced knowledge of front-end web development, but I suspect will also be new to others who have come to website-building with Quarto from a backgroup in R programming rather than HTML/CSS/JS.
+The more I worked on the site, the more I wanted to tweak. In doing so, I learnt a lot, and I've managed, with help, to implement customisations that I haven't seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just [100 seconds](https://www.youtube.com/watch?v=t8qtcDyCRFA){target="_blank"}), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky. 
 
-I am not, in this post, going to share how I achieved them. If I started on that, this post would get unwieldy and take me far too long to write. Instead, I'm just going to note what I had to learn to implement these features. I intend to spin each of the points below into separate tutorial-style blog posts over the next few months. If you're interested in seeing how I implemented things in the meantime, you can check out this site's [repo](https://github.com/EllaKaye/ellakaye.co.uk){target="_blank"}.
+In this section, I'm going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.
 
-### Animated logo
+I am not, in *this* post, going to share how I achieved these customisation. If I started on that, this post would get unwieldy and take me too long to write and get round to publishing. Instead, I'm just going to note what I had to learn to implement these features. I intend to spin each of the points below into separate tutorial-style blog posts. If you're interested in seeing how I implemented things in the meantime, you can check out this site's [repo](https://github.com/EllaKaye/ellakaye.co.uk){target="_blank"}.
 
-My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.^[This works best on a laptop/desktop but there's a hint of it on a smartphone when the logo is pressed.] To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the animation. I also had to figure out what HTML I could get away with using in `_quarto.yml` and the best place in the yaml to add the logo. There were also inconsistencies between browers to contend with. Along the way, I also learnt another strategy for using different logo images in light and dark modes. I was inspired to animate my logo by [Maya Gans](https://maya.rbind.io){target="_blank"}, who helped me a lot with the implementation.
+### Animated CSS logo
+
+My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.^[This works best on a laptop/desktop but there's a hint of it on a smartphone when the logo is pressed.] To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in `_quarto.yml` and the best place in the yaml to add the logo. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by [Maya Gans](https://maya.rbind.io){target="_blank"}, who helped me a lot with the implementation. 
+
+Creating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt [another strategy](https://github.com/quarto-dev/quarto-cli/discussions/1647){target="_blank"} for using different logo images in light and dark modes, using CSS to overwrite one .png image with another, which is useful if a logo doesn't lend itself to creation in CSS. 
 
 ### Animated navigation bar links and colours
 
@@ -105,30 +111,45 @@ Speaking of which, creating the custom layout of my homepage, using CSS grid and
 
 I put a *lot* of thought into the colour scheme for both the light and dark modes of the site, and making sure they complemented each other perfectly. For this, I built on what I'd learnt about [colour theory and accessibility when designing a custom syntax highlight scheme](../2021-05-26_custom-highlighting-distill-2/index.qmd) for my previous website. I also learnt about Sass and made extensive use of a lot of custom Sass variables.
 
-### Giscus comments box light/dark toggle
-
-Quarto makes it really easy to add [giscus](https://giscus.app){target="_blank"} comments boxes, and giscus (and in turn Quarto) make it pretty easy to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set light or dark dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark mode for the site. In response to my query, with a lot of back and forth, Sage Abdullah, the creator of giscus, figured out the JavaScript to make this happen and I figured out how to integrate it into the Quarto site.
-
 ### Custom syntax highlighting
 
 Having [implemented a custom syntax highlight theme](../2021-05-25_custom-highlighting-distill-1/index.qmd) for my {distill} site, and created a function for the [{distilltools}](../../packages/distilltools/index.qmd) package so others could do the same, I had hoped to be able to port that straight over to my Quarto site. Not quite. Although they are both called `arrow`, there are changes in the implementation of the default syntax highlight scheme for Quarto from how it was implemented in {distill}, and, to make things more awkward, there are also inconsistencies between the light and dark versions of `arrow` in Quarto. It took me a while to get my head around all that. It was quite finicky modifying my original highlighting theme and also creating a complementary theme for my dark mode.
 
+### giscus comments box light/dark toggle
 
+Quarto makes it really easy to add [giscus](https://giscus.app){target="_blank"} comments boxes, and giscus (and in turn Quarto) make it pretty easy to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set light or dark dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark mode for the site. In response to my query, with a lot of back and forth, Sage Abdullah (the creator of giscus) figured out the [JavaScript to make this happen](https://github.com/giscus/giscus/issues/336#issuecomment-1214366281){target="_blank"} and I figured out how to [integrate it into the Quarto site](https://github.com/giscus/giscus/issues/336#issuecomment-1214401296){target="_blank"}. 
 
-
-### Icon links
-
-
-- Getting the giscus comment box to toggle according to light/dark mode
+I would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. It haven't yet been able to make it work, though, which appears to be an [issue](https://github.com/giscus/giscus/issues/789){target="_blank"} related to hosting on netlify. 
 
 ### Local fonts and open type font features
 
+In order to give my site a distinct appearance, and because I love typography and think that professional fonts are worth paying for, I purchased licenses for [Lemon Milk Pro](){target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/SCSS to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.[^As much as a love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.]
 
+### Icon links
 
-[The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/) rings true:
+As on my {distill} site, I've made copious use of the `icon_link()` function in [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"}, a handy R function that creates a link, with an icon and some text, that (with some additional CSS) is styled a bit like a button, e.g. 
+
+```{r}
+#| echo: true
+library(distilltools)
+icon_link(
+  icon = "github",
+  text = "site repo",
+  url = "https://github.com/EllaKaye/ellakaye.co.uk"
+)
+```
+
+The function still works on a Quarto site, but there's a lot of set-up that's different. Unlike {distill}, Quarto doesn't support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the `icon-link` class from a distill site doesn't look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.
+
+## So, how long did it take?
+
+I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project! 
+
+Shortly after I finally shared my site, I came across the [The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/). It rang true!
 
 > We do these things not because they are easy, but because we thought they were going to be easy.
 
+That said, the fact that it turned out to be *not* easy turned out to be a positive, in that I've learnt a lot. And, once I've finished the series of blog posts on what I've learnt, hopefully you will have too.
 
 <!--------------- appendices go here ----------------->
 
