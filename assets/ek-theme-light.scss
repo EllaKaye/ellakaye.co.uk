@@ -400,7 +400,8 @@ iframe.slide-deck {
 .icon-link, div.quarto-about-jolla .about-link {
     background-color: transparent;
     color: $primary;
-    border: 2px solid !important;
+    //border: 2px solid !important;
+    border: 2px solid;
     border-color: $primary;
     padding: 5px .4rem 5px .4rem !important;
     margin-top: 4px;
@@ -413,8 +414,8 @@ iframe.slide-deck {
 
 .icon-link:hover, div.quarto-about-jolla .about-link:hover{
     background-color: $primary;
-    border-color: $primary;
     color: $body-bg;
+    border-color: $primary;
     text-decoration: none;
 }
 
