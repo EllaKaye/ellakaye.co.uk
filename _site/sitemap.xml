@@ -2,82 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.co.uk/community.html</loc>
-    <lastmod>2022-12-10T23:59:39.568Z</lastmod>
+    <lastmod>2022-12-11T00:10:42.041Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/contact.html</loc>
-    <lastmod>2022-12-10T23:59:39.896Z</lastmod>
+    <lastmod>2022-12-11T00:10:42.378Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2022-12-10T23:59:42.526Z</lastmod>
+    <lastmod>2022-12-11T00:10:44.951Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2020-12-09_advent-of-code-2020/index.html</loc>
-    <lastmod>2022-12-10T23:59:44.435Z</lastmod>
+    <lastmod>2022-12-11T00:10:46.946Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2022-12-10T23:59:46.677Z</lastmod>
+    <lastmod>2022-12-11T00:10:49.271Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2022-12-10T23:59:48.631Z</lastmod>
+    <lastmod>2022-12-11T00:10:51.254Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2022-12-10T23:59:49.492Z</lastmod>
+    <lastmod>2022-12-11T00:10:52.073Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks.html</loc>
-    <lastmod>2022-12-10T23:59:50.983Z</lastmod>
+    <lastmod>2022-12-11T00:10:53.324Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2018-08-23_phd-as-package/index.html</loc>
-    <lastmod>2022-12-10T23:59:51.836Z</lastmod>
+    <lastmod>2022-12-11T00:10:54.150Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
-    <lastmod>2022-12-10T23:59:52.350Z</lastmod>
+    <lastmod>2022-12-11T00:10:54.631Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2019-10-05_working-with-text-in-r/index.html</loc>
-    <lastmod>2022-12-10T23:59:52.871Z</lastmod>
+    <lastmod>2022-12-11T00:10:55.122Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2017-07-06_introducing-BradleyTerryScalable/index.html</loc>
-    <lastmod>2022-12-10T23:59:53.386Z</lastmod>
+    <lastmod>2022-12-11T00:10:55.603Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2017-05-25_overview-of-htmlwidgets/index.html</loc>
-    <lastmod>2022-12-10T23:59:53.875Z</lastmod>
+    <lastmod>2022-12-11T00:10:56.081Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/index.html</loc>
-    <lastmod>2022-12-10T23:59:54.239Z</lastmod>
+    <lastmod>2022-12-11T00:32:09.632Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/about.html</loc>
-    <lastmod>2022-12-10T23:59:54.603Z</lastmod>
+    <lastmod>2022-12-11T00:10:56.769Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages/distilltools/index.html</loc>
-    <lastmod>2022-12-10T23:59:55.238Z</lastmod>
+    <lastmod>2022-12-11T00:10:57.356Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages/EMK/index.html</loc>
-    <lastmod>2022-12-10T23:59:55.586Z</lastmod>
+    <lastmod>2022-12-11T00:10:57.684Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages/BradleyTerryScalable/index.html</loc>
-    <lastmod>2022-12-10T23:59:55.934Z</lastmod>
+    <lastmod>2022-12-11T00:10:58.038Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts.html</loc>
-    <lastmod>2022-12-10T23:59:56.359Z</lastmod>
+    <lastmod>2022-12-11T11:55:45.771Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages.html</loc>
-    <lastmod>2022-12-10T23:59:56.729Z</lastmod>
+    <lastmod>2022-12-11T00:10:58.777Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto/index.html</loc>
+    <lastmod>2022-12-11T11:55:47.682Z</lastmod>
   </url>
 </urlset>

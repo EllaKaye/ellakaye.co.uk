@@ -13,15 +13,16 @@ image-alt: |
 categories:
   - Quarto
   - distilltools
-open-graph: true
-twitter-card: true
 include-in-header: ../../_includes/fontawesome-2up.html
+open-graph: true
+twitter-card:
 # will inherit title, description, image
 # to change ANYTHING about card, need to fill in EVERYTHING below
-#  title: |
-#  description: |
-#  image: |
-#  image-alt: |
+  title: Welcome to my Quarto website!
+  description: Resources and inspirations for my site, plus my customisations
+  image: ../images/logo.png
+  image-alt: |
+    A square logo made from Ella Kaye's name - first name on top of last name in dark gray capital letters, separated by a horizontal bright pink line, on a very light grey background
 #  defaults to 500 x 500 summary: uncomment lines below for large card
 #  image-width: 600 
 #  image-height: 314
@@ -29,7 +30,7 @@ include-in-header: ../../_includes/fontawesome-2up.html
 #  image-width: 500
 #  image-height: 500
 #  card-style: summary
-draft: true
+draft: false
 ---
 
 <!--------------- set up ----------------->
@@ -38,7 +39,7 @@ draft: true
 #| echo: false
 #| results: 'hide'
 
-long_slug <- "draft_welcome-quarto"
+long_slug <- "2022-12-11_welcome-quarto"
 
 # NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
 # from the project root into the post directory
@@ -117,7 +118,7 @@ Having [implemented a custom syntax highlight theme](../2021-05-25_custom-highli
 
 ### giscus comments box light/dark toggle
 
-Quarto makes it really easy to add [giscus](https://giscus.app){target="_blank"} comments boxes, and giscus (and in turn Quarto) make it pretty easy to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set light or dark dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark mode for the site. In response to my query, with a lot of back and forth, Sage Abdullah (the creator of giscus) figured out the [JavaScript to make this happen](https://github.com/giscus/giscus/issues/336#issuecomment-1214366281){target="_blank"} and I figured out how to [integrate it into the Quarto site](https://github.com/giscus/giscus/issues/336#issuecomment-1214401296){target="_blank"}. 
+Quarto makes it really easy to add [giscus](https://giscus.app){target="_blank"} comments boxes, and giscus (and in turn Quarto) make it pretty easy to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set light or dark dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark mode for the site. In response to my query, with a lot of back and forth, Sage (the creator of giscus) figured out the [JavaScript to make this happen](https://github.com/giscus/giscus/issues/336#issuecomment-1214366281){target="_blank"} and I figured out how to [integrate it into the Quarto site](https://github.com/giscus/giscus/issues/336#issuecomment-1214401296){target="_blank"}. 
 
 I would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. It haven't yet been able to make it work, though, which appears to be an [issue](https://github.com/giscus/giscus/issues/789){target="_blank"} related to hosting on netlify. 
 
@@ -127,17 +128,23 @@ In order to give my site a distinct appearance, and because I love typography an
 
 ### Icon links
 
-As on my {distill} site, I've made copious use of the `icon_link()` function in [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"}, a handy R function that creates a link, with an icon and some text that, with some additional CSS, is styled a bit like a button, e.g. 
+As on my {distill} site, I've made copious use of the `icon_link()` function in [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"}, a handy R function that creates a link, with an icon and some text that, with some additional CSS, is styled a bit like a button, e.g. the code
 
-```{r}
-#| echo: true
-library(distilltools)
-icon_link(
+```{.r}
+distilltools::icon_link(
   icon = "github",
   text = "site repo",
   url = "https://github.com/EllaKaye/ellakaye.co.uk"
 )
 ```
+
+outputs HTML which, with some CSS styling for the `icon-link` class, renders as the following:
+
+`r distilltools::icon_link(
+  icon = "github",
+  text = "site repo",
+  url = "https://github.com/EllaKaye/ellakaye.co.uk"
+)`
 
 The function still works on a Quarto site, but there's a lot of set-up that's different. Unlike {distill}, Quarto doesn't support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the `icon-link` class from a {distill} site doesn't look right on Quarto. Further tweaks are necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.
 
@@ -145,9 +152,9 @@ The `icon_link()` function could do with an update, to include bootstrap icons (
 
 ## So, how long did it take?
 
-I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project! 
+I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project.
 
-Shortly after I finally shared my site, I came across the [The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/). It rang true.
+Shortly after I finally shared my site, I came across the [The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/). It rang true!
 
 > We do these things not because they are easy, but because we thought they were going to be easy.
 

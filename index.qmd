@@ -95,7 +95,7 @@ include-in-header:
 
 # redirects strategy from djnavarro
 # https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects
-# list names of post folders
+# list names of posts, talks and packages folders
 posts <- list.dirs(
   path = here::here("posts"),
   full.names = FALSE,
