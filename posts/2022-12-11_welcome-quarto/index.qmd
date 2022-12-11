@@ -102,7 +102,7 @@ Creating a logo with CSS also made it possible to easily change its appearance i
 
 ### Animated navigation bar links and colours
 
-Having animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process. It wasn't too tricky to find a solution for the animation itself online, but I found figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage tricky. I also learnt about @media queries, so that the animations only activate when the navbar is in a row.
+Having animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process, including @media queries to ensure that the animations only activate when the navbar is in a row. It wasn't too tricky to find a solution for the animation itself online, but I found figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage tricky. 
 
 ### CSS grid and bootstrap cards
 
