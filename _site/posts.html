@@ -186,7 +186,7 @@ gtag('config', 'G-7G8FLLRS4M', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Quarto,distilltools" data-listing-date-sort="1669939200000" data-listing-file-modified-sort="1670759682584" data-listing-reading-time-sort="9.65">
+<div class="quarto-post image-right" data-index="0" data-categories="Quarto,distilltools" data-listing-date-sort="1670716800000" data-listing-file-modified-sort="1670777464397" data-listing-reading-time-sort="9.93">
 <div class="thumbnail">
 <p><a href="./posts/2022-12-11_welcome-quarto/index.html"> <img src="./posts/2022-12-11_welcome-quarto/quarto.png" class="thumnail-image" alt="The quarto logo, a blue circle divided into quadrants followed by the word &amp;#039;quarto'
 "> </a></p>
@@ -210,14 +210,14 @@ distilltools
 </div>
 <a href="./posts/2022-12-11_welcome-quarto/index.html">
 <div class="listing-description">
-<p>Resources and sites I found inspiring and useful when building my new site, notes on my customisations and plans for future posts</p>
+<p>Resources and sites I found inspiring and useful when building my new site, plus notes on my customisations and plans for future posts</p>
 </div>
 </a>
 </div>
 <div class="metadata">
 <a href="./posts/2022-12-11_welcome-quarto/index.html">
 <div class="listing-date">
-Dec 2, 2022
+Dec 11, 2022
 </div>
 <div class="listing-author">
 Ella Kaye
@@ -692,6 +692,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/ellakaye\.co\.uk/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

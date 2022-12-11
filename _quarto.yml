@@ -71,6 +71,7 @@ format:
       light: assets/ek-light.theme
       dark: assets/ek-dark.theme
     smooth-scroll: true
+    link-external-newwindow: true
     
 editor: source
 
