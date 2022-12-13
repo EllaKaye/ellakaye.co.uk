@@ -1,7 +1,7 @@
 ---
 title: Welcome to my Quarto website!
 description: |
-  Resources and sites I found inspiring and useful when building my new site, plus notes on my customisations and plans for future posts
+  Resources I found inspiring and useful when building my new site, plus notes on my customisations
 date: 2022-12-11
 author: 
   - name: Ella Kaye
@@ -19,7 +19,8 @@ twitter-card:
 # will inherit title, description, image
 # to change ANYTHING about card, need to fill in EVERYTHING below
   title: Welcome to my Quarto website!
-  description: Resources and inspirations for my site, plus my customisations
+  description: |
+    Resources I found inspiring and useful when building my new site, plus notes on my customisations
   image: ../images/logo.png
   image-alt: |
     A square logo made from Ella Kaye's name - first name on top of last name in dark gray capital letters, separated by a horizontal bright pink line, on a very light grey background
@@ -48,13 +49,11 @@ long_slug <- "2022-12-11_welcome-quarto"
 
 <!--------------- post content ----------------->
 
-Hello, and welcome to my new site, built using [Quarto](https://quarto.org){target="_blank"}. Here’s why I switched from [{distill}](https://rstudio.github.io/distill/){target="_blank"} and the resources and inspirations that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts.
+Hello, and welcome to my new site, built using [Quarto](https://quarto.org){target="_blank"}. Here’s why I switched from [{distill}](https://rstudio.github.io/distill/){target="_blank"} and the resources that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts.
 
 ## Why Quarto? Why now?
 
-It doesn't seem all that long ago that I built a website using {distill} and announced it in a [post](../2021-05-08_welcome-distill/index.qmd) that this one will rather echo.
-
-I was very happy with that site. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one consistent, coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what [Posit](https://posit.co) (formerly RStudio) learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again (for the fourth time), so thought I may as well get on with it.
+I was very happy with my previous [website built using {distill}](../2021-05-08_welcome-distill/index.qmd). Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what [Posit](https://posit.co) (formerly RStudio) learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again (for the fourth time).
 
 I'm finding working with Quarto to be an absolute joy!
 
@@ -66,11 +65,11 @@ This post is not a guide on how to get a Quarto website up and running and style
 
 - My first taste of Quarto was Mine Çetinkaya-Rundel's [talk](https://www.youtube.com/watch?v=6p4vOKS6Xls){target="_blank"} about it at the 2022 Toronto Workshop on Reproducibility.
 
-- The official Quarto [tutorials](https://quarto.org/docs/get-started/){target="_blank"} got me going.
+- The official Quarto [tutorials](https://quarto.org/docs/get-started/){target="_blank"} taught me the basics.
 
-- The official Quarto [guide](https://quarto.org/docs/guide/){target="_blank"} is an absolute treasure trove with the section on [websites](https://quarto.org/docs/websites/) being, needless to say, most helpful for the development of this site.
+- The official Quarto [guide](https://quarto.org/docs/guide/){target="_blank"} is a treasure trove with the section on [websites](https://quarto.org/docs/websites/) being, needless to say, most helpful for the development of this site.
 
-These two posts on making the transition from R Markdown/{distill} to Quarto were also extremely helpful:
+These two posts on making the transition from R Markdown/{distill} to Quarto were also extremely useful:
 
 - Danielle Navarro on [porting a distill blog to Quarto](https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/){target="_blank"}. 
 
@@ -92,7 +91,7 @@ I didn't think it would take too long to make some tweaks, but the more I worked
 
 In this section, I'm going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.
 
-I am not, in *this* post, going to share how I achieved these customisation. If I started on that, this post would get unwieldy and take me too long to write and get round to publishing. Instead, I'm just going to note what I had to learn to implement these features. I intend to spin each of the points below into separate tutorial-style blog posts. If you're interested in seeing how I implemented them in the meantime, you can check out this site's [repo](https://github.com/EllaKaye/ellakaye.co.uk){target="_blank"}.
+For the sake of brevity, in *this* post I don't detail how I achieved these customisations. I just note what I had to learn to implement them. I intend to spin each of the points below into separate tutorial-style blog posts. If you're interested in seeing how I implemented them in the meantime, you can check out this site's [repo](https://github.com/EllaKaye/ellakaye.co.uk){target="_blank"}.
 
 ### Animated CSS logo
 
@@ -102,33 +101,33 @@ Creating a logo with CSS also made it possible to easily change its appearance i
 
 ### Animated navigation bar links and colours
 
-Having animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process, including @media queries to ensure that the animations only activate when the navbar is in a row. It wasn't too tricky to find a solution for the animation itself online, but I found figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage tricky. 
+Having animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process, including @media queries to ensure that the animations only activate when the navbar is in a row. I found a solution online for the animation itself, but figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage was tricky. 
 
 ### CSS grid and bootstrap cards
 
-Speaking of which, creating the custom layout of my homepage, using CSS grid and bootstrap cards, was a challenge. The blog posts by Albert and Christian linked to in the previous section got me a lot of the way there, but I still had to dive deep into the [boostrap documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to make sure the cards and the links inside them all lined up nicely.
+Speaking of which, creating the custom layout of my homepage, using CSS grid and bootstrap cards, was a challenge. The blog posts by Albert and Christian linked to in the previous section got me a lot of the way there, but I still had to dive deep into the [bootstrap documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to make sure the cards and the links inside them all lined up nicely.
 
 ### Light and dark mode
 
-I put a *lot* of thought into the colour scheme for both the light and dark modes of the site, and making sure they complemented each other perfectly. For this, I built on what I'd learnt about [colour theory and accessibility when designing a custom syntax highlight scheme](../2021-05-26_custom-highlighting-distill-2/index.qmd) for my previous website. I also learnt about Sass and made extensive use of a lot of custom Sass variables.
+I put a *lot* of thought into the colour scheme for both the light and dark modes of the site, and making sure they complemented each other perfectly. For this, I built on what I'd learnt about [colour theory and accessibility when designing a custom syntax highlight scheme](../2021-05-26_custom-highlighting-distill-2/index.qmd) for my previous website. I also learnt about Sass and made extensive use of custom Sass variables.
 
 ### Custom syntax highlighting
 
-Having [implemented a custom syntax highlight theme](../2021-05-25_custom-highlighting-distill-1/index.qmd) for my {distill} site, and created a function for the [{distilltools}](../../packages/distilltools/index.qmd) package so others could do the same, I had hoped to be able to port that straight over to my Quarto site. Unfortunately, it wasn't so simple. Although they are both called `arrow`, there are changes in the implementation of the default syntax highlight scheme for Quarto from how it was implemented in {distill}, and, to make things more awkward, there are also inconsistencies between the light and dark versions of `arrow` in Quarto. It took me a while to get my head around all that. It was quite finicky modifying my original highlighting theme and creating a complementary theme for my dark mode.
+Having [implemented a custom syntax highlight theme](../2021-05-25_custom-highlighting-distill-1/index.qmd) for my {distill} site, and created a function for the [{distilltools}](../../packages/distilltools/index.qmd) package so others could do the same, I had hoped to be able to port that straight over to my Quarto site. Unfortunately, it wasn't so simple. Although they are both called `arrow`, there are changes in the implementation of the default syntax highlight scheme for Quarto from how it was implemented in {distill}, and, to make things more awkward, there are also inconsistencies between the light and dark versions of `arrow` in Quarto. It took me a while to get my head around all that. Modifying my original highlighting theme and creating a complementary theme for the dark mode was finicky. 
 
 ### giscus comments box light/dark toggle
 
-Quarto makes it really easy to add [giscus](https://giscus.app){target="_blank"} comments boxes, and giscus (and in turn Quarto) make it simple to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set the default light or dark theme dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark switch. In response to my query, with a lot of back and forth, Sage (the creator of giscus) figured out the [JavaScript to make this happen](https://github.com/giscus/giscus/issues/336#issuecomment-1214366281){target="_blank"} and I figured out how to [integrate it into the Quarto site](https://github.com/giscus/giscus/issues/336#issuecomment-1214401296){target="_blank"}. 
+Quarto makes it easy to add [giscus](https://giscus.app){target="_blank"} comments boxes, and giscus (and in turn Quarto) make it simple to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set the default light or dark theme dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark switch. In response to my query, with a lot of back and forth, Sage (the creator of giscus) figured out the [JavaScript to make this happen](https://github.com/giscus/giscus/issues/336#issuecomment-1214366281){target="_blank"} and I figured out how to [integrate it into the Quarto site](https://github.com/giscus/giscus/issues/336#issuecomment-1214401296){target="_blank"}. 
 
-I would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. It haven't yet been able to make it work, though, which appears to be an [issue](https://github.com/giscus/giscus/issues/789){target="_blank"} related to hosting on Netlify. 
+I would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. I haven't yet been able to make it work, though, which appears to be an [issue](https://github.com/giscus/giscus/issues/789){target="_blank"} related to hosting on Netlify. 
 
 ### Local fonts and open type font features
 
-Because I love typography and think that professional fonts are worth paying for, and in order to give my site a distinct appearance, I purchased licenses for [Lemon Milk Pro](){target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about [open type font features](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide), and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.^[As much as I love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.]
+Because I'm interested in typography and think that professional fonts are worth paying for, and in order to give my site a distinct appearance, I purchased licenses for [Lemon Milk Pro](){target="_blank"} (used for body and header text) and [MonoLisa](https://www.monolisa.dev){target="_blank"} (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about [open type font features](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide), and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.^[As much as I love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it's not then clear what they have to type to replicate it.]
 
 ### Icon links
 
-As on my {distill} site, I've made copious use of the `icon_link()` function in [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"}, a handy R function that creates a link, with an icon and some text that, with some additional CSS, can be styled a bit like a button, e.g. the code
+As on my {distill} site, I've made copious use of the `icon_link()` function in my [{distilltools}](https://github.com/EllaKaye/distilltools/){target="_blank"} package, a handy R function that creates a link, with an icon and some text that, with some additional CSS, can be styled a bit like a button, e.g. the code
 
 ```{.r}
 distilltools::icon_link(
@@ -152,7 +151,7 @@ The `icon_link()` function could do with an update, to include bootstrap icons (
 
 ## So, how long did it take?
 
-I took me four months, though working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project.
+I took me four months, working intermittently, to put this site together, *much* longer than I had anticipated when embarking on the project.
 
 Shortly after I finally shared my site, I came across the [The Programmers' Credo](https://www.globalnerdy.com/2021/06/07/the-programmers-credo/). It rang true!
 
