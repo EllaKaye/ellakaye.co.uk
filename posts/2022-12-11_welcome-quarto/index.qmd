@@ -21,7 +21,7 @@ twitter-card:
   title: Welcome to my Quarto website!
   description: |
     Resources I found inspiring and useful when building my new site, plus notes on my customisations
-  image: ../images/logo.png
+  image: ../../images/logo.png
   image-alt: |
     A square logo made from Ella Kaye's name - first name on top of last name in dark gray capital letters, separated by a horizontal bright pink line, on a very light grey background
 #  defaults to 500 x 500 summary: uncomment lines below for large card
