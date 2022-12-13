@@ -28,9 +28,9 @@ twitter-card:
 #  image-width: 600 
 #  image-height: 314
 #  card-style: summary_large_image 
-#  image-width: 500
-#  image-height: 500
-#  card-style: summary
+  image-width: 500
+  image-height: 500
+  card-style: summary
 draft: false
 ---
 
