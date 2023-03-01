@@ -27,7 +27,7 @@ twitter-card: true
 #  image-width: 500
 #  image-height: 500
 #  card-style: summary
-draft: false
+draft: true
 ---
 
 <!--------------- set up ----------------->
