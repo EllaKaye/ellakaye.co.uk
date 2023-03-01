@@ -5,7 +5,7 @@ description: |
 date: 2022-12-11
 author: 
   - name: Ella Kaye
-    url: https://fosstodon.org/@ellakaye
+    #url: https://fosstodon.org/@ellakaye
 site-url: https://ellakaye.co.uk
 image: quarto.png
 image-alt: |

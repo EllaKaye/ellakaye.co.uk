@@ -5,7 +5,7 @@ description: |
 #date: UPDATE # initial commit date? Publish date? No date?
 author: 
   - name: Ella Kaye
-    url: https://twitter.com/ellamkaye
+    #url: httep://twitter.com/ellakaye
   - name: David Firth
 site-url: https://ellakaye.co.uk
 image: ../../images/hex/BradleyTerryScalable.png
