@@ -313,7 +313,7 @@ There is a workaround, though, which is that the above YAML can also be included
 
 source("../../R/appendix.R")
 insert_appendix(
-  repo_spec = "EllaKaye/ellakaye-quarto", 
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
   name = long_slug
 )
 ```

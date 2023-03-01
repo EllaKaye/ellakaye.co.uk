@@ -100,7 +100,7 @@ Incidentally, none of the above would have happened if I'd just thought, for my 
 
 source("../../R/appendix.R")
 insert_appendix(
-  repo_spec = "EllaKaye/ellakaye-quarto", 
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
   name = long_slug
 )
 ```

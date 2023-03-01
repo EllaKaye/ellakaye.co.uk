@@ -512,7 +512,7 @@ Now that I have chosen my colour palette, head back to [part 1](../2021-05-25_cu
 
 source("../../R/appendix.R")
 insert_appendix(
-  repo_spec = "EllaKaye/ellakaye-quarto", 
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
   name = long_slug
 )
 ```

@@ -9,7 +9,7 @@ execute:
 website:
   title: "Ella Kaye"
   site-url: "https://ellakaye.co.uk"
-  repo-url: https://github.com/EllaKaye/ellakaye-quarto
+  repo-url: https://github.com/EllaKaye/ellakaye.co.uk
   repo-actions: issue
   image: images/logo.png
   navbar:

@@ -164,7 +164,7 @@ Expect to hear much more from me, both on this blog and [twitter](https://twitte
 
 source("../../R/appendix.R")
 insert_appendix(
-  repo_spec = "EllaKaye/ellakaye-quarto", 
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
   name = long_slug
 )
 ```

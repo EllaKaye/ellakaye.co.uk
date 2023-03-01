@@ -1110,7 +1110,7 @@ I was late to the game, and that was as far as I managed to get in December 2020
 
 source("../../R/appendix.R")
 insert_appendix(
-  repo_spec = "EllaKaye/ellakaye-quarto", 
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
   name = long_slug
 )
 ```
