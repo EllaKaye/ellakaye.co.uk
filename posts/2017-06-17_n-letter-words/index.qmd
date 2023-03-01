@@ -5,7 +5,7 @@ description: |
 date: 2017-06-17
 author: 
   - name: Ella Kaye
-    url: https://twitter.com/ellamkaye
+    #url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.co.uk
 image: ../../images/hex/EMK.png
 image-alt: |

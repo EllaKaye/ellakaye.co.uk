@@ -4,7 +4,7 @@ description: |
   My attempts at Advent of Code, 2020
 author: 
   - name: Ella Kaye
-    url: https://twitter.com/ellamkaye
+    #url: https://twitter.com/ellamkaye
 date: 2020-12-09
 site-url: https://ellakaye.co.uk/
 image: advent-of-code-2020.jpg

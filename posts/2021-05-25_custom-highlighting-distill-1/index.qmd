@@ -6,7 +6,7 @@ description: |
 date: 2021-05-25
 author: 
   - name: Ella Kaye
-    url: https://twitter.com/ellamkaye
+    #url: https://twitter.com/ellamkaye
 site-url: https://ellakaye.co.uk
 image: more-theme-in-action.png
 #image-alt: |
