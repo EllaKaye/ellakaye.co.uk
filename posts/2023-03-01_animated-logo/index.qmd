@@ -1,5 +1,5 @@
 ---
-title: Creating an animated CSS logo
+title: Creating an animated CSS logo for this site
 description: |
   How and why I created an animated logo for this site, using CSS
 date: 2023-03-01
@@ -44,6 +44,37 @@ long_slug <- "2023-03-01_animated-logo"
 ```
 
 <!--------------- post content ----------------->
+
+In my [previous post](../2022-12-11_welcome-quarto/index.qmd), I outlined a number of customisations I made to this personal website of mine and promised a series of future blog posts on how I implemented them. This is the first in the series, on the creation of the animated logo in the top left corner of the site. Note that for the animation to work properly, it needs to be viewed on a device with a mouse/trackpad, not a touchscreen.
+
+## The motivation for creating a CSS logo
+
+Before I get to the details of *how* I created the animation, first a note on why. On my previous site, built with {distill}, I had a static version of the same logo, saved an a .png. As I was developing this site, I tweaked my colour scheme a lot, and each time I did so, I had to head back to my design software, update the image there, re-export it and reload the site. Needless to say, that got tiresome. I realised that if I could create the logo in HTML/CSS, I could style it with my theme and it would update automatically when I made changes there and fit with the rest of the styling on the site.
+
+That issue became even more pressing when I also implemented a dark mode. My light mode logo, with its dark grey text, disappeared into the background of the dark mode. I needed a way to switch logos on light/dark toggle. I did find a [solution](https://github.com/quarto-dev/quarto-cli/discussions/1647), which used some hacky CSS to override the logo.png used in light mode with an alternative logo-dark.png in dark mode, but now needed to manually edit two logo images whenever I tweaked the theme, doubling my original problem.^[This hack does still provide a useful trick for people with logos that can't be created with HTML and styled with CSS but who nevertheless want to switch logos between light and dark modes.]
+
+Having a CSS logo would solve both problems: it would automatically update along with any theme changes *and* I could theme separately in light and dark modes.
+
+Plus, around the time I was grappling with this issue, I saw [Maya Gans](https://maya.rbind.io) tweet that she was working on a CSS animated logo for he site and I got excited by the possibility of figuring out how to do something similar: the line separating my first and last name seemed destined to move on hover. I got in touch with Maya and she was fantastically helpful in assisting me with the implementation. There was lots to troubleshoot!
+
+## Figuring out the HTML and yaml
+
+The first challenge was figuring out the HTML to use in the title that would give me something to style for the line between the names. I needed my first name on top of my last name, but using either `<hr>` or `<br>` tags didn't work. It seems there are some limits to the HTML that can be used in yaml with Quarto. With `<hr>`, my last name was no longer displayed. Using `<br>` did give something to work with, at least that displayed on Chrome, but not on my default browser Safari. It turned out that `<span>` did the trick, with the addition of a class I could apply a CSS style to. The title became `ELLA<span class='icon-line'></span>KAYE`.
+
+With that as my website title and with CSS applied, the logo looked as I wanted, but the title in the browser tab also read "ELLA<span class='icon-line'></span>KAYE", which wasn't great. After some digging, I found it was possible to set the navbar title separately to the website title:
+
+```
+website:
+  title: "Ella Kaye"
+    navbar:
+      title: "ELLA<span class='icon-line'></span>KAYE"
+```
+
+That solves the problem. The browser tab shows "Ella Kaye" but the title of the navbar becomes the logo, with its span that can be styled.
+
+## Figuring out the CSS
+
+
 
 <!--------------- appendices go here ----------------->
 

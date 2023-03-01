@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.97">
+<meta name="generator" content="quarto-1.3.237">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -86,11 +87,12 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -104,8 +106,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -213,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <link rel="stylesheet" href="../../assets/ek-styles.css">
 <meta property="og:title" content="Ella Kaye - Custom syntax highlighting for {distill} part 2">
-<meta property="og:description" content="How to create an appealing and accessible colour palette for a syntax highlighting scheme">
+<meta property="og:description" content="The personal website of Ella Kaye">
 <meta property="og:image" content="https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2/ek-syntax-highlighting-palette.png">
 <meta property="og:site-name" content="Ella Kaye">
 <meta property="og:image:height" content="669">
@@ -221,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <meta property="og:image:alt" content="A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white.
 ">
 <meta name="twitter:title" content="Ella Kaye">
-<meta name="twitter:description" content="The personal website of Ella Kaye">
+<meta name="twitter:description" content="How to create an appealing and accessible colour palette for a syntax highlighting scheme">
 <meta name="twitter:image" content="https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2/ek-syntax-highlighting-palette.png">
 <meta name="twitter:creator" content="@ellamkaye">
 <meta name="twitter:site" content="@ellamkaye">
@@ -243,6 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <span class="navbar-title">ELLA<span class="icon-line"></span>KAYE</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -273,10 +275,9 @@ document.addEventListener('DOMContentLoaded', function () {
  <span class="menu-text">contact</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -330,8 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#update-august-2022" id="toc-update-august-2022" class="nav-link active" data-scroll-target="#update-august-2022">Update: August 2022</a></li>
-  <li><a href="#part-1-recap-and-part-2-overview" id="toc-part-1-recap-and-part-2-overview" class="nav-link" data-scroll-target="#part-1-recap-and-part-2-overview">Part 1 recap and part 2 overview</a></li>
+  <li><a href="#part-1-recap-and-part-2-overview" id="toc-part-1-recap-and-part-2-overview" class="nav-link active" data-scroll-target="#part-1-recap-and-part-2-overview">Part 1 recap and part 2 overview</a></li>
   <li><a href="#a-brief-primer-on-colour-theory" id="toc-a-brief-primer-on-colour-theory" class="nav-link" data-scroll-target="#a-brief-primer-on-colour-theory">A brief primer on colour theory</a>
   <ul class="collapse">
   <li><a href="#colour-harmonies" id="toc-colour-harmonies" class="nav-link" data-scroll-target="#colour-harmonies">Colour harmonies</a></li>
@@ -360,17 +360,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<div class="cell">
-
+<div class="top-callout callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="update-august-2022" class="level2 callout-note top-callout" data-collapse="false">
-<h2 class="anchored" data-anchor-id="update-august-2022">Update: August 2022</h2>
+<div class="callout-title-container flex-fill">
+Update: August 2022
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <p>Since this post was originally written, I have replaced my {disill} website with this one built with <a href="https://quarto.org">Quarto</a>.</p>
 <p>The highlighting you’ll see below is not quite the same as it appeared on my previous site, because the default <code>arrow</code> theme is implemented differently in {distill} and Quarto.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Moreover, I’m now using a very pale gray rather than white background, which necessitated a small shift in the green to achieve a sufficient colour contrast. And if you’re reading this in dark mode, it’s a whole different scheme again, though built on the same principles as described below.</p>
 <p>I am keeping this post otherwise as was on the blog for posterity. Most of the content holds, regardless of how the site was built.</p>
-</section>
-<div class="cell">
-
+</div>
+</div>
 </div>
 <section id="part-1-recap-and-part-2-overview" class="level2">
 <h2 class="anchored" data-anchor-id="part-1-recap-and-part-2-overview">Part 1 recap and part 2 overview</h2>
@@ -456,9 +462,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <p>If you don’t use ColorSlurp or a similar app, there are many online options for building a palette in this way, for example <a href="http://colorizer.org">http://colorizer.org</a> (add a new color to the palette by clicking on the next square down to the right of the sliders). In both ColorSlurp and on colorizer.org, once you have defined a colour by its HSB values, you can read off the hex code, for ease of use in R.</p>
 <p>At the end of this stage of the process, based purely on my pink and colour theory, my syntax highlighting palette now stood as in <a href="#fig-colour-theory-palette">Figure&nbsp;5</a>. In the HSB space, these colours all have a saturation of 100% and a brightness of 83%.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-colour-theory-palette" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -486,9 +489,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <p>The <span style="background-color: #D4006A; color: white; padding:3px">pink</span>, <span style="background-color: #006AD4; color: white; padding:3px">blue</span> and <span style="background-color: #6A00D4; color: white; padding:3px">purple</span> in the palette created above have a contrast ratio of better than 4.5:1 with the pure white background, but the <span style="background-color: #D46A00; color: black; padding:3px">orange</span> and <span style="background-color: #00D46A; color: black; padding:3px">green</span> do not.</p>
 <p>My first thought was to keep the pink, blue and purple the same, and to just reduce the brightness of the orange and green until the contrast ratio was a bit better than required. In the HSB space, that gives the palette in <a href="#fig-orange-green-less-bright">Figure&nbsp;7</a>.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-orange-green-less-bright" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -501,9 +501,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <p>It’s not bad, but when I applied that palette as a syntax highlighting scheme, to my eye the pink, blue and purple looked a little too bright relative to the orange.</p>
 <p>My next thought was to reduce the brightness on all the colours to the level of the least bright colour that passes the accessibility check (the green, at 53%). That gives the palette in <a href="#fig-all-less-bright">Figure&nbsp;8</a>.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-all-less-bright" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -515,9 +512,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <p>That looks way too dark for my liking. I don’t think it’s vibrant enough, and, although the colours all have good contrast against the white background, they don’t have much contrast with each other.</p>
 <p>So, I settled on a compromise position. I reduced the brightness of the original pink, blue and purple from 83% to match the brightness of the accessibility-passing orange (71%), leaving only the green at a brightness of 53%, which it needs to pass the contrast check. This gives the palette in <a href="#fig-final-palette">Figure&nbsp;9</a>. To my eye, the green doesn’t appear considerably more dark/less bright than the other four colours. If anything, the greens in <a href="#fig-colour-theory-palette">Figure&nbsp;5</a> and <a href="#fig-all-less-bright">Figure&nbsp;8</a> which both have uniform brighness, look a little too bright compared to the other colours. I guess this is a result of the lack of perceptual uniformity of the HSB space.</p>
-<div class="cell">
-
-</div>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-final-palette" class="quarto-figure quarto-figure-center anchored">
@@ -600,12 +594,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </details>
 </div>
 <div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-hcl-six" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -617,9 +605,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <p>The only personal decision I make in this section is which of these six colours to discard. Removing the first of the greens gives me the palette in <a href="#fig-hcl-five">Figure&nbsp;12</a>.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-hcl-five" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -629,30 +614,25 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 </div>
 </div>
-<div class="cell">
-
-</div>
-<div class="callout callout-style-default callout-note callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Update: May 27th 2021
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Since publishing this post, Achim Zeileis, the author of the {colorspace} package, got in touch with me on <a href="https://twitter.com/AchimZeileis/status/1397580619857682437">twitter</a> to offer a bit more insight into what’s going on with this palette. The <code>hcl_six</code> palette does not, as I originally stated, have constant chroma. I have corrected the text above. Not all combinations of Hue/Chroma/Luminance exist in HCL space. At the luminance of my pink (~46) not many other hues can have such high chroma (~118), as demonstrated in <a href="#fig-hclplot">Figure&nbsp;13</a>.</p>
+<p>Since publishing this post, Achim Zeileis, the author of the {colorspace} package, got in touch with me on <a href="https://twitter.com/AchimZeileis/status/1397580619857682437">twitter</a> to offer a bit more insight into what’s going on with this palette. The <code>hcl_six</code> palette does not, as I originally stated, have constant chroma. I have corrected the text above. Not all combinations of Hue/Chroma/Luminance exist in HCL space. At the luminance of my pink (~46) not many other hues can have such high chroma (~118), as demonstrated in <strong>?@fig-hclplot</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-hclplot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-hclplot-1.png" class="img-fluid figure-img" alt="A partially filled colour wheel for a luminance of 47 in HCL space, showing hues of orange, red and purple with high chroma, but with no greens or yellows of high chroma." width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13: Hues and Chromas in HCL space at the Luminance of my pink</figcaption><p></p>
+<figure id="fig-hclplot" class="figure">
+<img src="index_files/figure-html/fig-hclplot-1.png" class="img-fluid figure-img" alt="A partially filled colour wheel for a luminance of 47 in HCL space, showing hues of orange, red and purple with high chroma, but with no greens or yellows of high chroma." width="672">
+<figcaption class="figure-caption">Hues and Chromas in HCL space at the Luminance of my pink</figcaption>
 </figure>
-</div>
 </div>
 </div>
 <p><code>qualitative_hcl()</code> struggles in such circumstances, though does try to keep the luminance of the palette constant.</p>
@@ -694,14 +674,11 @@ Update: May 27th 2021
 </div>
 <p>At the end of the process, the palette looks like this:</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-hcl-darkened" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="index_files/figure-html/fig-hcl-darkened-1.png" class="img-fluid figure-img" alt="A swatch of five colours, pink, brown, green, blue, magenta, all slightly darker than in the previous figure." width="624"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14: An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13: An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -709,13 +686,13 @@ Update: May 27th 2021
 </section>
 <section id="checking-for-colourblindness-1" class="level3">
 <h3 class="anchored" data-anchor-id="checking-for-colourblindness-1">Checking for colourblindness</h3>
-<p>As before, we use {prismatic} to check how the palette appears to those with various types of colourblindess. Whilst R can help us visualise this, we still need to use our judgement as to whether the output is acceptable. I believe, in <a href="#fig-hcl-darkened-colourblind">Figure&nbsp;15</a>, it is.</p>
+<p>As before, we use {prismatic} to check how the palette appears to those with various types of colourblindess. Whilst R can help us visualise this, we still need to use our judgement as to whether the output is acceptable. I believe, in <a href="#fig-hcl-darkened-colourblind">Figure&nbsp;14</a>, it is.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-hcl-darkened-colourblind" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="hcl-darkened-colourblind.png" class="img-fluid figure-img" alt="Four colour palettes. One shows the darkened HCL palette from the previous post as is, the other three show how that palette appears to those with deuteranopia, protanopia and tritanopia. Under all those conditions, the five colours are distinguishable." width="561"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;15: Checking how the darkened HCL palette appears to those with various types of colourblindness.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14: Checking how the darkened HCL palette appears to those with various types of colourblindness.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -740,13 +717,13 @@ Update: May 27th 2021
 
 
 
-<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
+<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
 
 <p>2022-11-11 22:27:46 GMT</p>
-</div></section><section id="details" class="level2 appendix"><h2 class="quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
+</div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
 
 <p><a href="https://github.com/EllaKaye/ellakaye-quarto/tree/main/posts/2021-05-26_custom-highlighting-distill-2/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye-quarto/tree/main/posts/2021-05-26_custom-highlighting-distill-2/renv.lock" target="_blank">R environment</a></p>
-</div></section><section id="session-info" class="level5 appendix"><h2 class="quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
+</div></section><section id="session-info" class="level5 appendix"><h2 class="anchored quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
 
 <details>
 <summary>
@@ -792,8 +769,8 @@ Toggle
 <!-- -->
 
 
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-Zeileis:2020" class="csl-entry" role="doc-biblioentry">
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Zeileis:2020" class="csl-entry" role="listitem">
 Zeileis, Achim, Jason C. Fisher, Kurt Hornik, Ross Ihaka, Claire D. McWhite, Paul Murrell, Reto Stauffer, and Claus O. Wilke. 2020. <span>“<span class="nocase">colorspace</span>: A Toolbox for Manipulating and Assessing Colors and Palettes.”</span> <em>Journal of Statistical Software</em> 96 (1): 1–49. <a href="https://doi.org/10.18637/jss.v096.i01">https://doi.org/10.18637/jss.v096.i01</a>.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
@@ -803,15 +780,15 @@ Zeileis, Achim, Jason C. Fisher, Kurt Hornik, Ross Ihaka, Claire D. McWhite, Pau
 <li id="fn2"><p>Again, I want to stress that this 60° apart approach and discard one is NOT something you should do when building a five-colour palette for a data visualisation. There, where the colours mean something in relation to the data, it’s important that the hues are evenly spaced. Even for qualitative data, the perceptual uniformity of five evenly-spaced colours is preferable. However, for a syntax highlighting scheme, where any of the colours can appear next to any of the others, and we want all pairs to look good together, and the colours convey no meaning, based on my current and still somewhat limited knowledge of colour theory, I think the six-at-sixty-degrees-discard-one approach is preferable (though I could probably be persuaded otherwise if anyone has a compelling case for an evenly-spaced 5 colours in this context too).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Since switching my website to Quarto, I have found out about the <a href="https://emilhvitfeldt.github.io/prismatic/reference/best_contrast.html"><code>best_contrast</code></a> function from {prismatic} that I will use instead of <code>cr_choose_bw</code> in future, since it allows us to specify the colours to contrast against, useful for me now that I am using very dark gray and very pale gray instead of black and white.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
-  author = {Ella Kaye},
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
+  author = {Kaye, Ella},
   title = {Custom Syntax Highlighting for \{Distill\} Part 2},
   date = {21-05-26},
   url = {https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Ella Kaye. 21AD. <span>“Custom Syntax Highlighting for {Distill} Part
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Kaye, Ella. 21AD. <span>“Custom Syntax Highlighting for {Distill} Part
 2.”</span> May 26, 21AD. <a href="https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2">https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2</a>.
 </div></div></section></div></main> <!-- /main -->
 <div class="giscus">
@@ -957,9 +934,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1075,6 +1066,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1118,7 +1195,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
