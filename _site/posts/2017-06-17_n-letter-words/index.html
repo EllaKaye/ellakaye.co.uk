@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.247">
+<meta name="generator" content="quarto-1.3.97">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -162,7 +162,7 @@ function setGiscusTheme() {
 document.addEventListener('DOMContentLoaded', function () {
   const giscusAttributes = {
     "src": "https://giscus.app/client.js",
-    "data-repo": "EllaKaye/ellakaye-quarto",
+    "data-repo": "EllaKaye/ellakaye.co.uk",
     "data-repo-id": "R_kgDOHwJk_g",
     "data-category": "General",
     "data-category-id": "DIC_kwDOHwJk_s4CQr7D",
@@ -231,27 +231,27 @@ same bright pink, on a white background
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
  <span class="menu-text">posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talks.html">
+    <a class="nav-link" href="../../talks.html" rel="" target="">
  <span class="menu-text">talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../packages.html">
+    <a class="nav-link" href="../../packages.html" rel="" target="">
  <span class="menu-text">packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../community.html">
+    <a class="nav-link" href="../../community.html" rel="" target="">
  <span class="menu-text">community</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
  <span class="menu-text">contact</span></a>
   </li>  
 </ul>
@@ -286,7 +286,7 @@ same bright pink, on a white background
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Ella Kaye </p>
+               <p><a href="https://twitter.com/ellamkaye">Ella Kaye</a> </p>
             </div>
     </div>
       
@@ -449,17 +449,17 @@ Toggle
 
 <!-- -->
 
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2017,
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2017,
   author = {Ella Kaye},
   title = {`N\_letter\_words` and a Personal (Publicly Available)
     Package},
-  date = {2017-06-17},
+  date = {17-06-17},
   url = {https://ellakaye.co.uk/posts/2017-06-17_n-letter-words},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2017" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Ella Kaye. 2017. <span>“`N_letter_words` and a Personal (Publicly
-Available) Package.”</span> June 17, 2017. <a href="https://ellakaye.co.uk/posts/2017-06-17_n-letter-words">https://ellakaye.co.uk/posts/2017-06-17_n-letter-words</a>.
+Ella Kaye. 17AD. <span>“`N_letter_words` and a Personal (Publicly
+Available) Package.”</span> June 17, 17AD. <a href="https://ellakaye.co.uk/posts/2017-06-17_n-letter-words">https://ellakaye.co.uk/posts/2017-06-17_n-letter-words</a>.
 </div></div></section></div></main> <!-- /main -->
 <div class="giscus">
 <script id="quarto-html-after-body" type="application/javascript">
@@ -759,6 +759,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/ellakaye\.co\.uk/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content --><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -864,7 +878,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../../R/appendix.R"</span>)</span>
 <span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a><span class="fu">insert_appendix</span>(</span>
-<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo_spec =</span> <span class="st">"EllaKaye/ellakaye-quarto"</span>, </span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo_spec =</span> <span class="st">"EllaKaye/ellakaye.co.uk"</span>, </span>
 <span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> long_slug</span>
 <span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>

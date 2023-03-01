@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.247">
+<meta name="generator" content="quarto-1.3.97">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -98,7 +98,7 @@ function setGiscusTheme() {
 document.addEventListener('DOMContentLoaded', function () {
   const giscusAttributes = {
     "src": "https://giscus.app/client.js",
-    "data-repo": "EllaKaye/ellakaye-quarto",
+    "data-repo": "EllaKaye/ellakaye.co.uk",
     "data-repo-id": "R_kgDOHwJk_g",
     "data-category": "General",
     "data-category-id": "DIC_kwDOHwJk_s4CQr7D",
@@ -165,27 +165,27 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
  <span class="menu-text">posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talks.html">
+    <a class="nav-link" href="../../talks.html" rel="" target="">
  <span class="menu-text">talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../packages.html">
+    <a class="nav-link" href="../../packages.html" rel="" target="">
  <span class="menu-text">packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../community.html">
+    <a class="nav-link" href="../../community.html" rel="" target="">
  <span class="menu-text">community</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
  <span class="menu-text">contact</span></a>
   </li>  
 </ul>
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Ella Kaye </p>
+               <p><a href="https://twitter.com/ellamkaye">Ella Kaye</a> </p>
             </div>
     </div>
       
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <li><a href="#main-resources" id="toc-main-resources" class="nav-link active" data-scroll-target="#main-resources">Main resources</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/EllaKaye/ellakaye-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/EllaKaye/ellakaye.co.uk/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -507,6 +507,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/ellakaye\.co\.uk/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

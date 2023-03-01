@@ -88,6 +88,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
     let linkStyle = window.document.querySelector("#quarto-target-style");
     if (!linkStyle) {
       linkStyle = window.document.createElement("style");
+      linkStyle.setAttribute("id", "quarto-target-style");
       window.document.head.appendChild(linkStyle);
     }
     while (linkStyle.firstChild) {
@@ -147,6 +148,14 @@ window.document.addEventListener("DOMContentLoaded", function () {
       }
     };
   }
+
+  window.addEventListener(
+    "hashchange",
+    function (e) {
+      window.scrollTo(0, window.pageYOffset - headerOffset());
+    },
+    false
+  );
 
   // Observe size changed for the header
   const headerEl = window.document.querySelector("header.fixed-top");

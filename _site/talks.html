@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.247">
+<meta name="generator" content="quarto-1.3.97">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -133,27 +133,27 @@ gtag('config', 'G-7G8FLLRS4M', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html">
+    <a class="nav-link" href="./posts.html" rel="" target="">
  <span class="menu-text">posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./talks.html" aria-current="page">
+    <a class="nav-link active" href="./talks.html" rel="" target="" aria-current="page">
  <span class="menu-text">talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./packages.html">
+    <a class="nav-link" href="./packages.html" rel="" target="">
  <span class="menu-text">packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html">
+    <a class="nav-link" href="./community.html" rel="" target="">
  <span class="menu-text">community</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html">
+    <a class="nav-link" href="./contact.html" rel="" target="">
  <span class="menu-text">contact</span></a>
   </li>  
 </ul>
@@ -184,7 +184,7 @@ gtag('config', 'G-7G8FLLRS4M', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1603929600000" data-listing-file-modified-sort="1668204549386" data-listing-reading-time-sort="1.45">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1603929600000" data-listing-file-modified-sort="1668204549386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1.45">
 <a href="./talks/2020-10-29_how-to-get-help-in-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -212,7 +212,7 @@ Oct 29, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1570230000000" data-listing-file-modified-sort="1669104474525" data-listing-reading-time-sort="1.01">
+<div class="g-col-1" data-index="1" data-listing-date-sort="1570230000000" data-listing-file-modified-sort="1669104474525" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1.01">
 <a href="./talks/2019-10-05_working-with-text-in-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -238,7 +238,7 @@ Oct 5, 2019
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1534978800000" data-listing-file-modified-sort="1668204503229" data-listing-reading-time-sort="1.305">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1534978800000" data-listing-file-modified-sort="1668204503229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1.305">
 <a href="./talks/2018-08-23_phd-as-package/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -264,7 +264,7 @@ Aug 23, 2018
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1499295600000" data-listing-file-modified-sort="1668204466125" data-listing-reading-time-sort="1.6">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1499295600000" data-listing-file-modified-sort="1668204466125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1.6">
 <a href="./talks/2017-07-06_introducing-BradleyTerryScalable/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -289,7 +289,7 @@ Jul 6, 2017
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1495666800000" data-listing-file-modified-sort="1668204024424" data-listing-reading-time-sort="0.43">
+<div class="g-col-1" data-index="4" data-listing-date-sort="1495666800000" data-listing-file-modified-sort="1668204024424" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="0.43">
 <a href="./talks/2017-05-25_overview-of-htmlwidgets/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -566,6 +566,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/ellakaye\.co\.uk/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

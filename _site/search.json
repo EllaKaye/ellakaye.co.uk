@@ -2,65 +2,114 @@
   {
     "objectID": "community.html#r-user-groups",
     "href": "community.html#r-user-groups",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "R User Groups",
     "text": "R User Groups\nThere are local R User Groups (RUGs), affiliated with the R Consortium, all around the world. Many of these organise both in-person and online events and offer an excellent way to meet other R users nearby. They all have meetup pages. There’s also a great Shiny app for exploring the groups:\n RUGs on meetup  RUGs Shiny app\nI am on the organising committee of the Warwick R User Group (WRUG), and was previously an organiser of the Oxford R User Group.\n WRUG meetup  WRUG website  WRUG Twitter  WRUG GitHub"
   },
   {
     "objectID": "community.html#rladies",
     "href": "community.html#rladies",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "RLadies",
     "text": "RLadies\nRLadies has been around for over 10 years, promoting gender diversity in the R community. It is a worldwide organisation run by a global team, with local chapters all over the world. They also have a directory where you can browse their list of speakers for conferences & events, or view profiles of R-Ladies located by country.\n global website  local meetups  RLadies Shiny app  directory"
   },
   {
     "objectID": "community.html#rainbowr",
     "href": "community.html#rainbowr",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "rainbowR",
     "text": "rainbowR\nrainbowR’s mission is to support, promote and connect LGBTQ+ people in the R community and to and spread awareness of LGBTQ+ issues through data-driven activism. I am a co-founder and co-organiser of the group.\n website  join slack  slack group  tech.lgbt  Twitter  GitHub"
   },
   {
     "objectID": "community.html#r-forwards",
     "href": "community.html#r-forwards",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "R Forwards",
     "text": "R Forwards\nR Forwards is an R Foundation taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There’s more information on the website, though it’s rather out of date. The Twitter account is active.\n website  Twitter"
   },
   {
     "objectID": "community.html#data-science-data-visualisation-and-tidytuesday",
     "href": "community.html#data-science-data-visualisation-and-tidytuesday",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "Data science, data visualisation and #TidyTuesday",
     "text": "Data science, data visualisation and #TidyTuesday\nR for Data Science (R4DS) is a very friendly online learning community with an active slack group. It is a community of R users at all levels, working and learning together. There are learners and mentors and office hours, but everyone helps each other.\n website  Twitter  fosstodon.org\nR for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter and/or Mastodon with the hashtag #TidyTuesday. All the datasets and participating guides are on GitHub.\n #TidyTuesday  #TidyTuesday  GitHub\nI am an extremely infrequent contributor to #TidyTuesday. My contributions are on my GitHub.\n My TidyTuesday contributions"
   },
   {
     "objectID": "community.html#data-science-by-design",
     "href": "community.html#data-science-by-design",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "Data Science by Design",
     "text": "Data Science by Design\nData Science by Design (DSxD) celebrates creativity in data science and developing a more open, ethical, and inclusive future for data work. They run small conferences and an active slack group. They publish anthologies, both in print and online, collections of work by data designers, scientists, and artists, with each issue on a different theme. I was honoured to be included in the first volume, with an article on {distilltools}.\n website  Twitter  book"
   },
   {
     "objectID": "community.html#twitter",
     "href": "community.html#twitter",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "Twitter",
     "text": "Twitter\nYou’ll have seen above links to various groups on Twitter. To follow and engage with the R community on twitter more broadly, the #rstats hashtag is the best place to start.\n #rstats"
   },
   {
     "objectID": "community.html#mastodon",
     "href": "community.html#mastodon",
-    "title": "Ella Kaye",
+    "title": "COMMUNITY",
     "section": "Mastodon",
     "text": "Mastodon\nThere is an active, and growing, community of R users on Mastodon, an open-source social network that is becoming increasingly popular.1 The community is spread across different servers, though fosstodon.org appears the most popular. The #rstats tag is active here.\n fosstodon  #rstats"
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "Ella Kaye",
+    "title": "I’d love to hear from you!",
     "section": "",
     "text": "I’d love to hear from you!\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of its page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  Mastodon  GitHub\n\n\n\nOr, you can drop me an e-mail at hello @ ellakaye.co.uk"
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html",
+    "href": "posts/2022-12-11_welcome-quarto/index.html",
+    "title": "Welcome to my Quarto website!",
+    "section": "",
+    "text": "Hello, and welcome to my new site, built using Quarto. Here’s why I switched from {distill} and the resources that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts."
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html#why-quarto-why-now",
+    "href": "posts/2022-12-11_welcome-quarto/index.html#why-quarto-why-now",
+    "title": "Welcome to my Quarto website!",
+    "section": "Why Quarto? Why now?",
+    "text": "Why Quarto? Why now?\nI was very happy with my previous website built using {distill}. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what Posit (formerly RStudio) learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again (for the fourth time).\nI’m finding working with Quarto to be an absolute joy!"
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html#resources",
+    "href": "posts/2022-12-11_welcome-quarto/index.html#resources",
+    "title": "Welcome to my Quarto website!",
+    "section": "Resources",
+    "text": "Resources\nThis post is not a guide on how to get a Quarto website up and running and styled. There are already great resources for that. These are the the ones that I found most helpful.\n\nThe basics\n\nMy first taste of Quarto was Mine Çetinkaya-Rundel’s talk about it at the 2022 Toronto Workshop on Reproducibility.\nThe official Quarto tutorials taught me the basics.\nThe official Quarto guide is a treasure trove with the section on websites being, needless to say, most helpful for the development of this site.\n\nThese two posts on making the transition from R Markdown/{distill} to Quarto were also extremely useful:\n\nDanielle Navarro on porting a distill blog to Quarto.\nAlison Hill’s post on why we don’t talk about Quarto.\n\n\n\nGoing further\nThe above resources were enough for me to replicate the website I’d built with {distill}, but as I was putting it together, a couple of excellent posts were published that showed how much customisation was possible, and which massively increased my ambitions for my new site:\n\nAlbert Rapp’s ultimate guide to starting a Quarto blog.\nChristian Gebhard’s guide on switching to Quarto.\n\nThese two posts, in particular, gave me the inspiration and most of the know-how to create my custom home page. They also both contain helpful information on themes and styling."
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html#my-customisations-aka-how-long-could-this-possibly-take",
+    "href": "posts/2022-12-11_welcome-quarto/index.html#my-customisations-aka-how-long-could-this-possibly-take",
+    "title": "Welcome to my Quarto website!",
+    "section": "My customisations AKA how long could this possibly take?",
+    "text": "My customisations AKA how long could this possibly take?\nI didn’t think it would take too long to make some tweaks, but the more I worked on the site, the more I wanted to change. I’ve managed, with help, to implement customisations that I haven’t seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just 100 seconds), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky.\nIn this section, I’m going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.\nFor the sake of brevity, in this post I don’t detail how I achieved these customisations. I just note what I had to learn to implement them. I intend to spin each of the points below into separate tutorial-style blog posts. If you’re interested in seeing how I implemented them in the meantime, you can check out this site’s repo.\n\nAnimated CSS logo\nMy favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.1 To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in _quarto.yml and the best place in that file to add the code. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by Maya Gans, who helped me a lot with the implementation.\nCreating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt another strategy for using different logo images in light and dark modes, using CSS to overwrite one image file with another, which is useful if a logo doesn’t lend itself to creation in CSS.\n\n\nAnimated navigation bar links and colours\nHaving animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process, including @media queries to ensure that the animations only activate when the navbar is in a row. I found a solution online for the animation itself, but figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage was tricky.\n\n\nCSS grid and bootstrap cards\nSpeaking of which, creating the custom layout of my homepage, using CSS grid and bootstrap cards, was a challenge. The blog posts by Albert and Christian linked to in the previous section got me a lot of the way there, but I still had to dive deep into the bootstrap documentation to make sure the cards and the links inside them all lined up nicely.\n\n\nLight and dark mode\nI put a lot of thought into the colour scheme for both the light and dark modes of the site, and making sure they complemented each other perfectly. For this, I built on what I’d learnt about colour theory and accessibility when designing a custom syntax highlight scheme for my previous website. I also learnt about Sass and made extensive use of custom Sass variables.\n\n\nCustom syntax highlighting\nHaving implemented a custom syntax highlight theme for my {distill} site, and created a function for the {distilltools} package so others could do the same, I had hoped to be able to port that straight over to my Quarto site. Unfortunately, it wasn’t so simple. Although they are both called arrow, there are changes in the implementation of the default syntax highlight scheme for Quarto from how it was implemented in {distill}, and, to make things more awkward, there are also inconsistencies between the light and dark versions of arrow in Quarto. It took me a while to get my head around all that. Modifying my original highlighting theme and creating a complementary theme for the dark mode was finicky.\n\n\ngiscus comments box light/dark toggle\nQuarto makes it easy to add giscus comments boxes, and giscus (and in turn Quarto) make it simple to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set the default light or dark theme dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark switch. In response to my query, with a lot of back and forth, Sage (the creator of giscus) figured out the JavaScript to make this happen and I figured out how to integrate it into the Quarto site.\nI would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. I haven’t yet been able to make it work, though, which appears to be an issue related to hosting on Netlify.\n\n\nLocal fonts and open type font features\nBecause I’m interested in typography and think that professional fonts are worth paying for, and in order to give my site a distinct appearance, I purchased licenses for Lemon Milk Pro (used for body and header text) and MonoLisa (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.2\n\n\nIcon links\nAs on my {distill} site, I’ve made copious use of the icon_link() function in my {distilltools} package, a handy R function that creates a link, with an icon and some text that, with some additional CSS, can be styled a bit like a button, e.g. the code\ndistilltools::icon_link(\n  icon = \"github\",\n  text = \"site repo\",\n  url = \"https://github.com/EllaKaye/ellakaye.co.uk\"\n)\noutputs HTML which, with some CSS styling for the icon-link class, renders as the following:\n site repo\nThe function still works on a Quarto site, but there’s a lot of set-up that’s different. Unlike {distill}, Quarto doesn’t support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the icon-link class from a {distill} site didn’t look right on Quarto, so further tweaks were necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.\nThe icon_link() function could do with an update, to include bootstrap icons (which are automatically available in Quarto sites), to update to the latest Font Awesome icons (it currently uses 5.15, whereas the latest release is 6.2) and possibly to add more icon sets."
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html#so-how-long-did-it-take",
+    "href": "posts/2022-12-11_welcome-quarto/index.html#so-how-long-did-it-take",
+    "title": "Welcome to my Quarto website!",
+    "section": "So, how long did it take?",
+    "text": "So, how long did it take?\nI took me four months, working intermittently, to put this site together, much longer than I had anticipated when embarking on the project.\nShortly after I finally shared my site, I came across the The Programmers’ Credo. It rang true!\n\nWe do these things not because they are easy, but because we thought they were going to be easy.\n\nThat said, I consider the fact that it was not easy to be a positive, in that I’ve learnt a lot. And, once I’ve finished the series of blog posts on my new-found knowledge, hopefully you will have too.3"
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html#last-updated",
+    "href": "posts/2022-12-11_welcome-quarto/index.html#last-updated",
+    "title": "Welcome to my Quarto website!",
+    "section": "Last updated",
+    "text": "Last updated\n\n2022-12-13 20:21:07 GMT"
+  },
+  {
+    "objectID": "posts/2022-12-11_welcome-quarto/index.html#details",
+    "href": "posts/2022-12-11_welcome-quarto/index.html#details",
+    "title": "Welcome to my Quarto website!",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html",
@@ -68,6 +117,13 @@
     "title": "Welcome to my {distill} website!",
     "section": "",
     "text": "Hello, and welcome to my new site, built using the {distill} package. Here’s why I switched from {blogdown}, and the resources and inspirations that helped me in the process."
+  },
+  {
+    "objectID": "posts/2021-05-08_welcome-distill/index.html#update-august-2022",
+    "href": "posts/2021-05-08_welcome-distill/index.html#update-august-2022",
+    "title": "Welcome to my {distill} website!",
+    "section": "Update: August 2022",
+    "text": "Update: August 2022\nSince this post was originally written, I have replaced my {disill} website with this one built with Quarto.\nIf you’re looking to build a new website using R (or python or Julia), I would 100% recommend Quarto over {distill}.\nThat said, I still have a soft spot for {distill} and am keeping this post on the blog for posterity."
   },
   {
     "objectID": "posts/2021-05-08_welcome-distill/index.html#why-distill",
@@ -224,6 +280,13 @@
     "text": "Details\n\nsource code, R environment"
   },
   {
+    "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html#update-august-2022",
+    "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html#update-august-2022",
+    "title": "Custom syntax highlighting for {distill} part 2",
+    "section": "Update: August 2022",
+    "text": "Update: August 2022\nSince this post was originally written, I have replaced my {disill} website with this one built with Quarto.\nThe highlighting you’ll see below is not quite the same as it appeared on my previous site, because the default arrow theme is implemented differently in {distill} and Quarto.1 Moreover, I’m now using a very pale gray rather than white background, which necessitated a small shift in the green to achieve a sufficient colour contrast. And if you’re reading this in dark mode, it’s a whole different scheme again, though built on the same principles as described below.\nI am keeping this post otherwise as was on the blog for posterity. Most of the content holds, regardless of how the site was built."
+  },
+  {
     "objectID": "posts/2021-05-26_custom-highlighting-distill-2/index.html#part-1-recap-and-part-2-overview",
     "href": "posts/2021-05-26_custom-highlighting-distill-2/index.html#part-1-recap-and-part-2-overview",
     "title": "Custom syntax highlighting for {distill} part 2",
@@ -271,6 +334,13 @@
     "title": "Custom syntax highlighting for {distill} part 2",
     "section": "Details",
     "text": "Details\n\nsource code, R environment"
+  },
+  {
+    "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#update-august-2022",
+    "href": "posts/2021-05-25_custom-highlighting-distill-1/index.html#update-august-2022",
+    "title": "Custom syntax highlighting for {distill} part 1",
+    "section": "Update: August 2022",
+    "text": "Update: August 2022\nSince this post was originally written, I have replaced my {disill} website with this one built with Quarto.\narrow is the default syntax highlighting theme for Quarto, as it was for {distill}, although it is implemented slightly differently here, and the process of modifying it for Quarto is not the same as it was before. I’ll lay out the differences in a future post. Moreover, as a result, the highlighting you’ll see below is not quite the same as it appeared on my previous site, and if you’re reading this in dark mode, it’s a whole different scheme again.1 That said, I am keeping this post otherwise as was on the blog for posterity."
   },
   {
     "objectID": "posts/2021-05-25_custom-highlighting-distill-1/index.html#overview",
@@ -352,7 +422,7 @@
   {
     "objectID": "talks.html",
     "href": "talks.html",
-    "title": "Ella Kaye",
+    "title": "TALKS",
     "section": "",
     "text": "TALKS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to get help in R\n\n\nTips for looking for answers and asking questions about R\n\n\n\nElla Kaye\n\n\nOct 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with text in R\n\n\nAn overview of a range of packages for working with text in R\n\n\n\nElla Kaye\n\n\nOct 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up your PhD (or other research project) as an R package\n\n\nHow I set up my PhD as an R package\n\n\n\nElla Kaye\n\n\nAug 23, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanking items scalably with the Bradley-Terry model\n\n\nIntroducing the {BradleyTerryScalable} package\n\n\n\nElla Kaye\n\n\nJul 6, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn overview of htmlwidgets\n\n\nA brief overview of using htmlwidgets in R\n\n\n\nElla Kaye\n\n\nMay 25, 2017\n\n\n\n\n\n\n\n\nNo matching items"
   },
@@ -576,64 +646,15 @@
   {
     "objectID": "posts.html",
     "href": "posts.html",
-    "title": "Ella Kaye",
+    "title": "POSTS",
     "section": "",
     "text": "POSTS\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my Quarto website!\n\n\n\n\n\n\n\nQuarto\n\n\ndistilltools\n\n\n\n\nResources I found inspiring and useful when building my new site, plus notes on my customisations\n\n\n\n\n\n\nDec 11, 2022\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom syntax highlighting for {distill} part 2\n\n\nCreating the palette\n\n\n\n\ndistill\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nHow to create an appealing and accessible colour palette for a syntax highlighting scheme\n\n\n\n\n\n\nMay 26, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nCustom syntax highlighting for {distill} part 1\n\n\nModifying the default theme\n\n\n\n\ndistill\n\n\ndistilltools\n\n\ncolour\n\n\naccessibility\n\n\nR\n\n\n\n\nA guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}\n\n\n\n\n\n\nMay 25, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my {distill} website!\n\n\n\n\n\n\n\ndistill\n\n\ndistilltools\n\n\npackage development\n\n\nR\n\n\n\n\nResources and sites I found inspiring when building my new site, and a sneak-peek at {distilltools}, an exciting new project for {distill} users\n\n\n\n\n\n\nMay 8, 2021\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nAdvent of Code 2020\n\n\n\n\n\n\n\nR\n\n\nAdvent of Code\n\n\n\n\nMy attempts at Advent of Code, 2020\n\n\n\n\n\n\nDec 9, 2020\n\n\nElla Kaye\n\n\n\n\n\n\n  \n\n\n\n\nn_letter_words and a personal (publicly available) package\n\n\n\n\n\n\n\nR\n\n\npackage development\n\n\n\n\nHow I created a handy function and a personal package\n\n\n\n\n\n\nJun 17, 2017\n\n\nElla Kaye\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "packages.html",
     "href": "packages.html",
-    "title": "Ella Kaye",
+    "title": "PACKAGES",
     "section": "",
     "text": "PACKAGES\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEMK\n\n\nA collection of miscellaneous functions I have written that I personally find helpful in a variety of contexts.\n\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html",
-    "href": "posts/2022-12-11_welcome-quarto/index.html",
-    "title": "Welcome to my Quarto website!",
-    "section": "",
-    "text": "Hello, and welcome to my new site, built using Quarto. Here’s why I switched from {distill} and the resources that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts."
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html#why-quarto-why-now",
-    "href": "posts/2022-12-11_welcome-quarto/index.html#why-quarto-why-now",
-    "title": "Welcome to my Quarto website!",
-    "section": "Why Quarto? Why now?",
-    "text": "Why Quarto? Why now?\nI was very happy with my previous website built using {distill}. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what Posit (formerly RStudio) learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again (for the fourth time).\nI’m finding working with Quarto to be an absolute joy!"
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html#resources",
-    "href": "posts/2022-12-11_welcome-quarto/index.html#resources",
-    "title": "Welcome to my Quarto website!",
-    "section": "Resources",
-    "text": "Resources\nThis post is not a guide on how to get a Quarto website up and running and styled. There are already great resources for that. These are the the ones that I found most helpful.\n\nThe basics\n\nMy first taste of Quarto was Mine Çetinkaya-Rundel’s talk about it at the 2022 Toronto Workshop on Reproducibility.\nThe official Quarto tutorials taught me the basics.\nThe official Quarto guide is a treasure trove with the section on websites being, needless to say, most helpful for the development of this site.\n\nThese two posts on making the transition from R Markdown/{distill} to Quarto were also extremely useful:\n\nDanielle Navarro on porting a distill blog to Quarto.\nAlison Hill’s post on why we don’t talk about Quarto.\n\n\n\nGoing further\nThe above resources were enough for me to replicate the website I’d built with {distill}, but as I was putting it together, a couple of excellent posts were published that showed how much customisation was possible, and which massively increased my ambitions for my new site:\n\nAlbert Rapp’s ultimate guide to starting a Quarto blog.\nChristian Gebhard’s guide on switching to Quarto.\n\nThese two posts, in particular, gave me the inspiration and most of the know-how to create my custom home page. They also both contain helpful information on themes and styling."
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html#my-customisations-aka-how-long-could-this-possibly-take",
-    "href": "posts/2022-12-11_welcome-quarto/index.html#my-customisations-aka-how-long-could-this-possibly-take",
-    "title": "Welcome to my Quarto website!",
-    "section": "My customisations AKA how long could this possibly take?",
-    "text": "My customisations AKA how long could this possibly take?\nI didn’t think it would take too long to make some tweaks, but the more I worked on the site, the more I wanted to change. I’ve managed, with help, to implement customisations that I haven’t seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just 100 seconds), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky.\nIn this section, I’m going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.\nFor the sake of brevity, in this post I don’t detail how I achieved these customisations. I just note what I had to learn to implement them. I intend to spin each of the points below into separate tutorial-style blog posts. If you’re interested in seeing how I implemented them in the meantime, you can check out this site’s repo.\n\nAnimated CSS logo\nMy favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.1 To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in _quarto.yml and the best place in that file to add the code. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by Maya Gans, who helped me a lot with the implementation.\nCreating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt another strategy for using different logo images in light and dark modes, using CSS to overwrite one image file with another, which is useful if a logo doesn’t lend itself to creation in CSS.\n\n\nAnimated navigation bar links and colours\nHaving animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process, including @media queries to ensure that the animations only activate when the navbar is in a row. I found a solution online for the animation itself, but figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage was tricky.\n\n\nCSS grid and bootstrap cards\nSpeaking of which, creating the custom layout of my homepage, using CSS grid and bootstrap cards, was a challenge. The blog posts by Albert and Christian linked to in the previous section got me a lot of the way there, but I still had to dive deep into the bootstrap documentation to make sure the cards and the links inside them all lined up nicely.\n\n\nLight and dark mode\nI put a lot of thought into the colour scheme for both the light and dark modes of the site, and making sure they complemented each other perfectly. For this, I built on what I’d learnt about colour theory and accessibility when designing a custom syntax highlight scheme for my previous website. I also learnt about Sass and made extensive use of custom Sass variables.\n\n\nCustom syntax highlighting\nHaving implemented a custom syntax highlight theme for my {distill} site, and created a function for the {distilltools} package so others could do the same, I had hoped to be able to port that straight over to my Quarto site. Unfortunately, it wasn’t so simple. Although they are both called arrow, there are changes in the implementation of the default syntax highlight scheme for Quarto from how it was implemented in {distill}, and, to make things more awkward, there are also inconsistencies between the light and dark versions of arrow in Quarto. It took me a while to get my head around all that. Modifying my original highlighting theme and creating a complementary theme for the dark mode was finicky.\n\n\ngiscus comments box light/dark toggle\nQuarto makes it easy to add giscus comments boxes, and giscus (and in turn Quarto) make it simple to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set the default light or dark theme dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark switch. In response to my query, with a lot of back and forth, Sage (the creator of giscus) figured out the JavaScript to make this happen and I figured out how to integrate it into the Quarto site.\nI would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. I haven’t yet been able to make it work, though, which appears to be an issue related to hosting on Netlify.\n\n\nLocal fonts and open type font features\nBecause I’m interested in typography and think that professional fonts are worth paying for, and in order to give my site a distinct appearance, I purchased licenses for Lemon Milk Pro (used for body and header text) and MonoLisa (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about open type font features, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.2\n\n\nIcon links\nAs on my {distill} site, I’ve made copious use of the icon_link() function in my {distilltools} package, a handy R function that creates a link, with an icon and some text that, with some additional CSS, can be styled a bit like a button, e.g. the code\ndistilltools::icon_link(\n  icon = \"github\",\n  text = \"site repo\",\n  url = \"https://github.com/EllaKaye/ellakaye.co.uk\"\n)\noutputs HTML which, with some CSS styling for the icon-link class, renders as the following:\n site repo\nThe function still works on a Quarto site, but there’s a lot of set-up that’s different. Unlike {distill}, Quarto doesn’t support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the icon-link class from a {distill} site didn’t look right on Quarto, so further tweaks were necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.\nThe icon_link() function could do with an update, to include bootstrap icons (which are automatically available in Quarto sites), to update to the latest Font Awesome icons (it currently uses 5.15, whereas the latest release is 6.2) and possibly to add more icon sets."
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html#so-how-long-did-it-take",
-    "href": "posts/2022-12-11_welcome-quarto/index.html#so-how-long-did-it-take",
-    "title": "Welcome to my Quarto website!",
-    "section": "So, how long did it take?",
-    "text": "So, how long did it take?\nI took me four months, working intermittently, to put this site together, much longer than I had anticipated when embarking on the project.\nShortly after I finally shared my site, I came across the The Programmers’ Credo. It rang true!\n\nWe do these things not because they are easy, but because we thought they were going to be easy.\n\nThat said, I consider the fact that it was not easy to be a positive, in that I’ve learnt a lot. And, once I’ve finished the series of blog posts on my new-found knowledge, hopefully you will have too.3"
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html#last-updated",
-    "href": "posts/2022-12-11_welcome-quarto/index.html#last-updated",
-    "title": "Welcome to my Quarto website!",
-    "section": "Last updated",
-    "text": "Last updated\n\n2022-12-13 20:21:07 GMT"
-  },
-  {
-    "objectID": "posts/2022-12-11_welcome-quarto/index.html#details",
-    "href": "posts/2022-12-11_welcome-quarto/index.html#details",
-    "title": "Welcome to my Quarto website!",
-    "section": "Details",
-    "text": "Details\n\nsource code, R environment"
   }
 ]
