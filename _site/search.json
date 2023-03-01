@@ -63,6 +63,20 @@
     "text": "I’d love to hear from you!\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of its page.\nYou can find me on elsewhere online:\n\n\n\n Twitter  Mastodon  GitHub\n\n\n\nOr, you can drop me an e-mail at hello @ ellakaye.co.uk"
   },
   {
+    "objectID": "posts/2023-03-01_animated-logo/index.html#last-updated",
+    "href": "posts/2023-03-01_animated-logo/index.html#last-updated",
+    "title": "Creating an animated CSS logo",
+    "section": "Last updated",
+    "text": "Last updated\n\n2023-03-01 15:36:12 GMT"
+  },
+  {
+    "objectID": "posts/2023-03-01_animated-logo/index.html#details",
+    "href": "posts/2023-03-01_animated-logo/index.html#details",
+    "title": "Creating an animated CSS logo",
+    "section": "Details",
+    "text": "Details\n\nsource code, R environment"
+  },
+  {
     "objectID": "posts/2022-12-11_welcome-quarto/index.html",
     "href": "posts/2022-12-11_welcome-quarto/index.html",
     "title": "Welcome to my Quarto website!",
@@ -656,19 +670,5 @@
     "title": "PACKAGES",
     "section": "",
     "text": "PACKAGES\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistilltools\n\n\n{distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.\n\n\n\nElla Kaye, John Paul Helveston, Michael McCarthy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEMK\n\n\nA collection of miscellaneous functions I have written that I personally find helpful in a variety of contexts.\n\n\n\nElla Kaye\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBradleyTerryScalable\n\n\n{BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number…\n\n\n\nElla Kaye, David Firth\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2023-03-01_animated-logo/index.html#last-updated",
-    "href": "posts/2023-03-01_animated-logo/index.html#last-updated",
-    "title": "Creating an animated CSS logo",
-    "section": "Last updated",
-    "text": "Last updated\n\n2023-03-01 15:36:12 GMT"
-  },
-  {
-    "objectID": "posts/2023-03-01_animated-logo/index.html#details",
-    "href": "posts/2023-03-01_animated-logo/index.html#details",
-    "title": "Creating an animated CSS logo",
-    "section": "Details",
-    "text": "Details\n\nsource code, R environment"
   }
 ]

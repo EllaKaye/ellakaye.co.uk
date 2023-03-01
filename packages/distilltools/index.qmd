@@ -5,7 +5,7 @@ description: |
 #date: UPDATE # initial commit date? Publish date? No date?
 author: 
   - name: Ella Kaye
-    url: https://twitter.com/ellamkaye
+    #url: httep://twitter.com/ellakaye
   - name: John Paul Helveston
     url: https://jhelvy.com
   - name: Michael McCarthy
