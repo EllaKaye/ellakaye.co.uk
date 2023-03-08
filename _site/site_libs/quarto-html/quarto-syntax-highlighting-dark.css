@@ -56,62 +56,85 @@ div.sourceCode pre.sourceCode {
 
 code span.ot {
   color: #DCDCE6;
+  font-style: inherit;
 }
 
 code span.at {
   color: #B062FF;
+  font-style: inherit;
 }
 
 code span.ss {
   color: #00E673;
+  font-style: inherit;
 }
 
 code span.an {
   color: #DCDCE6;
+  font-style: inherit;
 }
 
 code span.fu {
   color: #2C95FF;
+  font-style: inherit;
 }
 
 code span.st {
   color: #00E673;
+  font-style: inherit;
 }
 
 code span.cf {
   color: #FF962C;
+  font-style: inherit;
 }
 
 code span.op {
   color: #DCDCE6;
+  font-style: inherit;
 }
 
 code span.er {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.bn {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.al {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.va {
   color: #F8F8FA;
+  font-style: inherit;
+}
+
+code span.bu {
+  font-style: inherit;
+}
+
+code span.ex {
+  font-style: inherit;
 }
 
 code span.pp {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.in {
   color: #DCDCE6;
+  font-style: inherit;
 }
 
 code span.vs {
   color: #00E673;
+  font-style: inherit;
 }
 
 code span.wa {
@@ -126,22 +149,27 @@ code span.do {
 
 code span.im {
   color: #B062FF;
+  font-style: inherit;
 }
 
 code span.ch {
   color: #00E673;
+  font-style: inherit;
 }
 
 code span.dt {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.fl {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.co {
   color: #DCDCE6;
+  font-style: inherit;
 }
 
 code span.cv {
@@ -151,22 +179,27 @@ code span.cv {
 
 code span.cn {
   color: #FF962C;
+  font-style: inherit;
 }
 
 code span.sc {
   color: #DCDCE6;
+  font-style: inherit;
 }
 
 code span.dv {
   color: #FF2B95;
+  font-style: inherit;
 }
 
 code span.re {
   color: #2C95FF;
+  font-style: inherit;
 }
 
 code span.kw {
   color: #F8F8FA;
+  font-style: inherit;
 }
 
 .prevent-inlining {

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.97">
+<meta name="generator" content="quarto-1.3.250">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -194,13 +165,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <link rel="stylesheet" href="../../assets/ek-styles.css">
 <meta property="og:title" content="Ella Kaye - Custom syntax highlighting for {distill} part 1">
-<meta property="og:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
+<meta property="og:description" content="The personal website of Ella Kaye">
 <meta property="og:image" content="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1/more-theme-in-action.png">
 <meta property="og:site-name" content="Ella Kaye">
 <meta property="og:image:height" content="968">
 <meta property="og:image:width" content="1312">
 <meta name="twitter:title" content="Ella Kaye">
-<meta name="twitter:description" content="The personal website of Ella Kaye">
+<meta name="twitter:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
 <meta name="twitter:image" content="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1/images/logo.png">
 <meta name="twitter:creator" content="@ellamkaye">
 <meta name="twitter:site" content="@ellamkaye">
@@ -218,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <span class="navbar-title">ELLA<span class="icon-line"></span>KAYE</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -248,10 +220,9 @@ document.addEventListener('DOMContentLoaded', function () {
  <span class="menu-text">contact</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -306,8 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#update-august-2022" id="toc-update-august-2022" class="nav-link active" data-scroll-target="#update-august-2022">Update: August 2022</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#but-first-the-default" id="toc-but-first-the-default" class="nav-link" data-scroll-target="#but-first-the-default">But first, the default</a>
   <ul class="collapse">
   <li><a href="#in-praise-of-the-default" id="toc-in-praise-of-the-default" class="nav-link" data-scroll-target="#in-praise-of-the-default">In praise of the default</a></li>
@@ -329,14 +299,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<div class="cell">
-
+<div class="top-callout callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="update-august-2022" class="level2 callout-note top-callout" data-collapse="false">
-<h2 class="anchored" data-anchor-id="update-august-2022">Update: August 2022</h2>
+<div class="callout-title-container flex-fill">
+Update: August 2022
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <p>Since this post was originally written, I have replaced my {disill} website with this one built with <a href="https://quarto.org">Quarto</a>.</p>
 <p><code>arrow</code> is the default syntax highlighting theme for Quarto, as it was for {distill}, although it is implemented slightly differently here, and the process of modifying it for Quarto is not the same as it was before. I’ll lay out the differences in a future post. Moreover, as a result, the highlighting you’ll see below is not quite the same as it appeared on my previous site, and if you’re reading this in dark mode, it’s a whole different scheme again.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> That said, I am keeping this post otherwise as was on the blog for posterity.</p>
-</section>
+</div>
+</div>
+</div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>The <a href="https://rstudio.github.io/distill/">{distill}</a> package for R can be used to build easy-to-maintain websites written only in R Markdown, such as this one.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
@@ -395,9 +374,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 <section id="so-why-change" class="level3">
 <h3 class="anchored" data-anchor-id="so-why-change">So, why change?</h3>
-<div class="cell">
-
-</div>
 <p>When I used the default syntax highlighting theme on my site I found, to my eye, that the red used for numeric variables clashed with the <span style="background-color: #D4006A; color: white; padding:3px">bright pink</span> (closest <a href="https://chir.ag/projects/name-that-color/#D4006A">colour name</a> “razzmatazz”) I’ve used in my logo and elsewhere throughout the site. So, I decided to tweak the default theme swapping the red for my pink and, to match it, more vibrant versions of the remaining colours.</p>
 </section>
 <section id="distillpandoc-documentation" class="level3">
@@ -449,9 +425,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </ul>
 <p>I was originally going to write up how I went about building such a palette, both in terms of the thought process and tools used, as part of this post, but it was getting a little long<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, so I’ve spun it out into a separate post, <a href="../../posts/2021-05-26_custom-highlighting-distill-2/index.html">Custom syntax highlighting for {distill} part 2: Creating the palette</a>.</p>
 <p>At the end of the process, the palette for my syntax highlighting scheme is as in <a href="#fig-final-palette-light">Figure&nbsp;1</a>.</p>
-<div class="cell">
-
-</div>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-final-palette-light" class="quarto-figure quarto-figure-center anchored">
@@ -542,13 +515,13 @@ output:
 
 
 
-<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
+<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
 
 <p>2022-11-13 11:43:53 GMT</p>
-</div></section><section id="details" class="level2 appendix"><h2 class="quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
+</div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
 
 <p><a href="https://github.com/EllaKaye/ellakaye-quarto/tree/main/posts/2021-05-25_custom-highlighting-distill-1/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye-quarto/tree/main/posts/2021-05-25_custom-highlighting-distill-1/renv.lock" target="_blank">R environment</a></p>
-</div></section><section id="session-info" class="level5 appendix"><h2 class="quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
+</div></section><section id="session-info" class="level5 appendix"><h2 class="anchored quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
 
 <details>
 <summary>
@@ -602,16 +575,16 @@ Toggle
 <li id="fn6"><p>If you happen to inspect the source code for this post, you might notice that I have copied <code>ek_syntax_highlighting.theme</code> into the directory. This is <em>not</em> necessary for my site (using the full path to the <code>.theme</code> folder in my root directory is sufficient). However, I needed to do this to get the theme to show in the version of this post in the <a href="https://distillery.rbind.io">distillery</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>Note that the <code>create_post_from_template()</code> function is likely to get wrapped into {distill} itself, or its functionality included in <code>distill::create_post()</code>, and will be depreciated from {distilltools} if so. (I have had some discussion with the {distill} team about this and will be submitting a PR in the near future.)<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
-  author = {Ella Kaye},
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
+  author = {Kaye, Ella},
   title = {Custom Syntax Highlighting for \{Distill\} Part 1},
-  date = {21-05-25},
+  date = {2021-05-25},
   url = {https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Ella Kaye. 21AD. <span>“Custom Syntax Highlighting for {Distill} Part
-1.”</span> May 25, 21AD. <a href="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1">https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Kaye, Ella. 2021. <span>“Custom Syntax Highlighting for {Distill} Part
+1.”</span> May 25, 2021. <a href="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1">https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1</a>.
 </div></div></section></div></main> <!-- /main -->
 <div class="giscus">
 <script id="quarto-html-after-body" type="application/javascript">
@@ -756,9 +729,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -874,6 +861,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -917,7 +990,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

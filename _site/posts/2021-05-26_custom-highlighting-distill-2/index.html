@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.237">
+<meta name="generator" content="quarto-1.3.250">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -308,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p><a href="https://twitter.com/ellamkaye">Ella Kaye</a> </p>
+               <p>Ella Kaye </p>
             </div>
     </div>
       
@@ -626,13 +596,15 @@ Update: May 27th 2021
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Since publishing this post, Achim Zeileis, the author of the {colorspace} package, got in touch with me on <a href="https://twitter.com/AchimZeileis/status/1397580619857682437">twitter</a> to offer a bit more insight into what’s going on with this palette. The <code>hcl_six</code> palette does not, as I originally stated, have constant chroma. I have corrected the text above. Not all combinations of Hue/Chroma/Luminance exist in HCL space. At the luminance of my pink (~46) not many other hues can have such high chroma (~118), as demonstrated in <strong>?@fig-hclplot</strong>.</p>
+<p>Since publishing this post, Achim Zeileis, the author of the {colorspace} package, got in touch with me on <a href="https://twitter.com/AchimZeileis/status/1397580619857682437">twitter</a> to offer a bit more insight into what’s going on with this palette. The <code>hcl_six</code> palette does not, as I originally stated, have constant chroma. I have corrected the text above. Not all combinations of Hue/Chroma/Luminance exist in HCL space. At the luminance of my pink (~46) not many other hues can have such high chroma (~118), as demonstrated in <a href="#fig-hclplot">Figure&nbsp;13</a>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<figure id="fig-hclplot" class="figure">
-<img src="index_files/figure-html/fig-hclplot-1.png" class="img-fluid figure-img" alt="A partially filled colour wheel for a luminance of 47 in HCL space, showing hues of orange, red and purple with high chroma, but with no greens or yellows of high chroma." width="672">
-<figcaption class="figure-caption">Hues and Chromas in HCL space at the Luminance of my pink</figcaption>
+<div id="fig-hclplot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="index_files/figure-html/fig-hclplot-1.png" class="img-fluid figure-img" alt="A partially filled colour wheel for a luminance of 47 in HCL space, showing hues of orange, red and purple with high chroma, but with no greens or yellows of high chroma." width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13: Hues and Chromas in HCL space at the Luminance of my pink</figcaption><p></p>
 </figure>
+</div>
 </div>
 </div>
 <p><code>qualitative_hcl()</code> struggles in such circumstances, though does try to keep the luminance of the palette constant.</p>
@@ -678,7 +650,7 @@ Update: May 27th 2021
 <div id="fig-hcl-darkened" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="index_files/figure-html/fig-hcl-darkened-1.png" class="img-fluid figure-img" alt="A swatch of five colours, pink, brown, green, blue, magenta, all slightly darker than in the previous figure." width="624"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13: An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;14: An HCL palette where all colours have a contrast ratio of 4.5:1 or better against white.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -686,13 +658,13 @@ Update: May 27th 2021
 </section>
 <section id="checking-for-colourblindness-1" class="level3">
 <h3 class="anchored" data-anchor-id="checking-for-colourblindness-1">Checking for colourblindness</h3>
-<p>As before, we use {prismatic} to check how the palette appears to those with various types of colourblindess. Whilst R can help us visualise this, we still need to use our judgement as to whether the output is acceptable. I believe, in <a href="#fig-hcl-darkened-colourblind">Figure&nbsp;14</a>, it is.</p>
+<p>As before, we use {prismatic} to check how the palette appears to those with various types of colourblindess. Whilst R can help us visualise this, we still need to use our judgement as to whether the output is acceptable. I believe, in <a href="#fig-hcl-darkened-colourblind">Figure&nbsp;15</a>, it is.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-hcl-darkened-colourblind" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="hcl-darkened-colourblind.png" class="img-fluid figure-img" alt="Four colour palettes. One shows the darkened HCL palette from the previous post as is, the other three show how that palette appears to those with deuteranopia, protanopia and tritanopia. Under all those conditions, the five colours are distinguishable." width="561"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;14: Checking how the darkened HCL palette appears to those with various types of colourblindness.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;15: Checking how the darkened HCL palette appears to those with various types of colourblindness.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -719,10 +691,10 @@ Update: May 27th 2021
 
 <div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
 
-<p>2022-11-11 22:27:46 GMT</p>
+<p>2023-03-08 16:13:48 GMT</p>
 </div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
 
-<p><a href="https://github.com/EllaKaye/ellakaye-quarto/tree/main/posts/2021-05-26_custom-highlighting-distill-2/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye-quarto/tree/main/posts/2021-05-26_custom-highlighting-distill-2/renv.lock" target="_blank">R environment</a></p>
+<p><a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2021-05-26_custom-highlighting-distill-2/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2021-05-26_custom-highlighting-distill-2/renv.lock" target="_blank">R environment</a></p>
 </div></section><section id="session-info" class="level5 appendix"><h2 class="anchored quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
 
 <details>
@@ -733,30 +705,30 @@ Toggle
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.1 (2022-06-23)
- os       macOS Monterey 12.6.1
+ version  R version 4.2.2 (2022-10-31)
+ os       macOS Ventura 13.2.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Europe/London
- date     2022-11-11
+ date     2023-03-08
  pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
- quarto   1.2.247 @ /usr/local/bin/quarto
+ quarto   1.3.250 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  ! package     * version    date (UTC) lib source
- P coloratio   * 0.0.0.9004 2022-10-23 [?] Github (matt-dray/coloratio@852ac49)
+ P coloratio   * 0.0.0.9004 2023-03-03 [?] Github (matt-dray/coloratio@852ac49)
  P colorspace  * 2.0-3      2022-02-21 [?] CRAN (R 4.2.0)
  P ggplot2     * 3.3.6      2022-05-03 [?] CRAN (R 4.2.0)
  P htmltools   * 0.5.3      2022-07-18 [?] CRAN (R 4.2.0)
  P purrr       * 0.3.5      2022-10-06 [?] CRAN (R 4.2.0)
  P sessioninfo * 1.2.2      2021-12-06 [?] CRAN (R 4.2.0)
 
- [1] /private/var/folders/xf/jb2591gj41xbj0c4y2d8_7ch0000gn/T/RtmprBakbD/renv-library-4e057d14d1b7
+ [1] /private/var/folders/xf/jb2591gj41xbj0c4y2d8_7ch0000gn/T/Rtmpx0pvGZ/renv-library-2b477c0fe600
  [2] /Users/ellakaye/Rprojs/mine/ellakaye-quarto/renv/library/R-4.2/aarch64-apple-darwin20
- [3] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
+ [3] /Users/ellakaye/Rprojs/mine/ellakaye-quarto/renv/sandbox/R-4.2/aarch64-apple-darwin20/fd29d0b8
 
  P ── Loaded and on-disk path mismatch.
 
@@ -783,13 +755,13 @@ Zeileis, Achim, Jason C. Fisher, Kurt Hornik, Ross Ihaka, Claire D. McWhite, Pau
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2021,
   author = {Kaye, Ella},
   title = {Custom Syntax Highlighting for \{Distill\} Part 2},
-  date = {21-05-26},
+  date = {2021-05-26},
   url = {https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-Kaye, Ella. 21AD. <span>“Custom Syntax Highlighting for {Distill} Part
-2.”</span> May 26, 21AD. <a href="https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2">https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2</a>.
+Kaye, Ella. 2021. <span>“Custom Syntax Highlighting for {Distill} Part
+2.”</span> May 26, 2021. <a href="https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2">https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2</a>.
 </div></div></section></div></main> <!-- /main -->
 <div class="giscus">
 <script id="quarto-html-after-body" type="application/javascript">
