@@ -8,7 +8,8 @@ execute:
 
 website:
   title: "Ella Kaye"
-  site-url: "https://ellakaye.co.uk"
+  site-url: https://ellakaye.co.uk
+  description: Ella Kaye's personal website
   repo-url: https://github.com/EllaKaye/ellakaye.co.uk
   repo-actions: issue
   image: images/logo.png

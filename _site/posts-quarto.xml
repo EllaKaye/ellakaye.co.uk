@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Ella Kaye</title>
+<link>https://ellakaye.co.uk/posts.html#category=Quarto</link>
+<atom:link href="https://ellakaye.co.uk/posts-quarto.xml" rel="self" type="application/rss+xml"/>
+<description>Ella Kaye&#39;s personal website</description>
+<image>
+<url>https://ellakaye.co.uk/images/logo.png</url>
+<title>Ella Kaye</title>
+<link>https://ellakaye.co.uk/posts.html#category=Quarto</link>
+<height>144</height>
+<width>144</width>
+</image>
+<generator>quarto-1.3.250</generator>
+<lastBuildDate>Sun, 11 Dec 2022 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Welcome to my Quarto website!</title>
+  <dc:creator>Ella Kaye</dc:creator>
+  <link>https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--------------- set up ----------------->
+<!--------------- post content ----------------->
+<p>Hello, and welcome to my new site, built using <a href="https://quarto.org" target="_blank">Quarto</a>. Here’s why I switched from <a href="https://rstudio.github.io/distill/" target="_blank">{distill}</a> and the resources that helped me in the process. I also outline some of the customisations I made and set out plans for future blog posts.</p>
+<section id="why-quarto-why-now" class="level2">
+<h2 class="anchored" data-anchor-id="why-quarto-why-now">Why Quarto? Why now?</h2>
+<p>I was very happy with my previous <a href="../../posts/2021-05-08_welcome-distill/index.html">website built using {distill}</a>. Then Quarto was released and it quickly became clear that everything that I loved about working with {distill} was true of Quarto, and then some. As a keen user of a whole suite of packages in the R Markdown ecosystem, I could see the appeal of one coherent system to produce reports, presentations, books and websites. Moreover, Quarto is the natural successor to R Markdown, bringing with it a vast range of improvements, building on what <a href="https://posit.co">Posit</a> (formerly RStudio) learnt over a decade of developing the latter. When it was made clear that although Posit will maintain {distill}, all future improvements will be to Quarto, I knew it was only a matter of time before I rewrote my website once again (for the fourth time).</p>
+<p>I’m finding working with Quarto to be an absolute joy!</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>This post is not a guide on how to get a Quarto website up and running and styled. There are already great resources for that. These are the the ones that I found most helpful.</p>
+<section id="the-basics" class="level3">
+<h3 class="anchored" data-anchor-id="the-basics">The basics</h3>
+<ul>
+<li><p>My first taste of Quarto was Mine Çetinkaya-Rundel’s <a href="https://www.youtube.com/watch?v=6p4vOKS6Xls" target="_blank">talk</a> about it at the 2022 Toronto Workshop on Reproducibility.</p></li>
+<li><p>The official Quarto <a href="https://quarto.org/docs/get-started/" target="_blank">tutorials</a> taught me the basics.</p></li>
+<li><p>The official Quarto <a href="https://quarto.org/docs/guide/" target="_blank">guide</a> is a treasure trove with the section on <a href="https://quarto.org/docs/websites/">websites</a> being, needless to say, most helpful for the development of this site.</p></li>
+</ul>
+<p>These two posts on making the transition from R Markdown/{distill} to Quarto were also extremely useful:</p>
+<ul>
+<li><p>Danielle Navarro on <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/" target="_blank">porting a distill blog to Quarto</a>.</p></li>
+<li><p>Alison Hill’s post on why <a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/" target="_blank">we don’t talk about Quarto</a>.</p></li>
+</ul>
+</section>
+<section id="going-further" class="level3">
+<h3 class="anchored" data-anchor-id="going-further">Going further</h3>
+<p>The above resources were enough for me to replicate the website I’d built with {distill}, but as I was putting it together, a couple of excellent posts were published that showed how much customisation was possible, and which massively increased my ambitions for my new site:</p>
+<ul>
+<li><p>Albert Rapp’s <a href="https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html" target="_blank">ultimate guide to starting a Quarto blog</a>.</p></li>
+<li><p>Christian Gebhard’s guide on <a href="https://jollydata.blog/posts/2022-08-06-_switching-to-quarto/switching-to-quarto.html" target="_blank">switching to Quarto</a>.</p></li>
+</ul>
+<p>These two posts, in particular, gave me the inspiration and most of the know-how to create my custom home page. They also both contain helpful information on themes and styling.</p>
+</section>
+</section>
+<section id="my-customisations-aka-how-long-could-this-possibly-take" class="level2">
+<h2 class="anchored" data-anchor-id="my-customisations-aka-how-long-could-this-possibly-take">My customisations AKA how long could this possibly take?</h2>
+<p>I didn’t think it would take too long to make some tweaks, but the more I worked on the site, the more I wanted to change. I’ve managed, with help, to implement customisations that I haven’t seen or read about elsewhere in relation to Quarto. Getting a basic Quarto site up is relatively straight-forward (in fact, Tom Mock shows how it can be done in just <a href="https://www.youtube.com/watch?v=t8qtcDyCRFA" target="_blank">100 seconds</a>), but extensive customisation, particularly when starting with a rudimentary knowledge of HTML and CSS, turned out to be pretty tricky.</p>
+<p>In this section, I’m going to list what I think are the cool features of this site, all of which I had to learn how to implement as I went along. Some of them are Quarto-specific. Others I expect will be fairly standard to those with a more advanced knowledge of front-end web development, but may well also be new to others who, like me, have come to website-building with Quarto from a backgroud in R programming rather than HTML/CSS/JS.</p>
+<p>For the sake of brevity, in <em>this</em> post I don’t detail how I achieved these customisations. I just note what I had to learn to implement them. I intend to spin each of the points below into separate tutorial-style blog posts. If you’re interested in seeing how I implemented them in the meantime, you can check out this site’s <a href="https://github.com/EllaKaye/ellakaye.co.uk" target="_blank">repo</a>.</p>
+<section id="animated-css-logo" class="level3">
+<h3 class="anchored" data-anchor-id="animated-css-logo">Animated CSS logo</h3>
+<p>My favourite feature of my website is the logo/home link in the top left corner, which is animated on hover.<sup>1</sup> To implement this, I had to learn first how to create and style the static version using HTML and CSS and then how to apply the CSS animation. I also had to figure out what HTML I could get away with using in <code>_quarto.yml</code> and the best place in that file to add the code. There were also inconsistencies between browers to contend with. I was inspired to animate my logo by <a href="https://maya.rbind.io" target="_blank">Maya Gans</a>, who helped me a lot with the implementation.</p>
+<p>Creating a logo with CSS also made it possible to easily change its appearance in the light and dark modes of the site. Along the way, I also learnt <a href="https://github.com/quarto-dev/quarto-cli/discussions/1647" target="_blank">another strategy</a> for using different logo images in light and dark modes, using CSS to overwrite one image file with another, which is useful if a logo doesn’t lend itself to creation in CSS.</p>
+</section>
+<section id="animated-navigation-bar-links-and-colours" class="level3">
+<h3 class="anchored" data-anchor-id="animated-navigation-bar-links-and-colours">Animated navigation bar links and colours</h3>
+<p>Having animated my logo, I turned to adding an animation on hover to the rest of the links on the navigation bar and learnt more CSS in the process, including <span class="citation" data-cites="media">@media</span> queries to ensure that the animations only activate when the navbar is in a row. I found a solution online for the animation itself, but figuring out how to match the colours on hover and on the link for the active page to the colour of the corresponding card on the homepage was tricky.</p>
+</section>
+<section id="css-grid-and-bootstrap-cards" class="level3">
+<h3 class="anchored" data-anchor-id="css-grid-and-bootstrap-cards">CSS grid and bootstrap cards</h3>
+<p>Speaking of which, creating the custom layout of my homepage, using CSS grid and bootstrap cards, was a challenge. The blog posts by Albert and Christian linked to in the previous section got me a lot of the way there, but I still had to dive deep into the <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">bootstrap documentation</a> to make sure the cards and the links inside them all lined up nicely.</p>
+</section>
+<section id="light-and-dark-mode" class="level3">
+<h3 class="anchored" data-anchor-id="light-and-dark-mode">Light and dark mode</h3>
+<p>I put a <em>lot</em> of thought into the colour scheme for both the light and dark modes of the site, and making sure they complemented each other perfectly. For this, I built on what I’d learnt about <a href="../../posts/2021-05-26_custom-highlighting-distill-2/index.html">colour theory and accessibility when designing a custom syntax highlight scheme</a> for my previous website. I also learnt about Sass and made extensive use of custom Sass variables.</p>
+</section>
+<section id="custom-syntax-highlighting" class="level3">
+<h3 class="anchored" data-anchor-id="custom-syntax-highlighting">Custom syntax highlighting</h3>
+<p>Having <a href="../../posts/2021-05-25_custom-highlighting-distill-1/index.html">implemented a custom syntax highlight theme</a> for my {distill} site, and created a function for the <a href="../../packages/distilltools/index.html">{distilltools}</a> package so others could do the same, I had hoped to be able to port that straight over to my Quarto site. Unfortunately, it wasn’t so simple. Although they are both called <code>arrow</code>, there are changes in the implementation of the default syntax highlight scheme for Quarto from how it was implemented in {distill}, and, to make things more awkward, there are also inconsistencies between the light and dark versions of <code>arrow</code> in Quarto. It took me a while to get my head around all that. Modifying my original highlighting theme and creating a complementary theme for the dark mode was finicky.</p>
+</section>
+<section id="giscus-comments-box-lightdark-toggle" class="level3">
+<h3 class="anchored" data-anchor-id="giscus-comments-box-lightdark-toggle">giscus comments box light/dark toggle</h3>
+<p>Quarto makes it easy to add <a href="https://giscus.app" target="_blank">giscus</a> comments boxes, and giscus (and in turn Quarto) make it simple to select from a handful of different themes to style those boxes. There are a selection of light and dark themes, and one option to set the default light or dark theme dynamically based on your computer system setting. There was not, however, an obvious way of making the theme of the giscus box change responsively on toggling the light/dark switch. In response to my query, with a lot of back and forth, Sage (the creator of giscus) figured out the <a href="https://github.com/giscus/giscus/issues/336#issuecomment-1214366281" target="_blank">JavaScript to make this happen</a> and I figured out how to <a href="https://github.com/giscus/giscus/issues/336#issuecomment-1214401296" target="_blank">integrate it into the Quarto site</a>.</p>
+<p>I would like to apply custom CSS to the giscus comments box in both light and dark modes, which should be possible. I haven’t yet been able to make it work, though, which appears to be an <a href="https://github.com/giscus/giscus/issues/789" target="_blank">issue</a> related to hosting on Netlify.</p>
+</section>
+<section id="local-fonts-and-open-type-font-features" class="level3">
+<h3 class="anchored" data-anchor-id="local-fonts-and-open-type-font-features">Local fonts and open type font features</h3>
+<p>Because I’m interested in typography and think that professional fonts are worth paying for, and in order to give my site a distinct appearance, I purchased licenses for <a href="" target="_blank">Lemon Milk Pro</a> (used for body and header text) and <a href="https://www.monolisa.dev" target="_blank">MonoLisa</a> (used for code). Having done so, I then had to learn the CSS/Sass to apply the local font files to the site. I also learnt all about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide">open type font features</a>, and how to turn them on and off using CSS. I needed this to turn off the default coding ligatures in MonoLisa.<sup>2</sup></p>
+</section>
+<section id="icon-links" class="level3">
+<h3 class="anchored" data-anchor-id="icon-links">Icon links</h3>
+<p>As on my {distill} site, I’ve made copious use of the <code>icon_link()</code> function in my <a href="https://github.com/EllaKaye/distilltools/" target="_blank">{distilltools}</a> package, a handy R function that creates a link, with an icon and some text that, with some additional CSS, can be styled a bit like a button, e.g.&nbsp;the code</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">distilltools<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">icon_link</span>(</span>
+<span id="cb1-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">icon =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit">"github"</span>,</span>
+<span id="cb1-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">text =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit">"site repo"</span>,</span>
+<span id="cb1-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">url =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit">"https://github.com/EllaKaye/ellakaye.co.uk"</span></span>
+<span id="cb1-5">)</span></code></pre></div>
+<p>outputs HTML which, with some CSS styling for the <code>icon-link</code> class, renders as the following:</p>
+<p><a href="https://github.com/EllaKaye/ellakaye.co.uk" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> site repo</a></p>
+<p>The function still works on a Quarto site, but there’s a lot of set-up that’s different. Unlike {distill}, Quarto doesn’t support Font Awesome out of the box, although there are a couple of options for accessing those icons. Copying over the CSS for the <code>icon-link</code> class from a {distill} site didn’t look right on Quarto, so further tweaks were necessary. There are also differences between {distill} and Quarto on the effect of calling the function in a code block vs inline code, and also different sensitivities to spacing/new lines.</p>
+<p>The <code>icon_link()</code> function could do with an update, to include bootstrap icons (which are automatically available in Quarto sites), to update to the latest Font Awesome icons (it currently uses 5.15, whereas the latest release is 6.2) and possibly to add more icon sets.</p>
+</section>
+</section>
+<section id="so-how-long-did-it-take" class="level2">
+<h2 class="anchored" data-anchor-id="so-how-long-did-it-take">So, how long did it take?</h2>
+<p>I took me four months, working intermittently, to put this site together, <em>much</em> longer than I had anticipated when embarking on the project.</p>
+<p>Shortly after I finally shared my site, I came across the <a href="https://www.globalnerdy.com/2021/06/07/the-programmers-credo/">The Programmers’ Credo</a>. It rang true!</p>
+<blockquote class="blockquote">
+<p>We do these things not because they are easy, but because we thought they were going to be easy.</p>
+</blockquote>
+<p>That said, I consider the fact that it was <em>not</em> easy to be a positive, in that I’ve learnt a lot. And, once I’ve finished the series of blog posts on my new-found knowledge, hopefully you will have too.<sup>3</sup></p>
+<!--------------- appendices go here ----------------->
+</section>
+<div class="cell">
+<div class="cell-output-display">
+
+
+</div>
+</div>
+
+
+
+<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
+
+<p>2023-03-01 15:41:01 GMT</p>
+</div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
+
+<p><a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2022-12-11_welcome-quarto/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2022-12-11_welcome-quarto/renv.lock" target="_blank">R environment</a></p>
+</div></section><section id="session-info" class="level5 appendix"><h2 class="anchored quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
+
+<details>
+<summary>
+Toggle
+</summary>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.2 (2022-10-31)
+ os       macOS Ventura 13.2.1
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       Europe/London
+ date     2023-03-01
+ pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
+ quarto   1.3.97 @ /usr/local/bin/quarto
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ sessioninfo * 1.2.2   2021-12-06 [2] CRAN (R 4.2.0)
+
+ [1] /Users/ellakaye/Rprojs/mine/ellakaye-quarto/renv/library/R-4.2/aarch64-apple-darwin20
+ [2] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+</details>
+
+
+<!-- -->
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This works best on a laptop/desktop but there’s a hint of it on a smartphone when the logo is pressed.↩︎</p></li>
+<li id="fn2"><p>As much as I love coding ligatures when writing code for myself, I prefer not to use them when demonstrating code to others as it’s not then clear what they have to type to replicate it.↩︎</p></li>
+<li id="fn3"><p>Due to other commitments, I’m highly unlikely to write any further posts before late Febrary 2023. There are several for me to write, so if there are any of the above topics you’re particularly interested in, please comment below and I’ll prioritse accordingly.↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2022,
+  author = {Kaye, Ella},
+  title = {Welcome to My {Quarto} Website!},
+  date = {2022-12-11},
+  url = {https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2022" class="csl-entry quarto-appendix-citeas">
+Kaye, Ella. 2022. <span>“Welcome to My Quarto Website!”</span> December
+11, 2022. <a href="https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto">https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto</a>.
+</div></div></section></div> ]]></description>
+  <category>Quarto</category>
+  <category>distilltools</category>
+  <guid>https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto/index.html</guid>
+  <pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto/quarto.png" medium="image" type="image/png" height="35" width="144"/>
+</item>
+</channel>
+</rss>
