@@ -18,12 +18,6 @@ You can find me on elsewhere online:
 library(distilltools)
 ```
 
-
-`r icon_link(
-  icon = "twitter",
-  text = "Twitter",
-  url = "https://twitter.com/ellamkaye"
-)`
 `r icon_link(
   icon = "mastodon",
   text = "Mastodon",
@@ -35,15 +29,10 @@ library(distilltools)
   text = "GitHub",
   url = "https://github.com/EllaKaye"
 )`
-
-```{r}
-#| echo: false
-#| eval: false
-icon_link(
+`r icon_link(
   icon = "linkedin",
   text = "LinkedIn",
-  url = "https://www.linkedin.com/in/ella-kaye-9b878248/"
-)
-```
+  url = "https://www.linkedin.com/in/ellakaye"
+)`
 
 Or, you can drop me an e-mail at [hello @ ellakaye.co.uk]{.heading-font}
