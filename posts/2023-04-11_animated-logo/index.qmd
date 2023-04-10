@@ -1,0 +1,310 @@
+---
+title: Creating an animated CSS logo
+description: |
+  How and why I created an animated logo for this site, using CSS
+date: 2023-04-11
+author: 
+  - name: Ella Kaye
+    #url: https://fosstodon.org/@ellakaye
+site-url: https://ellakaye.co.uk
+image: ../../images/logo.png
+image-alt: |
+  A square logo made from Ella Kaye's name - 
+  first name on top of last name in dark gray capital letters, 
+  separated by a horizontal bright pink line, on a very light grey background
+categories:
+  - Quarto
+  - CSS
+open-graph: true
+twitter-card: true
+# will inherit title, description, image
+# to change ANYTHING about card, need to fill in EVERYTHING below
+#  title: |
+#  description: |
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: summary_large_image 
+#  image-width: 500
+#  image-height: 500
+#  card-style: summary
+draft: true
+---
+
+<!--------------- set up ----------------->
+
+```{r}
+#| echo: false
+#| results: 'hide'
+
+long_slug <- "2023-04-11_animated-logo"
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+# renv::use(lockfile = "renv.lock")
+```
+
+<!--------------- post content ----------------->
+
+In my [previous post](../2022-12-11_welcome-quarto/index.qmd), 
+I outlined a number of customisations I made to this personal website and promised a series of future blog posts on how I implemented them. 
+This is the first in the series, on the creation of the animated logo in the top left corner of the site. 
+Note that for the animation to work properly, it needs to be viewed on a device with a mouse/trackpad, not a touchscreen.
+
+## The motivation for creating a CSS logo
+
+Before I get to the details of *how* I created the animation, first a note on why. 
+On my previous site, built with {distill}, I had a static version of the same logo, saved as a .png. 
+As I was developing this site, I tweaked my colour scheme a lot, 
+and each time I did so, I had to head back to my design software, update the image there, re-export it and reload the site. 
+Needless to say, that got tiresome. 
+
+That issue became even more pressing when I also implemented a dark mode. 
+My light mode logo, with its dark grey text, disappeared into the background of the dark mode. 
+I needed a way to switch logos on light/dark toggle. 
+I did find a [solution](https://github.com/quarto-dev/quarto-cli/discussions/1647), 
+which used some hacky CSS to override the logo.png used in light mode with an alternative logo-dark.png in dark mode, 
+but now needed to manually edit two logo images whenever I tweaked the theme, 
+doubling my original problem.^[This hack does still provide a useful trick for people with logos that can't be created with HTML and styled with CSS but who nevertheless want to switch logos between light and dark modes.]
+
+I realised that if I could create and style the logo with HTML and CSS, 
+it would solve both problems: 
+it would automatically update along with any theme changes *and* 
+I could theme separately in light and dark modes.
+It would always be consistent with the appearance of the site.
+
+Plus, around the time I was grappling with these issues, I saw [Maya Gans](https://maya.rbind.io) tweet that she was working on a CSS animated logo for her site 
+and I got excited by the possibility of figuring out how to do something similar: 
+the line separating my first and last name seemed destined to move on hover. 
+I got in touch with Maya and she was fantastically helpful in assisting me with the implementation.
+There was lots to troubleshoot!
+
+## Figuring out the HTML and yaml
+
+The first challenge was figuring out the HTML to use in the title that would give me something to style for the line between the names. 
+I needed my first name on top of my last name, but using either `<hr>` or `<br>` tags didn't work. 
+It seems there are some limits to the HTML that can be used in yaml with Quarto. 
+With `<hr>`, my last name was no longer displayed. 
+Using `<br>` did give something to work with, at least that displayed on Chrome, 
+but not on my default browser Safari. 
+It turned out that `<span>` did the trick, with the addition of a class I could apply a CSS style to.
+The title became `ELLA<span class='icon-line'></span>KAYE`.
+
+With that as my website title and with CSS applied, the logo looked as I wanted, 
+but the title in the browser tab also read `ELLA<span class='icon-line'></span>KAYE`, 
+which wasn't great. 
+After some digging, I found it was possible to set the navbar title separately from the website title:
+
+```{.yaml}
+website:
+  title: "Ella Kaye"
+  navbar:
+    title: "ELLA<span class='icon-line'></span>KAYE"
+```
+
+That solves the problem. 
+The browser tab shows "Ella Kaye" but the title of the navbar becomes the logo, 
+with its span that can be styled.
+The title of the website is also important if you have an RSS feed for your blog,
+which is another reason not to have additional HTML in it.
+
+## Theming the (static) logo
+
+:::{.callout-note}
+This section assumes a little bit of familiarity with CSS and Quarto themes.
+If these are new to you, I recommend first reading the 'Style your blog' section of Albert Rapp's epic ['Ultimate Guide to Starting a Quarto blog'](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html#style-your-blog) post,
+and watching the accompanying [video](https://www.youtube.com/watch?v=ErRX8plZpQE),
+which dives into how to customise the appearance of your site.
+The [official Quarto docs](https://quarto.org/docs/output-formats/html-themes.html) on HTML themes is also really useful.
+For learning CSS more generally, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) is a comprehensive resource.
+:::
+
+I gave the span separating my first and last names in the logo the class `icon-line`,
+so I can target that to style it. I have custom themes for my light and dark modes, 
+in the files [`ek-theme-light.scss`](https://github.com/EllaKaye/ellakaye.co.uk/blob/main/assets/ek-theme-light.scss) and [`ek-theme-dark.scss`](https://github.com/EllaKaye/ellakaye.co.uk/blob/main/assets/ek-theme-dark.scss) respectively. I have the following rule in both files:
+
+```{.scss}
+.icon-line {
+  display: block;
+  background: $primary;
+  width: 100%;
+  height: 6px;
+  margin: auto;
+  display: table;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+```
+
+It's a bit of a pain to have to define this rule, identically, in both `.scss` files,
+but it's necessary because of setting `background: $primary;`. 
+This is what ensures that the icon-line changes colour when light/dark mode is toggled.
+`$primary` is a Sass variable that is set to be the main accent colour.
+It is pink in light mode and green in dark mode. 
+This is achieved by defining the following variable in `ek-theme-light.scss`:
+
+```{.sass}
+$pink:      #D4006A;
+$primary:   $pink !default;
+```
+
+and similarly in `ek-theme-dark.scss`: 
+
+```{.sass}
+$green:     #00D46A;
+$primary:   $green !default;
+```
+
+Because `$primary` is defined differently for the two themes, 
+the rule for `.icon-line` has to appear in both theme files to pick up that difference.
+
+The other important property to note in the `.icon-line` rule that of `width: 100%`.
+This ensures that the line occupies the full width of the `navbar-title`. 
+This is the property that we will change with the animation.
+
+
+
+## Setting up the CSS animation
+
+Although, as explained above, the styling of the `icon-line` has to appear in the two `.scss` files,
+the animation is applied the same way in both light and dark mode and, 
+moreover, is created with pure CSS (i.e. without using any special features of Sass).
+Therefore the code for the animation lives in my `ek-styles.css` file.
+
+The code for the animation is in two parts.
+The first part selects what we want to animate and when,
+how long the animation should last and what the animation is called:
+
+```{.css}
+.navbar-title:hover > .icon-line {
+  animation-duration: 600ms;
+  animation-name: line-expand;
+}
+```
+
+The line `.navbar-title:hover > .icon-line` is the selector, 
+i.e. defines what we want to style.
+As described above, in `_quarto.yml`, we set the logo to be the title of the navbar.
+That translates to the CSS class `navbar-title`.[^inspector] 
+In CSS, we define a rule for a class by prefixing the class name with a `.`, 
+i.e. `.navbar-title`. The suffix `:hover` means that the rule is activated
+when the cursor hovers over the navbar title. 
+But it's not the whole logo we want to animate, 
+just the element with the class `icon-line` within it,
+which is what the `> .icon-line` part of the selector does. 
+Putting that all together, the selector `.navbar-title:hover > .icon-line` translates to 
+'when hovering over the navbar title, select the icon-line within it'.
+
+[^inspector]: We can determine the class of an element by right-clicking on it in a browser
+then selecting 'Inspect' or 'Inspect element' (depending on the browser) from the drop-down list.
+This opens up developer mode and will highlight the element you're inspecting,
+from which you can read off the class. Albert Rapp's [video](https://www.youtube.com/watch?v=ErRX8plZpQE) (also mentioned above)
+demonstrates how to do this.
+
+Now that we've selected what we want to animate,
+we can define some key properties of how we want the animation to progress
+(though not yet the appearance of the animation).
+In particular, we say we want the animation to last 600ms.
+We also name the animation, which is important, 
+because we use the name later when defining what the animation actually does.
+
+This brings us to the second part of the code for the animation:
+
+```{.css}
+@keyframes line-expand {
+  from {
+    width: 0%;
+  }
+  
+  to {
+    width: 100%;
+  }
+}
+```
+
+Here, we use the `@keyframes` at-rule, with the name of the animation set above, 
+to define the appearance of the animation.
+`from` indicates what we want the appearance to be at the beginning of the animation,
+and `to` indicates the same for the end.
+For my logo, I want to change the width of the line in the icon (i.e. the span with class `icon-line`). 
+At the beginning of the animation, I want it to disappear (i.e. have a width of 0%),
+then by the end, the width has returned to 100%, the same as in its static state.
+
+For more information on creating CSS animations, see the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+My logo animation is just about as simple as a CSS animation can be.
+The above docs explain more of the theory and delve into more complicated examples.
+
+## Applying the theme and animation
+
+The rules relating to the styling and animation of the logo appear in three different files.
+In order to apply them to the site, these need to be declared on the website's `_quarto.yml` file.
+For this site, the `.scss` and `.css` files live in the `assets` directory, 
+and they're set in `_quarto.yml` as follows:
+
+```{.yaml}
+format:
+  html:
+    theme: 
+      light: assets/ek-theme-light.scss
+      dark: assets/ek-theme-dark.scss
+    css: assets/ek-styles.css
+```
+
+## Conclusion
+
+That's it! 
+We've used HTML in the navbar title to create a logo,
+styled the static version in our light and dark themes,
+applied a CSS animation in a separate .css file
+and made sure all the files are linked properly in `_quarto.yml` so they apply to the site.
+
+I was thrilled recently to receive an e-mail from Matthieu Hanf letting me know that he'd found the repo for my site useful when creating his. 
+His [site](https://mhanf.netlify.app) is really cool and also features a navbar title logo that animates on hover.
+
+If you have an animated logo on your site, please comment below with a link to it.
+It'd love to see!
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
+  name = long_slug
+)
+```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+
+
+
+
