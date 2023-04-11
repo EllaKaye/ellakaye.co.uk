@@ -309,7 +309,7 @@ font-style: inherit"> assets/ek-styles.css</span></span></code></pre></div>
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>That’s it! We’ve used HTML in the navbar title to create a logo, styled the static version in our light and dark themes, applied a CSS animation in a separate .css file and made sure all the files are linked properly in <code>_quarto.yml</code> so they apply to the site.</p>
 <p>I was thrilled recently to receive an e-mail from Matthieu Hanf letting me know that he’d found the repo for my site useful when creating his. His <a href="https://mhanf.netlify.app">site</a> is really cool and also features a navbar title logo that animates on hover.</p>
-<p>If you have an animated logo on your site, please comment below with a link to it. It’d love to see!</p>
+<p>If you have an animated logo on your site, please comment in the box at the bottom of this page with a link to it. I’d love to see!</p>
 <!--------------- appendices go here ----------------->
 </section>
 <div class="cell">
@@ -323,7 +323,7 @@ font-style: inherit"> assets/ek-styles.css</span></span></code></pre></div>
 
 <div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
 
-<p>2023-04-11 15:21:09 BST</p>
+<p>2023-04-11 15:25:57 BST</p>
 </div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
 
 <p><a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-04-11_animated-logo/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-04-11_animated-logo/renv.lock" target="_blank">R environment</a></p>
@@ -385,6 +385,8 @@ Kaye, Ella. 2023. <span>“Creating an Animated CSS Logo.”</span> April
 </div></div></section></div> ]]></description>
   <category>Quarto</category>
   <category>CSS</category>
+  <category>Sass</category>
+  <category>Web development</category>
   <guid>https://ellakaye.co.uk/posts/2023-04-11_animated-logo/index.html</guid>
   <pubDate>Mon, 10 Apr 2023 23:00:00 GMT</pubDate>
   <media:content url="https://ellakaye.co.uk/images/logo.png" medium="image" type="image/png" height="144" width="144"/>
