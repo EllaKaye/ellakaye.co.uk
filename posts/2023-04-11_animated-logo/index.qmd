@@ -30,7 +30,7 @@ twitter-card: true
 #  image-width: 500
 #  image-height: 500
 #  card-style: summary
-draft: true
+draft: false
 ---
 
 <!--------------- set up ----------------->
@@ -59,7 +59,7 @@ Before I get to the details of *how* I created the animation, first a note on wh
 On my previous site, built with {distill}, I had a static version of the same logo, saved as a .png. 
 As I was developing this site, I tweaked my colour scheme a lot, 
 and each time I did so, I had to head back to my design software, update the image there, re-export it and reload the site. 
-Needless to say, that got tiresome. 
+Needless to say, that quickly became tiresome. 
 
 That issue became even more pressing when I also implemented a dark mode. 
 My light mode logo, with its dark grey text, disappeared into the background of the dark mode. 
@@ -76,12 +76,12 @@ I could theme separately in light and dark modes.
 It would always be consistent with the appearance of the site.
 
 Plus, around the time I was grappling with these issues, I saw [Maya Gans](https://maya.rbind.io) tweet that she was working on a CSS animated logo for her site 
-and I got excited by the possibility of figuring out how to do something similar: 
+and I became excited by the possibility of figuring out how to do something similar: 
 the line separating my first and last name seemed destined to move on hover. 
 I got in touch with Maya and she was fantastically helpful in assisting me with the implementation.
 There was lots to troubleshoot!
 
-## Figuring out the HTML and yaml
+## Figuring out the HTML and YAML
 
 The first challenge was figuring out the HTML to use in the title that would give me something to style for the line between the names. 
 I needed my first name on top of my last name, but using either `<hr>` or `<br>` tags didn't work. 
@@ -113,10 +113,11 @@ which is another reason not to have additional HTML in it.
 ## Theming the (static) logo
 
 :::{.callout-note}
-This section assumes a little bit of familiarity with CSS and Quarto themes.
+This section assumes a little bit of familiarity with CSS and using Sass in Quarto themes.
 If these are new to you, I recommend first reading the 'Style your blog' section of Albert Rapp's epic ['Ultimate Guide to Starting a Quarto blog'](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html#style-your-blog) post,
 and watching the accompanying [video](https://www.youtube.com/watch?v=ErRX8plZpQE),
-which dives into how to customise the appearance of your site.
+which dives into how to customise the appearance of your site. 
+Sam Csik also just published an excellent deck of [slides on customising Quarto websites with Sass and CSS](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide).
 The [official Quarto docs](https://quarto.org/docs/output-formats/html-themes.html) on HTML themes is also really useful.
 For learning CSS more generally, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) is a comprehensive resource.
 :::

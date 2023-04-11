@@ -15,7 +15,380 @@
 <link>https://ellakaye.co.uk/posts.html#category=Quarto</link>
 </image>
 <generator>quarto-1.3.250</generator>
-<lastBuildDate>Sun, 11 Dec 2022 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 10 Apr 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Creating an animated CSS logo</title>
+  <dc:creator>Ella Kaye</dc:creator>
+  <link>https://ellakaye.co.uk/posts/2023-04-11_animated-logo/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--------------- set up ----------------->
+<!--------------- post content ----------------->
+<p>In my <a href="../../posts/2022-12-11_welcome-quarto/index.html">previous post</a>, I outlined a number of customisations I made to this personal website and promised a series of future blog posts on how I implemented them. This is the first in the series, on the creation of the animated logo in the top left corner of the site. Note that for the animation to work properly, it needs to be viewed on a device with a mouse/trackpad, not a touchscreen.</p>
+<section id="the-motivation-for-creating-a-css-logo" class="level2">
+<h2 class="anchored" data-anchor-id="the-motivation-for-creating-a-css-logo">The motivation for creating a CSS logo</h2>
+<p>Before I get to the details of <em>how</em> I created the animation, first a note on why. On my previous site, built with {distill}, I had a static version of the same logo, saved as a .png. As I was developing this site, I tweaked my colour scheme a lot, and each time I did so, I had to head back to my design software, update the image there, re-export it and reload the site. Needless to say, that quickly became tiresome.</p>
+<p>That issue became even more pressing when I also implemented a dark mode. My light mode logo, with its dark grey text, disappeared into the background of the dark mode. I needed a way to switch logos on light/dark toggle. I did find a <a href="https://github.com/quarto-dev/quarto-cli/discussions/1647">solution</a>, which used some hacky CSS to override the logo.png used in light mode with an alternative logo-dark.png in dark mode, but now needed to manually edit two logo images whenever I tweaked the theme, doubling my original problem.<sup>1</sup></p>
+<p>I realised that if I could create and style the logo with HTML and CSS, it would solve both problems: it would automatically update along with any theme changes <em>and</em> I could theme separately in light and dark modes. It would always be consistent with the appearance of the site.</p>
+<p>Plus, around the time I was grappling with these issues, I saw <a href="https://maya.rbind.io">Maya Gans</a> tweet that she was working on a CSS animated logo for her site and I became excited by the possibility of figuring out how to do something similar: the line separating my first and last name seemed destined to move on hover. I got in touch with Maya and she was fantastically helpful in assisting me with the implementation. There was lots to troubleshoot!</p>
+</section>
+<section id="figuring-out-the-html-and-yaml" class="level2">
+<h2 class="anchored" data-anchor-id="figuring-out-the-html-and-yaml">Figuring out the HTML and YAML</h2>
+<p>The first challenge was figuring out the HTML to use in the title that would give me something to style for the line between the names. I needed my first name on top of my last name, but using either <code>&lt;hr&gt;</code> or <code>&lt;br&gt;</code> tags didn’t work. It seems there are some limits to the HTML that can be used in yaml with Quarto. With <code>&lt;hr&gt;</code>, my last name was no longer displayed. Using <code>&lt;br&gt;</code> did give something to work with, at least that displayed on Chrome, but not on my default browser Safari. It turned out that <code>&lt;span&gt;</code> did the trick, with the addition of a class I could apply a CSS style to. The title became <code>ELLA&lt;span class='icon-line'&gt;&lt;/span&gt;KAYE</code>.</p>
+<p>With that as my website title and with CSS applied, the logo looked as I wanted, but the title in the browser tab also read <code>ELLA&lt;span class='icon-line'&gt;&lt;/span&gt;KAYE</code>, which wasn’t great. After some digging, I found it was possible to set the navbar title separately from the website title:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">website</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span></span>
+<span id="cb1-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit">"Ella Kaye"</span></span>
+<span id="cb1-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">navbar</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span></span>
+<span id="cb1-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit">"ELLA&lt;span class='icon-line'&gt;&lt;/span&gt;KAYE"</span></span></code></pre></div>
+<p>That solves the problem. The browser tab shows “Ella Kaye” but the title of the navbar becomes the logo, with its span that can be styled. The title of the website is also important if you have an RSS feed for your blog, which is another reason not to have additional HTML in it.</p>
+</section>
+<section id="theming-the-static-logo" class="level2">
+<h2 class="anchored" data-anchor-id="theming-the-static-logo">Theming the (static) logo</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section assumes a little bit of familiarity with CSS and using Sass in Quarto themes. If these are new to you, I recommend first reading the ‘Style your blog’ section of Albert Rapp’s epic <a href="https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html#style-your-blog">‘Ultimate Guide to Starting a Quarto blog’</a> post, and watching the accompanying <a href="https://www.youtube.com/watch?v=ErRX8plZpQE">video</a>, which dives into how to customise the appearance of your site. Sam Csik also just published an excellent deck of <a href="https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide">slides on customising Quarto websites with Sass and CSS</a>. The <a href="https://quarto.org/docs/output-formats/html-themes.html">official Quarto docs</a> on HTML themes is also really useful. For learning CSS more generally, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN</a> is a comprehensive resource.</p>
+</div>
+</div>
+<p>I gave the span separating my first and last names in the logo the class <code>icon-line</code>, so I can target that to style it. I have custom themes for my light and dark modes, in the files <a href="https://github.com/EllaKaye/ellakaye.co.uk/blob/main/assets/ek-theme-light.scss"><code>ek-theme-light.scss</code></a> and <a href="https://github.com/EllaKaye/ellakaye.co.uk/blob/main/assets/ek-theme-dark.scss"><code>ek-theme-dark.scss</code></a> respectively. I have the following rule in both files:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">.icon-line</span> {</span>
+<span id="cb2-2">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">display</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">block</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-3">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">background</span>: <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$primary</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-4">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">width</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">100</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">%</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-5">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">height</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">6</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">px</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-6">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">margin</span>: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit">auto</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-7">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">display</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">table</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-8">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">margin-top</span>: <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">6</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">px</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-9">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">margin-bottom</span>: <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">6</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">px</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb2-10">}</span></code></pre></div>
+<p>It’s a bit of a pain to have to define this rule, identically, in both <code>.scss</code> files, but it’s necessary because of setting <code>background: $primary;</code>. This is what ensures that the icon-line changes colour when light/dark mode is toggled. <code>$primary</code> is a Sass variable that is set to be the main accent colour. It is pink in light mode and green in dark mode. This is achieved by defining the following variable in <code>ek-theme-light.scss</code>:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb3-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$pink</span>:      <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit">#D4006A</span>;</span>
+<span id="cb3-2"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$primary</span>:   <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$pink</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">!default</span>;</span></code></pre></div>
+<p>and similarly in <code>ek-theme-dark.scss</code>:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb4-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$green</span>:     <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit">#00D46A</span>;</span>
+<span id="cb4-2"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$primary</span>:   <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit">$green</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">!default</span>;</span></code></pre></div>
+<p>Because <code>$primary</code> is defined differently for the two themes, the rule for <code>.icon-line</code> has to appear in both theme files to pick up that difference.</p>
+<p>The other important property to note in the <code>.icon-line</code> rule that of <code>width: 100%</code>. This ensures that the line occupies the full width of the <code>navbar-title</code>. This is the property that we will change with the animation.</p>
+</section>
+<section id="setting-up-the-css-animation" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-the-css-animation">Setting up the CSS animation</h2>
+<p>Although, as explained above, the styling of the <code>icon-line</code> has to appear in the two <code>.scss</code> files, the animation is applied the same way in both light and dark mode and, moreover, is created with pure CSS (i.e.&nbsp;without using any special features of Sass). Therefore the code for the animation lives in my <code>ek-styles.css</code> file.</p>
+<p>The code for the animation is in two parts. The first part selects what we want to animate and when, how long the animation should last and what the animation is called:</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">.navbar-title</span><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">:hover</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">&gt;</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">.icon-line</span> {</span>
+<span id="cb5-2">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">animation-duration</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">600</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">ms</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb5-3">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">animation-name</span>: line-expand<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb5-4">}</span></code></pre></div>
+<p>The line <code>.navbar-title:hover &gt; .icon-line</code> is the selector, i.e.&nbsp;defines what we want to style. As described above, in <code>_quarto.yml</code>, we set the logo to be the title of the navbar. That translates to the CSS class <code>navbar-title</code>.<sup>2</sup> In CSS, we define a rule for a class by prefixing the class name with a <code>.</code>, i.e.&nbsp;<code>.navbar-title</code>. The suffix <code>:hover</code> means that the rule is activated when the cursor hovers over the navbar title. But it’s not the whole logo we want to animate, just the element with the class <code>icon-line</code> within it, which is what the <code>&gt; .icon-line</code> part of the selector does. Putting that all together, the selector <code>.navbar-title:hover &gt; .icon-line</code> translates to ‘when hovering over the navbar title, select the icon-line within it’.</p>
+<p>Now that we’ve selected what we want to animate, we can define some key properties of how we want the animation to progress (though not yet the appearance of the animation). In particular, we say we want the animation to last 600ms. We also name the animation, which is important, because we use the name later when defining what the animation actually does.</p>
+<p>This brings us to the second part of the code for the animation:</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit">@keyframes</span> line-expand {</span>
+<span id="cb6-2">  from {</span>
+<span id="cb6-3">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">width</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">0</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">%</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb6-4">  }</span>
+<span id="cb6-5">  </span>
+<span id="cb6-6">  to {</span>
+<span id="cb6-7">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">width</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit">100</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit">%</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit">;</span></span>
+<span id="cb6-8">  }</span>
+<span id="cb6-9">}</span></code></pre></div>
+<p>Here, we use the <code>@keyframes</code> at-rule, with the name of the animation set above, to define the appearance of the animation. <code>from</code> indicates what we want the appearance to be at the beginning of the animation, and <code>to</code> indicates the same for the end. For my logo, I want to change the width of the line in the icon (i.e.&nbsp;the span with class <code>icon-line</code>). At the beginning of the animation, I want it to disappear (i.e.&nbsp;have a width of 0%), then by the end, the width has returned to 100%, the same as in its static state.</p>
+<p>For more information on creating CSS animations, see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN docs</a>. My logo animation is just about as simple as a CSS animation can be. The above docs explain more of the theory and delve into more complicated examples.</p>
+</section>
+<section id="applying-the-theme-and-animation" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-theme-and-animation">Applying the theme and animation</h2>
+<p>The rules relating to the styling and animation of the logo appear in three different files. In order to apply them to the site, these need to be declared on the website’s <code>_quarto.yml</code> file. For this site, the <code>.scss</code> and <code>.css</code> files live in the <code>assets</code> directory, and they’re set in <code>_quarto.yml</code> as follows:</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">format</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span></span>
+<span id="cb7-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">html</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span></span>
+<span id="cb7-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">theme</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit"> </span></span>
+<span id="cb7-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">light</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit"> assets/ek-theme-light.scss</span></span>
+<span id="cb7-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">dark</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit"> assets/ek-theme-dark.scss</span></span>
+<span id="cb7-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit">css</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit"> assets/ek-styles.css</span></span></code></pre></div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>That’s it! We’ve used HTML in the navbar title to create a logo, styled the static version in our light and dark themes, applied a CSS animation in a separate .css file and made sure all the files are linked properly in <code>_quarto.yml</code> so they apply to the site.</p>
+<p>I was thrilled recently to receive an e-mail from Matthieu Hanf letting me know that he’d found the repo for my site useful when creating his. His <a href="https://mhanf.netlify.app">site</a> is really cool and also features a navbar title logo that animates on hover.</p>
+<p>If you have an animated logo on your site, please comment below with a link to it. It’d love to see!</p>
+<!--------------- appendices go here ----------------->
+</section>
+<div class="cell">
+<div class="cell-output-display">
+
+
+</div>
+</div>
+
+
+
+<div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
+
+<p>2023-04-11 15:21:09 BST</p>
+</div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
+
+<p><a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-04-11_animated-logo/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-04-11_animated-logo/renv.lock" target="_blank">R environment</a></p>
+</div></section><section id="session-info" class="level5 appendix"><h2 class="anchored quarto-appendix-heading">Session info</h2><div class="quarto-appendix-contents">
+
+<details>
+<summary>
+Toggle
+</summary>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.2 (2022-10-31)
+ os       macOS Ventura 13.3
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       Europe/London
+ date     2023-04-11
+ pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
+ quarto   1.3.250 @ /usr/local/bin/quarto
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ ! package     * version date (UTC) lib source
+ P sessioninfo * 1.2.2   2021-12-06 [?] CRAN (R 4.2.0)
+
+ [1] /Users/ellakaye/Rprojs/mine/ellakaye-quarto/renv/library/R-4.2/aarch64-apple-darwin20
+ [2] /Users/ellakaye/Rprojs/mine/ellakaye-quarto/renv/sandbox/R-4.2/aarch64-apple-darwin20/fd29d0b8
+
+ P ── Loaded and on-disk path mismatch.
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+</details>
+
+
+<!-- -->
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This hack does still provide a useful trick for people with logos that can’t be created with HTML and styled with CSS but who nevertheless want to switch logos between light and dark modes.↩︎</p></li>
+<li id="fn2"><p>We can determine the class of an element by right-clicking on it in a browser then selecting ‘Inspect’ or ‘Inspect element’ (depending on the browser) from the drop-down list. This opens up developer mode and will highlight the element you’re inspecting, from which you can read off the class. Albert Rapp’s <a href="https://www.youtube.com/watch?v=ErRX8plZpQE">video</a> (also mentioned above) demonstrates how to do this.↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2023,
+  author = {Kaye, Ella},
+  title = {Creating an Animated {CSS} Logo},
+  date = {2023-04-11},
+  url = {https://ellakaye.co.uk/posts/2023-04-11_animated-logo},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2023" class="csl-entry quarto-appendix-citeas">
+Kaye, Ella. 2023. <span>“Creating an Animated CSS Logo.”</span> April
+11, 2023. <a href="https://ellakaye.co.uk/posts/2023-04-11_animated-logo">https://ellakaye.co.uk/posts/2023-04-11_animated-logo</a>.
+</div></div></section></div> ]]></description>
+  <category>Quarto</category>
+  <category>CSS</category>
+  <guid>https://ellakaye.co.uk/posts/2023-04-11_animated-logo/index.html</guid>
+  <pubDate>Mon, 10 Apr 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://ellakaye.co.uk/images/logo.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Welcome to my Quarto website!</title>
   <dc:creator>Ella Kaye</dc:creator>

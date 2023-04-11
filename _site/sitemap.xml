@@ -2,86 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ellakaye.co.uk/community.html</loc>
-    <lastmod>2023-04-03T13:03:07.458Z</lastmod>
+    <lastmod>2023-04-10T21:01:24.048Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/contact.html</loc>
-    <lastmod>2023-04-03T13:04:16.257Z</lastmod>
+    <lastmod>2023-04-10T21:01:24.353Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2022-12-11_welcome-quarto/index.html</loc>
-    <lastmod>2023-04-03T13:03:10.584Z</lastmod>
+    <lastmod>2023-04-10T21:01:26.486Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2021-05-08_welcome-distill/index.html</loc>
-    <lastmod>2023-04-03T13:03:12.587Z</lastmod>
+    <lastmod>2023-04-10T21:01:28.499Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2020-12-09_advent-of-code-2020/index.html</loc>
-    <lastmod>2023-04-03T13:03:14.988Z</lastmod>
+    <lastmod>2023-04-10T21:01:31.000Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2021-05-26_custom-highlighting-distill-2/index.html</loc>
-    <lastmod>2023-04-03T19:30:08.964Z</lastmod>
+    <lastmod>2023-04-10T21:01:33.688Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1/index.html</loc>
-    <lastmod>2023-04-03T13:03:19.709Z</lastmod>
+    <lastmod>2023-04-10T21:01:35.794Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts/2017-06-17_n-letter-words/index.html</loc>
-    <lastmod>2023-04-03T13:03:20.540Z</lastmod>
+    <lastmod>2023-04-10T21:01:37.739Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks.html</loc>
-    <lastmod>2023-04-03T13:03:20.952Z</lastmod>
+    <lastmod>2023-04-10T21:01:38.137Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2018-08-23_phd-as-package/index.html</loc>
-    <lastmod>2023-04-03T13:03:21.719Z</lastmod>
+    <lastmod>2023-04-10T21:01:38.938Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2020-10-29_how-to-get-help-in-r/index.html</loc>
-    <lastmod>2023-04-03T13:03:22.221Z</lastmod>
+    <lastmod>2023-04-10T21:01:39.430Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2019-10-05_working-with-text-in-r/index.html</loc>
-    <lastmod>2023-04-03T13:03:22.684Z</lastmod>
+    <lastmod>2023-04-10T21:01:39.917Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2017-07-06_introducing-BradleyTerryScalable/index.html</loc>
-    <lastmod>2023-04-03T13:03:23.188Z</lastmod>
+    <lastmod>2023-04-10T21:01:40.412Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/talks/2017-05-25_overview-of-htmlwidgets/index.html</loc>
-    <lastmod>2023-04-03T13:03:23.637Z</lastmod>
+    <lastmod>2023-04-10T21:01:40.868Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/index.html</loc>
-    <lastmod>2023-04-03T13:03:23.967Z</lastmod>
+    <lastmod>2023-04-10T21:01:41.186Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/about.html</loc>
-    <lastmod>2023-04-03T13:03:24.361Z</lastmod>
+    <lastmod>2023-04-10T21:01:41.547Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages/distilltools/index.html</loc>
-    <lastmod>2023-04-03T13:03:24.989Z</lastmod>
+    <lastmod>2023-04-10T21:01:42.148Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages/EMK/index.html</loc>
-    <lastmod>2023-04-03T13:03:25.307Z</lastmod>
+    <lastmod>2023-04-10T21:01:42.458Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages/BradleyTerryScalable/index.html</loc>
-    <lastmod>2023-04-03T13:03:25.611Z</lastmod>
+    <lastmod>2023-04-10T21:01:42.780Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/posts.html</loc>
-    <lastmod>2023-04-10T20:47:24.480Z</lastmod>
+    <lastmod>2023-04-11T14:21:11.697Z</lastmod>
   </url>
   <url>
     <loc>https://ellakaye.co.uk/packages.html</loc>
-    <lastmod>2023-04-03T13:03:26.443Z</lastmod>
+    <lastmod>2023-04-10T21:01:43.587Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellakaye.co.uk/posts/2023-04-11_animated-logo/index.html</loc>
+    <lastmod>2023-04-11T14:21:11.152Z</lastmod>
   </url>
 </urlset>

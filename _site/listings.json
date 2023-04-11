@@ -12,6 +12,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2023-04-11_animated-logo/index.html",
       "/posts/2022-12-11_welcome-quarto/index.html",
       "/posts/2021-05-26_custom-highlighting-distill-2/index.html",
       "/posts/2021-05-25_custom-highlighting-distill-1/index.html",
