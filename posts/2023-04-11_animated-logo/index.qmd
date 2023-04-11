@@ -1,5 +1,5 @@
 ---
-title: Creating an animated CSS logo
+title: Creating and styling an animated logo for a Quarto site with CSS
 description: |
   How and why I created an animated logo for this site, using CSS
 date: 2023-04-11

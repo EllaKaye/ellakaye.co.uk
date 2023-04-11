@@ -17,7 +17,7 @@
 <generator>quarto-1.3.250</generator>
 <lastBuildDate>Mon, 10 Apr 2023 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Creating an animated CSS logo</title>
+  <title>Creating and styling an animated logo for a Quarto site with CSS</title>
   <dc:creator>Ella Kaye</dc:creator>
   <link>https://ellakaye.co.uk/posts/2023-04-11_animated-logo/index.html</link>
   <description><![CDATA[ 
@@ -323,7 +323,7 @@ font-style: inherit"> assets/ek-styles.css</span></span></code></pre></div>
 
 <div id="quarto-appendix" class="default"><section id="last-updated" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Last updated</h2><div class="quarto-appendix-contents">
 
-<p>2023-04-11 15:25:57 BST</p>
+<p>2023-04-11 15:31:50 BST</p>
 </div></section><section id="details" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Details</h2><div class="quarto-appendix-contents">
 
 <p><a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-04-11_animated-logo/index.qmd" target="_blank">source code</a>, <a href="https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-04-11_animated-logo/renv.lock" target="_blank">R environment</a></p>
@@ -374,14 +374,15 @@ Toggle
 </ol>
 </section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{kaye2023,
   author = {Kaye, Ella},
-  title = {Creating an Animated {CSS} Logo},
+  title = {Creating and Styling an Animated Logo for a {Quarto} Site
+    with {CSS}},
   date = {2023-04-11},
   url = {https://ellakaye.co.uk/posts/2023-04-11_animated-logo},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kaye2023" class="csl-entry quarto-appendix-citeas">
-Kaye, Ella. 2023. <span>“Creating an Animated CSS Logo.”</span> April
-11, 2023. <a href="https://ellakaye.co.uk/posts/2023-04-11_animated-logo">https://ellakaye.co.uk/posts/2023-04-11_animated-logo</a>.
+Kaye, Ella. 2023. <span>“Creating and Styling an Animated Logo for a
+Quarto Site with CSS.”</span> April 11, 2023. <a href="https://ellakaye.co.uk/posts/2023-04-11_animated-logo">https://ellakaye.co.uk/posts/2023-04-11_animated-logo</a>.
 </div></div></section></div> ]]></description>
   <category>Quarto</category>
   <category>CSS</category>
