@@ -471,6 +471,9 @@ iframe.slide-deck {
   border-color: $third-color;
 }
 
+kbd {
+  background-color: $body-bg;
+}
 
 
 
@@ -549,9 +552,7 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-kbd {
-  background-color: $body-bg;
-}
+
 
 iframe.slide-deck-4-3 {
   border: 3px solid $gray-300;

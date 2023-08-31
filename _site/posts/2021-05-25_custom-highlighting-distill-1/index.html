@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.250">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -95,7 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7G8FLLRS4M"></script>
@@ -165,13 +166,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <link rel="stylesheet" href="../../assets/ek-styles.css">
 <meta property="og:title" content="Ella Kaye - Custom syntax highlighting for {distill} part 1">
-<meta property="og:description" content="The personal website of Ella Kaye">
+<meta property="og:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
 <meta property="og:image" content="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1/more-theme-in-action.png">
 <meta property="og:site-name" content="Ella Kaye">
 <meta property="og:image:height" content="968">
 <meta property="og:image:width" content="1312">
 <meta name="twitter:title" content="Ella Kaye">
-<meta name="twitter:description" content="A guide to modifying the default {distill} syntax highlighting theme, including colour choice considerations, and its implementation in {distilltools}">
+<meta name="twitter:description" content="The personal website of Ella Kaye">
 <meta name="twitter:image" content="https://ellakaye.co.uk/posts/2021-05-25_custom-highlighting-distill-1/images/logo.png">
 <meta name="twitter:creator" content="@ellamkaye">
 <meta name="twitter:site" content="@ellamkaye">
@@ -323,7 +324,7 @@ Update: August 2022
 <p>Here’s the function in action, to get the theme used on this site:</p>
 <div class="cell">
 <details open="">
-<summary>Toggle the code</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get distilltools, requires remotes &gt;= 2.2</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"EllaKaye/distilltools"</span>) </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -341,7 +342,7 @@ Update: August 2022
 <p>And here’s the theme in action:</p>
 <div class="cell">
 <details open="">
-<summary>Toggle the code</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -386,7 +387,7 @@ Update: August 2022
 <p>I cloned the <a href="https://github.com/rstudio/distill">distill repo from GitHub</a> and opened it in RStudio.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> From there I began my detective work with one of my favourite RStudio features, ‘Find in Files’ (⇧ + ⌘ + F on a Mac), which searches across all files in a project. I searched for “highlight” and followed various trails until I discovered that the default is called <code>arrow.theme</code> and is stored in <code>inst/rmarkdown/templates/distill_article/resources/</code>. Thankfully, because it’s in the <code>inst</code> folder, the file is accessible to users who have the {distill} package installed. In the RStudio project for my website, I created a new script, <code>syntax_highlighting.R</code>, in the <code>R</code> folder I have in my root directory, then I ran the following to save a copy of <code>arrow.theme</code> into my website’s root directory:</p>
 <div class="cell">
 <details open="">
-<summary>Toggle the code</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>arrow_theme_path <span class="ot">&lt;-</span> <span class="fu">system.file</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown/templates/distill_article/resources/arrow.theme"</span>, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">"distill"</span></span>
@@ -430,7 +431,7 @@ Update: August 2022
 <div id="fig-final-palette-light" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="index_files/figure-html/fig-final-palette-light-1.png" class="img-fluid figure-img" alt="A swatch of five colours, a pink, orange, green, blue and purple, all quite bright, but still all with a contrast ratio of 4.5:1 or better against white." width="624"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: The palette I settled on for my syntax highlighting scheme.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;1: The palette I settled on for my syntax highlighting scheme.</figcaption>
 </figure>
 </div>
 </div>
@@ -444,7 +445,7 @@ Update: August 2022
 <p>With all the pieces in place, it’s now just a case of swapping out the default colour codes for our own choices. Although it’s possible to manually edit the <code>arrow.theme</code> file we now have in our directory, to aid reproducibility, and with a view to writing this up as a function, I edited it using R code instead. I read in the file, substituted the hex codes, then saved the resulting theme into a new <code>ek_syntax_highlighting.theme</code> file (leaving <code>arrow.theme</code> unchanged). Below are two approaches, one using base R, the other in the tidyverse, that I put in my <code>syntax_highlighting.R</code> script.</p>
 <div class="cell">
 <details open="">
-<summary>Toggle the code</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the default theme</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>theme <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"arrow.theme"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -480,7 +481,7 @@ Update: August 2022
 <p>The first argument to <code>modify_default_highlighting</code> is <code>name</code>, the name you want to give your theme (which will create the file <code>name.theme</code>). It then takes five colour arguments, which can be specified either in the hex form “#RRGGBB” or as a named colour, from the colour names in <a href="https://rdrr.io/r/grDevices/colors.html">grDevices::colors()</a>. For a list of the colour names available in R, see page 3 of the <a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf">R color cheatsheet</a> for a one page summary, or <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">Colors in R</a> for a slightly less visually overwhelming list. The final argument, <code>overwrite</code> (defaults to <code>TRUE</code>) specifies whether to overwrite <code>name.theme</code> if it already exists in the working directory. Here’s the function in action again, this time using colour names (note that I have not tested the visual properties of this as a palette, just dropped in some colour names into the function):</p>
 <div class="cell">
 <details open="">
-<summary>Toggle the code</summary>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(distilltools)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">modify_default_highlighting</span>(</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"ek_syntax_highlighting"</span>,</span>
@@ -985,7 +986,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/ellakaye\.co\.uk/);
+      var filterRegex = new RegExp("https:\/\/ellakaye\.co\.uk");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
