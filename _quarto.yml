@@ -11,7 +11,7 @@ website:
   site-url: https://ellakaye.co.uk
   description: Personal website, portfolio and blog
   repo-url: https://github.com/EllaKaye/ellakaye.co.uk
-  repo-actions: issue
+  #repo-actions: issue
   image: images/logo.png
   navbar:
     #logo: ELLAKAYE-logo-light.png
