@@ -1,0 +1,14 @@
+{
+  "hash": "36d8c750735b9af3f38caad83b7728d1",
+  "result": {
+    "markdown": "---\ninclude-in-header: \"_includes/fontawesome-2up.html\"\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [I'd love to hear from you!]{.primary}\n\nYou can leave a note about any of my posts, talks or packages using the comment box at the bottom of its page.\n\nYou can find me on elsewhere online:\n\n\n::: {.cell}\n\n:::\n\n\n`<a href=\"https://fosstodon.org/@ellakaye\" class=\"icon-link\" target=\"_blank\" rel=\"me noopener\"><i class=\"fab fa-mastodon\"></i> Mastodon</a>`{=html}\n`<a href=\"https://github.com/EllaKaye\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> GitHub</a>`{=html}\n`<a href=\"https://www.linkedin.com/in/ellakaye\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-linkedin\"></i> LinkedIn</a>`{=html}\n\nOr, you can drop me an e-mail at [hello @ ellakaye.co.uk]{.heading-font}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

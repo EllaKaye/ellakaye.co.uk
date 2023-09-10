@@ -3,8 +3,8 @@ project:
   resources:
     "_redirects"
     
-#execute:
-#  freeze: true
+execute:
+  freeze: auto
 
 website:
   title: "Ella Kaye"
