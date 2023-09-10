@@ -124,6 +124,6 @@ redirects <- c(distill_redirects,
                packages_redirects)
 
 # write the _redirect file
-writeLines(redirects, here::here("_site", "_redirects"))
+writeLines(redirects, here::here("_redirects"))
 ```
 
