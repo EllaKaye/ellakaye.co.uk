@@ -50,12 +50,13 @@ $theme: "litera" !default;
   src: local('MonoLisa-RegularItalic'), url('fonts/MonoLisa-RegularItalic.woff2') format('woff2'), url('fonts/MonoLisa-RegularItalic.woff') format('woff');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
 // fonts
-$font-family-sans-serif: "LEMONMILKPro-Light", Helvetica, sans-serif !default;
-$font-family-monospace: "MonoLisa-Regular", monospace;
-$headings-font-family: "LEMONMILKPro-Regular", Helvetica, sans-serif !default;
+$font-family-sans-serif: "LEMONMILKPro-Light", Figtree, Helvetica, sans-serif !default;
+$font-family-monospace: "MonoLisa-Regular", "Fira Mono", monospace;
+$headings-font-family: "LEMONMILKPro-Regular", Figtree, Helvetica, sans-serif !default;
 
 // litera bootswatch theme colors
 /*
