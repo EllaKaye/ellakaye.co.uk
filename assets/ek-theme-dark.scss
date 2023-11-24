@@ -152,6 +152,11 @@ code {
   font-feature-settings: 'dlig' 0, 'liga' 0, 'calt' 1, 'zero' 1, 'ss02' 0;
 }
 
+pre code {
+	background-color: $code-bg;
+	color: $light !important;
+}
+
 code span.co {
   font-family: "MonoLisa-RegularItalic", "Fira Mono", monospace;
 }
