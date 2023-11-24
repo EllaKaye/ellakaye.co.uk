@@ -8,6 +8,7 @@ listing:
   sort-ui: false
   filter-ui: false
   image-height: 416px
+  fields: [title, author, image, description]
 page-layout: full
 title-block-banner: false
 knitr:

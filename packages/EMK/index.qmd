@@ -2,7 +2,7 @@
 title: EMK
 description: |
   A collection of miscellaneous functions I have written that I personally find helpful in a variety of contexts.
-#date: UPDATE # initial commit date? Publish date? No date?
+date: 2018-03-18
 author: 
   - name: Ella Kaye
     #url: httep://twitter.com/ellakaye

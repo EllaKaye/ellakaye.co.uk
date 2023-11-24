@@ -2,7 +2,7 @@
 title: distilltools
 description: |
   {distilltools} is collection of tools to support the creation and styling of content on websites created using the {distill} package in R.
-#date: UPDATE # initial commit date? Publish date? No date?
+date: 2022-04-05
 author: 
   - name: Ella Kaye
     #url: httep://twitter.com/ellakaye

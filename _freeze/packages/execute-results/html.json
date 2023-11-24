@@ -1,7 +1,8 @@
 {
-  "hash": "c9ec3ae621a07c203517191db7357db4",
+  "hash": "6724f4cf40c33809f7ef49567519608b",
   "result": {
-    "markdown": "---\n#title: \"packages\"\nlisting:\n  contents: packages\n  sort: \"date desc\"\n  type: grid\n  categories: false\n  sort-ui: false\n  filter-ui: false\n  image-height: 416px\npage-layout: full\ntitle-block-banner: false\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [PACKAGES]{.second-color}",
+    "engine": "knitr",
+    "markdown": "---\n#title: \"packages\"\nlisting:\n  contents: packages\n  sort: \"date desc\"\n  type: grid\n  categories: false\n  sort-ui: false\n  filter-ui: false\n  image-height: 416px\n  fields: [title, author, image, description]\npage-layout: full\ntitle-block-banner: false\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\n---\n\n\n# [PACKAGES]{.second-color}",
     "supporting": [
       "packages_files"
     ],

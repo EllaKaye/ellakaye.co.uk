@@ -2,7 +2,7 @@
 title: BradleyTerryScalable
 description: |
   {BradleyTerryScalable} is an R package for fitting the Bradley-Terry model to pair-comparison data, to enable statistically principled ranking of a potentially large number of objects.
-#date: UPDATE # initial commit date? Publish date? No date?
+date: 2020-03-04
 author: 
   - name: Ella Kaye
     #url: httep://twitter.com/ellakaye
