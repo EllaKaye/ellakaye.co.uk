@@ -8,6 +8,7 @@ page-layout: full
 include-in-header: 
   - _includes/fontawesome-2up.html
   - _includes/mastodon.html
+freeze: false
 ---
 
 ::: {.grid}
