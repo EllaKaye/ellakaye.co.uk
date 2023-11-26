@@ -9,9 +9,7 @@ author:
 site-url: https://ellakaye.co.uk
 #image: IMAGE.png
 #image-alt: |
-categories:
-  - TAG_1
-  - TAG_2
+categories: [TAG_1, TAG_2]
 open-graph: true
 twitter-card: true
 # will inherit title, description, image
@@ -27,7 +25,7 @@ twitter-card: true
 #  image-width: 500
 #  image-height: 500
 #  card-style: summary
-draft: true
+draft: false
 ---
 
 <!--------------- set up ----------------->

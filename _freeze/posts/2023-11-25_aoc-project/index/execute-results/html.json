@@ -1,0 +1,15 @@
+{
+  "hash": "f7948b11bf54718ba8b47103807b79d7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: An Advent of Code website, website template and package\ndescription: |\n  I made project/website to work through then share my Advent of Code solutions, with R functions to ease the process, and I was so pleased with it that I made them into a template and package so others can use them too!\ndate: 2023-11-25\nauthor:\n  - name: Ella Kaye\nsite-url: https://ellakaye.co.uk\nimage: ../../images/hex/aochelpers.png\nimage-alt: |\n  aochelpers hex sticker, with a bright green outline and a dark background. The hex is filled with a white ASCII art star, with the word aochelpers in bright green in the middle.\ncategories: [Advent of Code, R, package development, Quarto]\nopen-graph: true\ndraft: false\n---\n\n\n<!--------------- set up ----------------->\n\n\n::: {.cell}\n\n:::\n\n\n<!--------------- post content ----------------->\n\n<!--------------- appendices go here ----------------->\n\n\n::: {.cell}\n::: {.cell-output-display}\n## Last updated {.appendix}\n \n2023-11-25 21:13:39.366787\n \n## Details {.appendix}\n \n[source code](https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-11-25_aoc-project/index.qmd){target='_blank'}, [R environment](https://github.com/EllaKaye/ellakaye.co.uk/tree/main/posts/2023-11-25_aoc-project/renv.lock){target='_blank'}\n:::\n:::\n\n\n##### Session info {.appendix}\n\n<details><summary>Toggle</summary>\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.3.1 (2023-06-16)\n os       macOS Sonoma 14.1\n system   aarch64, darwin20\n ui       X11\n language (EN)\n collate  en_US.UTF-8\n ctype    en_US.UTF-8\n tz       Europe/London\n date     2023-11-25\n pandoc   3.1.1 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)\n quarto   1.4.504 @ /usr/local/bin/quarto\n\n─ Packages ───────────────────────────────────────────────────────────────────\n ! package     * version date (UTC) lib source\n P sessioninfo * 1.2.2   2021-12-06 [?] CRAN (R 4.3.0)\n\n [1] /Users/ellakaye/Rprojs/mine/ellakaye-quarto/renv/library/R-4.3/aarch64-apple-darwin20\n [2] /Users/ellakaye/Library/Caches/org.R-project.R/R/renv/sandbox/R-4.3/aarch64-apple-darwin20/ac5c2659\n\n P ── Loaded and on-disk path mismatch.\n\n──────────────────────────────────────────────────────────────────────────────\n```\n\n\n:::\n:::\n\n\n</details>\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
