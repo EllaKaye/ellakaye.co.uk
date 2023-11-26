@@ -34,7 +34,7 @@ long_slug <- "2023-11-25_aoc-project"
 Back in 2020, I worked through some [Advent of Code](https://adventofcode.com) challenges 
 and wrote my solutions in [one long post](../2020-12-09_advent-of-code-2020/index.qmd).
 As I added to it daily, the post became increasingly unwieldy.
-Therefore, as I prepared to participate in Advent of Code 2023, 
+Therefore, as I began to prepare to participate in Advent of Code 2023, 
 I decided to build a separate website which would be simultaneously
 a project in which to work on the puzzles, and also a blog 
 from which to publish my solutions. 
@@ -43,7 +43,8 @@ and a separate post for each day.
 The inspiration came from Emil Hvitfeldt's [R Advent of Code](https://emilhvitfeldt.github.io/rstats-adventofcode/) site.
 
 This is easy to implement in [Quarto](https://quarto.org) 
-and I quickly got a new site up and running, copying over my 2020 solutions, and working on some from 2022 while I was at it.
+and I quickly got a new site up and running, copying over my 2020 solutions, 
+and working on some from 2022 while I was at it.
 
 My Advent of Code website is now live and ready for 2023, 
 at <https://adventofcode.ellakaye.co.uk>.
