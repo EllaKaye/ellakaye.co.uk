@@ -1,0 +1,156 @@
+---
+title: An Advent of Code website, website template and package
+description: |
+  I made project/website to work through then share my Advent of Code solutions, with R functions to ease the process, and I was so pleased with it that I made them into a template and package so others can use them too!
+date: 2023-11-29
+author:
+  - name: Ella Kaye
+site-url: https://ellakaye.co.uk
+image: ../../images/hex/aochelpers.png
+image-alt: |
+  aochelpers hex sticker, with a bright green outline and a dark background. The hex is filled with a white ASCII art star, with the word aochelpers in bright green in the middle.
+categories: [Advent of Code, R, package development, Quarto]
+open-graph: true
+draft: false
+---
+
+<!--------------- set up ----------------->
+
+```{r}
+#| echo: false
+#| results: 'hide'
+
+long_slug <- "2023-11-25_aoc-project"
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+#renv::use(lockfile = "renv.lock")
+```
+
+<!--------------- post content ----------------->
+
+Over the last month or so, I've been working on a project related to [Advent of Code](https://adventofcode.com) that comprises of three parts:
+
+- A [new website](https://adventofcode.ellakaye.co.uk) for me to keep a record of my solutions and make notes about what I learn along the way
+- A [template](https://github.com/EllaKaye/advent-of-code-website-template) for others to create similar websites
+- An R package, [**aochelpers**](https://ellakaye.github.io/aochelpers) that works hand-in-hand with my site and websites created from the template.
+It makes it incredibly easy to set up new posts, scripts and listings, using supplied (though personalisable) templates. 
+
+This post describes how the project came to be and developed but doesn't document the use of the package or template -- 
+that's covered in their respective sites linked to above.
+
+## A new website
+
+Back in 2020, I worked through some Advent of Code challenges 
+and wrote my solutions in [one long post](../2020-12-09_advent-of-code-2020/index.qmd).
+As I added to it daily, the post became increasingly unwieldy.
+Therefore, as I began to prepare to participate in Advent of Code 2023, 
+I decided to build a separate website which would be simultaneously
+a project in which to work on the puzzles, and also a blog 
+from which to publish my solutions. 
+It has a separate listing page for each year, 
+and a separate post for each day.
+The inspiration came from Emil Hvitfeldt's [R Advent of Code](https://emilhvitfeldt.github.io/rstats-adventofcode/) site.
+
+This was easy to implement in [Quarto](https://quarto.org) 
+and I quickly got a new site up and running, copying over my 2020 solutions, 
+and working on some from 2022 while I was at it.
+
+My Advent of Code website is now live and ready for 2023, 
+at <https://adventofcode.ellakaye.co.uk>.
+
+## File templates and supporting R functions
+
+For each puzzle, I wanted to be able to download my input from the Advent of Code website and save it into the directory for the post, 
+and for the `index.qmd` file each post to have the same structure -- 
+a 'Setup' section linking back to the puzzle on the Advent of Code website,
+a link to my data, and a code chunk to read in that data, then sections for my Part 1 and 2 solutions.
+I also wanted a `script.R` where I could play around with the code to develop my solution, perhaps with the example input given in the puzzle.
+
+To achieve this, I wrote a post template, and some R functions; 
+`aoc_get_input(day, year)` to get and save the input ^[Adapted from the `advent_input()` function in David Robinson's [**adventdrob**](https://github.com/dgrtwo/adventdrob) package]
+and `aoc_new_day(day, year)` to copy the post template into a new post, 
+substituting the values of `day` and `year` in the appropriate places. 
+I also wrote an `aoc_new_year()` function to set up a new listing page, 
+also from a template.
+
+## A website template
+At this point, I was really happy with what I'd done for myself, 
+and thought it would be nice to make it easy for others to make similar websites
+for themselves. 
+Rather than have people clone and adapt my site, 
+I created a template repo with the main elements of my site, but without all my solutions, and with custom themes inspired by Christmas colours and the Advent of Code site.^[As opposed to the theme I'd used on my version, which matches the theme of my personal website, and uses paid-for, licensed fonts, which I can't share on GitHub].
+
+The repo for the template is at <https://github.com/EllaKaye/advent-of-code-website-template> and the corresponding site is at <https://ellakaye.github.io/advent-of-code-website-template>.
+The repo has a long README about how to use/adapt the template.
+
+## The aochelpers package
+The functions I'd written to support the website were originally in a script in the website projects,
+but as I continued to work both on my site and the template, 
+I realised it would be much better to distribute them as a package. 
+That way I wouldn't have to worry about keeping my script in sync with the template script and,
+more importantly, having the functions in a package makes them much easier to document,
+and to share that documentation in a package website.
+
+As I worked on the package, I made the functions much more robust than when I'd written them for myself, 
+including writing various checks and tests.
+
+As well as functions for managing the website, **aochelpers** also contains functions for reading in the data, 
+in various formats well-suited to solving Advent of Code puzzles. 
+In time, I plan to add functions that are useful for solving the puzzles, 
+and also (perhaps) for interacting with the Advent of Code website.
+
+See the package [website](https://ellakaye.github.io/aochelpers) and [repo](https://github.com/EllaKaye/aochelpers) for more details and documentation. There's also a [summary page](../../packages/aochelpers/index.qmd) on this site about it.
+
+## Conclusion
+
+As often seems to happen with my projects, something that I thought would be quick 
+(let's spin out a simple website for my Advent of Code solutions!) 
+has turned into something much larger. It's been a lot of fun, though!
+
+I hope others find the website template and **aochelpers** useful. 
+If you do make a site with them, I'd love to know about it. 
+Please do share in the comments right at the bottom of this page.
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
+  name = long_slug
+)
+```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+
+
+
+

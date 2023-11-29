@@ -2,7 +2,7 @@
 title: aochelpers
 description: |
   Companion package for with websites created from [advent-of-code-website-template](https://github.com/EllaKaye/advent-of-code-website-template) 
-date: 2023-11-24
+date: 2023-11-29
 author: 
   - name: Ella Kaye
 site-url: https://ellakaye.co.uk
@@ -52,7 +52,27 @@ library(distilltools)
 
 ## Additional resources
 
-### [TODO] Links to any blog posts, talks etc
+The website template which {aochelpers} is a companion for:
+
+`r icon_link(
+  icon = "github",
+  text = "GitHub",
+  url = "https://github.com/EllaKaye/advent-of-code-website-template" 
+)`
+`r icon_link(
+  icon = "globe",
+  text = "website",
+  url = "https://ellakaye.github.io/advent-of-code-website-template" 
+)`
+
+
+A blog post about how the {aochelpers} package came to be:
+
+`r icon_link(
+  icon = "blog",
+  text = "blog post",
+  url = "../../posts/2023-11-29_aoc-project/index.qmd" 
+)`
 
 ## Overview 
 
