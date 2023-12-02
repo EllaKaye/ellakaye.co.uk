@@ -125,7 +125,7 @@ $second-color:  $purple;
 $third-color:   $blue;
 
 // font sizes;
-$font-size-base:   1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:   1rem; //!default; // Assumes the browser default, typically `16px`
 $h1-font-size:     $font-size-base * 2.5 !default;
 $h2-font-size:     $font-size-base * 2 !default;
 $h3-font-size:     $font-size-base * 1.75 !default;
@@ -143,15 +143,29 @@ $code-color: $second-color;
 $card-bg: $body-bg;
 $card-border-color: $gray-300;
 
-// font size and OpenType tweaks - adjust to make Fira Mono same size as Lemon Milk Light
-
-/*
-h1, h2, h3, h4, h5 {
-  font-weight: 300;
+#fn1 > p > code {
+  font-size: 0.8rem;
 }
-*/
 
-$code-font-size: $font-size-base;
+#fn2 > p > code {
+  font-size: 0.8rem;
+}
+
+#fn3 > p > code {
+  font-size: 0.8rem;
+}
+
+#fn4 > p > code {
+  font-size: 0.8rem;
+}
+
+#fn5 > p > code {
+  font-size: 0.8rem;
+}
+
+#fn6 > p > code {
+  font-size: 0.8rem;
+}
 
 code {
   font-feature-settings: 'dlig' 0, 'liga' 0, 'calt' 1, 'zero' 1, 'ss02' 0;

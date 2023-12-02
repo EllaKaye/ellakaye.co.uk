@@ -145,9 +145,6 @@ $code-color: $second-color;
 $card-bg: $body-bg;
 $card-border-color: $gray-700;
 
-// font size and OpenType tweaks - adjust to make Fira Mono same size as Lemon Milk Light
-$code-font-size: $font-size-base;
-
 code {
   font-feature-settings: 'dlig' 0, 'liga' 0, 'calt' 1, 'zero' 1, 'ss02' 0;
 }
