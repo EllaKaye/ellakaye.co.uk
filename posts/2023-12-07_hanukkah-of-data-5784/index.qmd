@@ -13,6 +13,7 @@ image-alt: |
 categories: [Hanukkah of Data, R, tidyverse]
 open-graph: true
 draft: false
+tab-stop: 2
 ---
 
 <!--------------- set up ----------------->
@@ -156,21 +157,21 @@ Find that phone number.
 ```{r}
 candle1 <- function(customers) {
   customers |> 
-  	select(name, phone) |> 
-  	separate_wider_delim(name, delim = " ", 
-  	                     names = c("first", "last"), 
-  	                     too_many = "merge") |> 
-  	mutate(phone_numbers = str_remove_all(phone, "-")) |> 
-  	mutate(last_phone = str_replace_all(last, "[a-cA-C]", "2")) |> 
-  	mutate(last_phone = str_replace_all(last_phone, "[d-fD-F]", "3")) |> 
-  	mutate(last_phone = str_replace_all(last_phone, "[g-iG-I]", "4")) |> 	
-  	mutate(last_phone = str_replace_all(last_phone, "[j-lJ-L]", "5")) |> 	
-  	mutate(last_phone = str_replace_all(last_phone, "[m-oM-O]", "6")) |> 	
-  	mutate(last_phone = str_replace_all(last_phone, "[p-sP-S]", "7")) |> 	
-  	mutate(last_phone = str_replace_all(last_phone, "[t-vT-V]", "8")) |> 	
-  	mutate(last_phone = str_replace_all(last_phone, "[w-zW-Z]", "9")) |> 
-  	filter(phone_numbers == last_phone) |> 
-  	pull(phone)
+    select(name, phone) |> 
+    separate_wider_delim(name, delim = " ", 
+                         names = c("first", "last"), 
+                         too_many = "merge") |> 
+    mutate(phone_numbers = str_remove_all(phone, "-")) |> 
+    mutate(last_phone = str_replace_all(last, "[a-cA-C]", "2")) |> 
+    mutate(last_phone = str_replace_all(last_phone, "[d-fD-F]", "3")) |> 
+    mutate(last_phone = str_replace_all(last_phone, "[g-iG-I]", "4")) |> 	
+    mutate(last_phone = str_replace_all(last_phone, "[j-lJ-L]", "5")) |> 	
+    mutate(last_phone = str_replace_all(last_phone, "[m-oM-O]", "6")) |> 	
+    mutate(last_phone = str_replace_all(last_phone, "[p-sP-S]", "7")) |> 	
+    mutate(last_phone = str_replace_all(last_phone, "[t-vT-V]", "8")) |> 	
+    mutate(last_phone = str_replace_all(last_phone, "[w-zW-Z]", "9")) |> 
+    filter(phone_numbers == last_phone) |> 
+    pull(phone)
 }
 
 investigator <- candle1(customers)
@@ -309,17 +310,17 @@ She has pastries (plural) by 5am, and the puzzle text suggests she has done this
 
 ```{r}
 candle4 <- function(customers, orders, orders_items) {
-	orders |> 
-		filter(hour(shipped) == 4) |> # received between 4am and 5am
-		inner_join(orders_items, by = "orderid") |> 
-		filter(str_detect(sku, "BKY")) |>  # bakery items
-		summarise(n_pastries = sum(qty), .by = "orderid") |> 
-		filter(n_pastries > 1) |> # has bought more than one pastry in the order
-		inner_join(orders, by = "orderid") |> 
-		count(customerid) |> 
-		slice_max(n) |> # the person who has done this most often
-		inner_join(customers, by = "customerid") |> 
-		pull(phone)	
+  orders |> 
+    filter(hour(shipped) == 4) |> # received between 4am and 5am
+    inner_join(orders_items, by = "orderid") |> 
+    filter(str_detect(sku, "BKY")) |>  # bakery items
+    summarise(n_pastries = sum(qty), .by = "orderid") |> 
+    filter(n_pastries > 1) |> # has bought more than one pastry in the order
+    inner_join(orders, by = "orderid") |> 
+    count(customerid) |> 
+    slice_max(n) |> # the person who has done this most often
+    inner_join(customers, by = "customerid") |> 
+    pull(phone)	
 }
 
 early_bird <- candle4(customers, orders, orders_items)
@@ -350,16 +351,16 @@ Find the person who has bought the most senior cat food in a single order.
 
 ```{r}
 candle5 <- function(customers, orders, orders_items, products) {
-	customers |> 
-		inner_join(orders, by = "customerid") |> 
-		inner_join(orders_items, by = "orderid") |> 
-		inner_join(products, by = "sku") |> 
-		filter(str_detect(desc, "Senior Cat")) |> 
-		summarise(qty_cat_food = sum(qty), .by = c(phone, orderid))|> 
-		select(-orderid) |> 
-		distinct() |> 
-		slice_max(qty_cat_food) |> 
-		pull(phone) 
+  customers |> 
+    inner_join(orders, by = "customerid") |> 
+    inner_join(orders_items, by = "orderid") |> 
+    inner_join(products, by = "sku") |> 
+    filter(str_detect(desc, "Senior Cat")) |> 
+    summarise(qty_cat_food = sum(qty), .by = c(phone, orderid))|> 
+    select(-orderid) |> 
+    distinct() |> 
+    slice_max(qty_cat_food) |> 
+    pull(phone) 
 }
 
 cat_lady <- candle5(customers, orders, orders_items, products)
@@ -403,18 +404,18 @@ i.e. the price she pays for an order is frequently less than the wholesale price
 
 ```{r}
 candle6 <- function(customers, orders, orders_items, products) {
-	inner_join(orders_items, products, by = "sku") |> 
-		mutate(shop_price = qty * unit_price,
-		       wholesale_price = qty * wholesale_cost) |> 
-		summarise(order_shop_price = sum(shop_price), 
-		          order_wholesale_price = sum(wholesale_price), 
-		          .by = orderid) |> 
-		filter(order_wholesale_price > order_shop_price) |> 
-		inner_join(orders, by = "orderid") |> 
-		count(customerid) |> 
-		slice_max(n) |> 
-		inner_join(customers, by = "customerid") |> 
-		pull(phone)
+  inner_join(orders_items, products, by = "sku") |> 
+    mutate(shop_price = qty * unit_price,
+           wholesale_price = qty * wholesale_cost) |> 
+    summarise(order_shop_price = sum(shop_price), 
+              order_wholesale_price = sum(wholesale_price), 
+              .by = orderid) |> 
+    filter(order_wholesale_price > order_shop_price) |> 
+    inner_join(orders, by = "orderid") |> 
+    count(customerid) |> 
+    slice_max(n) |> 
+    inner_join(customers, by = "customerid") |> 
+    pull(phone)
 }
 
 bargain_hunter <- candle6(customers, orders, orders_items, products)
@@ -444,63 +445,63 @@ just in a different colour.
 
 ```{r}
 candle7 <- function(customers, orders, orders_items, products, bargain_hunter) {
-	
-	# get info about the bargain hunter
-	bargain_hunter_id <- customers |> 
-		filter(phone == bargain_hunter) |> 
-		pull(customerid)
-	
-	bargain_hunter_orders <- customers |> 
-		filter(phone == bargain_hunter) |> 
-		inner_join(orders, by = "customerid") 
-	
-	bargain_hunter_orders_dates <- bargain_hunter_orders |> 
-		mutate(date = date(shipped)) |> 
-		distinct(date) |> 
-		pull(date)
-	
-	# Make regex for colours
-	colours <- products |> 
-		filter(str_detect(desc, "Jersey")) |>  # 12 colours, all with COL in sku
-		arrange(desc) |> 
-		separate_wider_regex(desc, c(item = ".*", " ", colour = ".*")) |> 
-		pull(colour) |> 
-		paste(collapse = "|") |> 
-		str_remove_all("\\(|\\)") 
-	# "amber|azure|blue|green|magenta|mauve|orange|puce|purple|red|white|yellow"
-	
-	# All orders with colours on the same date as the bargain hunter purchases
-	# (including the bargain hunter's purchases)
-	same_date_orders_colours <- orders |> 
-		mutate(shipped_date = date(shipped)) |> 
-		filter(shipped_date %in% bargain_hunter_orders_dates) |> 
-		select(orderid, customerid, shipped, shipped_date) |> 
-		left_join(orders_items, by = "orderid") |> 
-		left_join(products, by = "sku") |> 
-		select(-qty, -unit_price, -wholesale_cost, -dims_cm) |> 
-		filter(str_detect(desc, colours)) |> 
-		separate_wider_regex(desc, c(item = ".*", " ", colour = ".*")) 
-	# the last line seperates the `desc` column at the final deliminator of " ".
-	
-	# separate into bargain hunter and possible meet cute
-	bh <- same_date_orders_colours |> 
-		filter(customerid == bargain_hunter_id) |> 
-		select(customerid, shipped_date, shipped, item, colour)
-	
-	possible_meet_cute <- same_date_orders_colours |> 
-		filter(customerid != bargain_hunter_id) |> 
-		select(customerid, shipped_date, shipped, item, colour)
-	
-	# Now join these together by item and date 
-	# .x is bargain hunter, .y is possible meet cute
-	# find for row where colour is different and time is closest
-	# that's the meet cute, so join with customers and pull phone
-	inner_join(bh, possible_meet_cute, by = c("shipped_date", "item")) |> 
-		filter(colour.x != colour.y) |>
-		mutate(time_diff = abs(shipped.x - shipped.y)) |>
-		slice_min(time_diff) |>
-		left_join(customers, join_by(customerid.y == customerid)) |>
-		pull(phone)
+  
+  # get info about the bargain hunter
+  bargain_hunter_id <- customers |> 
+    filter(phone == bargain_hunter) |> 
+    pull(customerid)
+  
+  bargain_hunter_orders <- customers |> 
+    filter(phone == bargain_hunter) |> 
+    inner_join(orders, by = "customerid") 
+  
+  bargain_hunter_orders_dates <- bargain_hunter_orders |> 
+    mutate(date = date(shipped)) |> 
+    distinct(date) |> 
+    pull(date)
+  
+  # Make regex for colours
+  colours <- products |> 
+    filter(str_detect(desc, "Jersey")) |>  # 12 colours, all with COL in sku
+    arrange(desc) |> 
+    separate_wider_regex(desc, c(item = ".*", " ", colour = ".*")) |> 
+    pull(colour) |> 
+    paste(collapse = "|") |> 
+    str_remove_all("\\(|\\)") 
+  # "amber|azure|blue|green|magenta|mauve|orange|puce|purple|red|white|yellow"
+  
+  # All orders with colours on the same date as the bargain hunter purchases
+  # (including the bargain hunter's purchases)
+  same_date_orders_colours <- orders |> 
+    mutate(shipped_date = date(shipped)) |> 
+    filter(shipped_date %in% bargain_hunter_orders_dates) |> 
+    select(orderid, customerid, shipped, shipped_date) |> 
+    left_join(orders_items, by = "orderid") |> 
+    left_join(products, by = "sku") |> 
+    select(-qty, -unit_price, -wholesale_cost, -dims_cm) |> 
+    filter(str_detect(desc, colours)) |> 
+    separate_wider_regex(desc, c(item = ".*", " ", colour = ".*")) 
+  # the last line seperates the `desc` column at the final deliminator of " ".
+  
+  # separate into bargain hunter and possible meet cute
+  bh <- same_date_orders_colours |> 
+    filter(customerid == bargain_hunter_id) |> 
+    select(customerid, shipped_date, shipped, item, colour)
+  
+  possible_meet_cute <- same_date_orders_colours |> 
+    filter(customerid != bargain_hunter_id) |> 
+    select(customerid, shipped_date, shipped, item, colour)
+  
+  # Now join these together by item and date 
+  # .x is bargain hunter, .y is possible meet cute
+  # find for row where colour is different and time is closest
+  # that's the meet cute, so join with customers and pull phone
+  inner_join(bh, possible_meet_cute, by = c("shipped_date", "item")) |> 
+    filter(colour.x != colour.y) |>
+    mutate(time_diff = abs(shipped.x - shipped.y)) |>
+    slice_min(time_diff) |>
+    left_join(customers, join_by(customerid.y == customerid)) |>
+    pull(phone)
 }
 
 meet_cute <- candle7(customers, orders, orders_items, products, bargain_hunter) 
@@ -562,14 +563,14 @@ Find the person who owns an entire set (or at least the most) Noah's collectible
 
 ```{r}
 candle8 <- function(customers, orders, orders_items, products) {
-	customers |> 
-		inner_join(orders, by = "customerid") |> 
-		inner_join(orders_items, by = "orderid") |> 
-		inner_join(products, by = "sku") |> 
-		filter(str_detect(desc, "Noah")) |> 
-		count(phone, sort = TRUE) |> # unique phones, so equivalent to customer id
-		slice_max(n) |> 
-		pull(phone)
+  customers |> 
+    inner_join(orders, by = "customerid") |> 
+    inner_join(orders_items, by = "orderid") |> 
+    inner_join(products, by = "sku") |> 
+    filter(str_detect(desc, "Noah")) |> 
+    count(phone, sort = TRUE) |> # unique phones, so equivalent to customer id
+    slice_max(n) |> 
+    pull(phone)
 }
 
 collector <- candle8(customers, orders, orders_items, products)
@@ -627,24 +628,24 @@ orders_items <- read_csv("data/speedrun/noahs-orders_items.csv")
 products <- read_csv("data/speedrun/noahs-products.csv")
 
 speedrun <- function(customers, orders, orders_items, products) {
-   investigator <- candle1(customers)
-   contractor <- candle2(customers, orders, orders_items, products, "^D", "^S")
-   years_goat <- c(1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015)
-   neighbor <- candle3(customers, contractor, years_goat, 9)
-   early_bird <- candle4(customers, orders, orders_items)
-   cat_lady <- candle5(customers, orders, orders_items, products)
-   bargain_hunter <- candle6(customers, orders, orders_items, products)
-   meet_cute <- candle7(customers, orders, orders_items, products, bargain_hunter) 
-   collector <- candle8(customers, orders, orders_items, products)
-   
-   cat("Investigator:", investigator, "\n") 
-   cat("Contractor:", contractor, "\n") 
-   cat("Neighbor:", neighbor, "\n") 
-   cat("Early Bird:", early_bird, "\n") 
-   cat("Cat Lady:", cat_lady, "\n") 
-   cat("Bargain Hunter:", bargain_hunter, "\n") 
-   cat("Meet Cute:", meet_cute, "\n") 
-   cat("Collector:", collector, "\n") 
+  investigator <- candle1(customers)
+  contractor <- candle2(customers, orders, orders_items, products, "^D", "^S")
+  years_goat <- c(1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015)
+  neighbor <- candle3(customers, contractor, years_goat, 9)
+  early_bird <- candle4(customers, orders, orders_items)
+  cat_lady <- candle5(customers, orders, orders_items, products)
+  bargain_hunter <- candle6(customers, orders, orders_items, products)
+  meet_cute <- candle7(customers, orders, orders_items, products, bargain_hunter) 
+  collector <- candle8(customers, orders, orders_items, products)
+  
+  cat("Investigator:", investigator, "\n") 
+  cat("Contractor:", contractor, "\n") 
+  cat("Neighbor:", neighbor, "\n") 
+  cat("Early Bird:", early_bird, "\n") 
+  cat("Cat Lady:", cat_lady, "\n") 
+  cat("Bargain Hunter:", bargain_hunter, "\n") 
+  cat("Meet Cute:", meet_cute, "\n") 
+  cat("Collector:", collector, "\n") 
 }
 speedrun(customers, orders, orders_items, products) 
 ```
