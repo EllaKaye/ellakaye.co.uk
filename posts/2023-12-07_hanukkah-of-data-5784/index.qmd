@@ -1,0 +1,694 @@
+---
+title: "Hanukkah of Data, 5784"
+description: |
+  Hanukkah of Data is a fun and delightful coding challenge that requires an investigative mindset. Here are my solutions and reflections on the puzzles and overall experience.
+date: 2023-12-07
+author: 
+  - name: Ella Kaye
+#    url: https://fosstodon.org/@ellakaye
+site-url: https://ellakaye.co.uk
+image: hanukkah-of-data-menorah.jpeg
+image-alt: |
+  An ASCII art image of a menorah. The shamash and first candle are lit. There's an unlit candle for the second night. The remaining candle holders are empty.
+categories: [Hanukkah of Data, R, tidyverse]
+open-graph: true
+draft: false
+---
+
+<!--------------- set up ----------------->
+
+```{r}
+#| echo: false
+#| results: 'hide'
+
+long_slug <- "2023-12-07_hanukkah-of-data-5784"
+
+# NOTE: after finishing post, run renv::snapshot() and copy the renv.lock file 
+# from the project root into the post directory
+# renv::use(lockfile = "renv.lock")
+```
+
+<!--------------- post content ----------------->
+
+[Hanukkah of Data](https://hanukkah.bluebird.sh) is a data/coding challenge, 
+with one puzzle released daily throughout the eight days of Hanukkah.
+It has a lot in common with the much better known [Advent of Code](https://adventofcode.com), telling a story over a series of days.
+Hanukkah of Data uses the same data set for each puzzle, representing a database,
+and our task is to find a certain piece of information in it each day.
+It takes exploring the data and also a certain amount of investigation beyond the data, 
+as we'll see throughout the puzzles.
+
+In this post, I'll record my solutions for each puzzle, and how the code links to the puzzle text.
+However, getting to the solution for each day can be pretty involved,
+exploring several avenues then needing to think again, to find another clue in the puzzle text. 
+The whole process is a lot of fun, but I won't record in this post everything I did.
+My full workings are documented in commented [R scripts](https://github.com/EllaKaye/HanukkahOfData/tree/main/5784/scripts).
+I'm using the [**tidyverse**](https://www.tidyverse.org) to solve the puzzles. 
+This, for me, is a nice complement to Advent of Code, 
+which I'm primarily attempting to solve in base R this year, 
+and keeping a record of my solutions on a [dedicated site](https://adventofcode.ellakaye.co.uk).
+
+Also of interest with Hanukkah of Data is the looming challenge of the speed-run: 
+after the eight nights, we get to go through all the puzzles again.
+We're told that the puzzles will be the same, but that the underlying data set is more "challenging". 
+However, according to the website, we "should be able to complete the puzzles handily and in record time–if the solutions you crafted the first time weren’t just lucky guesses!"
+So, in anticipation of the speed-run, I wrapped all my code for each day inside a function, 
+to make it easy to rerun. 
+It turned out that the text for the speedrun *wasn't* exactly the same.
+I had to refactor my functions slightly as I went through again.
+The functions in the post below are my final solutions
+that give the right answers for both the initial game and the speedrun. 
+
+
+## The shamash
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: Noah's Market
+Noah’s Market
+
+Welcome to “Noah’s Market”, a bustling mom-and-pop everything store in Manhattan. In recent years it’s become quite an operation, but they’re still running on the same database your cousin Alex set up at the start of 2017.
+
+This morning, while waiting for your breakfast bagel, your Aunt Sarah pulled you aside in a hustle.
+
+“You know how Noah’s been talking recently about that rug we used to have?”
+
+She looked over at Noah, who was talking to a customer: “Such a beautiful carpet, with the most intricate design! I miss having it in my den. It has this vibrant beehive buzzing in the corner…”
+
+Sarah explained, “Noah entrusted me with that rug when he was remodeling his den a few years ago. It was so old and filthy, that I sent it to the cleaners, but then I completely forgot about it. Now, with Noah retiring and me taking over the store, he wants it back. So yesterday I freaked out and combed my apartment, and I finally found a claim ticket saying, ‘All items must be picked up within 90 days.’ At the cleaners, they didn’t have the rug, just the other half of the ticket.”
+
+Sarah added, “I need to find that rug before Noah comes over on the last night of Hanukkah. I have an idea but I need some help, and Alex will be busy for weeks doing those Advent of Code challenges.
+
+“Do you think you could help me track down the rug?”
+
+She hands you a USB drive labeled “Noah’s Market Database Backup”.
+
+“Alex set up the backups to be password-protected. I can never remember the password itself, but it’s just the year in the Hebrew calendar when Alex set up the database.”
+
+What’s the password to open the .zip files on the USB drive?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+What was the Hebrew year at the start of 2017?
+:::
+
+We're in 2023, and the Hebrew year is 5784, so it might be tempting to think we need to find six years earlier than that, 5778. However, Rosh Hashanah (Jewish New Year), always falls in September or October of the Gregorian calendar (in 2017 Rosh Hashanah began on September 20th). Since we need the Hebrew year at the *start* of 2017, the answer is **5777**.
+
+The shamash is lit. Happy Hanukkah!
+
+## The data
+
+The answer above, **5777**, also decrypts the USB drive which gives us access to the database.
+It contains four .csv files. 
+Since they're the same for all puzzles, let's read them in and take a glimpse at them now.
+
+```{r}
+#| message: false
+#| code-fold: false
+library(tidyverse)
+```
+
+
+```{r}
+#| code-fold: false
+#| message: false
+customers <- read_csv("data/noahs-customers.csv")
+orders <- read_csv("data/noahs-orders.csv")
+orders_items <- read_csv("data/noahs-orders_items.csv")
+products <- read_csv("data/noahs-products.csv")
+```
+
+```{r}
+#| code-fold: false
+glimpse(customers)
+glimpse(orders)
+glimpse(orders_items)
+glimpse(products)
+```
+
+
+## Candle 1
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Investigator
+
+Sarah brought a cashier over. She said, “Joe here says that one of our customers is a skilled private investigator.”
+
+Joe nodded, “They showed me their business card, and that’s what it said. Skilled Private Investigator. And their phone number was their last name spelled out. I didn’t know what that meant, but apparently before there were smartphones, people had to remember phone numbers or write them down. If you wanted a phone number that was easy-to-remember, you could get a number that spelled something using the letters printed on the phone buttons: like 2 has “ABC”, and 3 “DEF”, etc. And I guess this person had done that, so if you dialed the numbers corresponding to the letters in their name, it would call their phone number!
+
+“I thought that was pretty cool. But I don’t remember their name, or anything else about them for that matter. I couldn’t even tell you if they were male or female.”
+
+Sarah said, “This person seems like they are skilled at investigation. I need them to find Noah’s rug before the Hanukkah dinner. I don’t know how to contact them, but apparently they shop here at Noah’s Market.”
+
+She nodded at the USB drive in your hand.
+
+“Can you find this investigator’s phone number?”
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The investigator is someone who, 
+if you dialled the numbers corresponding to the letters in their last name, 
+it would call their phone number. 
+Find that phone number.
+:::
+
+```{r}
+candle1 <- function(customers) {
+  customers |> 
+  	select(name, phone) |> 
+  	separate_wider_delim(name, delim = " ", 
+  	                     names = c("first", "last"), 
+  	                     too_many = "merge") |> 
+  	mutate(phone_numbers = str_remove_all(phone, "-")) |> 
+  	mutate(last_phone = str_replace_all(last, "[a-cA-C]", "2")) |> 
+  	mutate(last_phone = str_replace_all(last_phone, "[d-fD-F]", "3")) |> 
+  	mutate(last_phone = str_replace_all(last_phone, "[g-iG-I]", "4")) |> 	
+  	mutate(last_phone = str_replace_all(last_phone, "[j-lJ-L]", "5")) |> 	
+  	mutate(last_phone = str_replace_all(last_phone, "[m-oM-O]", "6")) |> 	
+  	mutate(last_phone = str_replace_all(last_phone, "[p-sP-S]", "7")) |> 	
+  	mutate(last_phone = str_replace_all(last_phone, "[t-vT-V]", "8")) |> 	
+  	mutate(last_phone = str_replace_all(last_phone, "[w-zW-Z]", "9")) |> 
+  	filter(phone_numbers == last_phone) |> 
+  	pull(phone)
+}
+
+investigator <- candle1(customers)
+investigator
+```
+
+## Candle 2
+
+::: {.callout-note collapse="false" icon="false"}
+## The full puzzle text: The Contractor
+Thanks to your help, Sarah called the investigator that afternoon. The investigator went directly to the cleaners to see if they could get any more information about the unclaimed rug.
+
+While they were out, Sarah said, “I tried cleaning the rug myself, but there was this snail on it that always seemed to leave a trail of slime behind it. I spent a few hours cleaning it, and the next day the slime trail was back.”
+
+When the investigator returned, they said, “Apparently, this cleaner had a special projects program, where they outsourced challenging cleaning projects to industrious contractors. As they’re right across the street from Noah’s, they usually talked about the project over coffee and bagels at Noah’s before handing off the item to be cleaned. The contractors would pick up the tab and expense it, along with their cleaning supplies.
+
+“So this rug was apparently one of those special projects. The claim ticket said ‘2017 JP’. ‘2017’ is the year the item was brought in, and ‘JP’ is the initials of the contractor.
+
+“But they stopped outsourcing a few years ago, and don’t have contact information for any of these workers anymore.”
+
+Sarah first seemed hopeless, and then glanced at the USB drive you had just put back in her hand. She said, “I know it’s a long shot, but is there any chance you could find their phone number?”
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The contractor is the person with the initials JP who, in 2017, 
+bought coffee and bagels in the same order.
+:::
+
+```{r}
+candle2 <- function(customers, orders, orders_items, products, 
+                    first_initial_regex, second_initial_regex) {
+	customers |> 
+		separate_wider_delim(name, delim = " ", 
+		                     names = c("first", "last"), 
+		                     too_many = "merge") |> 
+		filter(str_detect(first, first_initial_regex)) |> 
+		filter(str_detect(last, second_initial_regex)) |> 
+		inner_join(orders, by = "customerid") |> 
+		filter(str_detect(ordered, "2017")) |> 
+		inner_join(orders_items, by = "orderid") |> 
+		inner_join(products, by = "sku") |> 
+		select(phone, orderid, desc) |> 
+		group_by(phone, orderid) |> 
+		filter(any(str_detect(desc, "Coffee")) & 
+		       any(str_detect(desc, "Bagel"))) |> 
+		distinct(phone) |> 
+		pull(phone)
+}
+
+contractor <- candle2(customers, orders, orders_items, products, "^J", "^P")
+contractor
+```
+
+The ability to filter on any pair of initials was introduced for the speedrun.
+
+I noticed the clue about 'coffee and bagels' before absorbing the one about the cleaning supplies.
+When I read some other solutions after completing my own, I realised that there is also "Rug Cleaner"
+amongst the products that Noah sells, 
+and that would have been a slightly easier way to the same solution.
+I'm not adjusting my solution, though, because I like coffee and bagels more than I like cleaning!
+
+## Candle 3
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Neighbor
+Sarah and the investigator were very impressed with your data skills, as you were able to figure out the phone number of the contractor. They called up the cleaning contractor straight away and asked about the rug.
+
+“Oh, yeah, I did some special projects for them a few years ago. I remember that rug unfortunately. I managed to clean one section, which revealed a giant spider that startled me whenever I tried to work on it.
+
+“I already had a fear of spiders before this, but this spider was so realistic that I had a hard time making any more progress. I kept expecting the cleaners would call for the rug, but they never did. I felt so bad about it, I couldn’t face them, and of course they never gave me another project.
+
+“At last I couldn’t deal with the rug taking up my whole bathtub, so I gave it to this guy who lived in my neighborhood. He said that he was naturally intuitive because he was a Cancer born in the year of the Rabbit, so maybe he was able to clean it.
+
+“I don’t remember his name. Last time I saw him, he was leaving the subway and carrying a bag from Noah’s. I swore I saw a spider on his hat.”
+
+Can you find the phone number of the person that the contractor gave the rug to?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The neighbor is the person who lives in the same neighborhood as the contractor, who was born in the year of the Rabbit and whose astrological sign is Cancer.
+:::
+
+```{r}
+candle3 <- function(customers, contractor, years, first_month) { 
+	
+	neighborhood <- customers |> 
+		filter(phone == contractor) |> 
+		pull(citystatezip)
+	
+	customers |> 
+		filter(year(birthdate) %in% years) |> 
+		filter(month(birthdate) == first_month & day(birthdate) >= 21 | 
+		       month(birthdate) == (first_month + 1) & day(birthdate) <= 22) |> 
+		filter(citystatezip == neighborhood) |> 
+		pull(phone)
+	
+}
+
+years_rabbit <- c(1939, 1951, 1963, 1975, 1987, 1999, 2011)
+neighbor <- candle3(customers, contractor, years_rabbit, 6)
+neighbor
+```
+
+The ability to filter on any of the 12-year cycle of animals that appear in the Chinese Zodiac,
+as well as for any astrological sign, was introduced for the speedrun.
+
+I like being able to use the `year()` and `month()` functions from the **lubridate** package 
+to be able to filter on particular parts of a `Date` without needing to separate them out into their own columns first. This was new to me.
+
+## Candle 4
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Early Bird
+The investigator called the phone number you found and left a message, and a man soon called back:
+
+“Wow, that was years ago! It was quite an elegant tapestry.
+
+“It took a lot of patience, but I did manage to get the dirt out of one section, which uncovered a superb owl. I put it up on my wall, and sometimes at night I swear I could hear the owl hooting.
+
+“A few weeks later my bike chain broke on the way home, and I needed to get it fixed before work the next day. Thankfully, this woman I met on Tinder came over at 5am with her bike chain repair kit and some pastries from Noah’s. Apparently she liked to get up before dawn and claim the first pastries that came out of the oven.
+
+“I didn’t have any money or I would’ve paid her for her trouble. She really liked the tapestry, though, so I wound up giving it to her.
+
+“I don’t remember her name or anything else about her.”
+
+Can you find the bicycle fixer’s phone number?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The Early Bird is the person who likes to get up before dawn and claim the first pastries from the oven. 
+She has pastries (plural) by 5am, and the puzzle text suggests she has done this multiple times.
+:::
+
+```{r}
+candle4 <- function(customers, orders, orders_items) {
+	orders |> 
+		filter(hour(shipped) == 4) |> # received between 4am and 5am
+		inner_join(orders_items, by = "orderid") |> 
+		filter(str_detect(sku, "BKY")) |>  # bakery items
+		summarise(n_pastries = sum(qty), .by = "orderid") |> 
+		filter(n_pastries > 1) |> # has bought more than one pastry in the order
+		inner_join(orders, by = "orderid") |> 
+		count(customerid) |> 
+		slice_max(n) |> # the person who has done this most often
+		inner_join(customers, by = "customerid") |> 
+		pull(phone)	
+}
+
+early_bird <- candle4(customers, orders, orders_items)
+early_bird
+```
+
+## Candle 5
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Cat Lady
+
+“Yes, I did have that tapestry for a little bit. I even cleaned a blotchy section that turned out to be a friendly koala.
+
+“But it was still really dirty, so when I was going through a Marie Kondo phase, I decided it wasn’t sparking joy anymore.
+
+“I listed it on Freecycle, and a woman in Staten Island came to pick it up. She was wearing a ‘Noah’s Market’ sweatshirt, and it was just covered in cat hair. When I suggested that a clowder of cats might ruin such a fine tapestry, she looked at me funny. She said “I only have ten or eleven cats, and anyway they are getting quite old now, so I doubt they’d care about some old rug.”
+
+“It took her 20 minutes to stuff the tapestry into some plastic bags she brought because it was raining. I spent the evening cleaning my apartment.”
+
+What’s the phone number of the woman from Freecycle?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The cat lady has many old cats. 
+Find the person who has bought the most senior cat food in a single order.
+:::
+
+```{r}
+candle5 <- function(customers, orders, orders_items, products) {
+	customers |> 
+		inner_join(orders, by = "customerid") |> 
+		inner_join(orders_items, by = "orderid") |> 
+		inner_join(products, by = "sku") |> 
+		filter(str_detect(desc, "Senior Cat")) |> 
+		summarise(qty_cat_food = sum(qty), .by = c(phone, orderid))|> 
+		select(-orderid) |> 
+		distinct() |> 
+		slice_max(qty_cat_food) |> 
+		pull(phone) 
+}
+
+cat_lady <- candle5(customers, orders, orders_items, products)
+cat_lady
+```
+
+We're told she's from Staten Island, and I originally filtered the customers for that, which got the right answer first time round, but there's no mention of where the cat lady is from in the speedrun, so I took it out (leaving it in gives the wrong answer on the speedrun).
+
+There's also a big red herring in the text today, the fact that she's wearing a sweatshirt from Noah's Market. 
+I originally looked for someone who had bought both a "Noah's Jersey" and cat food, 
+but that didn't give any correct answers.
+In fact, it turns out the Cat Lady hasn't purchased a Noah's sweatshirt (perhaps she'd been gifted one).
+Today was the day I realised that I needed to pay attention to the title of the puzzle: 
+the cats are the important thing today.
+
+In retrospect, I suspect that the mention of Noah's sweatshirt was to encourage us to see in the prduct list an item that comes in many colours.
+That would prove useful for Candle 7.
+
+## Candle 6
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Bargain Hunter
+
+“Why yes, I did have that rug for a little while in my living room! My cats can’t see a thing but they sure chased after the squirrel on it like it was dancing in front of their noses.
+
+“It was a nice rug and they were surely going to ruin it, so I gave it to my cousin, who was moving into a new place that had wood floors.
+
+“She refused to buy a new rug for herself–she said they were way too expensive. She’s always been very frugal, and she clips every coupon and shops every sale at Noah’s Market. In fact I like to tease her that Noah actually loses money whenever she comes in the store.
+
+“I think she’s been taking it too far lately though. Once the subway fare increased, she stopped coming to visit me. And she’s really slow to respond to my texts. I hope she remembers to invite me to the family reunion next year.”
+
+Can you find her cousin’s phone number?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The relevant clue is in the tease: "Noah actually loses money whenever she comes in the store". 
+The bargain hunter is the person who most often causes Noah to lose money, 
+i.e. the price she pays for an order is frequently less than the wholesale price of the items in that order.
+:::
+
+```{r}
+candle6 <- function(customers, orders, orders_items, products) {
+	inner_join(orders_items, products, by = "sku") |> 
+		mutate(shop_price = qty * unit_price,
+		       wholesale_price = qty * wholesale_cost) |> 
+		summarise(order_shop_price = sum(shop_price), 
+		          order_wholesale_price = sum(wholesale_price), 
+		          .by = orderid) |> 
+		filter(order_wholesale_price > order_shop_price) |> 
+		inner_join(orders, by = "orderid") |> 
+		count(customerid) |> 
+		slice_max(n) |> 
+		inner_join(customers, by = "customerid") |> 
+		pull(phone)
+}
+
+bargain_hunter <- candle6(customers, orders, orders_items, products)
+bargain_hunter
+```
+
+## Candle 7
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Meet Cute
+“Oh that tapestry, with the colorful toucan on it! I’ll tell you what happened to it.
+
+“One day, I was at Noah’s Market, and I was just about to leave when someone behind me said ‘Miss! You dropped something!’
+
+“Well I turned around to see this cute guy holding an item I had bought. He said, ‘I got the same thing!’ We laughed about it and wound up swapping items because I wanted the color he got. We had a moment when our eyes met and my heart stopped for a second. I asked him to get some food with me and we spent the rest of the day together.
+
+“Before long I moved into his place, but the romance faded quickly, as he wasn’t the prince I imagined. I left abruptly one night, forgetting the tapestry on his wall. But by then, it symbolized our love, and I wanted nothing more to do with it. For all I know, he still has it.”
+
+Can you figure out her ex-boyfriend’s phone number?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+The meet cute is the person who bought the same item as the bargain hunter on the same date at roughly the same time, 
+just in a different colour.
+:::
+
+```{r}
+candle7 <- function(customers, orders, orders_items, products, bargain_hunter) {
+	
+	# get info about the bargain hunter
+	bargain_hunter_id <- customers |> 
+		filter(phone == bargain_hunter) |> 
+		pull(customerid)
+	
+	bargain_hunter_orders <- customers |> 
+		filter(phone == bargain_hunter) |> 
+		inner_join(orders, by = "customerid") 
+	
+	bargain_hunter_orders_dates <- bargain_hunter_orders |> 
+		mutate(date = date(shipped)) |> 
+		distinct(date) |> 
+		pull(date)
+	
+	# Make regex for colours
+	colours <- products |> 
+		filter(str_detect(desc, "Jersey")) |>  # 12 colours, all with COL in sku
+		arrange(desc) |> 
+		separate_wider_regex(desc, c(item = ".*", " ", colour = ".*")) |> 
+		pull(colour) |> 
+		paste(collapse = "|") |> 
+		str_remove_all("\\(|\\)") 
+	# "amber|azure|blue|green|magenta|mauve|orange|puce|purple|red|white|yellow"
+	
+	# All orders with colours on the same date as the bargain hunter purchases
+	# (including the bargain hunter's purchases)
+	same_date_orders_colours <- orders |> 
+		mutate(shipped_date = date(shipped)) |> 
+		filter(shipped_date %in% bargain_hunter_orders_dates) |> 
+		select(orderid, customerid, shipped, shipped_date) |> 
+		left_join(orders_items, by = "orderid") |> 
+		left_join(products, by = "sku") |> 
+		select(-qty, -unit_price, -wholesale_cost, -dims_cm) |> 
+		filter(str_detect(desc, colours)) |> 
+		separate_wider_regex(desc, c(item = ".*", " ", colour = ".*")) 
+	# the last line seperates the `desc` column at the final deliminator of " ".
+	
+	# separate into bargain hunter and possible meet cute
+	bh <- same_date_orders_colours |> 
+		filter(customerid == bargain_hunter_id) |> 
+		select(customerid, shipped_date, shipped, item, colour)
+	
+	possible_meet_cute <- same_date_orders_colours |> 
+		filter(customerid != bargain_hunter_id) |> 
+		select(customerid, shipped_date, shipped, item, colour)
+	
+	# Now join these together by item and date 
+	# .x is bargain hunter, .y is possible meet cute
+	# find for row where colour is different and time is closest
+	# that's the meet cute, so join with customers and pull phone
+	inner_join(bh, possible_meet_cute, by = c("shipped_date", "item")) |> 
+		filter(colour.x != colour.y) |>
+		mutate(time_diff = abs(shipped.x - shipped.y)) |>
+		slice_min(time_diff) |>
+		left_join(customers, join_by(customerid.y == customerid)) |>
+		pull(phone)
+}
+
+meet_cute <- candle7(customers, orders, orders_items, products, bargain_hunter) 
+meet_cute
+```
+
+This was the trickiest day, and my longest solution. 
+It was also the day with the biggest 'gotcha' for the speedrun, 
+which turned out to be a delicious twist from the puzzle authors, 
+and which it retrospect I'm kicking myself for not having accounted for.
+
+When I was investigating where colours appear in the `products` table,
+I knew from Candle 5 that the 'Jersey' comes in multiple colours.
+Narrowing in on one of those colours, `red`, I found there were seven types of item,
+then that all of those seven had the same twelve colours.
+Their descriptions all have the structure `"Noah's Item (colour)"` 
+(for each combination of item and colour).
+Moreover, all 84 of those items have a `sku` that starts with `"COL"`,
+a shorthand for 'colour', it was easy to presume. 
+I double checked this by looking at all products that have a `sku` starting with `"COL"`
+and found 85 products. The extra one is `"Noah's Ark Model (HO Scale)"`, 
+*no* colour, though with a similar extra descriptor in `()` after the final deliminator of `" "`. 
+Still, I took a shortcut and instead of checking for items with a colour by regex,
+I initially filtered on having `"COL"` in the `sku` instead,
+knowing the one additional item wasn't going to cause a problem, 
+since even if both the bargain hunter and her meet cute bought this item, 
+we would filter it out as having the same "colour" 
+(the regex to separate out items and colours puts the `(HO Scale)` in the colour column).
+I made a note at the time that I should come back and be more robust about filtering items with colours.
+I wish I'd taken my own advice! 
+Running my original function on the speedrun caused a problem, and this was it.
+In the more "challening" dataset, 
+there are additions items with colours that *don't* have `"COL"` in their `sku`, and it's one of these that is the common item in this case.
+At least I knew where the problem in my code was likely to be, and how to fix it.
+
+The thing that makes it all the more frustrating that I didn't fix this before the speedrun is that 
+there's a massive clue later, as we'll soon see, that the assumption that `"COL"` stands for colour was wrong.
+
+## Candle 8
+
+::: {.callout-note collapse="false" icon="false"}
+## Full puzzle text: The Collector
+
+“Oh that damned woman! She moved in, clogged my bathtub, left her coupons all over the kitchen, and then just vanished one night without leaving so much as a note.
+
+Except she did leave behind that nasty carpet. I spent months cleaning one corner, only to discover a snake hiding in the branches! I knew then that she was never coming back, and I had to get it out of my sight.
+
+“Well, I don’t have any storage here, and it didn’t seem right to sell it, so I gave it to my sister. She wound up getting a newer and more expensive carpet, so she gave it to an acquaintance of hers who collects all sorts of junk. Apparently he owns an entire set of Noah’s collectibles! He probably still has the carpet, even.
+
+“My sister is away for the holidays, but I can have her call you in a few weeks.”
+
+The family dinner is tonight! Can you find the collector’s phone number in time?
+:::
+
+::: {.callout-note collapse="false" icon="false"}
+## The crux of the puzzle
+Find the person who owns an entire set (or at least the most) Noah's collectibles.
+:::
+
+```{r}
+candle8 <- function(customers, orders, orders_items, products) {
+	customers |> 
+		inner_join(orders, by = "customerid") |> 
+		inner_join(orders_items, by = "orderid") |> 
+		inner_join(products, by = "sku") |> 
+		filter(str_detect(desc, "Noah")) |> 
+		count(phone, sort = TRUE) |> # unique phones, so equivalent to customer id
+		slice_max(n) |> 
+		pull(phone)
+}
+
+collector <- candle8(customers, orders, orders_items, products)
+collector	
+```
+
+We saw when working on the Candle 7 puzzle that there are items that have the name "Noah" in their description.
+It seemed reasonable to assume that these are the collectibles and the code above got me the correct answers both first time and in the speedrun. 
+I now realise, though, that I may have got doubly lucky and that my assumption was probably incorrect. 
+But let's look at the rug/epilogue first, to realise how tantilisingly close I came to figuring it out properly,
+and to revel in just how fine (and devious) the storytelling and clue-dropping was.
+
+## The rug
+
+::: {.callout-note collapse="false" icon="false"}
+## The Eplilogue
+“Oh yes, that magnificant Persian carpet! An absolute masterpiece, with a variety of interesting animals congregating around a Tree of Life. As a collector, I couldn’t believe when it fell into my lap.
+
+“A friend of mine had taken it off her brother’s hands, and she didn’t know what to do with it. I saw her one day, and she was about to put an old rug out at the curb. It looked like it had been through a lot, but it was remarkably not that dirty. It still took quite a bit of effort and no small amount of rug cleaner, but ultimately I managed to get the last bits of grime out of it.
+
+“I actually live right down the street from Noah’s Market–I’m a huge fan and I shop there all the time! I even have a one-of-a-kind scale model of Noah’s Ark that makes a complete set of Noah’s collectibles.
+
+“I would love for Noah to have his rug once again to enjoy.”
+:::
+
+The epilogue wraps up the story, and ties together a few clues.
+We're hearing from the collector.
+There's a mention of the Noah's Ark collectible---that 85th item found in the product list during our hunt for the meet cute for candle 7. 
+At this point, it was there to see: `"COL"` in the `sku` is for **col**lectible, *not* **col**our. So, instead of incorrectly filtering on this in my original candle 7 solution, I probably *should* have filtered on this in my candle 8 solution, not on the description containing the word `"Noah"`. There are several items that have `"Noah"` in their description that might not be collectibles, hence now considering myself lucky that my code for candle 8 worked.
+
+I've expect that the COL/collectible/colour confusion was a deliberate "gotcha" on the part of [Saul Pwanson](https://www.saul.pw), the Hannukah of Data creator, 
+Although it was initally frustrating that my speedrun wasn't entirely smooth, I'm also kind-of pleased I feel into the trap, 
+because it's made me appreciate just how expertly the whole challenge has been crafted.
+
+On the subject of expert crafting, 
+one of the delights of Hanukkah of Data is the animated ASCII art.
+When we land on the [homepage](https://hanukkah.bluebird.sh/) we see a menorah, 
+the nine-pronged candelabra that holds one candle for each night of Hanukkah, 
+plus the *shamash*, which is used as the kindling light.
+At first, there's just the shamash, then on each night of Hanukkah, another candle appears.
+Solving a day's puzzle lights the associated candle.
+The picture I've used to accompany this post shows the state of the menorah at the beginning of the second night.
+As each candle gets lit, it illuminates some of an image above.
+It's such a treat to see the picture reveal itself, and link to the text.
+I didn't want to spoil the surprise for anyone by making the final artwork immediately visible, but for those who want to see it now, they can do so [here](hanukkah-of-data-rug.png).
+
+## The speedrun
+
+```{r}
+#| code-fold: false
+#| message: false
+customers <- read_csv("data/speedrun/noahs-customers.csv")
+orders <- read_csv("data/speedrun/noahs-orders.csv")
+orders_items <- read_csv("data/speedrun/noahs-orders_items.csv")
+products <- read_csv("data/speedrun/noahs-products.csv")
+
+speedrun <- function(customers, orders, orders_items, products) {
+   investigator <- candle1(customers)
+   contractor <- candle2(customers, orders, orders_items, products, "^D", "^S")
+   years_goat <- c(1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015)
+   neighbor <- candle3(customers, contractor, years_goat, 9)
+   early_bird <- candle4(customers, orders, orders_items)
+   cat_lady <- candle5(customers, orders, orders_items, products)
+   bargain_hunter <- candle6(customers, orders, orders_items, products)
+   meet_cute <- candle7(customers, orders, orders_items, products, bargain_hunter) 
+   collector <- candle8(customers, orders, orders_items, products)
+   
+   cat("Investigator:", investigator, "\n") 
+   cat("Contractor:", contractor, "\n") 
+   cat("Neighbor:", neighbor, "\n") 
+   cat("Early Bird:", early_bird, "\n") 
+   cat("Cat Lady:", cat_lady, "\n") 
+   cat("Bargain Hunter:", bargain_hunter, "\n") 
+   cat("Meet Cute:", meet_cute, "\n") 
+   cat("Collector:", collector, "\n") 
+}
+speedrun(customers, orders, orders_items, products) 
+```
+
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
+  name = long_slug
+)
+```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+
+
+
+

@@ -1,0 +1,15 @@
+{
+  "hash": "3ee907ac4f83274592040bac1feb3a06",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nknitr:\n  opts_chunk: \n    collapse: true\nexecute: \n  echo: false\npage-layout: full\ninclude-in-header: \n  - _includes/fontawesome-2up.html\n  - _includes/mastodon.html\n---\n\n\n::: {.grid}\n\n::: {.g-col-12}\n[Hello and welcome!]{.home-header}\n:::\n\n::: {.g-col-12 .g-col-md-4}\n<div class=\"card h-100\" id=\"card-first-color\">\n<div class=\"card-body d-flex flex-column\">\n<p class=\"card-text\">About me, my interests and experience, and my work as a Research Software Engineer.</p>\n<div style=\"margin-top: auto;\"><a href=\"about.qmd\" class=\"card-link heading-font\">ABOUT</a></div>\n</div>\n</div>\n:::\n\n::: {.g-col-12 .g-col-md-4}\n<div class=\"card h-100\" id=\"card-second-color\">\n<div class=\"card-body d-flex flex-column\">\n<p class=\"card-text\">I sometimes write about what I'm doing and learning, mostly about <i class=\"fa-brands fa-r-project\" aria-label=\"R project\"></i> and building websites.</p>\n<div style=\"margin-top: auto;\"><a href=\"posts.qmd\" class=\"card-link second-color-link heading-font\">POSTS</a></div>\n</div>\n</div>\n:::\n\n::: {.g-col-12 .g-col-md-4}\n<div class=\"card h-100\" id=\"card-third-color\">\n<div class=\"card-body d-flex flex-column\">\n<p class=\"card-text\">Slides and resources from talks I've given at R and RLadies user groups and conferences.</p>\n<div style=\"margin-top: auto;\"><a href=\"talks.qmd\" class=\"card-link third-color-link heading-font\">TALKS</a></div>\n</div>\n</div>\n:::\n\n::: {.g-col-12 .g-col-md-4}\n<div class=\"card h-100\" id=\"card-second-color\">\n<div class=\"card-body d-flex flex-column\">\n<p class=\"card-text\">I develop R packages. Here are links to their repos, websites and any other resources. </p>\n<div style=\"margin-top: auto;\"><a href=\"packages.qmd\" class=\"card-link second-color-link heading-font\">PACKAGES</a></div>\n</div>\n</div>\n:::\n\n::: {.g-col-12 .g-col-md-4}\n<div class=\"card h-100\" id=\"card-third-color\">\n<div class=\"card-body d-flex flex-column\">\n<p class=\"card-text\">I love the R community! Here's how to get involved, and groups I help organise or contribute to.</p>\n<div style=\"margin-top: auto;\"><a href=\"community.qmd\" class=\"card-link third-color-link heading-font\">COMMUNITY</a></div>\n</div>\n</div>\n:::\n\n::: {.g-col-12 .g-col-md-4}\n<div class=\"card h-100\" id=\"card-first-color\">\n<div class=\"card-body d-flex flex-column\">\n<p class=\"card-text\">Where to find me online and how to get in touch. I'd love to hear from you!</p>\n<div style=\"margin-top: auto;\"><a href=\"contact.qmd\" class=\"card-link heading-font\">CONTACT</a></div>\n</div>\n</div>\n:::\n\n:::\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
