@@ -34,8 +34,7 @@ long_slug <- "2023-12-07_hanukkah-of-data-5784"
 [Hanukkah of Data](https://hanukkah.bluebird.sh) is a data/coding challenge, 
 with one puzzle released daily throughout the eight days of Hanukkah.
 It has a lot in common with the much better known [Advent of Code](https://adventofcode.com), telling a story over a series of days.
-Hanukkah of Data uses the same data set for each puzzle, representing a database,
-and our task is to find a certain piece of information in it each day.
+Hanukkah of Data uses the same data set for each puzzle, representing a database, 		and our task is to find a certain piece of information in it each day.
 It takes exploring the data and also a certain amount of investigation beyond the data, 
 as we'll see throughout the puzzles.
 
@@ -327,6 +326,9 @@ early_bird <- candle4(customers, orders, orders_items)
 early_bird
 ```
 
+I had fun today learning more about traditional Jewish pastries.
+I was already a fan of [rugelach](https://en.wikipedia.org/wiki/Rugelach) and [babka](https://en.wikipedia.org/wiki/Babka) and that was a jumping off point for deeper exploration (hamentash, sufganiah, mandelbrot). Yum! Got to love a coding challenge that gives [credit](https://hanukkah.bluebird.sh/credits/) for deli consulting.
+
 ## Candle 5
 
 ::: {.callout-note collapse="false" icon="false"}
@@ -373,10 +375,10 @@ There's also a big red herring in the text today, the fact that she's wearing a 
 I originally looked for someone who had bought both a "Noah's Jersey" and cat food, 
 but that didn't give any correct answers.
 In fact, it turns out the Cat Lady hasn't purchased a Noah's sweatshirt (perhaps she'd been gifted one).
-Today was the day I realised that I needed to pay attention to the title of the puzzle: 
+This was the day I realised that I needed to pay attention to the title of the puzzle: 
 the cats are the important thing today.
 
-In retrospect, I suspect that the mention of Noah's sweatshirt was to encourage us to see in the prduct list an item that comes in many colours.
+In retrospect, I suspect that the mention of Noah's sweatshirt was to encourage us to see in the product list an item that comes in many colours.
 That would prove useful for Candle 7.
 
 ## Candle 6
@@ -519,7 +521,7 @@ Narrowing in on one of those colours, `red`, I found there were seven types of i
 then that all of those seven had the same twelve colours.
 Their descriptions all have the structure `"Noah's Item (colour)"` 
 (for each combination of item and colour).
-Moreover, all 84 of those items have a `sku` that starts with `"COL"`,
+Moreover, all 84 of those items have a `sku` that starts with `"COL"`;
 a shorthand for 'colour', it was easy to presume. 
 I double checked this by looking at all products that have a `sku` starting with `"COL"`
 and found 85 products. The extra one is `"Noah's Ark Model (HO Scale)"`, 
@@ -532,9 +534,9 @@ we would filter it out as having the same "colour"
 (the regex to separate out items and colours puts the `(HO Scale)` in the colour column).
 I made a note at the time that I should come back and be more robust about filtering items with colours.
 I wish I'd taken my own advice! 
-Running my original function on the speedrun caused a problem, and this was it.
+Running my original function on the speedrun gave the wrong answer.
 In the more "challening" dataset, 
-there are additions items with colours that *don't* have `"COL"` in their `sku`, and it's one of these that is the common item in this case.
+there are additional items with colours that *don't* have `"COL"` in their `sku`, and it's one of these that is the common item in this case.
 At least I knew where the problem in my code was likely to be, and how to fix it.
 
 The thing that makes it all the more frustrating that I didn't fix this before the speedrun is that 
@@ -581,7 +583,7 @@ We saw when working on the Candle 7 puzzle that there are items that have the na
 It seemed reasonable to assume that these are the collectibles and the code above got me the correct answers both first time and in the speedrun. 
 I now realise, though, that I may have got doubly lucky and that my assumption was probably incorrect. 
 But let's look at the rug/epilogue first, to realise how tantilisingly close I came to figuring it out properly,
-and to revel in just how fine (and devious) the storytelling and clue-dropping was.
+and to revel in just how fine the storytelling and clue-dropping was.
 
 ## The rug
 
@@ -601,21 +603,21 @@ We're hearing from the collector.
 There's a mention of the Noah's Ark collectible---that 85th item found in the product list during our hunt for the meet cute for candle 7. 
 At this point, it was there to see: `"COL"` in the `sku` is for **col**lectible, *not* **col**our. So, instead of incorrectly filtering on this in my original candle 7 solution, I probably *should* have filtered on this in my candle 8 solution, not on the description containing the word `"Noah"`. There are several items that have `"Noah"` in their description that might not be collectibles, hence now considering myself lucky that my code for candle 8 worked.
 
-I've expect that the COL/collectible/colour confusion was a deliberate "gotcha" on the part of [Saul Pwanson](https://www.saul.pw), the Hannukah of Data creator, 
+I expect that the COL/collectible/colour confusion was a deliberate "gotcha" on the part of [Saul Pwanson](https://www.saul.pw), the Hannukah of Data creator, 
 Although it was initally frustrating that my speedrun wasn't entirely smooth, I'm also kind-of pleased I feel into the trap, 
 because it's made me appreciate just how expertly the whole challenge has been crafted.
 
 On the subject of expert crafting, 
 one of the delights of Hanukkah of Data is the animated ASCII art.
 When we land on the [homepage](https://hanukkah.bluebird.sh/) we see a menorah, 
-the nine-pronged candelabra that holds one candle for each night of Hanukkah, 
-plus the *shamash*, which is used as the kindling light.
+the nine-pronged candelabra that holds one candle for each night of Hanukkah
+plus the *shamash* which is used as the kindling light.
 At first, there's just the shamash, then on each night of Hanukkah, another candle appears.
 Solving a day's puzzle lights the associated candle.
 The picture I've used to accompany this post shows the state of the menorah at the beginning of the second night.
 As each candle gets lit, it illuminates some of an image above.
 It's such a treat to see the picture reveal itself, and link to the text.
-I didn't want to spoil the surprise for anyone by making the final artwork immediately visible, but for those who want to see it now, they can do so [here](hanukkah-of-data-rug.png).
+I didn't want to spoil the surprise for anyone by making the final artwork immediately visible, but for those who want to see it now, they can do so [here](hanukkah-of-data-rug.png){target="_blank"}.
 
 ## The speedrun
 
@@ -650,6 +652,17 @@ speedrun <- function(customers, orders, orders_items, products) {
 speedrun(customers, orders, orders_items, products) 
 ```
 
+## Conclusion
+
+I thoroughly enjoyed participating in Hanukkah of Data. 
+I found the puzzles to be a lot of fun and enjoyed the storytelling that linked them.
+I loved the twist of the speedrun as a motivator for thinking about how to make my solutions robust.
+I learnt how to use new tidyverse functions, such as the `separate_wider_*()` family and `join_by()`, 
+and I've been inspired to do some baking too!
+There was a small group in the R4DS (R for Data Science) Slack working through the puzzles daily,
+and being part of that chat added an enjoyable sense of community and camaraderie.
+I very much hope the [talented team](https://hanukkah.bluebird.sh/credits/) run it again next year. 
+I'm already looking forward to it.
 
 <!--------------- appendices go here ----------------->
 
