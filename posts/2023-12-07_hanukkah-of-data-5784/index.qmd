@@ -603,7 +603,7 @@ We're hearing from the collector.
 There's a mention of the Noah's Ark collectible---that 85th item found in the product list during our hunt for the meet cute for candle 7. 
 At this point, it was there to see: `"COL"` in the `sku` is for **col**lectible, *not* **col**our. So, instead of incorrectly filtering on this in my original candle 7 solution, I probably *should* have filtered on this in my candle 8 solution, not on the description containing the word `"Noah"`. There are several items that have `"Noah"` in their description that might not be collectibles, hence now considering myself lucky that my code for candle 8 worked.
 
-I expect that the COL/collectible/colour confusion was a deliberate "gotcha" on the part of [Saul Pwanson](https://www.saul.pw), the Hannukah of Data creator, 
+I expect that the COL/collectible/colour confusion was a deliberate "gotcha" on the part of [Saul Pwanson](https://www.saul.pw), the Hannukah of Data creator. 
 Although it was initally frustrating that my speedrun wasn't entirely smooth, I'm also kind-of pleased I feel into the trap, 
 because it's made me appreciate just how expertly the whole challenge has been crafted.
 
