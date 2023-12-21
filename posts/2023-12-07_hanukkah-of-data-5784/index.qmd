@@ -617,7 +617,7 @@ Solving a day's puzzle lights the associated candle.
 The picture I've used to accompany this post shows the state of the menorah at the beginning of the second night.
 As each candle gets lit, it illuminates some of an image above.
 It's such a treat to see the picture reveal itself, and link to the text.
-I didn't want to spoil the surprise for anyone by making the final artwork immediately visible, but for those who want to see it now, they can do so [here](hanukkah-of-data-rug.png){target="_blank"}.
+I didn't want to spoil the surprise for anyone by making the final artwork immediately visible, but for those who want to see it now, they can do so [here](https://ellakaye.co.uk/posts/2023-12-07_hanukkah-of-data-5784/hanukkah-of-data-rug.png){target="_blank"}.
 
 ## The speedrun
 
