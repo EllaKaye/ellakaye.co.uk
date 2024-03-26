@@ -8,7 +8,7 @@ author:
 site-url: https://ellakaye.co.uk
 image: "Advent_Of_Code_Logo.png"
 #image-alt: |
-#	ASCII art Chistmas tree with Advent of Code written below in a green monospace font.
+#	ASCII art Christmas tree with Advent of Code written below in a green monospace font.
 categories: [Advent of Code, R]
 open-graph: true
 draft: false
