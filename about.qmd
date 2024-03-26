@@ -28,7 +28,7 @@ Prior to my current role, my academic path has taken me from a BA in Mathematics
 
 -   2016: first [R package](packages/BradleyTerryScalable/index.qmd){target="_blank"}
 
--   2017: first community involvement (useR!2017, [Oxford R User Group](https://r-oxford.github.io){target="_blank"}, [rainbowR](https://rainbowr.netlify.app){target="_blank"}, [\@R_LGBTQ](https://twitter.com/R_LGBTQ){target="_blank"})
+-   2017: first community involvement (useR!2017, [Oxford R User Group](https://r-oxford.github.io){target="_blank"}, [rainbowR](https://rainbowr.netlify.app){target="_blank"})
 
 -   2020: first [TidyTuesday](https://github.com/rfordatascience/tidytuesday) contribution
 

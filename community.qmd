@@ -45,12 +45,12 @@ I am on the organising committee of the Warwick R User Group (WRUG), and was pre
 `r icon_link(
   icon = "globe",
   text = "WRUG website",
-  url = "https://warwickrug.github.io/wrug_website/index.html"
+  url = "https://warwickrug.github.io"
 )`
 `r icon_link(
-  icon = "twitter",
-  text = "WRUG Twitter",
-  url = "https://twitter.com/WarwickRUG"
+  icon = "mastodon",
+  text = "WRUG mastodon",
+  url = "https://fosstodon.org/@WarwickRUG"
 )`
 `r icon_link(
   icon = "github",
@@ -104,13 +104,8 @@ rainbowR's mission is to support, promote and connect LGBTQ+ people in the R com
 )`
 `r icon_link(
   icon = "mastodon",
-  text = "tech.lgbt",
+  text = "mastodon",
   url = "https://tech.lgbt/@rainbowR"
-)`
-`r icon_link(
-  icon = "twitter",
-  text = "Twitter",
-  url = "https://twitter.com/R_LGBTQ"
 )`
 `r icon_link(
   icon = "github",
@@ -120,17 +115,17 @@ rainbowR's mission is to support, promote and connect LGBTQ+ people in the R com
 
 ## R Forwards
 
-R Forwards is an [R Foundation](https://www.r-project.org/foundation/){target="_blank"} taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There's more information on the website, though it's rather out of date. The Twitter account is active.
+R Forwards is an [R Foundation](https://www.r-project.org/foundation/){target="_blank"} taskforce that leads the R community forwards in widening the participation of women and other under-represented groups. They also oversee the useR! conferences. I am a co-lead of the communities team. There's more information on the website. The Mastodon account is also active.
 
 `r icon_link(
   icon = "globe",
   text = "website",
-  url = "https://rladies.org"
+  url = "https://forwards.github.io"
 )`
 `r icon_link(
-  icon = "twitter",
-  text = "Twitter",
-  url = "https://twitter.com/R_Forwards"
+  icon = "mastodon",
+  text = "mastodon",
+  url = "https://hachyderm.io/@R_Forwards"
 )`
 
 ## Data science, data visualisation and #TidyTuesday
@@ -143,23 +138,13 @@ R for Data Science (R4DS) is a very friendly online learning community with an a
   url = "https://www.rfordatasci.com"
 )`
 `r icon_link(
-  icon = "twitter",
-  text = "Twitter",
-  url = "https://twitter.com/R4DScommunity"
-)`
-`r icon_link(
   icon = "mastodon",
-  text = "fosstodon.org",
+  text = "mastodon",
   url = "https://fosstodon.org/@R4DSCommunity"
 )`
 
-R for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Twitter and/or Mastodon with the hashtag #TidyTuesday. All the datasets and participating guides are on GitHub.
+R for Data Science also runs the hugely popular #TidyTuesday initiative, a weekly data project aimed at the R ecosystem. Every week they post from the R4DS account above, a raw dataset a chart or article related to that dataset, and ask you to explore and visualise the data, then share the visualisation and the code on Mastodon with the hashtag #TidyTuesday. All the datasets and participating guides are on GitHub.
 
-`r icon_link(
-  icon = "twitter",
-  text = "#TidyTuesday",
-  url = "https://twitter.com/hashtag/TidyTuesday"
-)`
 `r icon_link(
   icon = "mastodon",
   text = "#TidyTuesday",
@@ -189,11 +174,6 @@ Data Science by Design (DSxD) celebrates creativity in data science and developi
   url = "http://datasciencebydesign.org"
 )`
 `r icon_link(
-  icon = "twitter",
-  text = "Twitter",
-  url = "https://twitter.com/DataScixDesign"
-)`
-`r icon_link(
   icon = "book",
   text = "book",
   url = "http://datasciencebydesign.org/book" 
@@ -202,19 +182,9 @@ Data Science by Design (DSxD) celebrates creativity in data science and developi
 
 <!-- ## Community forums -->
 
-## Twitter
-
-You'll have seen above links to various groups on Twitter. To follow and engage with the R community on twitter more broadly, the #rstats hashtag is the best place to start.
-
-`r icon_link(
-  icon = "twitter",
-  text = "#rstats",
-  url = "https://twitter.com/hashtag/rstats"
-)`
-
 ## Mastodon
 
-There is an active, and growing, community of R users on Mastodon, an open-source social network that is becoming increasingly popular.^[Danielle Navarro has an [excellent guide](https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/){target="_blank"} for data science folks trying to navigate the fediverse.] The community is spread across different servers, though fosstodon.org appears the most popular. The #rstats tag is active here.
+There is an active, and growing, community of R users on Mastodon, an open-source social network that is becoming increasingly popular.^[Danielle Navarro has an [excellent guide](https://blog.djnavarro.net/posts/2022-11-03_what-i-know-about-mastodon/){target="_blank"} for data science folks trying to navigate the fediverse.] The community is spread across different servers, though fosstodon.org appears the most popular. The #RStats tag is active here.
 
 `r icon_link(
   icon = "mastodon",
@@ -223,7 +193,7 @@ There is an active, and growing, community of R users on Mastodon, an open-sourc
 )`
 `r icon_link(
   icon = "mastodon",
-  text = "#rstats",
+  text = "#RStats",
   url = "https://fosstodon.org/tags/rstats"
 )`
 
