@@ -1,7 +1,8 @@
 project:
   type: website
   resources:
-    "_redirects"
+    - "_redirects"
+    - "images"
     
 execute:
   freeze: auto
