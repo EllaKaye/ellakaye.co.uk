@@ -63,6 +63,8 @@ library(distilltools)
 
 **Event:** [GROUP](url)
 
+**Talk listing:** [LISTING](url)
+
 **Date:** DATE
 
 **Time:** TIME
