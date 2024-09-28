@@ -35,7 +35,7 @@ Much of base R is written in C.  As R users, we may encounter this code when deb
 
 ## Event details
 
-**Event:** [useR!2024](https://events.linuxfoundation.org/user/)
+**Event:** [useR! 2024](https://events.linuxfoundation.org/user/)
 
 **Talk listing:** [sched](https://userconf2024.sched.com/event/1c8zS/c-for-r-users-ella-kaye-university-of-warwick)
 
