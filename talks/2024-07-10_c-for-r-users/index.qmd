@@ -1,0 +1,70 @@
+---
+title: C for R users
+description: |
+  Why R users/developers should learn some C
+date: 2024-07-10
+author: 
+  - name: Ella Kaye
+#site-url: https://ellakaye.co.uk
+image: stem-bug.jpg
+# N.B. Don't use "" in image-alt
+image-alt: |
+  A photo of a ladybird sitting on a stem (this links to the talk because of a 'bug' in the stem function).
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+`r icon_link(
+  icon = "images",
+  text = "slides",
+  url = "https://ellakaye.github.io/c-for-r-users"
+)`
+`r icon_link(
+  icon = "github",
+  text = "materials",
+  url = "https://github.com/EllaKaye/c-for-r-users"
+)`
+
+
+## Overview 
+
+Much of base R is written in C.  As R users, we may encounter this code when debugging our own code. As R contributors, an understanding of C can enable us to find the root cause of a bug and/or propose a patch to the C code to fix a bug. In any case, learning a new programming language can be fun and rewarding! In this talk, I'll discuss why, as R users/programmers, we may want to learn C, and resources for doing so. I'll show examples of how C is used in the codebase of base R. I'll give an example of how, with only a little C knowledge, it was possible to add a new feature into the R language (specifying colours with three-digit hex codes). Finally, I'll promote the C Study Group for R contributors as a friendly community learning C together.
+
+## Event details
+
+**Event:** [useR!2024](https://events.linuxfoundation.org/user/)
+
+**Date:** July 10th, 2024
+
+**Time:** 14:15
+
+**Location:** Salzburg, Austria
+
+## Key points
+
+- Much of base R is written in C. 
+
+- Knowing some C enables contributions to R by finding the root cause of a bug, which can then be reported and a patch proposed.
+
+- A little knowledge of C, and R's C API, can go a long way.
+
+
+## Slides - fill in iframe and link in last bullet point
+
+<iframe class="slide-deck ar4x3" src="https://ellakaye.github.io/c-for-r-users/" title="C for R users slide deck">
+</iframe>
+
+Keyboard shortcuts for slideshow (once you've clicked inside it):
+
+- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.
+
+- Use <kbd>o</kbd> for an overview of all slides.
+
+- Use <kbd>h</kbd> to see a list of other shortcuts 
+  
+  - <kbd>f</kbd> to toggle full screen not working, but the rest are fine.
+  
+  - For full screen slides, go to [slides]("") then press <kbd>f</kbd>.
