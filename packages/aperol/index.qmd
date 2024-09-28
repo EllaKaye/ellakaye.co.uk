@@ -1,0 +1,73 @@
+---
+title: aperol
+description: |
+  Generates praise using the {praise} package, then garbles it, as if being delivered by someone tipsy or drunk
+date: 2024-07-15 # went from initial commit to first release in a day!
+author: 
+  - name: Ella Kaye
+  - name: Kelly Bodwin
+  - name: Collin Schwantes
+site-url: https://ellakaye.co.uk
+image: ../../images/hex/aperol.png
+image-alt: |
+  A stylized illustration within an orange hexagonal frame. The word 'aperol' is written diagonally in green. Tere's a cocktail glass filled with an orange drink, ice cubes, and a slice of orange. The glass has a pink straw. Next to the glass is a whole orange with leaves and a pink flower. Small sparkles and stars are scattered around the image, giving it a festive feel. The color scheme is predominantly orange, green, and pink, creating a vibrant and summery atmosphere.
+# N.B. Don't use "" in image-alt
+draft: false
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+## Main resources
+
+`r icon_link(
+  icon = "github",
+  text = "source",
+  url = "https://github.com/EllaKaye/aperol"
+)`
+`r icon_link(
+  icon = "box-open",
+  text = "documentation",
+  url = "https://ellakaye.github.io/aperol"
+)`
+`r icon_link(
+  icon = "dice-d6",
+  text = "hex sticker",
+  url = "../../images/hex/aperol.png"
+)`
+
+## Overview
+
+A package that started as a joke, based on [this](https://fosstodon.org/@kellybodwin/112769186345818866) mastodon toot by Kelly Bodwin, asking what a package called {aperol} would do, and the subsequent suggestion by [Nick Tierney](https://aus.social/@njtierney/112770398923583882) that it should deliver praise, which [I ran with](https://fosstodon.org/@ellakaye/112771757956362352).
+
+{aperol} gives you praise, but as if from someone tipsy or drunk. Specifically, it generates some praise using the [{praise}](https://github.com/rladies/praise) package and garbles it. `aperol::tipsy()` swaps a subset of words, and `aperol::drunk()` mixes up the whole affirmation, repeating some words along the way.
+
+As of v0.2.0, there is an `aperol::spritz()` function, which is a wrapper to any other function (by default `devtools::check()`) which counts how many times you call it, and offers increasingly garbled praise, the more often you do so in a given time-frame.
+
+## Installation
+
+You can install the development version of aperol from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("EllaKaye/aperol")
+```
+
+## Examples
+
+```{r example}
+#| echo: true
+library(aperol)
+tipsy()
+tipsy(swaps = 2, "${Exclamation}! ${EXCLAMATION}!-${EXCLAMATION}! This is just ${adjective}!")
+drunk()
+drunk(repeat_words = 2, repeat_times = 2:3)
+drunk(2, 2, "You are ${creating} a ${adverb} ${adjective} ${rpackage}")
+```
+
+## The hex
+
+The hex for the package (created by Kelly Bodwin) is so fun that here it is in its full-sized glory.
+
+<img src=../../images/hex/aperol.png width="600">
