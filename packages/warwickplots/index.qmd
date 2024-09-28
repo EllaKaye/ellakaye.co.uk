@@ -1,0 +1,102 @@
+---
+title: warwickplots
+description: |
+  Palettes and themes consistent with The University of Warwick's brand, built using the {palettes} package
+date: 2024-05-30 # v0.1.0 release
+author: 
+  - name: Ella Kaye
+site-url: https://ellakaye.co.uk
+image: ../../images/hex/warwickplots.png
+image-alt: |
+  The image shows the hex sticker for the 'warwickplots' package. It consists of a hexagon filled with diagonal stripes in various colors including teal, blue, orange, red, and yellow. The name 'warwickplots' is written in white text on a dark purple banner that cuts horizontally across the center of the hexagon.
+draft: false
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+## Main resources
+
+`r icon_link(
+  icon = "github",
+  text = "source",
+  url = "https://github.com/Warwick-Stats-Resources/warwickplots"
+)`
+`r icon_link(
+  icon = "box-open",
+  text = "documentation",
+  url = "https://warwick-stats-resources.github.io/warwickplots/"
+)`
+`r icon_link(
+  icon = "dice-d6",
+  text = "hex sticker",
+  url = "../../images/hex/warwickplots.png"
+)`
+
+## Related resources
+
+This package is part of a trio of projects, alongside [warwickpres](https://github.com/Warwick-Stats-Resources/warwickpres) (a Quarto Revealjs presentation format consistent with the University of Warwick brand) and [warwickcourse](https://github.com/Warwick-Stats-Resources/warwickcourse) (a Quarto template for University of Warwick branded course/workshop websites). 
+
+## Overview
+
+{warwickplots} is an R package with colour palettes and a [ggplot2](https://ggplot2.tidyverse.org) theme that are consistent with The University of Warwick's [branding](https://warwick.ac.uk/about/brand/brand-guidelines/),
+especially its [colours](https://warwick.ac.uk/about/brand/brand-guidelines/colours/) and [typography](https://warwick.ac.uk/about/brand/brand-guidelines/typography/).
+
+The palettes are built using the [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
+The ggplot2 theme is heavily inspired by the work of [Cara Thompson](https://www.cararthompson.com/), particularly this talk on [applying a unifying aesthetic to your plots](https://www.cararthompson.com/talks/nhsr2022-ggplot-themes/).
+
+## Installation
+
+You can install the development version of warwickplots from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("Warwick-Stats-Resources/warwickplots")
+```
+
+## Palettes
+
+The package offers six colour palettes: one discrete, two divergent and three sequential:
+
+```{r palettes}
+#| message: false
+library(warwickplots)
+plot(warwick_palettes)
+```
+
+For further details on using the palettes, please see the [get started with warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette and the documentation for the [palettes](https://mccarthy-m-g.github.io/palettes/index.html) package.
+
+
+## `theme_warwick()`
+
+Below is a plot that uses the `warwick_palettes::primary` palette and `theme_warwick()`.
+
+```{r example, warning=FALSE}
+library(ggplot2)
+library(palmerpenguins)
+ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
+  geom_point(aes(colour = species, shape = species), alpha = 0.8, size = 2) +
+  scale_color_palette_d(warwick_palettes$primary) +
+  labs(title = "Penguin Size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for **<span style = 'color:#3C1053;'>Adelie</span>**, **<span style = 'color:#6DCDB8;'>Chinstrap</span>** and **<span style = 'color:#CB333B;'>Gentoo</span>** Penguins. This is based on data made available in the **palmerpenguins** R package.",
+       caption = "Visualization: Ella Kaye, Data: Gorman, Williams & Fraser (2014) DOI: 10.1371/journal.pone.009008",
+       x = "flipper length (mm)",
+       y = "body mass (g)") +
+  theme_warwick() +
+  theme(legend.position = 'none')
+```
+
+`theme_warwick()` is an extension of `ggplot2::theme_minimal()`, offering the following in addition:
+
+- Text hierarchy, with different sizes and colours
+- Spacing, giving the text room to breathe 
+- Uses `ggtext::element_textbox_simple()` for the plot title and subtitle, to enable use of markdown and CSS styling, and text-wrapping if the title/subtitle is long
+- Places the legend above the plot
+- Uses Lato or Avenir Next font (for online or print use respectively), *if* your system is set up for it
+
+Note that any `theme_warwick()` defaults can be overridden with a subsequent call to `theme()`. 
+
+For further details, including how to ensure your system is set up to use custom fonts, see the [get started warwickplots](https://warwick-stats-resources.github.io/warwickplots/articles/warwickplots.html) vignette. For further examples, including how to override `theme_warwick()`, see the [using warwickplots with ggplot2](https://warwick-stats-resources.github.io/warwickplots/articles/ggplot2.html) vignette.
+
