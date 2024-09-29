@@ -1,0 +1,15 @@
+{
+  "hash": "b77509a8e913ac42d85e68d857146cb4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: A conversation about Equity, Diversity, Inclusion and Accessibility (EDIA) in the RSE community\ndescription: |\n  Reflections on successes and challenges\ndate: 2024-07-31\nauthor: \n  - name: Ella Kaye\n  - name: Malvika Sharan\nimage: ella-malvika.png\n# N.B. Don't use \"\" in image-alt\nimage-alt: |\n  Two headshots, side by side. One is of Ella Kaye, the other of Malvika Sharan.\n---\n\n::: {.cell}\n\n:::\n\n\n\n`<a href=\"https://ellakaye.github.io/2024-07-31-diverse/\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-images\"></i> slides</a>`{=html}\n`<a href=\"https://github.com/EllaKaye/2024-07-31-diverse\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> materials</a>`{=html}\n\n:::{.callout-note}\nA link to the video will be added here shortly\n:::\n\n## Overview \n\nElla Kaye (Research Software Engineer, University of Warwick) and Malvika Sharan (Senior Researcher – Open Research at the Alan Turing Institute and co-lead of The Turing Way) will converse about their experiences in/with the RSE community, as well as both the challenges and successes they’ve encountered when working to improve EDIA. They will discuss the importance and difficulties of community-building and why it matters from an EDIA perspective. They will also consider the intersectionality between developing an RSE identity and their identities as members of groups under-represented in the broader RSE community. There will be time for questions and further discussion.\n\n## Event details\n\n**Event:** [DiveRSE](https://diverse-rse.github.io/events/2024-07-31), part of the [seminar series](https://diverse-rse.github.io)\n\n**Date:** July 31st, 2024\n\n**Time:** 15:00\n\n**Location:** Zoom\n\n\n## Slides\n\n<iframe class=\"slide-deck ar4x3\" src=\"https://ellakaye.github.io/2024-07-31-diverse/\" title=\"Slide deck for the conversation\">\n</iframe>\n\nKeyboard shortcuts for slideshow (once you've clicked inside it):\n\n- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides\n\n- Use <kbd>o</kbd> for an overview of all slides\n\n- Use <kbd>?</kbd> for an overview more keyboard shortcuts\n\n- Click the hamburger menu in the bottom left corner of the slide deck for more options\n\n  - <kbd>f</kbd> to toggle full screen doesn't work from this page. Go to [slides](https://ellakaye.github.io/2024-07-31-diverse/) and use that shortcut from there instead",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

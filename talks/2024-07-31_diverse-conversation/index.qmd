@@ -1,0 +1,63 @@
+---
+title: A conversation about Equity, Diversity, Inclusion and Accessibility (EDIA) in the RSE community
+description: |
+  Reflections on successes and challenges
+date: 2024-07-31
+author: 
+  - name: Ella Kaye
+  - name: Malvika Sharan
+image: ella-malvika.png
+image-alt: |
+  Two headshots, side by side. One is of Ella Kaye, the other of Malvika Sharan.
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+`r icon_link(
+  icon = "images",
+  text = "slides",
+  url = "https://ellakaye.github.io/2024-07-31-diverse/"
+)`
+`r icon_link(
+  icon = "github",
+  text = "materials",
+  url = "https://github.com/EllaKaye/2024-07-31-diverse"
+)`
+
+:::{.callout-note}
+A link to the video will be added here shortly
+:::
+
+## Overview 
+
+Ella Kaye (Research Software Engineer, University of Warwick) and Malvika Sharan (Senior Researcher – Open Research at the Alan Turing Institute and co-lead of The Turing Way) will converse about their experiences in/with the RSE community, as well as both the challenges and successes they’ve encountered when working to improve EDIA. They will discuss the importance and difficulties of community-building and why it matters from an EDIA perspective. They will also consider the intersectionality between developing an RSE identity and their identities as members of groups under-represented in the broader RSE community. There will be time for questions and further discussion.
+
+## Event details
+
+**Event:** [DiveRSE](https://diverse-rse.github.io/events/2024-07-31), part of the [seminar series](https://diverse-rse.github.io)
+
+**Date:** July 31st, 2024
+
+**Time:** 15:00
+
+**Location:** Zoom
+
+
+## Slides
+
+<iframe class="slide-deck ar4x3" src="https://ellakaye.github.io/2024-07-31-diverse/" title="Slide deck for the conversation">
+</iframe>
+
+Keyboard shortcuts for slideshow (once you've clicked inside it):
+
+- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides
+
+- Use <kbd>o</kbd> for an overview of all slides
+
+- Use <kbd>?</kbd> for an overview more keyboard shortcuts
+
+- Click the hamburger menu in the bottom left corner of the slide deck for more options
+
+  - <kbd>f</kbd> to toggle full screen doesn't work from this page. Go to [slides](https://ellakaye.github.io/2024-07-31-diverse/) and use that shortcut from there instead
