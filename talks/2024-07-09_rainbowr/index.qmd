@@ -6,10 +6,10 @@ date: 2024-07-09
 author: 
   - name: Ella Kaye
   - name: Hanne Oberman
-image: rainbowR-hex.png
+image: rainbowR-rect.png
 # N.B. Don't use "" in image-alt
 image-alt: |
-  A square featuring vertical stripes in the rainbow pride colours: red, orange, yellow, green, blue, and purple. In the center, there's a white horizontal band with the text 'rainbowR' written in a playful, multi-colored font. Each letter of 'rainbow' is composed from two geometic shapes in different colours, matching the rainbow stripes in the background, which overlap to make a third colour. The 'R' is from the R language logo. 
+  A rectangle featuring vertical stripes in the rainbow pride colours: red, orange, yellow, green, blue, and purple. In the center, there's a white horizontal band with the text 'rainbowR' written in a playful, multi-colored font. Each letter of 'rainbow' is composed from two geometic shapes in different colours, matching the rainbow stripes in the background, which overlap to make a third colour. The 'R' is from the R language logo. 
 draft: false
 ---
 
