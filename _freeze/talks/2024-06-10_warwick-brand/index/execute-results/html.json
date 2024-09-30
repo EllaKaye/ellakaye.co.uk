@@ -1,0 +1,15 @@
+{
+  "hash": "b7e76c030fdd3b37cad9e80781339802",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Warwick-branded plots, presentations and websites using Quarto and R\ndescription: |\n  Introducing warwickplots, warwickpres, and warwickbrand\ndate: 2024-06-10\nauthor: \n  - name: Ella Kaye\nimage: warwick-colours-logo.png\n# N.B. Don't use \"\" in image-alt\nimage-alt: |\n  Five vertical strips in bright colours: teal, blue, orange, red, yellow. Horizontally across them, a dark purple rectangle, with the University of Warwick logo in white on that.\n---\n\n::: {.cell}\n\n:::\n\n\n\n\n`<a href=\"https://warwick-stats-resources.github.io/warwickbrand-talk/\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-images\"></i> slides</a>`{=html}\n`<a href=\"https://github.com/Warwick-Stats-Resources/warwickbrand-talk\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-github\"></i> materials</a>`{=html}\n\n\n## Overview \n\nIntroducing three related resources, for those affiliated with the University of Warwick to use the university's [brand](https://warwick.ac.uk/about/brand/) in their plots, presentation and websites:\n\n- [**warwickplots**](https://github.com/Warwick-Stats-Resources/warwickplots)\n\n  An R package with colour palettes and a ggplot2 theme\n  \n- [**warwickpres**](https://github.com/Warwick-Stats-Resources/warwickpres)\n\n  A Quarto Revealjs extension for presentations\n\n- [**warwickcourse**](https://github.com/Warwick-Stats-Resources/warwickcourse)\n\n  A GitHub template for creating course/workshop websites with Quarto\n\nThis talk lets you know that these resources *exist*, what they *look* like, gives a quick guide to getting started using them, and lets you know where to learn more.\n\n## Event details\n\n**Group:** [Warwick R User Group](https://warwickrug.github.io)\n\n**Talk listing:** [Meetup](https://www.meetup.com/warwickrug/events/301363056)\n\n**Date:** June 10th, 2024\n\n**Time:** 12:00\n\n**Location:** Dirty Duck, University of Warwick\n\n\n## Slides\n\n<iframe class=\"slide-deck ar4x3\" src=\"https://warwick-stats-resources.github.io/warwickbrand-talk/\" title=\"Warwick brand talk slides\">\n</iframe>\n\nKeyboard shortcuts for slideshow (once you've clicked inside it):\n\n- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides\n\n- Use <kbd>o</kbd> for an overview of all slides\n\n- Use <kbd>?</kbd> for an overview more keyboard shortcuts\n\n- Click the hamburger menu in the bottom left corner of the slide deck for more options\n\n  - <kbd>f</kbd> to toggle full screen doesn't work from this page. Go to [slides](https://warwick-stats-resources.github.io/warwickbrand-talk/) and use that shortcut from there instead",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

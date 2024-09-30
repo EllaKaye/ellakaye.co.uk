@@ -1,0 +1,77 @@
+---
+title: Warwick-branded plots, presentations and websites using Quarto and R
+description: |
+  Introducing warwickplots, warwickpres, and warwickbrand
+date: 2024-06-10
+author: 
+  - name: Ella Kaye
+image: warwick-colours-logo.png
+# N.B. Don't use "" in image-alt
+image-alt: |
+  Five vertical strips in bright colours: teal, blue, orange, red, yellow. Horizontally across them, a dark purple rectangle, with the University of Warwick logo in white on that.
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+`r icon_link(
+  icon = "images",
+  text = "slides",
+  url = "https://warwick-stats-resources.github.io/warwickbrand-talk/"
+)`
+`r icon_link(
+  icon = "github",
+  text = "materials",
+  url = "https://github.com/Warwick-Stats-Resources/warwickbrand-talk"
+)`
+
+
+## Overview 
+
+Introducing three related resources, for those affiliated with the University of Warwick to use the university's [brand](https://warwick.ac.uk/about/brand/) in their plots, presentation and websites:
+
+- [**warwickplots**](https://github.com/Warwick-Stats-Resources/warwickplots)
+
+  An R package with colour palettes and a ggplot2 theme
+  
+- [**warwickpres**](https://github.com/Warwick-Stats-Resources/warwickpres)
+
+  A Quarto Revealjs extension for presentations
+
+- [**warwickcourse**](https://github.com/Warwick-Stats-Resources/warwickcourse)
+
+  A GitHub template for creating course/workshop websites with Quarto
+
+This talk lets you know that these resources *exist*, what they *look* like, gives a quick guide to getting started using them, and lets you know where to learn more.
+
+## Event details
+
+**Group:** [Warwick R User Group](https://warwickrug.github.io)
+
+**Talk listing:** [Meetup](https://www.meetup.com/warwickrug/events/301363056)
+
+**Date:** June 10th, 2024
+
+**Time:** 12:00
+
+**Location:** Dirty Duck, University of Warwick
+
+
+## Slides
+
+<iframe class="slide-deck ar4x3" src="https://warwick-stats-resources.github.io/warwickbrand-talk/" title="Warwick brand talk slides">
+</iframe>
+
+Keyboard shortcuts for slideshow (once you've clicked inside it):
+
+- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides
+
+- Use <kbd>o</kbd> for an overview of all slides
+
+- Use <kbd>?</kbd> for an overview more keyboard shortcuts
+
+- Click the hamburger menu in the bottom left corner of the slide deck for more options
+
+  - <kbd>f</kbd> to toggle full screen doesn't work from this page. Go to [slides](https://warwick-stats-resources.github.io/warwickbrand-talk/) and use that shortcut from there instead
