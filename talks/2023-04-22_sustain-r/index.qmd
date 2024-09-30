@@ -1,0 +1,70 @@
+---
+title: Sustainability and EDI (Equality, Diversity and Inclusion) in the R project
+description: |
+  About initiatives to encourage and train a new, more diverse, generation of contributors
+date: 2023-04-22
+author: 
+  - name: Ella Kaye
+  - name: Heather Turner
+image: r-logo-rect.png
+# N.B. Don't use "" in image-alt
+image-alt: |
+  The logo for the R project, consisting of a large gray oval with a blue capital letter 'R' overlapping it on the right side. The 'R' is bold and stands out prominently against the gray background. 
+draft: false
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+`r icon_link(
+  icon = "images",
+  text = "slides",
+  url = "https://satrday-sustain-r.netlify.app/"
+)`
+`r icon_link(
+  icon = "github",
+  text = "materials",
+  url = "https://github.com/ellakaye/sustain-r"
+)`
+`r icon_link(
+  icon = "play-circle",
+  text = "video",
+  url = "https://www.youtube.com/watch?v=yW6kRqktYQU&list=PLbARZQfpqIKLNjt5NnVQ1RgEKeayVVv6G&index=2"
+)`
+
+## Overview 
+
+The R Project is over 20 years old, but its future is not secure ‐ many of the R Core Team are nearing retirement and there are not enough new contributors to sustain the work. We present a number of initiatives, organised under Heather Turner’s ‘Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project’ fellowship, to encourage and train a new, more diverse, generation of contributors. These include R contributor office hours, collaboration campfires, bug BBQs, translatathons and an updated R development guide. This presentation is also a call to action to encourage others to get involved in
+supporting this language, a fundamental piece of software in many disciplines, used by an estimated two million people.
+
+## Event details
+
+**Event:** [SatRday London 2023](https://satrday-london-2023.jumpingrivers.com)
+
+**Date:** April 22nd, 2023
+
+**Time:** 11:50
+
+**Location:** Bush House, 30 Aldwych, London
+
+
+## Slides
+
+### [TODO]: fill in urls in iframe and link in last bullet point
+
+<iframe class="slide-deck ar4x3" src="https://satrday-sustain-r.netlify.app/" title="Sustainability and EDI in the R Project slides">
+</iframe>
+
+Keyboard shortcuts for slideshow (once you've clicked inside it):
+
+- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides
+
+- Use <kbd>o</kbd> for an overview of all slides
+
+- Use <kbd>?</kbd> for an overview more keyboard shortcuts
+
+- Click the hamburger menu in the bottom left corner of the slide deck for more options
+
+  - <kbd>f</kbd> to toggle full screen doesn't work from this page. Go to [slides](https://satrday-sustain-r.netlify.app/) and use that shortcut from there instead
