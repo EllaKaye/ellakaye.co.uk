@@ -25,10 +25,12 @@ library(distilltools)
   text = "materials",
   url = "https://github.com/EllaKaye/2024-07-31-diverse"
 )`
+`r icon_link(
+  icon = "play-circle",
+  text = "video",
+  url = "https://www.youtube.com/watch?v=6mvJO_ImHgY"
+)`
 
-:::{.callout-note}
-A link to the video will be added here shortly
-:::
 
 ## Overview 
 
