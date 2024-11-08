@@ -17,32 +17,35 @@ draft: false
 library(distilltools)
 ```
 
-
+## useR! 2024
 `r icon_link(
   icon = "images",
-  text = "slides - useR! 2024",
+  text = "slides",
   url = "https://github.com/r-lgbtq/user-2024"
 )`
 `r icon_link(
   icon = "github",
-  text = "materials - useR! 2024",
+  text = "materials",
   url = "https://r-lgbtq.github.io/useR-2024/"
 )`
 
+## posit::conf(2024)
 `r icon_link(
   icon = "images",
-  text = "slides - posit::conf(2024)",
+  text = "slides",
   url = "https://github.com/r-lgbtq/posit-conf-2024"
 )`
 `r icon_link(
   icon = "github",
-  text = "materials - posit::conf(2024)",
+  text = "materials",
   url = "https://r-lgbtq.github.io/posit-conf-2024/"
 )`
+`r icon_link(
+  icon = "play-circle",
+  text = "video",
+  url = "https://www.youtube.com/watch?v=zOEZtIPj6Vk"
+)`
 
-:::{.callout-note}
-Link to the video of the posit::conf(2024) presentation will be added once it becomes publicly available
-:::
 
 
 ## Overview 
