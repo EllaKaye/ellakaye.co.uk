@@ -21,24 +21,24 @@ library(distilltools)
 `r icon_link(
   icon = "images",
   text = "slides",
-  url = "https://github.com/r-lgbtq/user-2024"
+  url = "https://r-lgbtq.github.io/useR-2024/"
 )`
 `r icon_link(
   icon = "github",
   text = "materials",
-  url = "https://r-lgbtq.github.io/useR-2024/"
+  url = "https://github.com/r-lgbtq/user-2024"
 )`
 
 ## posit::conf(2024)
 `r icon_link(
   icon = "images",
   text = "slides",
-  url = "https://github.com/r-lgbtq/posit-conf-2024"
+  url = "https://r-lgbtq.github.io/posit-conf-2024/"
 )`
 `r icon_link(
   icon = "github",
   text = "materials",
-  url = "https://r-lgbtq.github.io/posit-conf-2024/"
+  url = "https://github.com/r-lgbtq/posit-conf-2024"
 )`
 `r icon_link(
   icon = "play-circle",
