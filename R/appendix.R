@@ -60,7 +60,18 @@ insert_lockfile <- function(repo_spec, name,
 
 # top level function ------------------------------------------------------
 
-insert_appendix <- function (repo_spec, name, collection = "posts") {
+insert_appendix <- function (repo_spec, name, collection = "posts", lockfile = FALSE) {
+
+  if (lockfile) {
+    details_content <- paste(
+      insert_source(repo_spec, name, collection),
+      insert_lockfile(repo_spec, name, collection),
+      sep = ", ")
+  } else {
+    details_content <- insert_source(repo_spec, name, collection)
+  }
+
+
   appendices <- paste(
     markdown_appendix(
       name = "Last updated",
@@ -69,10 +80,7 @@ insert_appendix <- function (repo_spec, name, collection = "posts") {
     " ",
     markdown_appendix(
       name = "Details",
-      content = paste(
-        insert_source(repo_spec, name, collection),
-        insert_lockfile(repo_spec, name, collection),
-        sep = ", ")
+      content = details_content
     ),
     sep = "\n"
   )
