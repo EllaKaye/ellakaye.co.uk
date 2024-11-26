@@ -52,8 +52,6 @@ supporting this language, a fundamental piece of software in many disciplines, u
 
 ## Slides
 
-### [TODO]: fill in urls in iframe and link in last bullet point
-
 <iframe class="slide-deck ar4x3" src="https://satrday-sustain-r.netlify.app/" title="Sustainability and EDI in the R Project slides">
 </iframe>
 
