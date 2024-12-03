@@ -1,0 +1,130 @@
+---
+title: The last year
+description: |
+  A big update on what I've been doing and working on over the last twelve months
+date: 2024-10-03
+author: 
+  - name: Ella Kaye
+site-url: https://ellakaye.co.uk
+#image: IMAGE.png
+#image-alt: |
+categories: [TAG_1, TAG_2]
+open-graph: true
+twitter-card: true
+code-tools: false
+# will inherit title, description, image
+# to change ANYTHING about card, need to fill in EVERYTHING below
+#  title: |
+#  description: |
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: summary_large_image 
+#  image-width: 500
+#  image-height: 500
+#  card-style: summary
+draft: true
+---
+
+<!--------------- set up ----------------->
+
+```{r}
+#| echo: false
+#| results: 'hide'
+
+long_slug <- "2024-10-03_update-2024"
+```
+
+<!--------------- post content ----------------->
+
+I've had a busy year and, as is so often the case with me, I haven't blogged as much as I intended. I'm now reflecting on the last twelve months^[Since it's Rosh Hashanah (Jewish New Year)] and catching up with a bumper blog post on what I've been working on over the last year.
+
+## Base R contributions
+I'm now two years into my role as a Research Software Engineer, working with Heather Turner on her fellowship project "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project". The main goal of the fellowship is to foster a newer and more diverse community of collaborators to base R, and it's closely aligned with the work of the [R Contribution Working Group](https://contributor.r-project.org).
+
+I've been involved in a few R developer events, which have lead to two patches that I co-authored being accepted into base R. **LINKS**. Even though the patches are pretty minor, it's a thrill to be able at contribute to the base of this language which I love so much.
+
+## Learning C
+
+The contributions referred to above both involve making edits to C code, though neither required a much knowledge of that language. Because I'm always looking to improve as a programmer, and in particular to be able to have a deeper understanding of the C code upon which R is built, I spent the beginning of the year learning C. I did this through participating in the C for R users study group, working through weeks 1-5 of [CS50](https://cs50.harvard.edu/x/2024/), Harvard's excellent Introduction to Computer Science course.
+
+This was a commitment I made as I [wrapped up last year's Advent of Code](../2023-12-30_advent-of-code-2023/index.qmd) and, as I planned, I did started to work through the 2015 run of Advent of Code. I was making good progress -- 16 puzzled solved in R and 8 also solved in C-- when other projects overtook that one in importance. I haven't yet updated [my Advent of Code website](https://adventofcode.ellakaye.co.uk) with blogs about my 2015 solutions, though the solutions themselves are on [GitHub](https://github.com/EllaKaye/advent-of-code/tree/main/2015).^[I enjoy coding more than I enjoy writing blog posts, so the temptation was always to move onto the next challenge, rather than write up the one I'd just completed.] It is a project I would like to return to at some point.
+
+## Learning Python
+
+I enjoyed the first five weeks of CS50 so much that I decided to complete the course, and therefore also learnt some Python, SQL, HTML, CSS, JavaScript and Flask.
+
+For my CS50 final project, I decided to revisit the first ever programming project I undertook, back in 2013 -- an implementation in Python of a patience^[Or solitaire, if you're in North America] card game. It's newbie code, and I wanted to bring it up-to-date, learning current Pythonic best practice, and bringing to bear all that I've learnt about programming over the last decade. I was about 90-95% of the way to finishing an implementation using the Python Arcade games engine, when my attention was caught by an announcement about the 2024 Shiny Contest and I decided to reimplement the game once again in Shiny for Python. I thought I was done with that version -- it was working perfectly on my laptop -- but when I uploaded it to Posit Connect Cloud, the slower speeds lead to a visual glitch. It's fixable, but requires refactoring much of the code-base, and I'll also need to learn some JavaScript. 
+
+I've paused development of the game while I go back and take a more structured approach to learning what I need -- I have almost completed the [CS50 Python course](https://cs50.harvard.edu/python/2022/), and next I'll work through [CS50 Web](https://cs50.harvard.edu/web/2020/). 
+
+I'd like to finish (the original) CS50 by the end of 2024, and I don't think I'll get theShiny for Python version done to my satisfaction in that time-frame. I'm planning on going back and completing the Python Arcade implementation, then returning to the Shiny version once I've done CS50 Web.
+
+## rainbowR
+
+On a different note, this has been a year of pushing forward [rainbowR](https://rainbowr.org), a community whose mission is to connect, support and promote LGBTQ+ people who code in R, and spread awareness of LGBTQ+ issues through data-driven activism. 
+
+We've got into a groove with [meet-ups](https://rainbowr.org/meetups), which we now run monthly, usually on the 4th Wednesday of the month at 5pm UK time. I launched a [buddy scheme](https://rainbowr.org/buddies), now in its third run, which is going well. And we're in the process of launching our first [book club](https://rainbowr.org/book-club).
+
+MORE THAN I CAN DO
+
+TEAM
+
+VISUAL IDENTITY
+
+WELCOME EMAIL
+
+All this work is paying off. The community has grown substantially over the last year -- around 90 new members, taking the total to over 130. But, more than numbers, what pleases me is how much people value the community. KIRA'S COMMENT
+
+## Conferences
+
+## Packages
+
+## SSI Inclusive
+
+## The rest
+
+<!--------------- appendices go here ----------------->
+
+```{r appendix}
+#| echo: false
+
+source("../../R/appendix.R")
+insert_appendix(
+  repo_spec = "EllaKaye/ellakaye.co.uk", 
+  name = long_slug
+)
+```
+
+##### Session info {.appendix}
+
+<details><summary>Toggle</summary>
+
+```{r}
+#| echo: false
+library(sessioninfo)
+# save the session info as an object
+pkg_session <- session_info(pkgs = "attached")
+
+# get the quarto version
+quarto_version <- system("quarto --version", intern = TRUE)
+
+# inject the quarto info
+pkg_session$platform$quarto <- paste(
+  system("quarto --version", intern = TRUE), 
+  "@", 
+  quarto::quarto_path()
+  )
+
+# print it out
+pkg_session
+```
+
+</details>
+
+
+
+
+
