@@ -36,7 +36,7 @@ Prior to my current role, my academic path has taken me from a BA in Mathematics
 
 - 2022: as an RSE, I now get to be both an {{< fa brands r-project >}} enthusiast *and* professional
 
-- 2023" first patch accepted in base R  
+- 2023: first patch accepted in base R  
 
 
 I love R! I have used it in extensively in my research as a statistician for visualising, analysing and modelling data. I have also used it for personal projects and writing [packages](packages.qmd). My enthusiasm for all things RMarkdown (especially {distill}) has now morphed into excitement about [Quarto](https://quarto.org){target="_blank"}. I have particularly enjoyed using it to build this website (my fourth!) [^about-1]
