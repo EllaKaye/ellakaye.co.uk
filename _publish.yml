@@ -1,4 +1,4 @@
 - source: project
   netlify:
     - id: 0ab2fcb4-73d1-47fa-8909-69dc0ce606d2
-      url: 'https://ellakaye.co.uk'
+      url: https://ellakaye.co.uk
