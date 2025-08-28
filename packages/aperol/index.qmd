@@ -27,9 +27,14 @@ library(distilltools)
   url = "https://github.com/EllaKaye/aperol"
 )`
 `r icon_link(
-  icon = "box-open",
+  icon = "book",
   text = "documentation",
   url = "https://ellakaye.github.io/aperol"
+)`
+`r icon_link(
+  icon = "rocket",
+  text = "R-universe",
+  url = "https://ellakaye.r-universe.dev/aperol"
 )`
 `r icon_link(
   icon = "dice-d6",

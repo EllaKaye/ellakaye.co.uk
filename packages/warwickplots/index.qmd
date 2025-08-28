@@ -25,9 +25,14 @@ library(distilltools)
   url = "https://github.com/Warwick-Stats-Resources/warwickplots"
 )`
 `r icon_link(
-  icon = "box-open",
+  icon = "book",
   text = "documentation",
   url = "https://warwick-stats-resources.github.io/warwickplots/"
+)`
+`r icon_link(
+  icon = "rocket",
+  text = "R-universe",
+  url = "https://warwick-stats-resources.r-universe.dev/warwickplots"
 )`
 `r icon_link(
   icon = "dice-d6",

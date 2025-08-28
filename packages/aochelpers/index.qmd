@@ -40,7 +40,7 @@ library(distilltools)
   url = "https://github.com/EllaKaye/aochelpers"
 )`
 `r icon_link(
-  icon = "box-open",
+  icon = "book",
   text = "documentation",
   url = "https://ellakaye.github.io/aochelpers/"
 )`

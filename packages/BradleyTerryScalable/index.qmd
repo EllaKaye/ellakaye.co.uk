@@ -36,7 +36,7 @@ library(distilltools)
 
 ## Main resources
 
-`r icon_link(   icon = "github",   text = "source",   url = "https://github.com/ellakaye/bradleyterryscalable" )` `r icon_link(   icon = "box-open",   text = "documentation",   url = "https://ellakaye.github.io/BradleyTerryScalable/" )` `r icon_link(   icon = "dice-d6",   text = "hex sticker",   url = "../../images/hex/BradleyTerryScalable.png" )`
+`r icon_link(   icon = "github",   text = "source",   url = "https://github.com/ellakaye/bradleyterryscalable" )` `r icon_link(   icon = "book",   text = "documentation",   url = "https://ellakaye.github.io/BradleyTerryScalable/" )` `r icon_link(   icon = "dice-d6",   text = "hex sticker",   url = "../../images/hex/BradleyTerryScalable.png" )`
 
 ## Additional resources
 

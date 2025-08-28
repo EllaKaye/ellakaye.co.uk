@@ -146,3 +146,5 @@ or left untouched by `convert_files_inplace()` and `convert_dir_inplace()`.
 Many thanks to [Allison Horst](https://allisonhorst.github.io) for the fantastic **basepenguins** hex,
 featuring the Adélie, Gentoo and Chinstrap familiar from her [**palmergenuins** artwork](https://allisonhorst.github.io/palmerpenguins/articles/art.html)
 and [Kristen Gorman's](https://gormankb.github.io) base camp from her trips to the Palmer Archipelago to collect the data.
+
+![](../../images/hex/basepenguins.png){width="50%"}
