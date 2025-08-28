@@ -1,0 +1,148 @@
+---
+title: basepenguins
+description: |
+  Convert files that Use {palmerpenguins} to Work with base R's penguin dataset
+#date: UPDATE # initial commit date? Publish date? No date?
+author: 
+  - name: Ella Kaye
+  - name: Heather Turner 
+site-url: https://ellakaye.co.uk
+image: ../../images/hex/basepenguins.png
+# N.B. Don't use "" in image-alt
+image-alt: |
+  A hexagonal logo for the basepenguins pack featuring three penguins in the foreground against an Antarctic landscape - an Adelie penguin on the left, a Gentoo penguin in the center back, and a Chinstrap penguin on the right. Behind them is a scenic view with icebergs, mountains, and what yellow camping tents on rocky terrain. The logo has a golden yellow border and the text basepenguins is displayed prominently across the upper portion in black letters.
+#categories:
+#  - TAG_1
+#  - TAG_2
+#twitter-card: 
+# uncomment lines below for different title and description to post
+#  title: |
+#  description: |
+# uncomment for different image to post
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: "summary_large_image" 
+draft: false
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+## Main resources
+
+`r icon_link(
+  icon = "github",
+  text = "source",
+  url = "https://github.com/EllaKaye/basepenguins/"
+)`
+`r icon_link(
+  icon = "book",
+  text = "documentation",
+  url = "https://ellakaye.github.io/basepenguins/"
+)`
+`r icon_link(
+  icon = "box-open",
+  text = "CRAN",
+  url = "https://CRAN.R-project.org/package=basepenguins"
+)`
+`r icon_link(
+  icon = "rocket",
+  text = "R-universe",
+  url = "https://ellakaye.r-universe.dev/basepenguins"
+)`
+`r icon_link(
+  icon = "dice-d6",
+  text = "hex sticker",
+  url = "../../images/hex/BradleyTerryScalable.png"
+)`
+
+
+## Overview 
+
+Convert scripts that use the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins/index.html) package to use the versions of the `penguins` and `penguins_raw` datasets that are available in R ≥ 4.5.0.
+
+The Palmer Penguins datasets have become [very popular](https://apreshill.github.io/palmerpenguins-useR-2022/) in the R community, especially in educational contexts, and as an [alternative to the `iris` dataset](https://journal.r-project.org/articles/RJ-2022-020/). Now that `penguins` and `penguins_raw` are in **datasets** (R ≥ 4.5.0), they are more widely available and easier to get started with, especially for new R users and for use in teaching.
+
+The version of `penguins` in **datasets** (R ≥ 4.5.0) has some shorter variable names than the **palmerpenguins** equivalent (e.g. `bill_len` instead of `bill_length_mm`), for more compact code and data display. 
+It does mean, however, that for those wanting to use R's version of `penguins`, it isn't simply a case of removing the call to `library(palmerpenguins)` 
+or replacing `palmerpenguins` with `datasets` in `data("penguins", package = "palmerpenguins")` and the script still running. The **basepenguins** package takes care of converting files by removing the call to **palmerpenguins** and making the necessary conversions to variable names, ensuring that the resulting scripts still run using the **datasets** versions of `penguins` and `penguins_raw`.
+
+## Installation
+
+**basepenguins** is available on CRAN:
+
+```r
+install.packages("basepenguins")
+```
+
+Or get the development version from R-universe:
+
+``` r
+install.packages("basepenguins", repos = "https://ellakaye.r-universe.dev")
+```
+
+## Converting a file
+
+If a file is 'convertible', i.e. it contains `library(palmerpenguins)` or `data("penguins", package = "palmerpenguins")` (with any style of quotes), and has one of a specified set of extensions (by default `"R"`, `"r"`, `"qmd"`, `"rmd"`, `"Rmd"`), then converting it will do the following:
+
+- Replace `library(palmerpenguins)` (or same with `palmerpenguins` in quotes) with the empty string`""`
+- Replace `data("penguins", package = "palmerpenguins")` (with any style of quotes) with `data("penguins", package = "datasets")` 
+-   Replace variable names:
+    -   `bill_length_mm` -\> `bill_len`
+    -   `bill_depth_mm` -\> `bill_dep`
+    -   `flipper_length_mm` -\> `flipper_len`
+    -   `body_mass_g` -\> `body_mass`
+-   Replace `ends_with("_mm")` with `starts_with("flipper_"), starts_with("bill_")`
+
+Here, we simply show the 'before-and-after' when converting a single file. For a more extensive guide to using the package, see the [Get Started](https://ellakaye.github.io/basepenguins/articles/basepenguins.html) vignette.
+
+```{r, include = FALSE}
+# Set up a temp directory and set it as the root directory for all chunks
+temp_dir <- tempdir()
+knitr::opts_knit$set(root.dir = temp_dir)
+```
+
+```{r}
+library(basepenguins)
+```
+
+Get and see an example file provided by the package (adapted from a section of the **palmerpenguins** [Get Started](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) vignette):
+
+```{r}
+#| echo: true
+penguins_file <- example_files("penguins.R")
+cat(readLines(penguins_file), sep = "\n")
+```
+
+Then, convert the file (saving it to a new file) and see the new script:
+
+```{r}
+#| echo: true
+convert_files(penguins_file, "penguins_converted.R")
+cat(readLines("penguins_converted.R"), sep = "\n")
+```
+
+## Converting multiple files or a directory
+
+There are four functions in **basepenguins** to convert mulitple files. 
+In each case, the default `extensions` (i.e. file types to convert) are `"R"`, `"r"`, `"qmd"`, `"rmd"`, `"Rmd"`.
+If `input` contains non-convertible files (i.e. without the specified extensions or without reference to `palmerpenguins`),
+they will be copied unmodified to their new `output` location in `convert_files()` and `convert_dir()`,
+or left untouched by `convert_files_inplace()` and `convert_dir_inplace()`.
+
+|  |  |
+|----|----|
+| `convert_files(input, output, extensions)` | convert an `input` vector of files to new `output` locations |
+| `convert_files_inplace(input, extensions)` | convert a vector of files by overwriting them |
+| `convert_dir(input, output, extensions)` | convert all files in `input` directory  into a new `output` directory (preserving nesting structure)  |
+| `convert_dir_inplace(input, extensions)` | convert all files in a directory by overwriting them |
+
+## Thank you!
+
+Many thanks to [Allison Horst](https://allisonhorst.github.io) for the fantastic **basepenguins** hex,
+featuring the Adélie, Gentoo and Chinstrap familiar from her [**palmergenuins** artwork](https://allisonhorst.github.io/palmerpenguins/articles/art.html)
+and [Kristen Gorman's](https://gormankb.github.io) base camp from her trips to the Palmer Archipelago to collect the data.

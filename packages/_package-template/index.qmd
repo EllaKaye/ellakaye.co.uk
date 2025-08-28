@@ -2,10 +2,9 @@
 title: Package title
 description: |
   Package description
-#date: UPDATE # initial commit date? Publish date? No date?
+date: 2025-04-08
 author: 
   - name: Ella Kaye
-    #url: httep://twitter.com/ellakaye
 site-url: https://ellakaye.co.uk
 image: IMAGE.png
 # N.B. Don't use "" in image-alt
@@ -43,7 +42,7 @@ library(distilltools)
   url = ""
 )`
 `r icon_link(
-  icon = "box-open",
+  icon = "book",
   text = "documentation",
   url = ""
 )`
