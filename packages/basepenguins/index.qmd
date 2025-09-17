@@ -2,7 +2,7 @@
 title: basepenguins
 description: |
   Convert files that Use {palmerpenguins} to Work with base R's penguin dataset
-#date: UPDATE # initial commit date? Publish date? No date?
+date: 2025-04-08 # CRAN publication
 author: 
   - name: Ella Kaye
   - name: Heather Turner 
