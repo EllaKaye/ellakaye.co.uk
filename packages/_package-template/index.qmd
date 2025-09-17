@@ -6,7 +6,7 @@ date: 2025-04-08
 author: 
   - name: Ella Kaye
 site-url: https://ellakaye.co.uk
-image: IMAGE.png
+image: ../../images/hex/PKGNAME.png
 # N.B. Don't use "" in image-alt
 image-alt: |
 #categories:
@@ -39,17 +39,27 @@ library(distilltools)
 `r icon_link(
   icon = "github",
   text = "source",
-  url = ""
+  url = "https://github.com/EllaKaye/PKGNAME"
 )`
 `r icon_link(
   icon = "book",
   text = "documentation",
-  url = ""
+  url = "https://ellakaye.github.io/PKGNAME"
+)`
+`r icon_link(
+  icon = "box-open",
+  text = "CRAN",
+  url = "https://CRAN.R-project.org/package=PKGNAME"
+)`
+`r icon_link(
+  icon = "rocket",
+  text = "R-universe",
+  url = "https://ellakaye.r-universe.dev/PKGNAME"
 )`
 `r icon_link(
   icon = "dice-d6",
   text = "hex sticker",
-  url = ""
+  url = "../../images/hex/PKGNAME.png"
 )`
 
 ## Additional resources

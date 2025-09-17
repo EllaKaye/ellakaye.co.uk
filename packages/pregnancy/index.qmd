@@ -1,0 +1,249 @@
+---
+title: pregnancy
+description: |
+  Calculate and track dates and medication during pregnancy and fertility treatment
+date: 2025-09-04
+author: 
+  - name: Ella Kaye
+site-url: https://ellakaye.co.uk
+image: ../../images/hex/pregnancy.png
+# N.B. Don't use "" in image-alt
+image-alt: |
+  Hex sticker for the pregnancy R package featuring a blue hexagonal border with stylized hands traced from a photo of a woman cradling her pregnant belly, positioned around the package name.
+#categories:
+#  - TAG_1
+#  - TAG_2
+#twitter-card: 
+# uncomment lines below for different title and description to post
+#  title: |
+#  description: |
+# uncomment for different image to post
+#  image: |
+#  image-alt: |
+#  defaults to 500 x 500 summary: uncomment lines below for large card
+#  image-width: 600 
+#  image-height: 314
+#  card-style: "summary_large_image" 
+draft: false
+---
+
+```{r libraries}
+library(distilltools)
+```
+
+
+## Main resources
+
+`r icon_link(
+  icon = "github",
+  text = "source",
+  url = "https://github.com/EllaKaye/pregnancy"
+)`
+`r icon_link(
+  icon = "book",
+  text = "documentation",
+  url = "https://ellakaye.github.io/pregnancy"
+)`
+`r icon_link(
+  icon = "box-open",
+  text = "CRAN",
+  url = "https://CRAN.R-project.org/package=pregnancy"
+)`
+`r icon_link(
+  icon = "rocket",
+  text = "R-universe",
+  url = "https://ellakaye.r-universe.dev/pregnancy"
+)`
+`r icon_link(
+  icon = "dice-d6",
+  text = "hex sticker",
+  url = "../../images/hex/pregnancy.png"
+)`
+
+## Overview
+
+This is an R package for calculating dates and tracking medications during pregnancy and fertility treatment. 
+It extends a private, personal package that I wrote for myself when I was pregnant.
+It contains functions and features that I found useful at the time, 
+and others that I added when adapting the package for general use.
+
+The functionality goes beyond what's offered by online pregnancy calculators and apps, 
+plus there are no concerns (unlike with these sites and apps) about data privacy, tracking or advertising.
+
+## Installation 
+
+**pregnancy** is available on CRAN:
+
+``` r
+install.packages("pregnancy")
+```
+
+You can install the development version from R-universe:
+
+``` r
+install.packages("pregnancy", repos = "https://ellakaye.r-universe.dev")
+```
+
+Alternatively, install the development version from [GitHub](https://github.com/EllaKaye/pregnancy) with: 
+
+``` r 
+pak::pak("EllaKaye/pregnancy") 
+```
+
+## Usage
+
+This is a quick tour. 
+For a more extensive guide, see the [Get Started](https://ellakaye.github.io/pregnancy/articles/pregnancy.html) vignette, 
+`vignette("pregnancy")`.
+
+```{r echo = FALSE}
+# save any existing options
+due_date_opt <- getOption("pregnancy.due_date")
+person_opt <- getOption("pregnancy.person")
+medications_opt <- getOption("pregnancy.medications")
+```
+
+```{r}
+library(pregnancy)
+```
+
+## Date calculations
+
+```{r}
+#| echo: true
+# invisibly returns a Date object with the estimated due date
+# by default, start date of last menstrual period, but other options available
+due_date <- calculate_due_date("2025-02-24")
+```
+
+```{r}
+#| echo: true
+# set the pregnancy.due_date option
+# avoids having to pass the due date as argument to other functions
+set_due_date(due_date)
+```
+
+This README was built on **`r format(Sys.Date(), '%B %d, %Y')`**, 
+so for the purposes of reading this page, that counts as "today".
+
+```{r}
+#| echo: true
+# don't need to specify `due_date` since option is set
+# invisibly returns number of days into the pregnancy
+how_far()
+```
+
+```{r}
+#| echo: true
+# alternative `on_date`, addressed as "I"
+how_far(on_date = "2025-09-17", person = 1)
+```
+
+```{r}
+#| echo: true
+# when a given week of the pregnancy is reached
+# invisibly returns the Date when that week is reached
+date_when(33)
+```
+
+## Tracking medications
+
+```{r}
+#| echo: true
+# a simplified medication schedule
+meds <- dplyr::tribble(
+  ~medication, ~format, ~quantity, ~start_date, ~stop_date,
+  "progynova", "tablet", 3, "2025-08-21", "2025-08-31",
+  "progynova", "tablet", 6, "2025-09-01", "2025-09-11",
+  "cyclogest", "pessary", 2, "2025-09-03", "2025-09-11",
+  "clexane", "injection", 1, "2025-09-08", "2025-11-05"
+)
+```
+
+```{r}
+#| echo: true
+# how much of each medication is left to take, as of "today"
+medications_remaining(meds)
+```
+
+```{r}
+#| echo: true
+# how much medication for a given week 
+# (useful if you need to request a prescription to cover a certain time period)
+medications_remaining(meds, on_date = "2025-09-01", until_date = "2025-09-07")
+```
+
+## Global options
+
+`how_far()` and `date_when()` both need to know the pregnancy due date,
+and this can be passed directly to the `due_date` argument.
+It would be very tedious, however, to have to enter a due date every time you call these functions over the course of a pregnancy, 
+especially since that date is constant throughout. 
+The same holds for the for medications table required for `medications_remaining()`.
+
+To avoid this, the pregnancy package makes use of **global options**, 
+which can be set with the `set_*` family of functions (`set_due_date()`, `set_person()`, `set_medications()`), 
+and retrieved with the corresponding `get_*` family of functions (`get_due_date()`, `get_person()`, `get_medications()`).
+These options will persist for the duration of the current R session.
+
+Any global option can be unset by calling its `set_*` function with the argument `NULL`.
+
+```{r}
+#| echo: true
+# a different due date from the earlier example
+set_due_date("2026-04-01")
+```
+
+```{r}
+#| echo: true
+how_far()
+```
+
+```{r}
+#| echo: true
+# check and then unset option
+get_due_date()
+set_due_date(NULL)
+```
+
+### Options in `.Rprofile`
+
+We recommend adding your options to your `.Rprofile` so they persist across R sessions.
+R will read in these options at the start of each session, 
+and you will not need to use the `set_*` family of functions, nor pass them as arguments to the package functions. 
+The `get_*` family of functions will still retrieve the options set in `.Rprofile`. 
+
+Here's an example of what that might look like:
+
+``` r
+options(
+  pregnancy.due_date = "2025-09-16",
+  pregnancy.person = "I", # addressed in first person
+  pregnancy.medications = tibble::tribble(
+  ~medication, ~format, ~quantity, ~start_date, ~stop_date,
+  "progynova", "tablet", 3, "2025-08-21", "2025-08-31",
+  "progynova", "tablet", 6, "2025-09-01", "2025-09-11",
+  "cyclogest", "pessary", 2, "2025-09-03", "2025-09-11",
+  "clexane", "injection", 1, "2025-09-08", "2025-11-05"
+  ) 
+)
+```
+
+Note that it is best to avoid creating R objects in your `.Rprofile`, e.g. a `medications` data frame outside of the call to `options()`, otherwise that object will be loaded into your global environment at the start of every R session.
+
+## Documentation
+
+See package website at <https://ellakaye.github.io/pregnancy/> 
+and also in the installed package: `help(package = "pregnancy")`.
+
+```{r echo = FALSE}
+# reset original options
+options(
+  pregnancy.due_date = due_date_opt,
+  pregnancy.person = person_opt,
+  pregnancy.medications = medications_opt
+  )
+```
+
+
+
