@@ -1,6 +1,13 @@
 ![](images/ellakaye-profile-2023.jpg){.profile-pic fig-alt="Headshot of Ella Kaye, a woman of around 40 with short brown hair looking slightly off-camera and smiling" fig-align="center" width="33%"}
 
-I am a Senior Research Software Engineer in the [Department of Statistics](https://warwick.ac.uk/fac/sci/statistics/){target="_blank"} at the University of Warwick, working with [Dr Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/){target="_blank"} on her [fellowship](https://society-rse.org/community/rse-fellows/){target="_blank"} "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project".
+I am a Senior Research Software Engineer in the [Department of Advanced Research Computing](https://www.birmingham.ac.uk/research/arc){target="_blank"} at the University of Birmingham.
+
+My main project is as a co-lead on the RSMF-funded project "[Enabling the Next Generation of Contributors to R](https://blog.r-project.org/2025/12/17/rsmf-enabling-the-next-generation-of-contributors-to-r/index.html)", 
+working primarily with [Dr Heather Turner](https://heatherturner.net){target="_blank"} on her [fellowship](https://society-rse.org/community/rse-fellows/){target="_blank"} "Sustainability and EDI (Equality, Diversity and Inclusion) in the R Project".
+
+
+
+
 
 This involves:
 
@@ -16,7 +23,11 @@ Please see my [professional webpage](https://warwick.ac.uk/EllaKaye){target="_bl
 
 ### Previously
 
+It's not unusual for Research Software Engineers to have wiggly career paths, and mine is no exception.
+
 Prior to my current role, my academic path has taken me from a BA in Mathematics and Philosophy (University of Oxford), through an MA in History and Philosophy of Science and Technology (University of Toronto), an MPhil in Mathematics Education (University of Cambridge), an MSc in Applied Statistics (University of Oxford) and the [OxWaSP programme](http://www.oxwasp-cdt.ac.uk){target="_blank"} for postgraduate research in Statistics (University of Warwick). I also have a PGCE in Secondary Mathematics, have taught at secondary school, and worked in market research.
+
+**FIRST RSE JOB...**
 
 <!-- You can check out my [CV](CV.pdf) for more details. -->
 
