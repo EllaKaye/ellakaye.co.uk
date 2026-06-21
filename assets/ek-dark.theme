@@ -15,7 +15,7 @@
             "underline": false
         },
         "Attribute": {
-            "text-color": "#B062FF",
+            "text-color": "#BF7FFF",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -36,7 +36,7 @@
             "underline": false
         },
         "Function": {
-            "text-color": "#2C95FF",
+            "text-color": "#42A0FF",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -64,21 +64,21 @@
             "underline": false
         },
         "Error": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "BaseN": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "Alert": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -106,7 +106,7 @@
             "underline": false
         },
         "Preprocessor": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -141,7 +141,7 @@
             "underline": false
         },
         "Import": {
-            "text-color": "#B062FF",
+            "text-color": "#BF7FFF",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -155,14 +155,14 @@
             "underline": false
         },
         "DataType": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "Float": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -197,14 +197,14 @@
             "underline": false
         },
         "DecVal": {
-            "text-color": "#FF2B95",
+            "text-color": "#FF64B1",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "RegionMarker": {
-            "text-color": "#2C95FF",
+            "text-color": "#42A0FF",
             "background-color": null,
             "bold": false,
             "italic": false,
