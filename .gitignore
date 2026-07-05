@@ -10,3 +10,4 @@
 
 assets/giscus-light.css
 assets/giscus-light-custom.css
+**/*.quarto_ipynb
