@@ -1,38 +1,12 @@
----
-include-in-header: "_includes/fontawesome-2up.html"
-knitr:
-  opts_chunk: 
-    collapse: true
-execute: 
-  echo: false
----
-
 # [I'd love to hear from you!]{.primary}
 
 You can leave a note about any of my posts, talks or packages using the comment box at the bottom of its page.
 
 You can find me on elsewhere online:
 
-```{r}
-#| echo: false
-library(distilltools)
-```
-
-`r icon_link(
-  icon = "mastodon",
-  text = "Mastodon",
-  url = "https://fosstodon.org/@ellakaye",
-  rel = "me noopener"
-)`
-`r icon_link(
-  icon = "github",
-  text = "GitHub",
-  url = "https://github.com/EllaKaye"
-)`
-`r icon_link(
-  icon = "linkedin",
-  text = "LinkedIn",
-  url = "https://www.linkedin.com/in/ellakaye"
-)`
+[{{< iconify simple-icons:github >}} GitHub](https://github.com/EllaKaye){.btn .icon-link}
+[{{< iconify simple-icons:bluesky >}} Bluesky](https://bsky.app/profile/ellakaye.co.uk){.btn .icon-link}
+[{{< iconify mdi:mastodon >}} Mastodon](https://fosstodon.org/@ellakaye){.btn .icon-link}
+[{{< iconify mdi:linkedin >}} LinkedIn](https://www.linkedin.com/in/ellakaye){.btn .icon-link}
 
 Or, you can drop me an e-mail at [hello @ ellakaye.co.uk]{.heading-font}
