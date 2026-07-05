@@ -5,8 +5,6 @@ description: |
 date: UPDATE
 author: 
   - name: Ella Kaye
-    #url: httep://twitter.com/ellakaye
-#site-url: https://ellakaye.co.uk
 image: IMAGE.png
 # N.B. Don't use "" in image-alt
 image-alt: |
@@ -84,7 +82,7 @@ library(distilltools)
 
 ### [TODO]: fill in urls in iframe and link in last bullet point
 
-<iframe class="slide-deck ar4x3" src="FILL IN" title="FILL IN">
+<iframe class="slide-deck ar16x9" src="FILL IN" title="FILL IN">
 </iframe>
 
 Keyboard shortcuts for slideshow (once you've clicked inside it):
