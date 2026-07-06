@@ -127,7 +127,7 @@ ss432
 `timeline()` and `ladder()` work across all siteswap types, returning ggplot2 objects that can be further customised. The path of each prop is shown in a different colour.
 `throw_data()` returns the underlying data frame for use in custom visualisations.
 
-`timeline` shows the throws and catches of each prop over time, with a focus on the beat. `ladder` additionally shows which hand throws and catches each prop.
+`timeline()` shows the throws and catches of each prop over time, with a focus on the beat. `ladder()` additionally shows which hand throws and catches each prop.
 
 ```{r timeline-valid}
 timeline(ss423)
